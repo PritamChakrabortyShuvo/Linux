@@ -29,22 +29,20 @@ Linux was created by **Linus Torvalds** in **1991**. It started as a personal pr
 
 ## Where is Linux?
 **World Wide Web :**
-
-    - 67% of the world’s web-servers run Linux (2016)
+- 67% of the world’s web-servers run Linux (2016)
 **Research/High-Performance Compute :**
-
-    - Google, Amazon, NSA, 100% of TOP500  Super-computers.
+- Google, Amazon, NSA, 100% of TOP500  Super-computers.
 **Modern Smartphones and devices :**
-    - The Android phone
-    - Amazon Kindle
-    - Smart TVs/Devices
+- The Android phone
+- Amazon Kindle
+- Smart TVs/Devices
 
 ## Why is Linux?
-    - Free and open-source.
-    - Powerful for research datacenters
-    - Personal for desktops and phones
-    - Universal
-    - Community (and business) driven.
+- Free and open-source.
+- Powerful for research datacenters
+- Personal for desktops and phones
+- Universal
+- Community (and business) driven.
 
 ## Linux Architecture
 
@@ -62,8 +60,8 @@ Linux interacts with various essential hardware components:
 
 **Input/Output Devices :** Supported via device drivers, facilitating interaction between hardware and the kernel.
     
-    Input Devices : Include keyboards, touchpads, and others for user interaction.
-    Output Devices : Such as monitors and printers, displaying information to users.
+- Input Devices : Include keyboards, touchpads, and others for user interaction.
+- Output Devices : Such as monitors and printers, displaying information to users.
 
 ### Kernel
 The kernel is the core of the operating system, managing hardware and providing a foundation for software. It performs crucial functions:
