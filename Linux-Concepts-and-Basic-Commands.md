@@ -64,32 +64,31 @@ The architecture of Linux is the underlying structured layer like other operatin
 
 Linux interacts with various essential hardware components:
 
-**CPU :** Executes instructions; Linux supports diverse CPU architectures for portability.
+- **CPU :** Executes instructions; Linux supports diverse CPU architectures for portability.
 
-**RAM :** Primary memory used for storing data and programs; Linux kernel manages memory allocation.
+- **RAM :** Primary memory used for storing data and programs; Linux kernel manages memory allocation.
 
-**Input/Output Devices :** Supported via device drivers, facilitating interaction between hardware and the kernel.
+- **Input/Output Devices :** Supported via device drivers, facilitating interaction between hardware and the kernel.
     
-- Input Devices : Include keyboards, touchpads, and others for user interaction.
-- Output Devices : Such as monitors and printers, displaying information to users.
+    - Input Devices : Include keyboards, touchpads, and others for user interaction.
+    - Output Devices : Such as monitors and printers, displaying information to users.
 
 ### Kernel
 The kernel is the core of the operating system, managing hardware and providing a foundation for software. It performs crucial functions:
 
-**Device Management :** Handles device drivers, input/output operations, and peripheral devices.
+- **Device Management :** Handles device drivers, input/output operations, and peripheral devices.
 
-**Resource Management :** Manages CPU processes and bridges resources with processes.
+- **Resource Management :** Manages CPU processes and bridges resources with processes.
 
-**Memory Management :** Allocates and manages system memory efficiently.
+- **Memory Management :** Allocates and manages system memory efficiently.
 
-**System Calls :** Handles requests for file operations, memory control, and process management.
+- **System Calls :** Handles requests for file operations, memory control, and process management.
 
-**Performance Optimization :** Balances resources, schedules tasks, and enhances system efficiency.
+- **Performance Optimization :** Balances resources, schedules tasks, and enhances system efficiency.
 
 Linux's compatibility with different hardware configurations ensures versatile usage across a wide range of devices.
 
-### Types of Kernels in OS Architecture
-Monolithic; Microkernel; Hybrid; Nano kernel & Exo kernel
+- **Types of Kernels in OS Architecture :** Monolithic; Microkernel; Hybrid; Nano kernel & Exo kernel
 
 Linux includes a **monolithic kernel** which makes this OS the most stable and fast.
 
@@ -164,7 +163,7 @@ A Linux distribution (distro) is a packaged version of Linux that includes the k
 
 Each distribution caters to different user needs, from general desktop use to specialized server environments.
 
-## Linux vs Unix
+## Linux VS Unix
 **Origins:**
     
 - `Unix:` Created in the 1970s by AT&T Bell Labs.
