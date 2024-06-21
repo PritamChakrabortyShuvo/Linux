@@ -53,7 +53,8 @@ The architecture of Linux is the underlying structured layer like other operatin
 <div style="text-align: center;">
 <figure>
     <img src="Images/Architecture.png" alt="Project Logo" width="550" height="500">
-    <figcaption>Linux Architecture : Bird Eye View</figcaption>
+    
+<figcaption>Linux Architecture : Bird Eye View</figcaption>
 </figure>
 </div>
 
