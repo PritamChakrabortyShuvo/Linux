@@ -50,17 +50,12 @@ Linux was created by **Linus Torvalds** in **1991**. It started as a personal pr
 ## Linux Architecture
 
 The architecture of Linux is the underlying structured layer like other operating systems. Generally, it has four fundamental layers. Those are: **application**, **shell**, **kernel**, and **hardware**.
-<div style="text-align: center;">
-<figure>
-    <img src="Images/Architecture.png" alt="Project Logo" width="550" height="500">
-    
-<figcaption>Linux Architecture : Bird Eye View</figcaption>
-</figure>
-</div>
+**Linux Architecture : Bird View**
 
-<div style="text-align: center;">
-    <img src="Images/Linux OS Architecture.png" alt="Project Logo" width="800" height="500">
-</div>
+<img src="Images/Architecture.png" alt="Project Logo" width="550" height="500">
+
+<img src="Images/Linux OS Architecture.png" alt="Project Logo" width="800" height="500">
+
 
 ### Hardware
 
