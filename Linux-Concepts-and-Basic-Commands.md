@@ -208,19 +208,19 @@ Linux interaction refers to the methods by which users communicate with and cont
 **Shell Types**
 In Linux, there are two major types of shells −
 
-1. **Bourne shell-** If you are using a Bourne-type shell, the `$`character is the default prompt. The Bourne Shell has the following subcategories −
+1. **Bourne shell-** If you are using a Bourne-type shell, the `$`character is the default prompt. The Bourne Shell has the following subcategories :
     - Bourne shell (sh)
     - Korn shell (ksh)
     - Bourne Again shell (bash)
     - POSIX shell (sh)
 
-2. **C shell −** If you are using a C-type shell, the `%` character is the default prompt. The different C-type shells follow −
+2. **C shell −** If you are using a C-type shell, the `%` character is the default prompt. The different C-type shells follow :
     - C shell (csh)
     - TENEX/TOPS C shell (tcsh)
 
 ### Linux Prompt
 
-**The Linux prompt**, also known as the **command prompt**, is the interface in a terminal where users type commands. It typically looks like this
+**The Linux prompt**, also known as the **command prompt**, is the interface in a terminal where users type commands. It typically looks like this :
 
 <div style="text-align: center;">
     <img src="Images/Linux-Prompt.png" alt="Project Logo">
