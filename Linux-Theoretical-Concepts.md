@@ -5,7 +5,7 @@
 
 Welcome! to **Linux Theoretical Concepts** guide. This is your go-to guide for mastering Linux concepts and theory. Whether you're a beginner or need a quick reference, it offers essential insights to enhance your Linux understanding and usage.
 
-# Table of Contents
+## Table of Contents
 
 1. [What is Linux?](#what-is-linux)
 2. [Who is Linux?](#who-is-linux)
@@ -17,14 +17,14 @@ Welcome! to **Linux Theoretical Concepts** guide. This is your go-to guide for m
 8. [Linux VS Unix](#linux-vs-unix)
 9. [Linux Interaction](#Linux-interaction)
 
-# What is Linux?
+## What is Linux?
 Linux is an **open-source operating system** based on **Unix**, widely used for *servers*, *desktops*, and *embedded systems*. 
 It provides a stable, secure, and flexible environment for managing hardware resources and running applications.
 
-# Who is Linux?
+## Who is Linux?
 Linux was created by **Linus Torvalds** in **1991**. It started as a personal project and has grown into a major force in computing, supported by a global community of developers.
 
-# Where is Linux?
+## Where is Linux?
 **World Wide Web :**
 - 67% of the world’s web-servers run Linux (2016)
 **Research/High-Performance Compute :**
@@ -34,14 +34,14 @@ Linux was created by **Linus Torvalds** in **1991**. It started as a personal pr
 - Amazon Kindle
 - Smart TVs/Devices
 
-# Why is Linux?
+## Why is Linux?
 - Free and open-source.
 - Powerful for research datacenters
 - Personal for desktops and phones
 - Universal
 - Community (and business) driven.
 
-# Linux Architecture
+## Linux Architecture
 
 The architecture of Linux is the underlying structured layer like other operating systems. Generally, it has four fundamental layers. Those are: **application**, **shell**, **kernel**, and **hardware**.
 
@@ -54,7 +54,7 @@ The architecture of Linux is the underlying structured layer like other operatin
 <img src="Images/Linux OS Architecture.png" alt="Project Logo" width="800" height="500">
 
 
-## Hardware
+### Hardware
 
 Linux interacts with various essential hardware components:
 
@@ -67,7 +67,7 @@ Linux interacts with various essential hardware components:
     - Input Devices : Include keyboards, touchpads, and others for user interaction.
     - Output Devices : Such as monitors and printers, displaying information to users.
 
-## Kernel
+### Kernel
 The kernel is the core of the operating system, managing hardware and providing a foundation for software. It performs crucial functions:
 
 - **Device Management :** Handles device drivers, input/output operations, and peripheral devices.
@@ -86,16 +86,16 @@ Linux's compatibility with different hardware configurations ensures versatile u
 
 Linux includes a **monolithic kernel** which makes this OS the most stable and fast.
 
-## Command Line Shell
+### Command Line Shell
 The command line Interface is the user interface where the user types commands in a text form. When the user provides the command in the terminal, the shell interprets the commands for the kernel. The shell also has some built-in commands that help the user to navigate, manage, and change the file system.
 
-## Applications
+### Applications
 Applications are the programs that the user runs on top of the architecture. The applications are the user space element that includes database applications, media players, web browsers, and presentations.
 
-## System Utilities and Libraries
+### System Utilities and Libraries
 The system utilities and libraries provide a wide range of functions to manage the system. Low-level hardware complexity to high-level user support is served by the system utilities and libraries.
 
-# File System Hierarchy in Linux
+## File System Hierarchy in Linux
 
 The file system hierarchy in Linux organizes the structure of directories and files, ensuring efficient management and accessibility.
 
@@ -142,7 +142,7 @@ This hierarchical structure ensures consistency and provides a standardized way 
 
 **`/var:`** Variable data files, including logs, spool files, and temporary files that may change during system operation.
 
-# Linux Distributions
+## Linux Distributions
 
 A Linux distribution (distro) is a packaged version of Linux that includes the kernel, system utilities, applications, and a package manager.
 
@@ -162,7 +162,7 @@ A Linux distribution (distro) is a packaged version of Linux that includes the k
 
 Each distribution caters to different user needs, from general desktop use to specialized server environments.
 
-# Linux VS Unix
+## Linux VS Unix
 Unix generally refers to a family of proprietary operating systems, while Linux is an open-source variant developed by Linus Torvalds. It is often considered a Unix-like system due to its compatibility with Unix standards and APIs
 
 **Origins:**
@@ -200,10 +200,10 @@ Unix generally refers to a family of proprietary operating systems, while Linux 
 - `Unix:` Less flexible due to proprietary nature.
 - `Linux:` Highly customizable with many different distributions to choose from.
 
-# Linux Interaction
+## Linux Interaction
 Linux interaction refers to the methods by which users communicate with and control the Linux operating system, primarily through **shells** & **prompt**.
 
-## Shell
+### Shell
 ***The shell*** is a ***command-line interface (CLI)*** that allows users to interact with the Linux operating system. It is a interface between the **`user`** & the **`kernel`**
 
 It acts as an intermediary between the user and the system, interpreting and executing commands typed by the user.
@@ -221,7 +221,7 @@ In Linux, there are two major types of shells −
     - C shell (csh)
     - TENEX/TOPS C shell (tcsh)
 
-## Linux Prompt
+### Linux Prompt
 
 **The Linux prompt**, also known as the **command prompt**, is the interface in a terminal where users type commands. It typically looks like this :
 
