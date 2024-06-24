@@ -25,9 +25,9 @@ This guide provides an extensive overview of the most commonly used Linux comman
 19. [Command Line Browser](#command-line-browser)
 20. [Downloading Files](#downloading-files)
 21. [Extract tar archives](#extract-tar-archives)
-
-
-
+22. [User Specific Commands](#user-specific-commands)
+23. [Update and Install](#update-and-install)
+24. [Linux Networking](#linux-networking)
 
 ### Listing Files & Directories
 This command lists files and directories. Essential for file navigation in Linux
@@ -343,59 +343,85 @@ To extract the tar archives we use **`–x`** option.
 ```bash
     tar -xf <file>.tar
 ```
+### User Specific Commands
+All accesses into a Linux System are through a User.
+```bash
+    useradd
+```
+Create User.
+```bash
+    userdel
+```
+Delete User.
+```bash
+    su -[username]
+```
+Start new shell as different user.
 
 ```bash
-
+    finger
 ```
+User information lookup.
 
 ```bash
-
+    passwd
 ```
+Change or Create user password
 
 ```bash
-
+    whoami
 ```
+Prints the current username of the logged-in user. 
 
 ```bash
-
+    who
 ```
+### Update and Install
+Displays information about users who are currently logged into the system. 
+```bash
+   sudo apt update 
+```
+This command updates the local package index from the repositories configured in your system's **`sources.list`** file. It does not install or upgrade any packages; instead, it retrieves information about available packages and their versions, ensuring your system has the latest information about available software.
+```bash
+    sudo apt upgrade
+```
+This command upgrades all installed packages to their latest versions, respecting package dependencies and ensuring your system is up to date.
 
 ```bash
-
+    sudo apt install <package_name>
 ```
+For install package.
+
+### Linux Networking
 
 ```bash
-
+    ifconfig
 ```
+This command is used to configure and display the network interfaces and their IP addresses.
 
 ```bash
-
+    ip addr
 ```
+This command is used to show or manipulate routing, devices, policy routing and tunnels.
 
 ```bash
-
+    ip link
 ```
+This command is used to display information about link layer devices currently configured.
 
 ```bash
-
+    ip route
 ```
+This command is used to show and manipulate the IP routing table.
 
 ```bash
-
+    sudo lsof -i :80
 ```
-
+This is used to list all processes that are currently listening on port 80 (HTTP) on your system.
 ```bash
-
+    sudo kill $(sudo lsof -t -i :80)
 ```
-
-```bash
-
-```
-
-```bash
-
-```
-
+It will effectively terminates (kills) all processes that are currently listening on port 80.
 ```bash
 
 ```
