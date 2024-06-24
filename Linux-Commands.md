@@ -332,8 +332,12 @@ Command **`wget`** just downloads the file in the location which you are in, Els
 ```
 Downloads the file in given path and name.
 
-```bash
+### Extract tar archives
+To extract files from a **`.tar`** archive in Linux, use the **`tar`** command. Command **`tar`** can be used for both extraction and creation of archives.
 
+To extract the tar archives we use **`–x`** option.
+```bash
+    tar -xf <file>.tar
 ```
 
 ```bash
