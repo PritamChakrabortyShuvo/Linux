@@ -211,7 +211,7 @@ It acts as an intermediary between the user and the system, interpreting and exe
 **Shell Types**
 In Linux, there are two major types of shells −
 
-1. **Bourne shell-** If you are using a Bourne-type shell, the `$`character is the default prompt. The Bourne Shell has the following subcategories :
+1. **Bourne shell-** If you are using a Bourne-type shell, the `$`character is the default prompt. The Bourne Shell has the following subcategories
     - Bourne shell (sh)
     - Korn shell (ksh)
     - Bourne Again shell (bash)
