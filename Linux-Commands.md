@@ -22,6 +22,10 @@ This guide provides an extensive overview of the most commonly used Linux comman
 16. [Awk Command Filter](#awk-command-filter)
 17. [File Editors](#file-editors)
 18. [Vim Editor](#vim-editor)
+19. [Command Line Browser](#command-line-browser)
+20. [Downloading Files](#downloading-files)
+21. [Extract tar archives](#extract-tar-archives)
+
 
 
 
