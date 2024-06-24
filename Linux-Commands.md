@@ -15,7 +15,17 @@ This guide provides an extensive overview of the most commonly used Linux comman
 9. [Remove Directory](#remove-directory)
 10. [Copy Directory](#copy-directory)
 11. [Moving Directory](#moving-directory)
-12.
+12. [Concatenate a File](#concatenate-a-file)
+13. [Head Command Filter](#head-command-filter)
+14. [Tail Command Filter](#tail-command-filter)
+15. [Grep Command Filter]
+16. [Awk Command Filter]
+17. [File Editors]
+18. [Vim Editor]
+    - [ESC Mode]
+    - [Colon Mode]
+    - [Insert Mode]
+
 
 ### Listing Files & Directories
 This command lists files and directories. Essential for file navigation in Linux
@@ -187,16 +197,391 @@ Depends on the situation it will rename or move.
     - Destination is a file - Then that is a invalid operation.
     - Destination is a directory – Then the source will be moved into 
 destination directory.
+
+### Concatenate a File
+In view the complete content of a file then we will concatenate (cat) the file.
 ```bash
-    
+    cat file_name
+```
+It shows complete content of a file 
+```bash
+    cat -n file_name
+```
+Shows the content with line numbers added on output.
+```bash
+    tac file_name
+```
+It will print the lines in reverse order mean last line in first and first line at last.
+
+### Head Command Filter 
+**`head`** command can give the **top 10 lines** by default.
+```bash
+    head file_name
 ```
 ```bash
-    
+    head -n 5 file_name
+```
+Print top 5 lines.
+
+### Tail Command Filter
+**`tail`** command can give the **last 10 lines** by default.
+```bash
+    tail file_name
 ```
 ```bash
-    
+    tail -n 5 file_name
 ```
+Print last 5 lines.
 ```bash
-    
+    tail -f file_name
 ```
+**-f** option continuously monitors and displays the last part of a file, updating the output as new lines are added.
+**Note :** To come out of **`tail –f`** you can press **`CTRL + C`** on terminal.
+
+### Grep Command Filter
+The **`grep`** command searches for a specific word or string in files and prints only the lines containing that word or string.
+```bash
+    grep word file_name
+```
+**Example :**
+```bash
+    grep root passwd
+```
+It fethes all the lines having a word root in passwd file.
+
+### Awk Command Filter
+The **`awk`** command scans and processes text files. It can extract and print specific columns of data. 
+```bash
+    awk '{print $1}' file_name
+```
+Prints the first column from each line.
+
+### File Editors
+File editors are tools used to create, modify, and manage text files in Linux. Common file editors include:
+
+- **`nano`**: A simple, easy-to-use text editor with basic features. Ideal for beginners.
+
+- **`vi / vim`**: A powerful, advanced text editor with extensive features for efficient text editing. Suitable for experienced users.But **`vi`** is widely used and **`vim`** is a enhanced version of **`vi`**. 
+
+- **`gedit`**: A graphical text editor with a user-friendly interface, part of the GNOME desktop environment.
+
+These editors help users edit configuration files, write scripts, and manage documents directly from the command line or a graphical interface.
+### Vim Editor 
+**`vim`** (Vi IMproved) is a highly configurable and powerful text editor used in Linux. It extends the capabilities of the older **`vi`** editor and is suitable for both beginners and advanced users.
+```bash
+    vim file_name
+```
+![Project Logo](Images/VIM%20Editor.png)
+
+#### ESC Mode
+In vim (Vi IMproved) editor, the **`ESC`** (Escape) key is pivotal for navigating and executing commands in Normal mode. Here are key functionalities in ESC mode:
+
+- **Navigation:**
+
+    - **`h`**: Move left
+    - **`j`**: Move down
+    - **`k`**: Move up
+    - **`l`**: Move right
+
+- **Editing:**
+
+    - **`x`**: Delete the character under the cursor
+    - **`dd`**: Delete the current line
+    - **`yy`**: Yank (copy) the current line
+    - **`p`**: Paste the yanked text after the cursor position
+
+- **Search and Replace:**
+
+    - **`/pattern`**: Search forward for "pattern"
+    - **`n`**: Move to the next occurrence of the search pattern
+    - **`N`**: Move to the previous occurrence of the search pattern
+    - **`:s/pattern/replacement`**: Replace "pattern" with "replacement" in the current line
+
+- **Saving and Quitting:**
+
+    - **`:w`**: Save changes (write)
+    - **`:q`**: Quit (close the file)
+    - **`:q!`**: Quit without saving changes (force quit)
+    - **`:wq`** or **`:x`**: Save changes and quit
+
+```bash
+
+```
+
+```bash
+
+```
+
+```bash
+
+```
+
+```bash
+
+```
+
+```bash
+
+```
+
+```bash
+
+```
+
+```bash
+
+```
+
+```bash
+
+```
+
+```bash
+
+```
+
+```bash
+
+```
+
+```bash
+
+```
+
+```bash
+
+```
+
+```bash
+
+```
+
+```bash
+
+```
+
+```bash
+
+```
+
+```bash
+
+```
+
+```bash
+
+```
+
+```bash
+
+```
+
+```bash
+
+```
+
+```bash
+
+```
+
+```bash
+
+```
+
+```bash
+
+```
+
+```bash
+
+```
+
+```bash
+
+```
+
+```bash
+
+```
+
+```bash
+
+```
+
+```bash
+
+```
+
+```bash
+
+```
+
+```bash
+
+```
+
+```bash
+
+```
+
+```bash
+
+```
+
+```bash
+
+```
+
+```bash
+
+```
+
+```bash
+
+```
+
+```bash
+
+```
+
+```bash
+
+```
+
+```bash
+
+```
+
+```bash
+
+```
+
+```bash
+
+```
+
+```bash
+
+```
+
+```bash
+
+```
+
+```bash
+
+```
+
+```bash
+
+```
+
+```bash
+
+```
+
+```bash
+
+```
+
+```bash
+
+```
+
+```bash
+
+```
+
+```bash
+
+```
+
+```bash
+
+```
+
+```bash
+
+```
+
+```bash
+
+```
+
+```bash
+
+```
+
+```bash
+
+```
+
+```bash
+
+```
+
+```bash
+
+```
+
+```bash
+
+```
+
+```bash
+
+```
+
+```bash
+
+```
+
+```bash
+
+```
+
+```bash
+
+```
+
+```bash
+
+```
+
+```bash
+
+```
+
+```bash
+
+```
+
+```bash
+
+```
+
+```bash
+
+```
+
+```bash
+
+```
+
+```bash
+
+```
+
+```bash
+
+```
+
+```bash
+
+```
+
+```bash
+
+```
+
 
