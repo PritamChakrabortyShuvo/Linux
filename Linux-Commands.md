@@ -18,13 +18,11 @@ This guide provides an extensive overview of the most commonly used Linux comman
 12. [Concatenate a File](#concatenate-a-file)
 13. [Head Command Filter](#head-command-filter)
 14. [Tail Command Filter](#tail-command-filter)
-15. [Grep Command Filter]
-16. [Awk Command Filter]
-17. [File Editors]
-18. [Vim Editor]
-    - [ESC Mode]
-    - [Colon Mode]
-    - [Insert Mode]
+15. [Grep Command Filter](#grep-command-filter)
+16. [Awk Command Filter](#awk-command-filter)
+17. [File Editors](#file-editors)
+18. [Vim Editor](#vim-editor)
+
 
 
 ### Listing Files & Directories
@@ -304,21 +302,35 @@ In vim (Vi IMproved) editor, the **`ESC`** (Escape) key is pivotal for navigatin
     - **`:q!`**: Quit without saving changes (force quit)
     - **`:wq`** or **`:x`**: Save changes and quit
 
+- Modes:
+
+    - Normal Mode: Press **`Esc`** to enter Normal mode, where you can navigate and execute commands.
+    - Insert Mode: Press **`i`** to enter Insert mode, where you can insert and edit text.
+    - Visual Mode: Press **`v`** to enter Visual mode, where you can select blocks of text for editing or copying.
+
+### Command Line Browser
+Most of the time you need to browse URLs and fetch that content over the command line. Some times we need some partial information of that URL else we need complete information of that URL.
+
+Command **`curl`** is available to browse the content over the command line.
 ```bash
-
+    curl URL
 ```
-
 ```bash
-
+    curl URL -o file_name_to_save_download
 ```
+This command is useful for downloading files from the internet directly to your local system using the command line.
 
+### Downloading Files
+Most of the times we just need to download the software of different tools which we work on. To just download the software we can use **`wget`** command.
+
+Command **`wget`** just downloads the file in the location which you are in, Else you can provide a custom location as well.
 ```bash
-
+    wget URL
 ```
-
 ```bash
-
+    wget -o /opt/file_name URL
 ```
+Downloads the file in given path and name.
 
 ```bash
 
