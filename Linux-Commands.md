@@ -38,45 +38,40 @@ This guide provides an extensive overview of the most commonly used Linux comman
 32. [Administration – File Permissions](#administration--file-permissions)
 
 ### Listing Files & Directories
-This command lists files and directories. Essential for file navigation in Linux
+This command lists files and directories. Essential for file navigation in Linux.
+
+Get list of files and directories, but it may not show hidden files.
 ```bash
     ls
 ```
-Get list of files and directories, but it may not show hidden files.
-
 **Note :** Hidden files in Linux were created with **`.`** filename
 
+Get list of hidden files and directories.
 ```bash
     ls -a
 ```
-Get list of hidden files and directories.
-
+Get list of files with long format, usually shows properties of a file.
 ```bash
      ls -l
 ```
-Get list of files with long format, usually shows properties of a file.
-
+Get list of all files and directories, including hidden ones, in detailed format.
 ```bash
      ls -al
 ```
-Get list of all files and directories, including hidden ones, in detailed format
+Get list of files and directories sorted by modification time, with the most recently modified items appearing first.
 ```bash
     ls -t
 ```
-Get list of files and directories sorted by modification time, with the most recently modified items appearing first.
-
 ### Creating Files
 We can create files in Linux in multiple ways/commands. As a basic  we always use **`touch`** command to create a file.
+Creates an empty text file.
 ```bash
      touch file_name.txt
 ```
-Creates an empty text file.
-
+*`touch`* command can create multiple files as shown.
 ```bash
     touch text.txt lambda.py      
 ```
-*`touch`* command can create multiple files as shown.
-
 **Note :** In Linux we don’t have any file extensions. Extensions we may use it for our understanding.
 
 ### Remove Files
@@ -85,11 +80,10 @@ To remove files we have **`rm`** command, Also we can use **`unlink`** command w
 ```bash
     rm file_name
 ```
+This command forcefully deletes file without confirmation, bypassing write protection. Use with caution.
 ```bash
     rm -f file_name
 ```
-This command forcefully deletes file without confirmation, bypassing write protection. Use with caution.
-
 ### Copy Files
 To copy a file we have **`cp`** command. Alternatively we have **`rsync`** command as well but mostly we prefer to use cp command in general.
 
@@ -100,16 +94,15 @@ If the destination file already exists then it will overwrite the file and in fe
 
 ### Renaming Files
 To rename or move a file we use **`mv`** command.
+
+For rename the file.
 ```bash 
     mv old_name new_name
 ```
-For rename the file.
-
+For moving the file.
 ```bash
     mv file_name /path/to/directory/
 ```
-For moving the file.
-
 ### Present Working Directory
 ```bash
     pwd
@@ -128,22 +121,18 @@ The **`pwd`** command prints the current working directory's absolute path. It's
 ```
 You will switch to **`/bin`** directory.
 
+Simple **`cd`** command will take you to the user home directory
 ```bash
     cd
 ```
-Simple **`cd`** command will take you to the user home directory
-
+A hyphen symbol after cd command can take you to previous working directory.
 ```bash
     cd -
 ```
-A hyphen symbol after cd command can take you to previous working directory.
-
+Double dot denotes parent directory and it can take you to parent directory of existing directory.
 ```bash
     cd .. 
 ```
-Double dot denotes parent directory and it can take you to 
-parent directory of existing directory.
-
 ### Single Dot & Double Dot
 Single dot **`(.)`** in Linux denote the present working directory.
 
@@ -164,11 +153,10 @@ To create a directory you can use **`mkdir`** command.
 ```
 Creates a directory and any necessary parent directories that do not exist. It ensures that the entire path specified is created, even if multiple directories need to be nested. 
 
+Can create multiple directories also at the same time.
 ```bash
     mkdir dir1 dir2 
 ```
-Can create multiple directories also at the same time.
-
 ### Remove Directory
 Removing directory commands needed to be picked based on requirement.
 
@@ -176,7 +164,7 @@ To remove empty directories we use **`rmdir`** command.
 ```bash
    rmdir empty_directory_name
 ```
-To remove directories recursively we use **`rm`** command
+To remove directories recursively we use **`rf`** command
 ```bash
     rm –rf dir1 dir2
 ```
@@ -188,14 +176,14 @@ This command recursively and forcefully removes multiple directories and all its
 Copying directories can be done with cp command.
 
 **Note :** While copying the directories we need to mention **`–r`** option to enable that we are copying directories.
+
+It copies dir1 to dir2 and all the contents of dir1 will be copied to dir2 as well.
 ```bash
     cp -r dir1 dir2
 ```
-It copies dir1 to dir2 and all the contents of dir1 will be copied to dir2 as well.
 
 ### Moving Directory
-Moving directories or renaming directories can be done with **`mv`** 
-command.
+Moving directories or renaming directories can be done with **`mv`** command.
 ```bash
     mv file /path/to/directory
 ```
@@ -205,47 +193,45 @@ Depends on the situation it will rename or move.
 
 - If destination exists:
     - Destination is a file - Then that is a invalid operation.
-    - Destination is a directory – Then the source will be moved into 
-destination directory.
-
+    - Destination is a directory – Then the source will be moved into destination directory.
 ### Concatenate a File
 In view the complete content of a file then we will concatenate (cat) the file.
+
+Shows complete content of a file.
 ```bash
     cat file_name
 ```
-It shows complete content of a file 
+Shows the content with line numbers added on output.
 ```bash
     cat -n file_name
 ```
-Shows the content with line numbers added on output.
+It will print the lines in reverse order mean last line in first and first line at last.
 ```bash
     tac file_name
 ```
-It will print the lines in reverse order mean last line in first and first line at last.
-
 ### Head Command Filter 
 **`head`** command can give the **top 10 lines** by default.
 ```bash
     head file_name
 ```
+Print top 5 lines.
 ```bash
     head -n 5 file_name
 ```
-Print top 5 lines.
-
 ### Tail Command Filter
 **`tail`** command can give the **last 10 lines** by default.
 ```bash
     tail file_name
 ```
+Print last 5 lines.
 ```bash
     tail -n 5 file_name
 ```
-Print last 5 lines.
 ```bash
     tail -f file_name
 ```
 **-f** option continuously monitors and displays the last part of a file, updating the output as new lines are added.
+
 **Note :** To come out of **`tail –f`** you can press **`CTRL + C`** on terminal.
 
 ### Grep Command Filter
@@ -261,11 +247,11 @@ It fethes all the lines having a word root in passwd file.
 
 ### Awk Command Filter
 The **`awk`** command scans and processes text files. It can extract and print specific columns of data. 
+
+Prints the first column from each line.
 ```bash
     awk '{print $1}' file_name
 ```
-Prints the first column from each line.
-
 ### File Editors
 File editors are tools used to create, modify, and manage text files in Linux. Common file editors include:
 
@@ -327,11 +313,10 @@ Command **`curl`** is available to browse the content over the command line.
 ```bash
     curl URL
 ```
+This command is useful for downloading files from the internet directly to your local system using the command line.
 ```bash
     curl URL -o file_name_to_save_download
 ```
-This command is useful for downloading files from the internet directly to your local system using the command line.
-
 ### Downloading Files
 Most of the times we just need to download the software of different tools which we work on. To just download the software we can use **`wget`** command.
 
@@ -339,11 +324,10 @@ Command **`wget`** just downloads the file in the location which you are in, Els
 ```bash
     wget URL
 ```
+Downloads the file in given path and name.
 ```bash
     wget -o /opt/file_name URL
 ```
-Downloads the file in given path and name.
-
 ### Extract tar archives
 To extract files from a **`.tar`** archive in Linux, use the **`tar`** command. Command **`tar`** can be used for both extraction and creation of archives.
 
@@ -353,34 +337,31 @@ To extract the tar archives we use **`–x`** option.
 ```
 ### User Specific Commands
 All accesses into a Linux System are through a User.
+
+Create a User.
 ```bash
-    useradd
+    useradd user_name
 ```
-Create User.
+Delete a User.
 ```bash
-    userdel
+    userdel user_name
 ```
-Delete User.
+Start new shell as different user.
 ```bash
     su -[username]
 ```
-Start new shell as different user.
-
+User information lookup.
 ```bash
     finger
 ```
-User information lookup.
-
+Change or Create user password.
 ```bash
     passwd
 ```
-Change or Create user password
-
+Prints the current username of the logged-in user. 
 ```bash
     whoami
 ```
-Prints the current username of the logged-in user. 
-
 ```bash
     who
 ```
@@ -395,10 +376,10 @@ This command updates the local package index from the repositories configured in
 ```
 This command upgrades all installed packages to their latest versions, respecting package dependencies and ensuring your system is up to date.
 
+For install package.
 ```bash
     sudo apt install <package_name>
 ```
-For install package.
 
 ### Linux Networking
 
@@ -437,26 +418,22 @@ Every command we execute in Linux will create a process and every process will g
 
 As part of our job we will manage such processes run inside server. In order to manage those process we need the information about the process. Command ps can help us in getting required/all process running inside the OS.
 
+List the process running in current session.
 ```bash
     ps
 ```
-List the process running in current session.
-
+List process running by the user you logged in.
 ```bash
     ps –u
 ```
-List process running by the user you logged in.
-
+Get all process running inside OS.
 ```bash
     ps –e
 ```
-Get all process running inside OS.
-
+All process listed out with more detailed way. 
 ```bash
     ps –ef
 ```
-All process listed out with more detailed way. 
-
 - We do need to manage these process, Some cases we need to stop/kill them.
 
 - To kill any process under Linux OS can use kill command.
@@ -465,16 +442,14 @@ All process listed out with more detailed way.
 
 - In general we use two type of killing a process by using a signal number 15 and 9, 15 is default signal and we no need to specify in particular.
 
+Kill the process of given PID with 15 signal.
 ```bash
     kill PID
 ```
-Kill the process of given PID with 15 signal.
-
+Kill the process of given PID with 9 signal.
 ```bash
     kill -9 PID
 ```
-Kill the process of given PID with 9 signal.
-
 **Note :** 15 signal is graceful kill and where as 9 is forceful kill of a process.
 
 ### Administration 
@@ -498,7 +473,6 @@ In Linux family, User cannot be added with out a group. So we need a group in or
 To check whether the group added or not by using **`cat /etc/group | grep devops`**
 
 We can now add a user to devops group.
-
 ```bash
     sudo useradd –g devops pritam
 ```
@@ -506,26 +480,22 @@ To verify the user which was added.
 ```bash
     id pritam
 ```
+To add a user to multiple groups.
 ```bash
     usermod –a –G bin pritam
 ```
-To add a user to multiple groups.
-
+To set a password to the user (Clouds will not use password by default)
 ```bash
     passwd pritam
 ```
-To set a password to the user (Clouds will not use password by default)
-
-```bash
-    su raju
-```
 You can switch user from one user to another user using.
-
 ```bash
-    sudo su - raju
+    su shuvo
 ```
 To again another user with out password using **`sudo`**.
-
+```bash
+    sudo su - pritam
+```
 ### Administration – Package Management
 
 In Linux uses rpm for packaging. Such packages can be downloaded and installed using **`yum`** command which uses **`rpm`** command in backend.
@@ -584,14 +554,12 @@ We can use following commands to reboot a server.
     shutdown -r
 ```
 We can use following commands to shutdown a server.
-
 ```bash
     init 0
     shutdown -s 
     halt
 ```
 We can validate system restarted by referring the startup time.
-
 ```bash
     uptime
 ```
