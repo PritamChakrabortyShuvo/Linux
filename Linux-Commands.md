@@ -568,19 +568,26 @@ To start the service at the time of reboot automatically then
 ```bash
     sudo systemctl disable httpd
 ```
+### Administration – Commands Reboot
+We can use following commands to reboot a server.
+```bash
+    reboot
+    init 6
+    shutdown -r
+```
+We can use following commands to shutdown a server.
 
 ```bash
-
+    init 0
+    shutdown -s 
+    halt
 ```
+We can validate system restarted by referring the startup time.
 
 ```bash
-
+    uptime
 ```
-
-```bash
-
-```
-
+### Administration – File Ownerships
 ```bash
 
 ```
