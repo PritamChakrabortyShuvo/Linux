@@ -600,8 +600,10 @@ To change the owner / group of a file
 ```
 **Note :** **-R** option need to be used for a directory.
 
+###  Administration – File Permissions 
+To change the permission of a file
 ```bash
-
+    chmod <notation> file/directory
 ```
 
 ```bash
