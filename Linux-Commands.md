@@ -422,29 +422,52 @@ This is used to list all processes that are currently listening on port 80 (HTTP
     sudo kill $(sudo lsof -t -i :80)
 ```
 It will effectively terminates (kills) all processes that are currently listening on port 80.
-```bash
 
-```
+### Process Management
 
-```bash
+Every command we execute in Linux will create a process and every process will get an associated ID which we generally call it as PID and it is unique in the OS which is taken care by Kernel.
 
-```
-
-```bash
-
-```
+As part of our job we will manage such processes run inside server. In order to manage those process we need the information about the process. Command ps can help us in getting required/all process running inside the OS.
 
 ```bash
-
+    ps
 ```
+List the process running in current session.
 
 ```bash
-
+    ps –u
 ```
+List process running by the user you logged in.
 
 ```bash
-
+    ps –e
 ```
+Get all process running inside OS.
+
+```bash
+    ps –ef
+```
+All process listed out with more detailed way. 
+
+- We do need to manage these process, Some cases we need to stop/kill them.
+
+- To kill any process under Linux OS can use kill command.
+
+- Command kill will be used to kill the process with PID as input provided.
+
+- In general we use two type of killing a process by using a signal number 15 and 9, 15 is default signal and we no need to specify in particular.
+
+```bash
+    kill PID
+```
+Kill the process of given PID with 15 signal.
+
+```bash
+    kill -9 PID
+```
+Kill the process of given PID with 9 signal.
+
+**Note :** 15 signal is graceful kill and where as 9 is forceful kill of a process.
 
 ```bash
 
