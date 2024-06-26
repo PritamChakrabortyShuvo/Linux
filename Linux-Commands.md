@@ -469,25 +469,55 @@ Kill the process of given PID with 9 signal.
 
 **Note :** 15 signal is graceful kill and where as 9 is forceful kill of a process.
 
+### Administration 
+
+- In Linux, All admin activities cannot be performed by normal user. We need to be a root user to perform any activities.
+
+- To perform those admin activities we use **`sudo`** command to gain the root access and perform those admin commands.
+
+- To any admin command we can prefix **`sudo`** command to gain root privilege.
+
+- As we are using cloud based servers we usually login with normal user like centos and such default users will have complete **`sudo`** access by default.
+
+- In companies we usually will have individual accounts and we can perform the admin activities which are allowed using **`sudo`** access.
+
+### Administration - User Management
+
+In Linux family, User cannot be added with out a group. So we need a group in order to add a user. User can be part of one more group but primarily should be associated with one group.
 ```bash
-
+    sudo groupadd devops
 ```
+To check whether the group added or not by using **`cat /etc/group | grep devops`**
+
+We can now add a user to devops group.
 
 ```bash
-
+    sudo useradd –g devops pritam
 ```
+To verify the user which was added.
+```bash
+    id pritam
+```
+```bash
+    usermod –a –G bin pritam
+```
+To add a user to multiple groups.
 
 ```bash
-
+    passwd pritam
 ```
+To set a password to the user (Clouds will not use password by default)
 
 ```bash
-
+    su raju
 ```
+You can switch user from one user to another user using.
 
 ```bash
-
+    sudo su - raju
 ```
+To again another user with out password using **`sudo`**.
+
 
 ```bash
 
