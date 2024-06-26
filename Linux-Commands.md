@@ -28,6 +28,14 @@ This guide provides an extensive overview of the most commonly used Linux comman
 22. [User Specific Commands](#user-specific-commands)
 23. [Update and Install](#update-and-install)
 24. [Linux Networking](#linux-networking)
+25. [Process Management](#process-management)
+26. [Administration](#administration)
+27. [Administration - User Management](#administration---user-management)
+28. [Administration – Package Management](#administration--package-management)
+29. [Administration – Service Management](#administration--service-management)
+30. [Administration – Commands Reboot](#administration--commands-reboot)
+31. [Administration – File Ownerships](#administration--file-ownerships)
+32. [Administration – File Permissions](#administration--file-permissions)
 
 ### Listing Files & Directories
 This command lists files and directories. Essential for file navigation in Linux
@@ -605,97 +613,3 @@ To change the permission of a file
 ```bash
     chmod <notation> file/directory
 ```
-
-```bash
-
-```
-
-```bash
-
-```
-
-```bash
-
-```
-
-```bash
-
-```
-
-```bash
-
-```
-
-```bash
-
-```
-
-```bash
-
-```
-
-```bash
-
-```
-
-```bash
-
-```
-
-```bash
-
-```
-
-```bash
-
-```
-
-```bash
-
-```
-
-```bash
-
-```
-
-```bash
-
-```
-
-```bash
-
-```
-
-```bash
-
-```
-
-```bash
-
-```
-
-```bash
-
-```
-
-```bash
-
-```
-
-```bash
-
-```
-
-```bash
-
-```
-
-```bash
-
-```
-
-```bash
-
-```
-
-
