@@ -518,49 +518,55 @@ You can switch user from one user to another user using.
 ```
 To again another user with out password using **`sudo`**.
 
+### Administration – Package Management
 
+In Linux uses rpm for packaging. Such packages can be downloaded and installed using **`yum`** command which uses **`rpm`** command in backend.
+
+**`YUM`** has capability to download and install the packages from different sources which are defined under **`/etc/yum.repos.d/*.repo`**
 ```bash
-
+    sudo yum list / sudo yum list all 
 ```
-
 ```bash
-
+    sudo yum list installed 
 ```
-
 ```bash
-
+    sudo yum list available
 ```
-
 ```bash
-
+    sudo yum install httpd –y
 ```
-
 ```bash
-
+    sudo yum remove httpd –y
 ```
-
 ```bash
-
+     sudo yum update httpd –y
 ```
+### Administration – Service Management
+
+RedHat Linux 7 uses **`systemctl`** command to manage the services, Earlier till 6 version we use to use **`service`** command.
+
+To list all services which are active.
 
 ```bash
-
+    sudo systemctl list-units -t service 
 ```
-
+To start/stop/restart a service.
 ```bash
-
+    sudo systemctl start httpd 
+    sudo systemctl stop httpd 
+    sudo systemctl restart httpd
 ```
-
+To check the status of httpd.
 ```bash
-
+    sudo systemctl status httpd
 ```
+To start the service at the time of reboot automatically then
 
 ```bash
-
+    sudo systemctl enable httpd 
 ```
-
 ```bash
-
+    sudo systemctl disable httpd
 ```
 
 ```bash
