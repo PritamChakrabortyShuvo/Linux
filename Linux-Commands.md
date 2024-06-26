@@ -588,17 +588,17 @@ We can validate system restarted by referring the startup time.
     uptime
 ```
 ### Administration – File Ownerships
+To change the owner / group of a file 
 ```bash
-
+    chown <owner-name> file/directory
 ```
-
 ```bash
-
+    chgrp <group-name> file/directory
 ```
-
 ```bash
-
+    chown <owner-name>:<group-name> file/directory
 ```
+**Note :** **-R** option need to be used for a directory.
 
 ```bash
 
