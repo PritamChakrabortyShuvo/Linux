@@ -52,12 +52,14 @@ Linux was created by **Linus Torvalds** in **1991**. It started as a personal pr
 - **Networking Issues :** Problems with networking between VMs.
 - **Permissions :** Challenges with permissions and security settings.
 - **Hands-On Practice :** Insufficient practical experience.
-## Linux Architecture : Working with Shell
+
+## Working with Shell
 A shell is a **command-line interface** that allows users to interact with the operating system by typing commands to perform tasks.
 Using a **shell** instead of a **Graphical User Interface** (GUI) allows for greater efficiency, automation through scripting, and more precise control over system tasks especially for advanced users and server management.
 ### Home Directory
 The home directory is a unique, user-specific folder (e.g., `/home/username`) where personal files, settings, and configurations are stored in a Linux system.
-<img src="Images/Home Directory.png" alt="Project Logo" width=50% height=25%>
+
+<img src="Images/Home Directory.png" alt="Project Logo" width=75% height=30%>
 
 ### Commands & Arguments 
 In Linux, **`commands`** are instructions given to the shell to perform specific tasks and **`arguments`** are additional pieces of information passed to those commands to modify their behavior or specify what they operate on.
@@ -77,32 +79,70 @@ In Linux, commands can be categorized into 2 types based on their location on th
 
 - **Internal Commands :** These are built into the shell itself and do not require external programs to run.  **Example :** **`cd`**, **`echo`**, **`pwd`**
 
-The architecture of Linux is the underlying structured layer like other operating systems. Generally, it has four fundamental layers. Those are: **application**, **shell**, **kernel**, and **hardware**.
+### Linux Basic Commands
 
-**Linux Architecture : Bird View**
+For more details on commands see the [Linux Commands](https://github.com/PritamChakrabortyShuvo/Linux/blob/main/Linux-Commands.md) file.
 
-<img src="Images/Architecture.png" alt="Project Logo" width="550" height="500">
+### Absoluiute & Relative Path
 
-**Linux OS Architecture :**
+A **path** is the location of a file or directory in the filesystem which can be either **absolute** (full path) or **relative** (relative to the current directory).
+- **Absolute Path :** An absolute path is the full path to a file or directory from the root directory **`/`**.Starting from the top of the filesystem. For example: **`/home/user/directory/file.txt`**.
 
-<img src="Images/Linux OS Architecture.png" alt="Project Logo" width="800" height="500">
+- **Relative Path :** A relative path is the path to a file or directory from our current working directory, without starting from the root. For example, if we are in **`/home/user`** the relative path to **`file.txt`** inside directory would be **`directory/file.txt`**.
+
+<img src="Images/Path.png" alt="Project Logo" width=50% height=25%>
+
+### Pushd and Popd
+**`pushd`** & **`popd`** are commands in Bash used for managing the directory stack allowing us to easily switch between directories.
+
+- **`pushd` :** This command saves the current directory on a stack and then changes to the specified directory. For example, running **`pushd`** **`/path/to/directory`** will add the current directory to the stack and navigate to **`/path/to/directory`**.
+
+- **`popd` :** This command removes the top directory from the stack and changes to that directory. For instance, running **`popd`** after a **`pushd`** will take you back to the directory that was saved on the stack.
+
+These commands are useful for quickly navigating between multiple directories without needing to remember or retype paths.
+### Shell Types
+There are various shell types in linux. They are 
+- **Bourne Shell (`sh`) :** The original Unix shell, known for its simplicity and scripting capabilities, widely used for system scripts.
+- **C Shell (`csh/tcsh`) :** A shell with C-like syntax, offering features like aliases and job control, with **`tcsh`** as an enhanced version.
+- **Korn Shell (`ksh`) :** A superset of the Bourne shell, adding features like command-line editing and improved scripting.
+- **Z Shell (`zsh`) :** A highly customizable shell with advanced features like auto-completion, globbing, and theming.
+- **Bourne Again Shell (`bash`) :** A popular, feature-rich shell, backward-compatible with **`sh`**, and widely used as the **default shell in Linux systems**.
+
+**`bash`** shell has some features like
+- Bash Auto Completion
+- Alias
+- Command History
+
+### Bash Environment Variables
+Bash environment variables are like placeholders that store important information such as **user settings** or **system paths**. They help the shell and programs run smoothly and can be used to control how commands work. For example :
+
+<img src="Images/Logname.png" alt="Project Logo" width=50% height=25%>
+
+Logname show the name which stored in the logname.
+
+We can also set an environment variable. For example :
+
+<img src="Images/env.png" alt="Project Logo" width=50% height=25%>
+
+### PATH Variables
+The **PATH** variable in Bash is a list of directories where the shell searches for executable programs when we enter a command. If a command is in one of these directories we can run it without needing to type the full path.
+
+### Bash Prompt
+The **bash prompt** is the text displayed in the terminal where we type commands. It typically shows our username, hostname, and current director & can be customized using environment variables like **`$PS1`**.
+
+<img src="Images/ps1.png" alt="Project Logo" width=50% height=25%>
+
+## Core Concepts
+Linux core concepts include the system's main parts, like the kernel, file system, processes, and user management, which work together to run applications smoothly and securely.
+
+### Linux Kernel
+The **kernel** is the core part of the Linux operating system that manages hardware resources, facilitates communication between software and hardware & handles system processes, memory, and file management. 
+It acts as a bridge between applications and the underlying hardware.
+
+<img src="Images/Kernel.png" alt="Project Logo" width=50% height=25%>
 
 
-### Hardware
-
-Linux interacts with various essential hardware components:
-
-- **CPU :** Executes instructions; Linux supports diverse CPU architectures for portability.
-
-- **RAM :** Primary memory used for storing data and programs; Linux kernel manages memory allocation.
-
-- **Input/Output Devices :** Supported via device drivers, facilitating interaction between hardware and the kernel.
-    
-    - Input Devices : Include keyboards, touchpads, and others for user interaction.
-    - Output Devices : Such as monitors and printers, displaying information to users.
-
-### Kernel
-The kernel is the core of the operating system, managing hardware and providing a foundation for software. It performs crucial functions:
+**Kernel functions** are the core tasks performed by the Linux kernel to manage system resources and ensure smooth operation. Here’s a brief overview of the main kernel functions
 
 - **Device Management :** Handles device drivers, input/output operations, and peripheral devices.
 
@@ -120,16 +160,54 @@ Linux's compatibility with different hardware configurations ensures versatile u
 
 Linux includes a **monolithic kernel** which makes this OS the most stable and fast.
 
-### Command Line Shell
-The command line Interface is the user interface where the user types commands in a text form. When the user provides the command in the terminal, the shell interprets the commands for the kernel. The shell also has some built-in commands that help the user to navigate, manage, and change the file system.
+**Kernel Space and User Space :**
 
-### Applications
-Applications are the programs that the user runs on top of the architecture. The applications are the user space element that includes database applications, media players, web browsers, and presentations.
+**Kernel Space** and **User Space** are two distinct areas of memory in a Linux operating system that separate kernel-level operations from user-level processes.
 
-### System Utilities and Libraries
-The system utilities and libraries provide a wide range of functions to manage the system. Low-level hardware complexity to high-level user support is served by the system utilities and libraries.
+<img src="Images/Kenel and User space.png" alt="Project Logo" width=75% height=50%>
 
-## File System Hierarchy in Linux
+**Key Differences :**
+
+- **Control :** Kernel space has full control over the system, while user space operates under constraints set by the kernel.
+- **Stability :** Crashes or errors in user space applications do not affect the kernel, enhancing system stability.
+
+This separation is crucial for system security, stability, and efficiency, preventing user applications from directly interfering with critical system operations.
+
+
+### Linux Boot Sequence
+The **Linux boot sequence** is the series of steps that the system goes through to start up and load the operating system. Here’s a simple explanation of each point in the sequence:
+
+1. **BIOS POST**
+
+    - **Explanation :** When we power on our computer the **BIOS (Basic Input/Output System)** performs a **POST (Power-On Self-Test)** to check the hardware components like the CPU, RAM, and storage devices.
+    - **Purpose :** This step ensures that all essential hardware is functioning correctly before proceeding to load the operating system.
+
+2. **Boot Loader (GRUB2)**
+
+    - **Explanation :** After the **POST** is successful, the **BIOS** loads the boot loader, such as **GRUB2 (Grand Unified Bootloader)** from the bootable disk.
+    - **Purpose :** **GRUB2** presents a menu of available operating systems and allows the user to select which one to load. It then loads the selected kernel into memory.
+
+3. **Kernel Initialization**
+
+    - **Explanation :** The boot loader loads the Linux kernel into memory and hands over control to it. The kernel initializes the system hardware, sets up memory management, and starts managing processes.
+    - **Purpose :** This step prepares the system to run by detecting hardware devices, setting up drivers, and creating a suitable environment for user processes.
+
+4. **INIT Process (Systemd)**
+
+    - **Explanation :** After the kernel has initialized the system, it starts the **INIT** process, which is often managed by **Systemd** in modern Linux distributions. This process is the first user-space application that runs.
+    - **Purpose :** The **INIT** process is responsible for starting all other processes and services needed for the system to function, including user interfaces, network services, and system daemons.
+
+
+<img src="Images/Boot Sequence.png" alt="Project Logo" width=75% height=50%>
+
+### Systemd Targets
+**Systemd** is a system and service manager for Linux that starts up the system, manages services, and improves boot speed by running processes in parallel.
+
+**Runlevels :** Runlevels are different modes that tell a Linux system what services to start or stop, helping to control how the system operates at startup or during use
+- **`3` :** Boots into a **`Command Line Interface`**
+- **`5` :** Boots into a **`Graphical Interface`**
+
+### File System Hierarchy in Linux
 
 The file system hierarchy in Linux organizes the structure of directories and files, ensuring efficient management and accessibility.
 
@@ -144,13 +222,13 @@ This hierarchical structure ensures consistency and provides a standardized way 
 
 **`Root Directory (/):`**  The top-level directory containing all other directories and files in the system.
 
-**`/bin:`** Essential user binaries (executable programs) required for system boot and maintenance.
+**`/bin:`** Essential user binaries such as **`cp`**, **`mv`**, **`mkdir`** etc. are located here.
 
 **`/boot:`** Files required for the boot process, including the Linux kernel and bootloader configurations.
 
-**`/dev:`** Device files representing hardware devices connected to the system, managed by the kernel.
+**`/dev:`** Device files representing hardware devices such as hdd, mouse, keyboard etc. connected to the system, managed by the kernel.
 
-**`/etc:`** System-wide configuration files used by various applications and services.
+**`/etc:`** Store most of the configuration files used by various applications and services.
 
 **`/home:`** User home directories where personal files and configurations are stored.
 
@@ -160,7 +238,7 @@ This hierarchical structure ensures consistency and provides a standardized way 
 
 **`/mnt:`** Temporary mount points for filesystems mounted manually by the user.
 
-**`/opt:`** Optional software applications installed manually by the system administrator.
+**`/opt:`** 3rd party software applications installed manually by the system administrator.
 
 **`/proc:`** Virtual file system providing information about processes and system resources.
 
@@ -170,13 +248,13 @@ This hierarchical structure ensures consistency and provides a standardized way 
 
 **`/srv:`** Data files for services provided by the system.
 
-**`/tmp:`** Temporary files accessible to all users, typically cleared on system reboot.
+**`/tmp:`** Stores temporary data.
 
 **`/usr:`** Secondary hierarchy containing read-only user data and programs (user utilities).
 
 **`/var:`** Variable data files, including logs, spool files, and temporary files that may change during system operation.
 
-## Linux Distributions
+### Linux Distributions
 
 A Linux distribution (distro) is a packaged version of Linux that includes the kernel, system utilities, applications, and a package manager.
 
