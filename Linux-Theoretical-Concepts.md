@@ -77,12 +77,6 @@ In Linux, commands can be categorized into 2 types based on their location on th
 
 - **Internal Commands :** These are built into the shell itself and do not require external programs to run.  **Example :** **`cd`**, **`echo`**, **`pwd`**
 
-Use the **`type`** command to determine the type of command in Linux.
-```bash
-    type command_name
-```
-
-
 The architecture of Linux is the underlying structured layer like other operating systems. Generally, it has four fundamental layers. Those are: **application**, **shell**, **kernel**, and **hardware**.
 
 **Linux Architecture : Bird View**
