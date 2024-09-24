@@ -164,7 +164,7 @@ Linux includes a **monolithic kernel** which makes this OS the most stable and f
 
 **Kernel Space** and **User Space** are two distinct areas of memory in a Linux operating system that separate kernel-level operations from user-level processes.
 
-<img src="Images/Kenel and User space.png" alt="Project Logo" width=75% height=50%>
+<img src="Images/Kenel and User space.png" alt="Project Logo" width=100% height=75%>
 
 **Key Differences :**
 
@@ -198,7 +198,7 @@ The **Linux boot sequence** is the series of steps that the system goes through 
     - **Purpose :** The **INIT** process is responsible for starting all other processes and services needed for the system to function, including user interfaces, network services, and system daemons.
 
 
-<img src="Images/Boot Sequence.png" alt="Project Logo" width=75% height=50%>
+<img src="Images/Boot Sequence.png" alt="Project Logo" width=100% height=75%>
 
 ### Systemd Targets
 **Systemd** is a system and service manager for Linux that starts up the system, manages services, and improves boot speed by running processes in parallel.
