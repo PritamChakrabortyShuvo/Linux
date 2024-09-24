@@ -11,6 +11,7 @@ Welcome! to **Linux Theoretical Concepts** guide. This is your go-to guide for m
 2. [Who is Linux?](#who-is-linux)
 3. [Where is Linux?](#where-is-linux)
 4. [Why is Linux?](#why-is-linux)
+5. [Common Challenges](#common-challenges)
 5. [Linux Architecture](#linux-architecture)
 6. [File System Hierarchy in Linux](#file-system-hierarchy-in-linux)
 7. [Linux Distributions](#linux-distributions)
@@ -26,11 +27,12 @@ Linux was created by **Linus Torvalds** in **1991**. It started as a personal pr
 
 ## Where is Linux?
 **World Wide Web :**
-- 67% of the world’s web-servers run Linux (2016)
+- 96
+3% of the top 1 milions world’s web-servers running on Linux.
 **Research/High-Performance Compute :**
 - Google, Amazon, NSA, 100% of TOP500  Super-computers.
 **Modern Smartphones and devices :**
-- The Android phone
+- The Android phone (86% of all smartphones are powered by Linux)
 - Amazon Kindle
 - Smart TVs/Devices
 
@@ -41,7 +43,45 @@ Linux was created by **Linus Torvalds** in **1991**. It started as a personal pr
 - Universal
 - Community (and business) driven.
 
-## Linux Architecture
+## Common Challenges
+- **Directory Navigation :** Difficulty navigating directory structures and files.
+- **Text Editors :** Lack of experience with text editors, especially Vi or Vim.
+- **Linux Variants :** Confusion over different flavors of Linux.
+- **Installation Errors :** Issues during application and dependency installation.
+- **Package Managers :** Unfamiliarity with rpm, dpkg, apt, and yum.
+- **Networking Issues :** Problems with networking between VMs.
+- **Permissions :** Challenges with permissions and security settings.
+- **Hands-On Practice :** Insufficient practical experience.
+## Linux Architecture : Working with Shell
+A shell is a **command-line interface** that allows users to interact with the operating system by typing commands to perform tasks.
+Using a **shell** instead of a **Graphical User Interface** (GUI) allows for greater efficiency, automation through scripting, and more precise control over system tasks especially for advanced users and server management.
+### Home Directory
+The home directory is a unique, user-specific folder (e.g., `/home/username`) where personal files, settings, and configurations are stored in a Linux system.
+<img src="Images/Home Directory.png" alt="Project Logo" width=50% height=25%>
+
+### Commands & Arguments 
+In Linux, **`commands`** are instructions given to the shell to perform specific tasks and **`arguments`** are additional pieces of information passed to those commands to modify their behavior or specify what they operate on.
+- **Structure :**
+    - **Command :** The main instruction (e.g., **`ls, cp, mkdir`**).
+    - **Argumants :** Options or parameters that provide context or modify the command's behavior (e.g., **`-l`*for long format).
+- **Example :**
+
+    <img src="Images/Command & Argument.png" alt="Project Logo" width=50% height=25%>
+   
+   Here **`/home/user`** an argument that specifying the directory to list.
+- **Options :** Usually start with **`-`** or **`--`**(e.g., **`-a`**, **`--all`**).
+
+### Commands Type 
+In Linux, commands can be categorized into 2 types based on their location on the system.
+- **External Commands :** In Linux, **external commands** refer to commands that are not built into the shell itself but are separate executable programs stored in the file system. These commands are usually located in directories such as **`/bin`**, **`/usr/bin`**, **`/sbin`**, and **`/usr/sbin`**, and they are run by the shell when called from the terminal. **Example :** **`ls`**, **`cp`**, **`grep`**
+
+- **Internal Commands :** These are built into the shell itself and do not require external programs to run.  **Example :** **`cd`**, **`echo`**, **`pwd`**
+
+Use the **`type`** command to determine the type of command in Linux.
+```bash
+    type command_name
+```
+
 
 The architecture of Linux is the underlying structured layer like other operating systems. Generally, it has four fundamental layers. Those are: **application**, **shell**, **kernel**, and **hardware**.
 
