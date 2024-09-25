@@ -27,6 +27,7 @@ This guide provides an extensive overview of the most commonly used Linux comman
 - [Bash Prompt](#bash-prompt)
 - [Kernel Versoins](#kernel-versions)
 - [Working with Hardware](#working-with-hardware)
+- [Package Management](#package-management)
 - [Grep Command Filter](#grep-command-filter)
 - [Awk Command Filter](#awk-command-filter)
 - [File Editors](#file-editors)
