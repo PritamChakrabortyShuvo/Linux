@@ -132,6 +132,27 @@ The **bash prompt** is the text displayed in the terminal where we type commands
 
 <img src="Images/ps1.png" alt="Project Logo" width=50% height=25%>
 
+### Linux Prompt
+
+**The Linux prompt**, also known as the **command prompt**, is the interface in a terminal where users type commands. It typically looks like this :
+
+<div style="text-align: center;">
+    <img src="Images/Linux-Prompt.png" alt="Project Logo">
+</div>
+
+**Components of the Linux Prompt**
+
+- **`username:`** The current user's name.
+
+- **`hostname:`** The name of the computer.
+
+- **`current-directory:`** The directory the user is currently in.
+
+- **`$ or #:`** The symbol at the end of the prompt. **`$`** **indicates a regular user**, while **`#`** **indicates the root (superuser)**.
+
+The prompt waits for the user to enter commands, which are then executed by the shell.
+
+
 ## Core Concepts
 Linux core concepts include the system's main parts, like the kernel, file system, processes, and user management, which work together to run applications smoothly and securely.
 
@@ -180,22 +201,22 @@ The **Linux boot sequence** is the series of steps that the system goes through 
 1. **BIOS POST**
 
     - **Explanation :** When we power on our computer the **BIOS (Basic Input/Output System)** performs a **POST (Power-On Self-Test)** to check the hardware components like the CPU, RAM, and storage devices.
-    - **Purpose :** This step ensures that all essential hardware is functioning correctly before proceeding to load the operating system.
+    - **Purpose :** This step checks that all important hardware like RAM, hard drives, and keyboard is working properly before starting the computer. **Example :** When we turn on the computer, we might see a brief screen with a logo indicating that the system is checking if everything is okay. If any hardware issues are detected an error message may appear, preventing the system from booting.
 
 2. **Boot Loader (GRUB2)**
 
     - **Explanation :** After the **POST** is successful, the **BIOS** loads the boot loader, such as **GRUB2 (Grand Unified Bootloader)** from the bootable disk.
-    - **Purpose :** **GRUB2** presents a menu of available operating systems and allows the user to select which one to load. It then loads the selected kernel into memory.
+    - **Purpose :** **GRUB2** shows a list of installed operating systems and lets us choose which one to start. After we make a selection, it loads the operating system's kernel into memory to begin booting. **Example :**When the computer starts, GRUB2 might show options like "Ubuntu" and "Windows." We can select "Ubuntu" and it will load the necessary files to start the operating system.
 
 3. **Kernel Initialization**
 
     - **Explanation :** The boot loader loads the Linux kernel into memory and hands over control to it. The kernel initializes the system hardware, sets up memory management, and starts managing processes.
-    - **Purpose :** This step prepares the system to run by detecting hardware devices, setting up drivers, and creating a suitable environment for user processes.
+    - **Purpose :** This step sets up the operating system by detecting and configuring hardware, like loading drivers for devices such as keyboards and mouse.  **Example :**When we turn on the computer and the operating system starts the kernel initializes drivers for our keyboard and mouse so that they can be used within the OS.
 
 4. **INIT Process (Systemd)**
 
     - **Explanation :** After the kernel has initialized the system, it starts the **INIT** process, which is often managed by **Systemd** in modern Linux distributions. This process is the first user-space application that runs.
-    - **Purpose :** The **INIT** process is responsible for starting all other processes and services needed for the system to function, including user interfaces, network services, and system daemons.
+    - **Purpose :** The **INIT** process is the first program that runs after the kernel is ready; it starts other programs and services that the system needs to work, like logging in and connecting to the internet. **Example :**When our system boots up, INIT starts the login screen so we can enter our username and password.
 
 
 <img src="Images/Boot Sequence.png" alt="Project Logo" width=100% height=75%>
@@ -314,41 +335,3 @@ Unix generally refers to a family of proprietary operating systems, while Linux 
 
 ## Linux Interaction
 Linux interaction refers to the methods by which users communicate with and control the Linux operating system, primarily through **shells** & **prompt**.
-
-### Shell
-***The shell*** is a ***command-line interface (CLI)*** that allows users to interact with the Linux operating system. It is a interface between the **`user`** & the **`kernel`**
-
-It acts as an intermediary between the user and the system, interpreting and executing commands typed by the user.
-
-**Shell Types**
-In Linux, there are two major types of shells −
-
-1. **Bourne shell-** If you are using a Bourne-type shell, the `$`character is the default prompt. The Bourne Shell has the following subcategories
-    - Bourne shell (sh)
-    - Korn shell (ksh)
-    - Bourne Again shell (bash)
-    - POSIX shell (sh)
-
-2. **C shell −** If you are using a C-type shell, the `%` character is the default prompt. The different C-type shells follow :
-    - C shell (csh)
-    - TENEX/TOPS C shell (tcsh)
-
-### Linux Prompt
-
-**The Linux prompt**, also known as the **command prompt**, is the interface in a terminal where users type commands. It typically looks like this :
-
-<div style="text-align: center;">
-    <img src="Images/Linux-Prompt.png" alt="Project Logo">
-</div>
-
-**Components of the Linux Prompt**
-
-- **`username:`** The current user's name.
-
-- **`hostname:`** The name of the computer.
-
-- **`current-directory:`** The directory the user is currently in.
-
-- **`$ or #:`** The symbol at the end of the prompt. **`$`** **indicates a regular user**, while **`#`** **indicates the root (superuser)**.
-
-The prompt waits for the user to enter commands, which are then executed by the shell.
