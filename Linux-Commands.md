@@ -462,7 +462,82 @@ Lists detailed information about all hardware in the system requiring admin acce
     ```bash
        apt list | grep telnet 
     ```
+### Vieweing File Sizes
 
+Shows the size of test.img in kilobytes (KB), in a simple total format.
+```bash
+    du -sk test.img 
+```
+Displays the size of test.img in a human-readable format (like KB, MB, GB).
+```bash
+    du -sh test.img 
+```
+Lists test.img file details, including size, in a human-readable format with file permissions and date modified.
+```bash
+    ls -lh test.img 
+```
+### Archiving Files
+Creates an archive named **`test.tar`** that includes file1 & file2
+```bash
+    tar -cf test.tar file1 file2 
+```
+Lists detailed information about the **`test.tar`** file showing its size, permissions &modification date in long format.
+```bash
+    ls -ltr test.tar 
+```
+Lists the contents of the **`test.tar`** archive without extracting them
+```bash
+    tar -tf test.tar 
+```
+Extracts the files from the **`test.tar`** archive.
+```bash
+    tar -xf test.tar 
+```
+Creates a compressed archive (using gzip) named **`test.tar.gz`** containing file1 & file2.
+```bash
+    tar -zcf test.tar file1 file2 
+```
+### Compressing 
+Compresses **`test.img`** using **`bzip2`** creating a **`test.img.bz2`** file.
+```bash
+    bzip2 test.img 
+```
+Compresses **`test.img`** using **`gzip`** creating a **`test.img.gz`** file.
+```bash
+    gzip test.img 
+```
+Compresses **`test.img`** using **`xz`** creating a **`test.img.xz`** file.
+```bash
+    xz test2.img 
+```
+### Uncompressing
+Decompresses **`test.img.bz2`** restoring it to the original **`test.img`** file.
+```bash
+    bunzip2 test.img.bz2 
+```
+Decompresses **`test1.img.gz`** restoring it to the original **`test.img`** file.
+```bash
+    gunzip test1.img.gz 
+```
+Decompresses **`test.img.xz`** restoring it to the original **`test.img`** file.
+```bash
+    unxz test1.img.xz 
+```
+### Compressing Files
+Displays the contents of hostfile.txt.bz2 without extracting it.
+```bash
+    bzcat hostfile.txt.bz2 
+```
+### Searching for Files and Directories
+Quickly searches and displays the paths of files named **`Test.txt`** using a prebuilt file index.
+```bash
+    locate Test.txt 
+```
+Searches for a file named Test.txt starting from the /home/user01 directory and displays its path if found.
+```bash
+    find /home/user01 -name Test.txt 
+```
+**Note :** If the database is not up-to-date, running **`sudo updatedb`** can refresh it.
 ### Grep Command Filter
 The **`grep`** command searches for a specific word or string in files and prints only the lines containing that word or string.
 ```bash
@@ -470,9 +545,15 @@ The **`grep`** command searches for a specific word or string in files and print
 ```
 **Example :**
 ```bash
-    grep root passwd
+    grep Hello Test.txt
 ```
-It fethes all the lines having a word root in passwd file.
+It fethes all the lines having a word Hello in **`Test.txt`** file.
+**Note :** **`grep`** is case sensitive use **`-i`**
+**Example :**
+```bash
+    grep hello -i Test.txt
+```
+It fethes all the lines having a word Hello in **`Test.txt`** file.
 
 ### Awk Command Filter
 The **`awk`** command scans and processes text files. It can extract and print specific columns of data. 
@@ -481,60 +562,6 @@ Prints the first column from each line.
 ```bash
     awk '{print $1}' file_name
 ```
-### File Editors
-File editors are tools used to create, modify, and manage text files in Linux. Common file editors include:
-
-- **`nano`**: A simple, easy-to-use text editor with basic features. Ideal for beginners.
-
-- **`vi / vim`**: A powerful, advanced text editor with extensive features for efficient text editing. Suitable for experienced users.But **`vi`** is widely used and **`vim`** is a enhanced version of **`vi`**. 
-
-- **`gedit`**: A graphical text editor with a user-friendly interface, part of the GNOME desktop environment.
-
-These editors help users edit configuration files, write scripts, and manage documents directly from the command line or a graphical interface.
-### Vim Editor 
-**`vim`** (Vi IMproved) is a highly configurable and powerful text editor used in Linux. It extends the capabilities of the older **`vi`** editor and is suitable for both beginners and advanced users.
-```bash
-    vim file_name
-```
-![Project Logo](Images/VIM%20Editor.png)
-
-#### ESC Mode
-In vim (Vi IMproved) editor, the **`ESC`** (Escape) key is pivotal for navigating and executing commands in Normal mode. Here are key functionalities in ESC mode:
-
-- **Navigation:**
-
-    - **`h`**: Move left
-    - **`j`**: Move down
-    - **`k`**: Move up
-    - **`l`**: Move right
-
-- **Editing:**
-
-    - **`x`**: Delete the character under the cursor
-    - **`dd`**: Delete the current line
-    - **`yy`**: Yank (copy) the current line
-    - **`p`**: Paste the yanked text after the cursor position
-
-- **Search and Replace:**
-
-    - **`/pattern`**: Search forward for "pattern"
-    - **`n`**: Move to the next occurrence of the search pattern
-    - **`N`**: Move to the previous occurrence of the search pattern
-    - **`:s/pattern/replacement`**: Replace "pattern" with "replacement" in the current line
-
-- **Saving and Quitting:**
-
-    - **`:w`**: Save changes (write)
-    - **`:q`**: Quit (close the file)
-    - **`:q!`**: Quit without saving changes (force quit)
-    - **`:wq`** or **`:x`**: Save changes and quit
-
-- Modes:
-
-    - Normal Mode: Press **`Esc`** to enter Normal mode, where you can navigate and execute commands.
-    - Insert Mode: Press **`i`** to enter Insert mode, where you can insert and edit text.
-    - Visual Mode: Press **`v`** to enter Visual mode, where you can select blocks of text for editing or copying.
-
 ### Command Line Browser
 Most of the time you need to browse URLs and fetch that content over the command line. Some times we need some partial information of that URL else we need complete information of that URL.
 
