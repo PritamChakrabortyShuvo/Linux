@@ -4,38 +4,40 @@ This guide provides an extensive overview of the most commonly used Linux comman
 
 ### Table of Contents
 
-1. [Listing Files & Directories](#listing-files--directories)
-2. [Creating Files](#creating-files)
-3. [Remove Files](#remove-files)
-4. [Copy Files](#copy-files)
-5. [Present Working Directory](#present-working-directory)
-6. [Change Directory](#change-directory)
-7. [Single Dot & Double Dot](#single-dot--double-dot)
-8. [Create Directory](#create-directory)
-9. [Remove Directory](#remove-directory)
-10. [Copy Directory](#copy-directory)
-11. [Moving Directory](#moving-directory)
-12. [Concatenate a File](#concatenate-a-file)
-13. [Head Command Filter](#head-command-filter)
-14. [Tail Command Filter](#tail-command-filter)
-15. [Grep Command Filter](#grep-command-filter)
-16. [Awk Command Filter](#awk-command-filter)
-17. [File Editors](#file-editors)
-18. [Vim Editor](#vim-editor)
-19. [Command Line Browser](#command-line-browser)
-20. [Downloading Files](#downloading-files)
-21. [Extract tar archives](#extract-tar-archives)
-22. [User Specific Commands](#user-specific-commands)
-23. [Update and Install](#update-and-install)
-24. [Linux Networking](#linux-networking)
-25. [Process Management](#process-management)
-26. [Administration](#administration)
-27. [Administration - User Management](#administration---user-management)
-28. [Administration – Package Management](#administration--package-management)
-29. [Administration – Service Management](#administration--service-management)
-30. [Administration – Commands Reboot](#administration--commands-reboot)
-31. [Administration – File Ownerships](#administration--file-ownerships)
-32. [Administration – File Permissions](#administration--file-permissions)
+- [Listing Files & Directories](#listing-files--directories)
+- [Command Types](#command-types)
+- [Creating Files](#creating-files)
+- [Remove Files](#remove-files)
+- [Copy Files](#copy-files)
+- [Present Working Directory](#present-working-directory)
+- [Create a Directory](#create-a-directory)
+- [Change Directory](#change-directory)
+- [Single Dot & Double Dot](#single-dot--double-dot)
+- [Create Directory](#create-directory)
+- [Remove Directory](#remove-directory)
+- [Copy Directory](#copy-directory)
+- [Moving Directory](#moving-directory)
+- [Concatenate a File](#concatenate-a-file)
+- [Head Command Filter](#head-command-filter)
+- [Tail Command Filter](#tail-command-filter)
+- [Grep Command Filter](#grep-command-filter)
+- [Awk Command Filter](#awk-command-filter)
+- [File Editors](#file-editors)
+- [Vim Editor](#vim-editor)
+- [Command Line Browser](#command-line-browser)
+- [Downloading Files](#downloading-files)
+- [Extract tar archives](#extract-tar-archives)
+- [User Specific Commands](#user-specific-commands)
+- [Update and Install](#update-and-install)
+- [Linux Networking](#linux-networking)
+- [Process Management](#process-management)
+- [Administration](#administration)
+- [Administration - User Management](#administration---user-management)
+- [Administration – Package Management](#administration--package-management)
+- [Administration – Service Management](#administration--service-management)
+- [Administration – Commands Reboot](#administration--commands-reboot)
+- [Administration – File Ownerships](#administration--file-ownerships)
+- [Administration – File Permissions](#administration--file-permissions)
 
 ### Listing Files & Directories
 This command lists files and directories. Essential for file navigation in Linux.
@@ -62,13 +64,18 @@ Get list of files and directories sorted by modification time, with the most rec
 ```bash
     ls -t
 ```
+### Command Types
+It shows how a command is recognized by the shell, indicating if it's built-in, an alias, or an external program.
+```bash
+    type <command>
+```
 ### Creating Files
 We can create files in Linux in multiple ways/commands. As a basic  we always use **`touch`** command to create a file.
 Creates an empty text file.
 ```bash
      touch file_name.txt
 ```
-*`touch`* command can create multiple files as shown.
+**`touch`** command can create multiple files as shown.
 ```bash
     touch text.txt lambda.py      
 ```
@@ -104,12 +111,30 @@ For moving the file.
     mv file_name /path/to/directory/
 ```
 ### Present Working Directory
+The **`pwd`** command prints the current working directory's absolute path. It's useful for determining your current location.
 ```bash
     pwd
 ```
-The **`pwd`** command prints the current working directory's absolute path. It's useful for determining your current location.
-
 **Note :** It is always important to observe the directory you are in before executing the command, because in some cases if you try to execute some command and which you lead to loss of data if you executecommands in wrong location.
+
+### Create Directory
+To make a single directory
+```bash
+    mkdir directory_name
+```
+To make multiples directory
+```bash
+    mkdir directory1 directory2 directory3
+```
+This command creates a directory named **`directory2`** inside **`directory1`**. 
+```bash
+    mkdir directory1/directory2
+```
+This command creates both **`directory1`** and **`directory2`** if they don't already exist.
+```bash
+    mkdir -p directory1/directory2
+```
+**Note :** The **`-p`** option ensures that all necessary parent directories are created without errors.
 
 ### Change Directory
 ```bash
@@ -142,21 +167,6 @@ Double dot **`(..)`** denotes the parent directory.
 ```
 Here dot denotes to copy the file in this location without specifying any filename or path
 
-### Create Directory
-To create a directory you can use **`mkdir`** command.
-
-```bash
-    mkdir directory_name
-```
-```bash
-    mkdir -p demo/new/item1
-```
-Creates a directory and any necessary parent directories that do not exist. It ensures that the entire path specified is created, even if multiple directories need to be nested. 
-
-Can create multiple directories also at the same time.
-```bash
-    mkdir dir1 dir2 
-```
 ### Remove Directory
 Removing directory commands needed to be picked based on requirement.
 
@@ -175,12 +185,11 @@ This command recursively and forcefully removes multiple directories and all its
 ### Copy Directory
 Copying directories can be done with cp command.
 
-**Note :** While copying the directories we need to mention **`–r`** option to enable that we are copying directories.
-
 It copies dir1 to dir2 and all the contents of dir1 will be copied to dir2 as well.
 ```bash
     cp -r dir1 dir2
 ```
+**Note :** While copying the directories we need to mention **`–r`** option to enable that we are copying directories.
 
 ### Moving Directory
 Moving directories or renaming directories can be done with **`mv`** command.
@@ -205,9 +214,25 @@ Shows the content with line numbers added on output.
 ```bash
     cat -n file_name
 ```
+This command allows creating or overwriting a file and entering text directly into it.
+```bash
+    cat >file_name
+```
+**Note :** After running the command input is taken from the keyboard and pressing **`Ctrl`** **+** **`D`** saves the input and exits.
+
 It will print the lines in reverse order mean last line in first and first line at last.
 ```bash
     tac file_name
+```
+### Using Command Line to Get Help
+
+This command provides a one-line description of a specified command or program, summarizing its function.
+```bash
+    whatis <command>
+```
+This command displays the manual page for a specified command or program, providing detailed documentation about its usage, options, and examples
+```bash
+    man <command>
 ```
 ### Head Command Filter 
 **`head`** command can give the **top 10 lines** by default.
@@ -233,6 +258,122 @@ Print last 5 lines.
 **-f** option continuously monitors and displays the last part of a file, updating the output as new lines are added.
 
 **Note :** To come out of **`tail –f`** you can press **`CTRL + C`** on terminal.
+
+### Alias Command
+This command creates a shortcut or nickname for a longer command in the shell allowing users to execute complex or frequently used commands more easily.
+```bash
+    alias ll='ls -l'
+```
+This creates a shortcut **`ll`** that lists files in long format.
+### Environment Variables 
+This command shows the current environment variables or lets a command run with specific variable settings.
+```bash
+    env
+```
+Shows the current username stored in the **`LOGNAME`** variable.
+```bash
+    echo $LOGNAME
+```
+Sets **`LOGNAME`** to **`user1`** and makes it available for other programs.
+```bash
+    export LOGNAME=user1
+```
+This sets the **`LOGNAME`** variable to **`user2`** in the current shell session but it does not **export** it so it's not available to child processes.
+```bash
+    LOGNAME=user2
+```
+### Path Variables
+Displays the current list of directories where the shell looks for executable programs.
+```bash
+    echo $PATH
+```
+Shows the full path of the specified executable program, if it exists in the directories listed in the **`PATH`**.
+```bash
+    which program
+```
+ Adds **`/opt/apps/bin`** to the end of the existing **`PATH`** allowing the system to find executables in that directory.
+```bash
+    export PATH=$PATH:/opt/apps/bin
+```
+### Bash Prompt
+The command changes the terminal prompt to simply show **Server01 :**.
+```bash
+    PS1="Server01 :"
+```
+This command customizes the terminal prompt to display the date (**`\d`**), time (**`\t`**), username (**`\u`**), hostname (**`\h`**), and current working directory (**`\w`**), followed by a dollar sign (**`$`**).
+```bash
+    PS1="[\d \t \u@\h:\w ] $ "
+```
+Here’s a simplified explanation of each of the prompt escape sequences :
+- **`\d`**: Displays the date in "Weekday Month Date" format (e.g., "Tue May 26").
+- **`\e`**: Represents an ASCII escape character (033).
+- **`\h`**: Shows the hostname up to the first dot (e.g., "HQDN").
+- **`\H`**: Displays the full hostname.
+- **`\n`**: Inserts a newline character.
+- **`\r`**: Inserts a carriage return.
+- **`\s`**: Displays the name of the shell.
+- **`\t`**: Shows the current time in 24-hour HH:MM format.
+- **`\T`**: Shows the current time in 12-hour HH:MM format.
+- **`\@`**: Displays the current time in 12-hour am/pm format.
+- **`\A`**: Shows the current time in 24-hour HH format.
+- **`\u`**: Displays the username of the current user.
+- **`\w`**: Shows the current working directory, with $HOME abbreviated as a tilde (~).
+- **`\W`**: Displays the basename of the current working directory, with $HOME abbreviated as a tilde (~).
+- **`\$`**: Displays a # if the user is root (UID 0) and a $ otherwise.
+
+### Kernel Versions
+Displays the kernel version of the operating system currently running on the system.
+```bash
+    uname -r
+```
+Suppose the Kerner Version is **`4.15.0-72-generic`**. Here
+- **`4`** : Kernel Version
+- **`15`** : Major Version
+- **`0`** : Minor Version
+- **`72`** : Patch Release
+- **`Generic`** : Distro Specific Information
+
+### Working with Hardware
+Shows system messages related to the kernel and hardware events, useful for troubleshooting.
+```bash
+    dmesg
+```
+Filters the system messages to show only those about **USB devices** making it easier to find related info.
+```bash
+    dmesg | grep -i usb
+```
+Displays the path and details for the device named **`/dev/sda5`** helping identify its hardware location.
+```bash
+    udevadm info --query=path --name=/dev/sda5
+```
+Watches and shows real-time changes to devices, like when devices are plugged in or removed.
+```bash
+    udevadm monitor
+```
+Lists all devices connected to the PCI bus, like graphics cards and network cards, giving an overview of hardware.
+```bash
+    lspci
+```
+ Displays all block devices (like hard drives and partitions) in a simple format showing how they are connected.
+```bash
+    lsblk
+```
+Provides details about the CPU, such as the number of cores and speed, helping understand processing power.
+```bash
+    lscpu
+```
+Summarizes the system's memory showing total memory and available memory blocks.
+```bash
+    lsmem --summary
+```
+Displays used and free memory in megabytes, giving a quick overview of the system's memory status.
+```bash
+    free -m
+```
+Lists detailed information about all hardware in the system requiring admin access for full details.
+```bash
+   sudo lshw 
+```
 
 ### Grep Command Filter
 The **`grep`** command searches for a specific word or string in files and prints only the lines containing that word or string.
