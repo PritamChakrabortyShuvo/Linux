@@ -382,7 +382,7 @@ Lists detailed information about all hardware in the system requiring admin acce
    sudo lshw 
 ```
 ### Package Management 
-1. Working with **`RPM`** : Suppose we have a package called **`telnet.rpm`** in rpm format. 
+1. **Working with **`RPM`** :** Suppose we have a package called **`telnet.rpm`** in rpm format. 
 
     Installs the telnet package with a progress bar and detailed output.
      ```bash
@@ -407,7 +407,7 @@ Lists detailed information about all hardware in the system requiring admin acce
     ```bash
         rpm -Vf <path to file>
      ```
-2. Working with **`DPKG`** : Suppose we have a package called **`telnet.deb`** in deb format. 
+2. **Working with **`DPKG`** :** Suppose we have a package called **`telnet.deb`** in deb format. 
 
     Installs the telnet package with a progress bar and detailed output.
      ```bash
@@ -431,7 +431,7 @@ Lists detailed information about all hardware in the system requiring admin acce
     ```bash
         dpkg –p <path to file>
      ```
-3. Working with **`APT`** : Here are the descriptions for each **`apt`** command :
+3. **Working with **`APT`** :** Here are the descriptions for each **`apt`** command :
 
     Refreshes the list of available packages and their versions from the repositories.
     ```bash
