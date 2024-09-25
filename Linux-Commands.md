@@ -431,6 +431,37 @@ Lists detailed information about all hardware in the system requiring admin acce
     ```bash
         dpkg –p <path to file>
      ```
+3. Working with **`APT`** : Here are the descriptions for each **`apt`** command :
+
+    Refreshes the list of available packages and their versions from the repositories.
+    ```bash
+        apt update
+    ```
+    Installs the latest versions of all installed packages on the system.
+    ```bash
+        apt upgrade
+    ```
+    Opens the sources list file for editing, allowing changes to the repositories used for package management.
+    ```bash
+        apt edit-sources
+    ```
+    Installs the telnet package and its dependencies.
+    ```bash
+        apt install telnet
+    ```
+    Uninstalls the telnet package from the system.
+    ```bash
+        apt remove telnet
+    ```
+    Searches for available packages related to telnet in the repositories.
+    ```bash
+       apt search telnet 
+    ```
+    Lists all installed and available packages and filters the output to show only those related to telnet.
+    ```bash
+       apt list | grep telnet 
+    ```
+
 ### Grep Command Filter
 The **`grep`** command searches for a specific word or string in files and prints only the lines containing that word or string.
 ```bash
