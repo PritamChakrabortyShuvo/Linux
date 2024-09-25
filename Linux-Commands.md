@@ -383,6 +383,7 @@ Lists detailed information about all hardware in the system requiring admin acce
 ```
 ### Package Management 
 1. Working with **`RPM`** : Suppose we have a package called **`telnet.rpm`** in rpm format. 
+
     Installs the telnet package with a progress bar and detailed output.
      ```bash
         rpm -ivh telnet.rpm
@@ -406,8 +407,30 @@ Lists detailed information about all hardware in the system requiring admin acce
     ```bash
         rpm -Vf <path to file>
      ```
+2. Working with **`DPKG`** : Suppose we have a package called **`telnet.deb`** in deb format. 
 
-
+    Installs the telnet package with a progress bar and detailed output.
+     ```bash
+        dpkg -i telnet.deb
+     ```
+    **Note :** **`i`** stands for install.
+    Here
+    Uninstalls (erases) the telnet package from the system.
+    ```bash
+        dpkg -r telnet.deb
+     ```
+    Lists information about the installed telnet package, including its version and description.
+    ```bash
+        dpkg –l telnet
+     ```
+    Shows detailed status information about the telnet package, such as whether it is installed and its configuration.
+    ```bash
+        dpkg –s telnet
+     ```
+    Displays information about the package from the specified file path, including its contents and metadata.
+    ```bash
+        dpkg –p <path to file>
+     ```
 ### Grep Command Filter
 The **`grep`** command searches for a specific word or string in files and prints only the lines containing that word or string.
 ```bash
