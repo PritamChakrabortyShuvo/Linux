@@ -381,6 +381,32 @@ Lists detailed information about all hardware in the system requiring admin acce
 ```bash
    sudo lshw 
 ```
+### Package Management 
+1. Working with **`RPM`** : Suppose we have a package called **`telnet.rpm`** in rpm format. 
+    Installs the telnet package with a progress bar and detailed output.
+     ```bash
+        rpm -ivh telnet.rpm
+     ```
+    **Note :** **`i`** stands for install; **`-v`** stands for verbose & provide detailed output during installation; **`-h`** stands for hash and shows a progress bar with hash marks.
+    Here
+    Uninstalls (erases) the telnet package from the system.
+    ```bash
+        rpm -e telnet.rpm
+     ```
+    Upgrades or installs the telnet package with verbose output and progress bar.
+    ```bash
+        rpm -Uvh telnet.rpm
+     ```
+    **Note :** **`U`** stands for upgrade.
+    Queries whether the telnet package is installed on the system.
+    ```bash
+        rpm -q telnet.rpm
+     ```
+    Verifies which package owns the specified file and checks its integrity.
+    ```bash
+        rpm -Vf <path to file>
+     ```
+
 
 ### Grep Command Filter
 The **`grep`** command searches for a specific word or string in files and prints only the lines containing that word or string.
