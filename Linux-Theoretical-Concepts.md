@@ -185,7 +185,7 @@ Linux includes a **monolithic kernel** which makes this OS the most stable and f
 
 **Kernel Space** and **User Space** are two distinct areas of memory in a Linux operating system that separate kernel-level operations from user-level processes.
 
-<img src="Images/Kenel and User space.png" alt="Project Logo" width=100% height=75%>
+<img src="Images/Kenel and User space.png" alt="Project Logo" width=70% height=75%>
 
 **Key Differences :**
 
@@ -219,7 +219,7 @@ The **Linux boot sequence** is the series of steps that the system goes through 
     - **Purpose :** The **INIT** process is the first program that runs after the kernel is ready; it starts other programs and services that the system needs to work, like logging in and connecting to the internet. **Example :**When our system boots up, INIT starts the login screen so we can enter our username and password.
 
 
-<img src="Images/Boot Sequence.png" alt="Project Logo" width=100% height=75%>
+<img src="Images/Boot Sequence.png" alt="Project Logo" width=70% height=75%>
 
 ### Systemd Targets
 **Systemd** is a system and service manager for Linux that starts up the system, manages services, and improves boot speed by running processes in parallel.
@@ -287,13 +287,77 @@ A Linux distribution (distro) is a packaged version of Linux that includes the k
 
 - **CentOS :** A free, community-supported alternative to Red Hat Enterprise Linux, commonly used for servers.
 
-- **Arch Linux :** A rolling release system aimed at advanced users who prefer custom installations.
-
-- **openSUSE :** Offers robust tools for developers and system administrators, available in Leap and Tumbleweed versions.
+- **Red Hat Enterprise Linux (RHEL):** A commercial distribution designed for enterprise use known for its support, security and stability.
 
 - **Mint :** Based on Ubuntu, designed to be user-friendly with a focus on multimedia support.
 
 Each distribution caters to different user needs, from general desktop use to specialized server environments.
+
+## Package Management 
+
+**Package management** refers to the process of installing, upgrading, configuring and removing software packages in an operating system. It involves using package managers which are tools that automate these tasks by managing dependencies, ensuring that the correct versions of software are installed and handling software repositories.
+
+### Software Package 
+**A software package** is a bundled collection of files including executables, libraries and metadata that are grouped together for easy installation and management on an operating system.
+
+<img src="Images/Packages.png" alt="Project Logo" width=70% height=75%>
+
+The image illustrates the components involved in installing GIMP on an Ubuntu 24.04 system. A .deb package containing the GIMP software binaries, metadata and configuration files is downloaded and installed on the system making GIMP accessible for use.
+
+### Package Manager 
+**A package manager** is a tool that automates the installation, updating and removal of software packages on an operating system such as **`DPKG`**, **`APT`**, **`APT-GET`**, **`RPM`**, **`YUM`** & **`DNF`**. 
+
+<img src="Images/Packages01.png" alt="Project Logo" width=70% height=75%>
+
+Here’s a simple explanation of each package managers 
+1. **`DPKG`**
+    - **Type:** Package Manager
+    - **Description:** A low-level tool for managing **`.deb`** packages on Debian-based systems. It installs, removes and queries packages directly but does not handle dependencies automatically.
+2. **`APT`**
+    - **Type:** Package Manager
+    - **Description:** A higher-level package manager for Debian-based systems that simplifies software management by **automatically resolving dependencies** and allowing easy installation and updating of packages from repositories.
+3. **`APT-GET`**
+    - **Type:** Command-Line Tool (part of APT)
+    - **Description:** A command-line tool used with APT for installing, upgrading, or removing packages. It provides a more granular control over package management compared to the simpler apt command.
+4. **`RPM`**
+    - **Type:** Package Manager
+    - **Description:** A package manager for Red Hat-based systems that manages .rpm packages directly. It requires **manual handling of dependencies** or the use of additional tools for dependency resolution.
+5. **`YUM`**
+    - **Type:** Package Manager
+    - **Description:** A higher-level package manager for Red Hat-based systems that simplifies the management of RPM packages automatically handling dependencies and allowing users to easily install and update software.
+6. **`DNF`**
+    - **Type:** Package Manager
+    - **Description:** The next-generation package manager that replaces YUM in Red Hat-based systems. It offers better performance and improved dependency resolution while maintaining similar functionality.
+
+    <img src="Images/Package Managers.png" alt="Project Logo" width=70% height=75%>
+
+All of these are package managers or tools used to manage software packages but **`DPKG`**, **`APT`** and **`APT-GET`** are primarily for **Debian-based systems** while **`RPM`**, **`YUM`** and **`DNF`** are for **Red Hat-based systems**.
+
+Package managers perform several key functions to simplify software management on a system:
+
+- **Installation of Software:** Automatically downloads and installs software packages, ensuring all required dependencies are met.
+- **Updating Software:** Helps keep installed software up to date by fetching and applying the latest updates from repositories.
+- **Uninstallation:** Safely removes software and any unused dependencies without affecting other installed packages.
+- **Dependency Resolution:** Automatically identifies and installs any required software that a package depends on to function properly.
+- **Repository Management:** Provides access to software repositories where packages are stored, making it easy to find, install, and update software.
+- **Package Querying:** Allows checking of installed software, version details, and other metadata.
+
+These functions make managing software on Linux systems efficient and straightforward.
+
+### Upgrade vs Update 
+In the context of package management, update and upgrade have different meanings:
+
+- **Update:** This refreshes the package list on the system by retrieving the latest information about available software versions from the repositories. It doesn't install or modify any packages, just ensures the system is aware of the newest versions. **Example:** **`sudo apt update`**
+
+- **Upgrade:** This installs the latest available versions of the installed software packages based on the updated package list. It updates the actual software on the system. **Example:** **`sudo apt upgrade`**
+
+### APT vs APT-GET
+**`APT`** and **`APT-GET`** are both command-line tools used for managing packages on Debian-based systems like Ubuntu but they have some differences:
+- **`APT`:** A more user-friendly command introduced in newer versions of Ubuntu, combining features of various older **`APT`** tools (like **`apt-get`**, **`apt-cache`**). It provides a simpler syntax and improved output for most common package management tasks. **Example:** **`sudo apt update`**; **`sudo apt install package_name`**
+
+- **`APT-GET`:** An older, more feature-rich command-line tool that has been around for a long time. It provides more granular control over package management but is less streamlined for everyday use. **Example:** **`sudo apt-get update`**; **`sudo apt-get install package_name`**
+
+In summary, **`APT`** is a modern,more convenient version for most users while **`APT-GET`** is still used for more advanced or specific tasks.
 
 ## Linux VS Unix
 Unix generally refers to a family of proprietary operating systems, while Linux is an open-source variant developed by Linus Torvalds. It is often considered a Unix-like system due to its compatibility with Unix standards and APIs
