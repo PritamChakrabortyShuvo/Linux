@@ -53,7 +53,7 @@ Linux was created by **Linus Torvalds** in **1991**. It started as a personal pr
 - **Permissions :** Challenges with permissions and security settings.
 - **Hands-On Practice :** Insufficient practical experience.
 
-## Working with Shell
+## Working with Shell - I
 A shell is a **command-line interface** that allows users to interact with the operating system by typing commands to perform tasks.
 Using a **shell** instead of a **Graphical User Interface** (GUI) allows for greater efficiency, automation through scripting, and more precise control over system tasks especially for advanced users and server management.
 ### Home Directory
@@ -358,6 +358,62 @@ In the context of package management, update and upgrade have different meanings
 - **`APT-GET`:** An older, more feature-rich command-line tool that has been around for a long time. It provides more granular control over package management but is less streamlined for everyday use. **Example:** **`sudo apt-get update`**; **`sudo apt-get install package_name`**
 
 In summary, **`APT`** is a modern,more convenient version for most users while **`APT-GET`** is still used for more advanced or specific tasks.
+
+## Working with Shell - II
+
+File editors are tools used to create, modify, and manage text files in Linux. Common file editors include:
+
+- **`nano`**: A simple, easy-to-use text editor with basic features. Ideal for beginners.
+
+- **`vi / vim`**: A powerful, advanced text editor with extensive features for efficient text editing. Suitable for experienced users.But **`vi`** is widely used and **`vim`** is a enhanced version of **`vi`**. 
+
+- **`gedit`**: A graphical text editor with a user-friendly interface, part of the GNOME desktop environment.
+
+These editors help users edit configuration files, write scripts, and manage documents directly from the command line or a graphical interface.
+
+### Vim Editor 
+**`vim`** (Vi IMproved) is a highly configurable and powerful text editor used in Linux. It extends the capabilities of the older **`vi`** editor and is suitable for both beginners and advanced users.
+```bash
+    vim file_name
+```
+<img src="Images/VIM Editor.png" alt="Project Logo" width=70% height=75%>
+
+#### ESC Mode
+In vim (Vi IMproved) editor, the **`ESC`** (Escape) key is pivotal for navigating and executing commands in Normal mode. Here are key functionalities in ESC mode:
+
+- **Navigation:**
+
+    - **`h`**: Move left
+    - **`j`**: Move down
+    - **`k`**: Move up
+    - **`l`**: Move right
+
+- **Editing:**
+
+    - **`x`**: Delete the character under the cursor
+    - **`dd`**: Delete the current line
+    - **`yy`**: Yank (copy) the current line
+    - **`p`**: Paste the yanked text after the cursor position
+
+- **Search and Replace:**
+
+    - **`/pattern`**: Search forward for "pattern"
+    - **`n`**: Move to the next occurrence of the search pattern
+    - **`N`**: Move to the previous occurrence of the search pattern
+    - **`:s/pattern/replacement`**: Replace "pattern" with "replacement" in the current line
+
+- **Saving and Quitting:**
+
+    - **`:w`**: Save changes (write)
+    - **`:q`**: Quit (close the file)
+    - **`:q!`**: Quit without saving changes (force quit)
+    - **`:wq`** or **`:x`**: Save changes and quit
+
+- Modes:
+
+    - Normal Mode: Press **`Esc`** to enter Normal mode, where you can navigate and execute commands.
+    - Insert Mode: Press **`i`** to enter Insert mode, where you can insert and edit text.
+    - Visual Mode: Press **`v`** to enter Visual mode, where you can select blocks of text for editing or copying.
 
 ## Linux VS Unix
 Unix generally refers to a family of proprietary operating systems, while Linux is an open-source variant developed by Linus Torvalds. It is often considered a Unix-like system due to its compatibility with Unix standards and APIs
