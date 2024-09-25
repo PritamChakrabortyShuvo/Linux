@@ -185,7 +185,7 @@ Linux includes a **monolithic kernel** which makes this OS the most stable and f
 
 **Kernel Space** and **User Space** are two distinct areas of memory in a Linux operating system that separate kernel-level operations from user-level processes.
 
-<img src="Images/Kenel and User space.png" alt="Project Logo" width=70% height=75%>
+<img src="Images/Kenel and User space.png" alt="Project Logo" width=90% height=75%>
 
 **Key Differences :**
 
@@ -206,20 +206,20 @@ The **Linux boot sequence** is the series of steps that the system goes through 
 2. **Boot Loader (GRUB2)**
 
     - **Explanation :** After the **POST** is successful, the **BIOS** loads the boot loader, such as **GRUB2 (Grand Unified Bootloader)** from the bootable disk.
-    - **Purpose :** **GRUB2** shows a list of installed operating systems and lets us choose which one to start. After we make a selection, it loads the operating system's kernel into memory to begin booting. **Example :**When the computer starts, GRUB2 might show options like "Ubuntu" and "Windows." We can select "Ubuntu" and it will load the necessary files to start the operating system.
+    - **Purpose :** **GRUB2** shows a list of installed operating systems and lets us choose which one to start. After we make a selection, it loads the operating system's kernel into memory to begin booting. **Example :** When the computer starts, GRUB2 might show options like "Ubuntu" and "Windows." We can select "Ubuntu" and it will load the necessary files to start the operating system.
 
 3. **Kernel Initialization**
 
     - **Explanation :** The boot loader loads the Linux kernel into memory and hands over control to it. The kernel initializes the system hardware, sets up memory management, and starts managing processes.
-    - **Purpose :** This step sets up the operating system by detecting and configuring hardware, like loading drivers for devices such as keyboards and mouse.  **Example :**When we turn on the computer and the operating system starts the kernel initializes drivers for our keyboard and mouse so that they can be used within the OS.
+    - **Purpose :** This step sets up the operating system by detecting and configuring hardware, like loading drivers for devices such as keyboards and mouse.  **Example :** When we turn on the computer and the operating system starts the kernel initializes drivers for our keyboard and mouse so that they can be used within the OS.
 
 4. **INIT Process (Systemd)**
 
     - **Explanation :** After the kernel has initialized the system, it starts the **INIT** process, which is often managed by **Systemd** in modern Linux distributions. This process is the first user-space application that runs.
-    - **Purpose :** The **INIT** process is the first program that runs after the kernel is ready; it starts other programs and services that the system needs to work, like logging in and connecting to the internet. **Example :**When our system boots up, INIT starts the login screen so we can enter our username and password.
+    - **Purpose :** The **INIT** process is the first program that runs after the kernel is ready; it starts other programs and services that the system needs to work, like logging in and connecting to the internet. **Example :** When our system boots up, INIT starts the login screen so we can enter our username and password.
 
 
-<img src="Images/Boot Sequence.png" alt="Project Logo" width=70% height=75%>
+<img src="Images/Boot Sequence.png" alt="Project Logo" width=90% height=75%>
 
 ### Systemd Targets
 **Systemd** is a system and service manager for Linux that starts up the system, manages services, and improves boot speed by running processes in parallel.
@@ -300,14 +300,14 @@ Each distribution caters to different user needs, from general desktop use to sp
 ### Software Package 
 **A software package** is a bundled collection of files including executables, libraries and metadata that are grouped together for easy installation and management on an operating system.
 
-<img src="Images/Packages.png" alt="Project Logo" width=70% height=75%>
+<img src="Images/Packages.png" alt="Project Logo" width=90% height=75%>
 
 The image illustrates the components involved in installing GIMP on an Ubuntu 24.04 system. A .deb package containing the GIMP software binaries, metadata and configuration files is downloaded and installed on the system making GIMP accessible for use.
 
 ### Package Manager 
 **A package manager** is a tool that automates the installation, updating and removal of software packages on an operating system such as **`DPKG`**, **`APT`**, **`APT-GET`**, **`RPM`**, **`YUM`** & **`DNF`**. 
 
-<img src="Images/Packages01.png" alt="Project Logo" width=70% height=75%>
+<img src="Images/Packages01.png" alt="Project Logo" width=90% height=75%>
 
 Here’s a simple explanation of each package managers 
 1. **`DPKG`**
