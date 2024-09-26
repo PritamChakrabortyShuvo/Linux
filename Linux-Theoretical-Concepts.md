@@ -415,6 +415,41 @@ In vim (Vi IMproved) editor, the **`ESC`** (Escape) key is pivotal for navigatin
     - Insert Mode: Press **`i`** to enter Insert mode, where you can insert and edit text.
     - Visual Mode: Press **`v`** to enter Visual mode, where you can select blocks of text for editing or copying.
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ## Linux VS Unix
 Unix generally refers to a family of proprietary operating systems, while Linux is an open-source variant developed by Linus Torvalds. It is often considered a Unix-like system due to its compatibility with Unix standards and APIs
 
@@ -454,4 +489,4 @@ Unix generally refers to a family of proprietary operating systems, while Linux 
 - `Linux:` Highly customizable with many different distributions to choose from.
 
 ## Linux Interaction
-Linux interaction refers to the methods by which users communicate with and control the Linux operating system, primarily through **shells** & **prompt**.
+Linux interaction refers to the methods by which users communicate with and control the Linux operating system, primarily through **shells** and **prompt**.
