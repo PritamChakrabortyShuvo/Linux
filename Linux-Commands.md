@@ -548,7 +548,8 @@ The **`grep`** command searches for a specific word or string in files and print
     grep Hello Test.txt
 ```
 It fethes all the lines having a word Hello in **`Test.txt`** file.
-**Note :** **`grep`** is case sensitive use **`-i`**
+**Note :** **`grep`** is case sensitive use **`-i`**.
+
 **Example :**
 ```bash
     grep hello -i Test.txt
@@ -642,7 +643,6 @@ For install package.
 ```bash
     ifconfig
 ```
-This command is used to configure and display the network interfaces and their IP addresses.
 
 ```bash
     ip addr
