@@ -632,6 +632,7 @@ This command updates the local package index from the repositories configured in
     sudo apt upgrade
 ```
 This command upgrades all installed packages to their latest versions, respecting package dependencies and ensuring your system is up to date.
+This command upgrades all installed packages to their latest versions, respecting package dependencies and ensuring your system is up to date.
 
 For install package.
 ```bash
