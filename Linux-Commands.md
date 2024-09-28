@@ -647,7 +647,7 @@ For install package.
 ```bash
     ip addr
 ```
-This command is used to show or manipulate routing, devices, policy routing and tunnels.
+
 
 ```bash
     ip link
