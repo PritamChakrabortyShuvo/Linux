@@ -594,8 +594,53 @@ There are 3 types of Linux Accounts.
     - **Defination:** Special accounts used by system services (e.g., **`web servers`**, **`databases`**).
     - **Usage:** These accounts run background services and processes without being accessible for normal login.
     - **Security:** System accounts are tightly controlled and typically have minimal permissions to keep the system secure.
+### Access Controls Files 
+Access Control Files in Linux are essential system files that manage user authentication, permissions & access to system resources. These files define how users can log in to the system, what resources they can access & their respective permissions.
+#### Key Access Control Files
+1. **`/etc/passwd`** :
+    - **Purpose:** Stores basic information about user accounts.
+    - **Content:** Contains username, user ID (UID), group ID (GID), home directory & default shell. It allows the system to identify and authenticate users when they log in.
+<img src="Images/passwd.png" alt="Project Logo" width=80% height=50%>
+
+**Fields Explained:**
+- **`USERNAME`**: **`user01`** - The name of the user.
+- **`PASSWORD`:** **`x`** - Indicates that the password is stored in the shadow file for security.
+- **`UID: 1001`** - The user ID for "user01" which uniquely identifies the user in the system.
+- **`GID: 1001`** - The group ID associated with "user01"
+- **`GECOS:`** (empty) - Typically used for additional information (like the user's full name), but it's emptyhere.
+- **`HOMEDIR:`** ***`/home/user01`** - The path to "user01's" home directory.
+- **`SHELL:`** **`/bin/bash`** - The default shell that "bob" will use when logging in.
+2. **`/etc/shadow`** :
+    - **Purpose:** Contains secure hashed passwords and account expiration information.
+    - **Content:** Includes the username and hashed password, as well as details about password expiration, minimum and maximum password age & account expiration. This file is usually **accessible only to the root user** for security reasons.
+ <img src="Images/shadow.png" alt="Project Logo" width=80% height=50%>
+
+**Fields Explained:**
+- **`USERNAME`**: **`user01`** - The name of the user.
+- **`PASSWORD`**: **`$6$0h0utOtO$5JcuRxR7y72LLQk4Kdog7u09LsNFS0yZPkIC8pV9tgD0wXCHutYcWF/7.eJ3TfGfG0lj4JF63PyuPwKC18tJS`**. - hashed password for the user (using SHA-512).
+- **`LASTCHANGE`**: **`18188`** - The last time the password was changed, represented in days since January 1, 1970 (epoch time).
+- **`MINAGE`**: **`0`** - Minimum number of days required between password changes (0 means no minimum).
+- **`MAXAGE`**: **`99999`** - Maximum number of days the password is valid before it must be changed.
+- **`WARN:`** **`7`** - Number of days before expiration when the user will be warned to change their password.
+- **`INACTIVE:`** (empty) - Number of days after password expiration before the account is disabled.
+- **`EXPDATE:`** (empty) - Expiration date for the account (blank means the account does not expire).
+
+2. **`/etc/group`** :
+    - **Purpose:** Defines groups of users and their membership.
+    - **Content:** Contains group names, group IDs (GIDs) & a list of users that belong to each group. This helps manage permissions collectively for users in a group.
+ <img src="Images/groups.png" alt="Project Logo" width=80% height=50%>
+
+**Fields Explained:**
+- **`NAME`**: developer - The name of the group.
+- **`PASSWORD`**: **`x`** - Indicates that group passwords are not typically used and that the password field is not relevant here.
+- **`GID`**: **`1001`** - The unique Group ID associated with the "**developer**" group.
+- **`MEMBERS`**: **`user01`**,**`user02`** - A comma-separated list of users who are members of the "**developer**" group.
+
 ## Linux VS Unix
 Unix generally refers to a family of proprietary operating systems, while Linux is an open-source variant developed by Linus Torvalds. It is often considered a Unix-like system due to its compatibility with Unix standards and APIs
+
+developer:x:1001:user01,user02
+
 
 **Origins:**
     
