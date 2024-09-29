@@ -663,6 +663,110 @@ Access Control Files in Linux are essential system files that manage user authen
 - **`-d`** **`/home/robert`**: Specifies the user's home directory as /home/robert.
 - **`-s`** **`/bin/bash`**: Sets the default shell for the user to /bin/bash.
 - **`-c`** **`"Mercury Project member"`**: Adds a comment describing the user as a "Mercury Project member".
+
+### File Permissions 
+File permissions in Linux control who can read, write or execute files & directories. These permissions ensure that only authorized users can access or modify files providing a fundamental layer of security and access control.
+
+#### File types Identifiers
+File type identifiers in Linux indicate the type of file or object in the file system. These identifiers are the first character shown when we use the **`ls -l`** command to list files. They help us quickly identify what kind of object we’re dealing with—whether it’s a regular file, directory or a special device file.
+
+Here’s a simple list of file type identifiers in Linux:
+- **Directory**: **`d`**
+- **Regular File**: **`-`**
+- **Character Device**: **`c`**
+- **Link (Symbolic Link)**: **`l`**
+- **Socket File**: **`s`**
+- **Pipe (Named Pipe)**: **`p`**
+- **Block Device**: **`b`**
+
+#### File Permission Types
+
+In Linux, file permission types determine who can read, write or execute a file or directory. These permissions are essential for maintaining security and controlling access to files.
+
+Three Types of File Permissions:
+1. **Read (`r`):**
+    - **Files:** Allows the user to view or open the file and read its contents.
+    - **Directories:** Allows the user to list the contents of the directory.
+2. **Write (`w`):**
+    - **Files:** Allows the user to modify, edit or delete the file.
+    - **Directories:** Allows the user to add, delete or rename files within the directory.
+3. **Execute (`x`):**
+    - **Files:** Allows the user to run the file as a program or script. Even if we can read a script or program we won’t be able to run (execute) it.
+    - **Directories:** Allows the user to access the files in the directory (navigate into it). Without execute permission we can see the directory exists (if we have read permission) but we cannot enter or access its contents
+4. **No Permission (`-`):**
+If a user is denied permission for a specific action, a **`-`** will appear in place of r, w or x. This means no permission for that particular action.
+
+<img src="Images/file-permission01.png" alt="Project Logo" width=80% height=50%>
+
+#### How Permissions Are Assigned?
+Permissions are assigned to three different categories of users:
+- **Owner:** The user who owns the file.
+- **Group:** A group of users who share access to the file.
+- **Others:** Everyone else on the system who is not the owner or part of the group.
+
+<img src="Images/file-permission.png" alt="Project Logo" width=80% height=50%>
+
+<img src="Images/file-permission03.png" alt="Project Logo" width=80% height=50%>
+
+#### Modifying File Permissions
+In Linux, we modify file permissions using the **`chmod`** command. This command lets us set or change the permissions for owner, group & others.
+**Ways to Modify Permissions**
+1. **Symbolic Notation:** Use letters to represent permissions (**`r`**, **`w`**, **`x`**) and operators (**`+`**, **`-`**, **`=`**).
+2. **Numeric (Octal) Notation:** Use numbers to represent permission values.
+
+**Symbolic Notation:** In symbolic notation, we use:
+- **`u`** (user/owner)
+- **`g`** (group)
+- **`o`** (others)
+- **`a`** (all: owner, group, and others)
+
+We then modify permissions using:
+- **`+`** (add permission)
+- **`-`** (remove permission)
+- **`=`** (set exact permission)
+
+For Example :
+
+ **`chmod u+rwx test-file`** :  Provide full access to user.
+
+ **`chmod ugo+r-x test-file`** : Provide read access to user, groups and others, Remove execute access
+
+ **`chmod o-rwx test-file`** : Remove all access for others
+
+ **`chmod u+rwx,g+r-x,o-rwx test-file`** :Fullaccess for user, add read, remove execute for group & no access for others
+
+**Numeric (Octal) Notation:**
+Permissions can also be represented using a number for owner, group, and others:
+
+- **Read** (**`r`**) = 4
+- **Write** (**`w`**) = 2
+- **Execute** (**`x`**) = 1
+- **No permission** (**`-`**) = 0
+
+For Example :
+
+ **`chmod 777 test-file`** :  Provide full access to users, group & others
+
+ **`chmod 555 test-file`** : Provide read and execute access to users, groups & others 
+
+ **`chmod 660 test-file`** : Read and Write access for user & Group no access for others.
+
+ **`chmod 750 test-file`** : Fullaccess for user,read and execute for group no access for others.
+
+**Modifying file permission using `chown`**:
+
+ **`chown user_name:developer test-file`** : Changes owner to user and group to developer
+
+ **`chown user_name andoid.apk`** : Changes just the owner of the file to user_name.Group unchanged.
+
+ **`chgrp android test-file`** : Change the group for the test-file to the group called android.
+
+
+
+
+
+
+
 ## Linux VS Unix
 Unix generally refers to a family of proprietary operating systems, while Linux is an open-source variant developed by Linus Torvalds. It is often considered a Unix-like system due to its compatibility with Unix standards and APIs
 **Origins:**
