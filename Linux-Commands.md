@@ -617,6 +617,68 @@ Shows all active network connections on port 80 that are currently listening for
 ```bash
     netstat -an | grep 80 | grep -i LISTEN
 ```
+### Security
+
+In Linux family, User cannot be added with out a group. So we need a group in order to add a user. User can be part of one more group but primarily should be associated with one group.
+
+Shows the user ID (UID) and group ID (GID) of the current user.
+```bash
+    id
+```
+Displays a list of users currently logged into the system.
+```bash
+    who
+```
+Shows a history of all users who have logged in and out.
+```bash
+    last
+```
+Switches to another user (including root) with their environment settings.
+```bash
+    su -
+```
+You can switch user from one user to another user using.
+```bash
+    su user01
+```
+To set a password to the user.
+```bash
+    passwd user01
+```
+To again another user with out password using **`sudo`**.
+```bash
+    sudo su - pritam
+```
+Runs a command (whoami in this case) as another user without switching fully.
+```bash
+    su -c "whoami"
+```
+Displays the list of users and permissions who can run commands as superuser using **`sudo`**.
+```bash
+    cat /etc/sudoers
+```
+To check whether the group added or not.
+```bash
+    cat /etc/group | grep devops
+```
+If there is no group called devops creates a new user group called **"devops"** with administrative privileges **`sudo`**.
+```bash
+    sudo groupadd devops
+```
+We can now add a user to devops group.
+```bash
+    sudo useradd –g devops pritam
+```
+To verify the user which was added.
+```bash
+    id pritam
+```
+To add a user to multiple groups.
+```bash
+    usermod –a –G bin pritam
+```
+
+
 ### Command Line Browser
 Most of the time you need to browse URLs and fetch that content over the command line. Some times we need some partial information of that URL else we need complete information of that URL.
 
@@ -741,38 +803,7 @@ Kill the process of given PID with 9 signal.
 
 - In companies we usually will have individual accounts and we can perform the admin activities which are allowed using **`sudo`** access.
 
-### Administration - User Management
 
-In Linux family, User cannot be added with out a group. So we need a group in order to add a user. User can be part of one more group but primarily should be associated with one group.
-```bash
-    sudo groupadd devops
-```
-To check whether the group added or not by using **`cat /etc/group | grep devops`**
-
-We can now add a user to devops group.
-```bash
-    sudo useradd –g devops pritam
-```
-To verify the user which was added.
-```bash
-    id pritam
-```
-To add a user to multiple groups.
-```bash
-    usermod –a –G bin pritam
-```
-To set a password to the user (Clouds will not use password by default)
-```bash
-    passwd pritam
-```
-You can switch user from one user to another user using.
-```bash
-    su shuvo
-```
-To again another user with out password using **`sudo`**.
-```bash
-    sudo su - pritam
-```
 ### Administration – Package Management
 
 In Linux uses rpm for packaging. Such packages can be downloaded and installed using **`yum`** command which uses **`rpm`** command in backend.
