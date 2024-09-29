@@ -621,6 +621,14 @@ Shows all active network connections on port 80 that are currently listening for
 
 In Linux family, User cannot be added with out a group. So we need a group in order to add a user. User can be part of one more group but primarily should be associated with one group.
 
+This command creates a new user with a home directory and basic configuration.
+```bash
+    sudo adduser username
+```
+This allows the admin or the user to change their password.
+```bash
+    passwd username
+```
 Shows the user ID (UID) and group ID (GID) of the current user.
 ```bash
     id
@@ -640,6 +648,10 @@ Switches to another user (including root) with their environment settings.
 You can switch user from one user to another user using.
 ```bash
     su user01
+```
+This removes a user from the system.
+```bash
+    sudo deluser user01
 ```
 To set a password to the user.
 ```bash
