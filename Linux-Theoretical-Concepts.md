@@ -376,7 +376,7 @@ These editors help users edit configuration files, write scripts, and manage doc
 ```bash
     vim file_name
 ```
-<img src="Images/VIM Editor.png" alt="Project Logo" width=70% height=75%>
+<img src="Images/VIM Editor.png" alt="Project Logo" width=90% height=75%>
 
 #### ESC Mode
 In vim (Vi IMproved) editor, the **`ESC`** (Escape) key is pivotal for navigating and executing commands in Normal mode. Here are key functionalities in ESC mode:
@@ -435,7 +435,7 @@ When we type a website’s name like **`www.example.com`** in our browser:
 2. Just like we need an address to find a house computers need an IP address to find a website.
 
 ### DNS (Domain Name System)
-**DNS (Domain Name System)** is like the "phone book" of the internet. It translates human-friendly domain names **`like www.example.com`** into IP addresses like **`192.168.1.1`** that computers use to communicate with each other. Without DNS we'd need to remember the IP addresses of every website we visit which would be very difficult.
+**DNS (Domain Name System)** is like the "phone book" of the internet. It translates human-friendly domain names like **`www.example.com`** into IP addresses like **`192.168.1.1`** that computers use to communicate with each other. Without DNS we'd need to remember the IP addresses of every website we visit which would be very difficult.
 
 #### How DNS Works?
 Let’s say we want to visit **`www.example.com`**. Here’s what happens step-by-step:
@@ -463,6 +463,41 @@ Let’s say we want to visit **`www.example.com`**. Here’s what happens step-b
  Here is the workflow diagram of this complete process :
 <img src="Images/DNS Workflow.png" alt="Project Logo" width=100% height=75%>
 
+Simple Workflow diagram :
+
+<img src="Images/Domain Names02.png" alt="Project Logo" width=70% height=75%>
+
+
+### Domain Name
+A domain name is the human-readable address we use to access websites on the internet. Instead of remembering IP addresses we use easy to remember names like **`www.google.com`**.
+#### Structure of a Domain Name
+A domain name typically has two main parts:
+
+1. **Second-Level Domain (SLD):** This is the main name that identifies the website. For example, in **`www.google.com`**, **"google"** is the SLD.
+
+2. **Top-Level Domain (TLD):** This follows the SLD and indicates the type or location of the website. Common examples include:
+    - **.com:** Commercial websites
+    - **org:** Organizations (usually non-profits)
+    - **.net:** Network-related websites
+    - **.edu:** Educational institutions
+    - **.gov:** Government websites
+    - **Country-specific TLDs:** Like .uk for the United Kingdom, .ca for Canada, .bd for Bangladesh.
+
+Putting it together **`www.google.com`** consists of:
+- **`www`:** A subdomain often used to indicate the web version of the site.
+- **`google`:** The second-level domain.
+- **`.com`:** The top-level domain.
+
+<img src="Images/Domain Names.png" alt="Project Logo" width=70% height=50%>
+
+#### How Domain Names Work?
+1. **Registration:** To get a domain name, we need to register it through a domain registrar like **GoDaddy**, **Namecheap**, etc. This usually involves paying a yearly fee.
+
+2. **DNS Linking**: Once registered the domain name needs to be linked to an IP address through the **Domain Name System**. This tells the internet where to find the website associated with that name.
+
+3. **Accessing the Website:** When we type a domain name in our browser:
+    - Our computer uses DNS to find the corresponding IP address.
+    - It connects to the server at that IP address and loads the website.
 ## Linux VS Unix
 Unix generally refers to a family of proprietary operating systems, while Linux is an open-source variant developed by Linus Torvalds. It is often considered a Unix-like system due to its compatibility with Unix standards and APIs
 
