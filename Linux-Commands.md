@@ -617,7 +617,7 @@ Shows all active network connections on port 80 that are currently listening for
 ```bash
     netstat -an | grep 80 | grep -i LISTEN
 ```
-### Security
+### Security and File Permissions
 
 In Linux family, User cannot be added with out a group. So we need a group in order to add a user. User can be part of one more group but primarily should be associated with one group.
 
@@ -656,6 +656,18 @@ Runs a command (whoami in this case) as another user without switching fully.
 Displays the list of users and permissions who can run commands as superuser using **`sudo`**.
 ```bash
     cat /etc/sudoers
+```
+A file that contains basic information about user accounts, including usernames, user IDs (UIDs), group IDs (GIDs), home directories, and default shells.
+```bash
+     /etc/passwd
+```
+A file that securely stores hashed passwords and account expiration information for user accounts, accessible only to privileged users for enhanced security.
+```bash
+     /etc/shadow
+```
+A file that defines user groups on the system, listing group names, group IDs (GIDs), and the members of each group for managing permissions collectively.
+```bash
+     /etc/group
 ```
 To check whether the group added or not.
 ```bash
