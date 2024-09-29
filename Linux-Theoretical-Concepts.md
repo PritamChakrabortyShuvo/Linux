@@ -536,6 +536,7 @@ Routing is the process of selecting paths in a network along which to send data 
 3. **Routing Tables:** Each router has a routing table, which is like a map that lists the best paths to different network destinations. Routers update these tables to adapt to changes in the network.
 4. **Forwarding:** Based on the routing table, the router forwards the packet to the next hop (another router or the final destination) until it reaches the target device.
 <img src="Images/Routing.png" alt="Project Logo" width=100% height=50%>
+
 ### Gateway
 A gateway is a device that acts as a "gate" between two networks, allowing them to communicate with each other. It serves as a translator or bridge between different protocols or architectures.
 #### How Does a Gateway Work?
