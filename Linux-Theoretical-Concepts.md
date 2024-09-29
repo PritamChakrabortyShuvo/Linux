@@ -415,40 +415,53 @@ In vim (Vi IMproved) editor, the **`ESC`** (Escape) key is pivotal for navigatin
     - Insert Mode: Press **`i`** to enter Insert mode, where you can insert and edit text.
     - Visual Mode: Press **`v`** to enter Visual mode, where you can select blocks of text for editing or copying.
 
+## Linux Networking Basic
+Linux networking is fundamental for system administration especially in managing servers configuring network interfaces & ensuring smooth communication between devices. Some components are described below.
 
+### Name Resolution
+**Name resolution** is like translating a website name into an address that computers understand called an IP address like **`142.250.182.206`**. Just like a GPS needs an address to take us somewhere our computer needs the IP address of a website to load it.
 
+#### How Does Name Resolution Work?
+When we type a website’s name like **`www.example.com`** in our browser:
+1. **Our Computer Looks for answer locally :**
+    - It checks if it already knows the IP address for that website this is called a **"cache"**.
+    - It checks a special file called the **hosts file** under **`/etc/host`** which has some website names and their IP addresses listed manually.
+2. **If it doesn’t find the IP address**
+    - It asks a **`DNS server`** to find the IP address for the website.
+3. DNS server finds the IP address and sends it back to our computer.
+4. Our computer connects to the website using the IP address it got & the page loads.
+#### Why Do We Need Name Resolution?
+1. Instead of remembering IP addresses we only need to remember names like **`google.com`**.
+2. Just like we need an address to find a house computers need an IP address to find a website.
 
+### DNS (Domain Name System)
+**DNS (Domain Name System)** is like the "phone book" of the internet. It translates human-friendly domain names **`like www.example.com`** into IP addresses like **`192.168.1.1`** that computers use to communicate with each other. Without DNS we'd need to remember the IP addresses of every website we visit which would be very difficult.
 
+#### How DNS Works?
+Let’s say we want to visit **`www.example.com`**. Here’s what happens step-by-step:
+1. **We Type a Website Name**
+    - We open our browser and type **`www.example.com`**.
+2. **Our Computer Checks its Memory**
+    - First, our computer checks if it has recently visited **`www.example.com`** & already knows its IP address.
+    - If it finds the IP address in its memory (cache) it will use it immediately to connect to the website. If not it moves to the next step.
+3. **Our Computer Asks a DNS Server**
+    - If our computer doesn’t know the IP address it asks a DNS server (like asking a librarian for help finding a book).
+    - The DNS server checks if it has the IP address for **`www.example.com`**.
+4. **DNS Server Asks for Help**
+    - If the DNS server doesn’t have the IP address, it asks a bigger server called the **Root Server** for help.
+    - The **Root Server** doesn’t know the IP address either but it knows which server can help us get closer to the answer.
+5. **Finding the Right Server**
+    - The Root Server sends our DNS server to a **TLD (Top Level Domain)** server. This server handles **`.com`**, **`.org`** etc.
+    - The TLD Server then directs us to the **Authoritative Name Server** which knows the exact IP address for **`www.example.com`**.
+6. **Getting the IP Address**
+    - The **Authoritative Name Server** gives the IP address say **`192.168.1.100`** for **`www.example.com`**.
+7. **DNS Server Sends the IP Address Back to Us**
+    - The DNS server now sends the IP address to our computer.
+8. **Our Computer Connects to the Website**
+    - With the IP address our computer can now connect to **`www.example.com`** & the website appears in our browser.
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+ Here is the workflow diagram of this complete process :
+<img src="Images/DNS Workflow.png" alt="Project Logo" width=100% height=75%>
 
 ## Linux VS Unix
 Unix generally refers to a family of proprietary operating systems, while Linux is an open-source variant developed by Linus Torvalds. It is often considered a Unix-like system due to its compatibility with Unix standards and APIs
