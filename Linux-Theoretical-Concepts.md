@@ -526,6 +526,22 @@ Switching is how we connect devices like computers and printers in a local netwo
 1. **Faster Communication:** Switches help devices talk to each other quickly by sending data only to the intended device.
 2. **Less Confusion:** Data goes to the right device not to everyone on the network.
 3. **Easy to Expand:** We can easily add more devices by connecting them to the switch.
+<img src="Images/Switching.png" alt="Project Logo" width=100% height=50%>
+
+### Routing 
+Routing is the process of selecting paths in a network along which to send data packets from one device to another. Routers are the devices that perform this function.
+### How Does Routing Work?
+1. **Data Packets:** When data is sent over the internet, it is divided into small packets. Each packet needs to find its way to the destination.
+2. **Routers:** Routers are devices that connect different networks. They read the destination IP address of each packet and determine the best path for it to take.
+3. **Routing Tables:** Each router has a routing table, which is like a map that lists the best paths to different network destinations. Routers update these tables to adapt to changes in the network.
+4. **Forwarding:** Based on the routing table, the router forwards the packet to the next hop (another router or the final destination) until it reaches the target device.
+<img src="Images/Routing.png" alt="Project Logo" width=100% height=50%>
+### Gateway
+A gateway is a device that acts as a "gate" between two networks, allowing them to communicate with each other. It serves as a translator or bridge between different protocols or architectures.
+#### How Does a Gateway Work?
+1. **Connecting Networks:** A gateway connects networks that use different protocols. For example, it can connect a local area network (LAN) to the internet.
+2. **Data Translation:** When data passes through a gateway it can convert the data formats or protocols so that devices on different networks can understand each other.
+3. **Routing:** Gateways often have routing capabilities meaning they can direct data packets to their destination even if the destination is on a different network.
 
 ## Linux VS Unix
 Unix generally refers to a family of proprietary operating systems, while Linux is an open-source variant developed by Linus Torvalds. It is often considered a Unix-like system due to its compatibility with Unix standards and APIs
