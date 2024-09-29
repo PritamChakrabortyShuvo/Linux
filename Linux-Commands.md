@@ -609,6 +609,14 @@ It will effectively terminates (kills) all processes that are currently listenin
 ```bash
     sudo kill $(sudo lsof -t -i :80)
 ```
+Traces the path that packets take from the local machine to the IP address **`192.168.2.5`** showing each hop along the route and the time taken to reach each one.
+```bash
+    traceroute 192.168.2.5
+```
+Shows all active network connections on port 80 that are currently listening for incoming connections.
+```bash
+    netstat -an | grep 80 | grep -i LISTEN
+```
 ### Command Line Browser
 Most of the time you need to browse URLs and fetch that content over the command line. Some times we need some partial information of that URL else we need complete information of that URL.
 
