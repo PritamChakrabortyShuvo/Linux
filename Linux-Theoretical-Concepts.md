@@ -594,6 +594,23 @@ There are 3 types of Linux Accounts.
     - **Defination:** Special accounts used by system services (e.g., **`web servers`**, **`databases`**).
     - **Usage:** These accounts run background services and processes without being accessible for normal login.
     - **Security:** System accounts are tightly controlled and typically have minimal permissions to keep the system secure.
+**Summary:**
+- **Root Account:** Full control, for system management.
+- **Regular User Account:** For normal users, limited access.
+- **System Account:** For services and background tasks, not for users to log in.
+#### Key Concepts in Linux Accounts
+**User ID (UID):**
+- **Definition:** A unique number assigned to each user account.
+- **`Purpose:** Linux uses the UID to identify users in the system, especially for permissions.
+**Group ID (GID):**
+- **Definition:** A number representing a group of users.
+- **Purpose:** Groups are used to assign permissions to multiple users at once, making it easier to manage access.
+**Home Directory:**
+- **Definition:** A personal folder where each user stores their files.
+- **Purpose:** Every user has a dedicated home directory (/home/username), ensuring files are kept separate and private.
+**Shell:**
+- **Definition:** The program that interprets and executes commands.
+- **Purpose:** Each account is assigned a shell (like Bash), which allows the user to interact with the system through the terminal.
 ### Access Controls Files 
 Access Control Files in Linux are essential system files that manage user authentication, permissions & access to system resources. These files define how users can log in to the system, what resources they can access & their respective permissions.
 #### Key Access Control Files
