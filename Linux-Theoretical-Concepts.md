@@ -653,12 +653,18 @@ Access Control Files in Linux are essential system files that manage user authen
 - **`GID`**: **`1001`** - The unique Group ID associated with the "**developer**" group.
 - **`MEMBERS`**: **`user01`**,**`user02`** - A comma-separated list of users who are members of the "**developer**" group.
 
+#### Manging Users
+<img src="Images/Managing Users.png" alt="Project Logo" width=80% height=50%>
+
+**Description:** Creates a new user account named "user01" with the specified settings:
+**`
+- **`-u`** **`1009`**: Assigns the user ID (UID) 1009.
+- **`-g`** **`1009`**: Sets the primary group ID (GID) to 1009.
+- **`-d`** **`/home/robert`**: Specifies the user's home directory as /home/robert.
+- **`-s`** **`/bin/bash`**: Sets the default shell for the user to /bin/bash.
+- **`-c`** **`"Mercury Project member"`**: Adds a comment describing the user as a "Mercury Project member".
 ## Linux VS Unix
 Unix generally refers to a family of proprietary operating systems, while Linux is an open-source variant developed by Linus Torvalds. It is often considered a Unix-like system due to its compatibility with Unix standards and APIs
-
-developer:x:1001:user01,user02
-
-
 **Origins:**
     
 - `Unix:` Created in the 1970s by AT&T Bell Labs.
