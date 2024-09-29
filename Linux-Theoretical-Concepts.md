@@ -543,7 +543,8 @@ A gateway is a device that acts as a "gate" between two networks, allowing them 
 1. **Connecting Networks:** A gateway connects networks that use different protocols. For example, it can connect a local area network (LAN) to the internet.
 2. **Data Translation:** When data passes through a gateway it can convert the data formats or protocols so that devices on different networks can understand each other.
 3. **Routing:** Gateways often have routing capabilities meaning they can direct data packets to their destination even if the destination is on a different network.
-## Security & File Permissions
+## Linux Security & File Permissions
+### Linux Security
 **Linux Security** refers to the various measures, tools & practices used to protect a Linux system from unauthorized access, attacks & threats. It involves controlling who can access the system, securing data, managing user permissions & protecting the system from vulnerabilities. Let’s explore Linux Security in simple terms :
 1. **Access Controls**
     - **Definition:** Control who can access files, directories & resources on the system.
@@ -577,6 +578,22 @@ A gateway is a device that acts as a "gate" between two networks, allowing them 
     - **Description:** Antivirus software scans for & removes viruses & malware to keep the system safe.
 
 Linux security involves many techniques to protect the system from unauthorized access, control user activities & safeguard sensitive data. Each of these topics plays a critical role in maintaining a secure environment.
+### Linux Accounts 
+A Linux account refers to a user profile that allows someone to log into & use a Linux system. Each user has their own account & these accounts help manage access to the system, files & resources securely.
+#### Types of Linux Accounts 
+There are 3 types of Linux Accounts.
+1. **Root Account (SUPERUSER)**
+    - **Defination:** The most powerful account in Linux.
+    - **Usage:** It can do anything on the system, like installing software, changing files or managing users.
+    - **Security:** Since root has unlimited power it should be used cautiously. Normal users should avoid using root for regular tasks to prevent accidental damage.
+2. **Regular User Account** 
+    - **Defination:** Accounts created for normal users with limited privileges.
+    - **Usage:** Regular users can access their own files & perform standard tasks but they cannot change system    settings or access other users' files without permission.
+    - **Security:** Users are given only the necessary access they need helping keep the system safe from mistakes or malicious actions.
+3. **System Account**
+    - **Defination:** Special accounts used by system services (e.g., **`web servers`**, **`databases`**).
+    - **Usage:** These accounts run background services and processes without being accessible for normal login.
+    - **Security:** System accounts are tightly controlled and typically have minimal permissions to keep the system secure.
 ## Linux VS Unix
 Unix generally refers to a family of proprietary operating systems, while Linux is an open-source variant developed by Linus Torvalds. It is often considered a Unix-like system due to its compatibility with Unix standards and APIs
 
