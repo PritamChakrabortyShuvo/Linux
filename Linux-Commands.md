@@ -563,6 +563,52 @@ Prints the first column from each line.
 ```bash
     awk '{print $1}' file_name
 ```
+### Linux Networking
+Queries the DNS to find the IP address associated with the domain name **`www.google.com`**.
+Add your line here
+```bash
+    nslookup www.google.com
+```
+Queries DNS records for **`www.google.com`** and displays the corresponding IP address
+```bash
+    dig www.google.com
+```
+Displays and configures network interface parameters.
+```bash
+    ifconfig
+```
+Displays IP addresses assigned to all network interfaces.
+```bash
+    ip addr
+```
+Lists network interfaces and their statuses.
+```bash
+    ip link
+```
+Displays or modifies the IP routing table.
+```bash
+    route
+```
+Displays the routing table for network traffic.
+```bash
+    ip route
+```
+Assigns the IP address **`192.168.1.10`** with a subnet mask of **`/24`** to the network interface **`eth0`**.
+```bash
+     ip addr add 192.168.1.10/24 dev eth0
+```
+Adds a route to the **`192.168.1.0/24`** network, directing traffic through the gateway **`192.168.2.1`**.
+```bash
+     ip route add 192.168.1.0/24 via 192.168.2.1 
+```
+This is used to list all processes that are currently listening on port 80 (HTTP) on your system.
+```bash
+    sudo lsof -i :80
+```
+It will effectively terminates (kills) all processes that are currently listening on port 80.
+```bash
+    sudo kill $(sudo lsof -t -i :80)
+```
 ### Command Line Browser
 Most of the time you need to browse URLs and fetch that content over the command line. Some times we need some partial information of that URL else we need complete information of that URL.
 
@@ -585,13 +631,7 @@ Downloads the file in given path and name.
 ```bash
     wget -o /opt/file_name URL
 ```
-### Extract tar archives
-To extract files from a **`.tar`** archive in Linux, use the **`tar`** command. Command **`tar`** can be used for both extraction and creation of archives.
 
-To extract the tar archives we use **`–x`** option.
-```bash
-    tar -xf <file>.tar
-```
 ### User Specific Commands
 All accesses into a Linux System are through a User.
 
@@ -639,35 +679,7 @@ For install package.
     sudo apt install <package_name>
 ```
 
-### Linux Networking
-Add your line here
-```bash
-    ifconfig
-```
-Add your line here
-```bash
-    ip addr
-```
-Add here
 
-```bash
-    ip link
-```
-This command is used to display information about link layer devices currently configured.
-
-```bash
-    ip route
-```
-This command is used to show and manipulate the IP routing table.
-
-```bash
-    sudo lsof -i :80
-```
-This is used to list all processes that are currently listening on port 80 (HTTP) on your system.
-```bash
-    sudo kill $(sudo lsof -t -i :80)
-```
-It will effectively terminates (kills) all processes that are currently listening on port 80.
 
 ### Process Management
 
