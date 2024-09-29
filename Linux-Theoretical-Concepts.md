@@ -467,7 +467,6 @@ Simple Workflow diagram :
 
 <img src="Images/Domain Names02.png" alt="Project Logo" width=70% height=75%>
 
-
 ### Domain Name
 A domain name is the human-readable address we use to access websites on the internet. Instead of remembering IP addresses we use easy to remember names like **`www.google.com`**.
 #### Structure of a Domain Name
@@ -498,6 +497,23 @@ Putting it together **`www.google.com`** consists of:
 3. **Accessing the Website:** When we type a domain name in our browser:
     - Our computer uses DNS to find the corresponding IP address.
     - It connects to the server at that IP address and loads the website.
+
+### Hub
+A hub is a device that allows multiple devices to connect to a network and communicate with each other but doesn’t manage traffic.
+#### How Does a Hub Work?
+1. **Data Transmission:** When one device sends data to the hub the hub broadcasts that data to all other connected devices.
+2. **No Intelligence:** A hub does not filter or direct data. It simply sends everything it receives to all ports regardless of the destination.
+3. **Physical Layer:** Hubs operate at the physical layer (Layer 1) of the OSI model, meaning they deal with the physical connection and transmission of data.
+#### Characteristics of Hubs
+1. **Broadcasting:** Sends data to all devices on the network, leading to potential data collisions if multiple devices send data simultaneously.
+2. **Limited Intelligence:** Hubs don’t learn device addresses; they do not store any information about connected devices.
+3. **Simple Setup:** Hubs are easy to set up, as they typically only require connecting devices via Ethernet cables.
+#### Limitations of Hubs
+1.	If the HUB is failed the entire network is failed
+2.	We can’t send private data through HUB
+3.	HUB doesn’t provide any security
+4.	It doesn’t support full-duplex transmission
+
 ## Linux VS Unix
 Unix generally refers to a family of proprietary operating systems, while Linux is an open-source variant developed by Linus Torvalds. It is often considered a Unix-like system due to its compatibility with Unix standards and APIs
 
