@@ -514,6 +514,19 @@ A hub is a device that allows multiple devices to connect to a network and commu
 3.	HUB doesn’t provide any security
 4.	It doesn’t support full-duplex transmission
 
+### Switching 
+Switching is how we connect devices like computers and printers in a local network so they can share information.
+### How Does Switching Work?
+1. **Data Packets:** Information is sent in small pieces called packets.
+2. **Network Switch:** A network switch is a device that helps send these packets to the right place, kind of like a post office.
+3. **Address Book:** Each device has a unique address called a MAC address. The switch keeps a list of these addresses to know where to send data.
+4. **Learning:** When a packet arrives the switch checks who sent it and adds that address to its list.
+5. **Forwarding:** If the switch knows where to send the packet it goes straight to that device. If it doesn't know it sends the packet to everyone to find the right device.
+#### Benefits of Switching
+1. **Faster Communication:** Switches help devices talk to each other quickly by sending data only to the intended device.
+2. **Less Confusion:** Data goes to the right device not to everyone on the network.
+3. **Easy to Expand:** We can easily add more devices by connecting them to the switch.
+
 ## Linux VS Unix
 Unix generally refers to a family of proprietary operating systems, while Linux is an open-source variant developed by Linus Torvalds. It is often considered a Unix-like system due to its compatibility with Unix standards and APIs
 
