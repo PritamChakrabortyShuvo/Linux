@@ -543,7 +543,40 @@ A gateway is a device that acts as a "gate" between two networks, allowing them 
 1. **Connecting Networks:** A gateway connects networks that use different protocols. For example, it can connect a local area network (LAN) to the internet.
 2. **Data Translation:** When data passes through a gateway it can convert the data formats or protocols so that devices on different networks can understand each other.
 3. **Routing:** Gateways often have routing capabilities meaning they can direct data packets to their destination even if the destination is on a different network.
+## Security & File Permissions
+**Linux Security** refers to the various measures, tools & practices used to protect a Linux system from unauthorized access, attacks & threats. It involves controlling who can access the system, securing data, managing user permissions & protecting the system from vulnerabilities. Let’s explore Linux Security in simple terms :
+1. **Access Controls**
+    - **Definition:** Control who can access files, directories & resources on the system.
+    - **Description:** Access controls ensure only authorized users can read, write or execute files.
+2. **PAM (Pluggable Authentication Modules)**
+    - **Definition:** A system that manages authentication for Linux users & services.
+    - **Description:** PAM controls login and authentication ensuring users are properly verified.
+3. **Network Security**
+    - **Definition:** Measures to protect the network from unauthorized access & attacks.
+    - **Description:** Network security protects the system by controlling who and what can communicate over the network.
+4. **SSH Hardening**
+    - **Definition:** Strengthening the security of SSH (Secure Shell) connections.
+    - **Description:** SSH hardening secures remote access by using strong passwords, keys & disabling root login.
+5. **SELinux (Security-Enhanced Linux)**
+    - **Definition:** A security module that enforces access controls & limits what applications can do.
+    - **Description:** SELinux adds extra layers of security by enforcing strict access policies on processes & files.
+6. **Firewalls (iptables/nftables)**
+    - **Definition:** Tools that control network traffic to and from the system.
+    - **Description:** Firewalls block or allow network traffic based on security rules.
+7. **User Management**
+    - **Definition:** Managing user accounts, passwords & permissions.
+    - **Description:** User management ensures each person has the right level of access to the system.
+8. **File Integrity Monitoring**
+    - **Definition:** Checking files to ensure they haven’t been altered or tampered with.
+    - **Description:** File integrity monitoring detects unauthorized changes to important system files.
+9. **Data Encryption**
+    - **Definition:** Encrypting sensitive data to prevent unauthorized access.
+    - **Description:** Encryption protects data by converting it into a code that only authorized users can read.
+10. **Antivirus/Anti-Malware**
+    - **Definition:** Software that detects & removes malicious programs.
+    - **Description:** Antivirus software scans for & removes viruses & malware to keep the system safe.
 
+Linux security involves many techniques to protect the system from unauthorized access, control user activities & safeguard sensitive data. Each of these topics plays a critical role in maintaining a secure environment.
 ## Linux VS Unix
 Unix generally refers to a family of proprietary operating systems, while Linux is an open-source variant developed by Linus Torvalds. It is often considered a Unix-like system due to its compatibility with Unix standards and APIs
 
