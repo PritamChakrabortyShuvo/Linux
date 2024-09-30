@@ -793,22 +793,27 @@ When using password-based SSH we need to enter the password every time we log in
 
 #### Steps to Set Up Password-less SSH (Linux to Linux)
 1. **Generate SSH Key Pair**
-- On our local machine we generate a public-private key pair using the **`ssh-keygen -t rsa`** command.
+  - On our local machine we generate a public-private key pair using the **`ssh-keygen -t rsa`** command.
     This will create two files:
     - **`id_rsa`** (private key)
     - **`id_rsa.pub`** (public key)
 2. **Copy Public Key to the Remote Server**
-- To set up password-less SSH, we need to place our public key on the remote server. The simplest way to do this is using the **`ssh-copy-id user@remote_host`** command. This will copies our public key (**`id_rsa.pub`**) to the **`~/.ssh/authorized_keys`** file on the remote server for the specified user.
+   - To set up password-less SSH, we need to place our public key on the remote server. The simplest way to do this is using the **`ssh-copy-id user@remote_host`** command. This will copies our public key (**`id_rsa.pub`**) to the **`~/.ssh/authorized_keys`** file on the remote server for the specified user.
 
-Alternatively, we can manually copy the public key to the remote server by using **`scp ~/.ssh/id_rsa.pub user@remote_host:~/.ssh/authorized_keys`** command.
+     Alternatively, we can manually copy the public key to the remote server by using **`scp ~/.ssh/id_rsa.pub user@remote_host:~/.ssh/authorized_keys`** command.
 
 3. **Log in to the Server Without a Password**
-- Now that the public key is on the remote server, we can log in without a password using **`ssh user@remote_host`** command.
+   - Now that the public key is on the remote server, we can log in without a password using **`ssh user@remote_host`** command.
 
 Here is the workflow of **Linux** to **Linux** **Password-Less SSH**
 <img src="Images/SSH-passwordless01.png" alt="Project Logo" width=80% height=50%>
+
+### SCP (Secure Copy Protocol)
+**SCP** stands for **Secure Copy Protocol**. It is a command used to securely transfer files between a local and a remote system or between two remote systems over an SSH connection. SCP ensures that the data is encrypted during the transfer making it secure.
+
 ## Linux VS Unix
 Unix generally refers to a family of proprietary operating systems, while Linux is an open-source variant developed by Linus Torvalds. It is often considered a Unix-like system due to its compatibility with Unix standards and APIs
+
 **Origins:**
     
 - `Unix:` Created in the 1970s by AT&T Bell Labs.
