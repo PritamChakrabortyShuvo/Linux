@@ -863,7 +863,7 @@ use **`iptables -A OUTPUT -p tcp --dport 443 -j DROP`**
 
 #### Example of a Cron Job
 To schedule a cron job to run at 12:01 AM on 16th September and only if it is a Thursday the cron expression would be
-<img src="Images/Cron.png.png" alt="Project Logo" width=80% height=50%>
+<img src="Images/Cron.png" alt="Project Logo" width=80% height=50%>
 
  - In cron, the **`*`** (asterisk) is a wildcard that means "every" or "any." It is used to tell cron that it should not restrict the job to a specific value for that field.
  - In a cron expression, **`/2`** means "every 2 units" for the respective field (minute, hour, etc.). It’s a step value which indicates the job should run at regular intervals.
