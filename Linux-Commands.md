@@ -745,6 +745,48 @@ Change the group for the test-file to the group called android.
 ```bash
     chgrp android test-file
 ```
+### SSH
+Connects to a remote server using its hostname or IP address.
+```bash
+    ssh <hostname OR IP Address>
+```
+Connects to a remote server as the specified user.
+```bash
+   ssh <user>@<hostname OR IP Address> 
+```
+Connects to a remote server, specifying the user with the **`-l`** option.
+```bash
+    ssh -l <user> <hostname OR IP Address>
+```
+Generates an SSH key pair (public and private keys) using the RSA encryption algorithm.
+```bash
+    ssh-keygen -t rsa
+```
+Copies the public SSH key to the remote server to enable password-less login for the specified user.
+```bash
+    ssh-copy-id user@devapp01
+```
+Connects to the **`devapp01`** server.
+```bash
+    ssh devapp01
+```
+Displays the contents of the authorized_keys file, showing the public keys authorized for SSH login.
+```bash
+    cat /home/user/.ssh/authorized_keys
+```
+### SCP
+Securely copies a file (**`caleston-code.tar.gz`**) from the local machine to the remote server (**`devapp01`**) in the **`/home/user`** directory.
+```bash
+    scp /home/user/caleston-code.tar.gz devapp01:/home/user
+```
+Securely copies a file to the **`/root`** directory on the remote server.
+```bash
+    scp /home/user/caleston-code.tar.gz devapp01:/root
+```
+Recursively and securely copies the media directory from the local machine to the **`/home/user`** directory on the remote server.
+```bash
+    scp -pr /home/user/media/ devapp01:/home/user
+```
 ### Command Line Browser
 Most of the time you need to browse URLs and fetch that content over the command line. Some times we need some partial information of that URL else we need complete information of that URL.
 
