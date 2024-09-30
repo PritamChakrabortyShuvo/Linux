@@ -760,13 +760,53 @@ For Example :
  **`chown user_name andoid.apk`** : Changes just the owner of the file to user_name.Group unchanged.
 
  **`chgrp android test-file`** : Change the group for the test-file to the group called android.
+### SSH (Secure Shell)
+SSH (Secure Shell) is a network protocol used to securely access and manage remote systems over an unsecured network. It provides a secure way to log into another computer, execute commands & transfer files all while encrypting the communication to prevent eavesdropping, data tampering or identity theft.There are 2 types of **SSH**
+#### 1. Password Based SSH
 
+**Password based SSH** refers to the method of authenticating a user in an SSH session by using a password. When we use SSH to connect to a remote server the server can ask for a password as a way to verify our identity before granting access. This is one of the simplest & most common forms of **SSH authentication** but it's less secure compared to other methods like **key-based authentication**. 
+##### How Password SSH Works?
+**First Step ~ Initiating Connection** : We open an SSH connection to a remote server using a command like :
+ - **`ssh <hostname OR IP Address>`** :This command initiates an SSH connection to a server using the hostname or IP address of the remote machine.
+ - **`ssh <user>@<hostname OR IP Address>`** :This allows us to specify a different user to log into the remote server. We must provide the username along with the hostname or IP address.
+ - **`ssh -l <user> <hostname OR IP Address>`** :This is an alternative way to specify the user we want to log in as using the **`-l`** (login) option. It's functionally the same as using **`<user>@<hostname>`**.
 
+**Second Step ~ Password Prompt:** If the server is configured to allow password authentication, it will prompt us for a password.
 
+**Third Step ~ LogIn:** After we enter the correct password we gain access to the remote system.
 
+When using password-based SSH we need to enter the password every time we log in to the remote server. This can be less convenient especially if we frequently connect to the server as the system will always prompt us for the password at each login attempt.
 
+<img src="Images//SSH-password.png" alt="Project Logo" width=80% height=50%>
 
+#### 2. Password Less SSH
+**Password-less SSH** allows us to connect to a remote server without entering a password each time. It uses SSH key-based authentication instead of password authentication. This method is not only more convenient but also more secure as it eliminates the risk of brute-force attacks on passwords.
 
+##### How Password-less SSH Works?
+1. **SSH Key Pair:** A pair of cryptographic keys (public and private) is generated on our local machine.
+ - The **private key** stays on the **local machine** and is never shared.
+ - The **public key** is placed on the **remote server**.
+
+2. **Authentication:** When we connect to the server, the server checks if the local machine has the correct private key to match the public key. If it does, access is granted without needing a password.
+
+<img src="Images/SSH-password-less.png" alt="Project Logo" width=80% height=50%>
+
+##### Steps to Set Up Password-less SSH (Linux to Linux)
+1. **Generate SSH Key Pair**
+- On our local machine we generate a public-private key pair using the **`ssh-keygen -t rsa`** command.
+    This will create two files:
+    - **`id_rsa`** (private key)
+    - **`id_rsa.pub`** (public key)
+2. **Copy Public Key to the Remote Server**
+- To set up password-less SSH, we need to place our public key on the remote server. The simplest way to do this is using the **`ssh-copy-id user@remote_host`** command. This will copies our public key (**`id_rsa.pub`**) to the **`~/.ssh/authorized_keys`** file on the remote server for the specified user.
+
+Alternatively, we can manually copy the public key to the remote server by using **`scp ~/.ssh/id_rsa.pub user@remote_host:~/.ssh/authorized_keys`** command.
+
+3. **Log in to the Server Without a Password**
+- Now that the public key is on the remote server, we can log in without a password using **`ssh user@remote_host`** command.
+
+Here is the workflow of **Linux** to **Linux** **Password-Less SSH**
+<img src="Images/SSH-passwordless01.png" alt="Project Logo" width=80% height=50%>
 ## Linux VS Unix
 Unix generally refers to a family of proprietary operating systems, while Linux is an open-source variant developed by Linus Torvalds. It is often considered a Unix-like system due to its compatibility with Unix standards and APIs
 **Origins:**
