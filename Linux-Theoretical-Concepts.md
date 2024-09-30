@@ -848,3 +848,20 @@ use **`iptables -A OUTPUT -p tcp --dport 443 -j DROP`**
 **`iptables -I OUTPUT -p tcp -d 172.16.238.100 --dport 443 -j ACCEPT`** this command inserts a rule at the top of the OUTPUT chain to allow outgoing TCP traffic to the destination IP address 172.16.238.100 on port 443.
 4. Allow incoming on pirt 80 use **`iptables -A INPUT -p tcp -s 172.16.238.187 --dport 80 -j ACCEPT`**
 
+### CRON 
+**Cron** is a Linux utility used for scheduling tasks to run automatically at specified intervals or times. It allows us to automate tasks like running scripts, performing backups or updating the system. These tasks called **cron jobs** are defined in a special file called the **crontab(cron table)**.
+#### Key Points about Cron:
+ - **Crontab:** A file where we can list tasks (cron jobs) to run at specific times.
+ - **Syntax of a Cron Job:** Each line in the crontab file defines a job and includes the time schedule followed by the command to execute.
+ - **Time Format:** A cron job uses a five-field time format:
+     - Minute (0-59)
+     - Hour (0-23)
+     - Day of the Month (1-31)
+     - Month (1-12)
+     - Day of the Week (0-7, where 0 or 7 is Sunday)
+#### Example of a Cron Job
+To schedule a cron job to run at 12:01 AM on 16th September and only if it is a Thursday the cron expression would be
+<img src="Images/Cron.png" alt="Project Logo" width=80% height=50%>
+
+ - In cron, the **`*`** (asterisk) is a wildcard that means "every" or "any." It is used to tell cron that it should not restrict the job to a specific value for that field.
+ - In a cron expression, **`/2`** means "every 2 units" for the respective field (minute, hour, etc.). It’s a step value which indicates the job should run at regular intervals.
