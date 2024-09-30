@@ -812,6 +812,27 @@ Allows incoming TCP traffic on port **`80`** (HTTP) from the IP address **`172.1
 ```bash
     iptables -A INPUT -p tcp -s 172.16.238.187 --dport 80 -j ACCEPT
 ```
+It is used to delete a 5 no rule from the OUTPUT chain in the iptables firewall.
+```bash
+    iptables -D OUTPUT 5
+```
+### Crontab
+To view crontab.
+```bash
+    crontab -l
+```
+To edit crontab.
+```bash
+    crontab -e
+```
+In the crontab editor schedule the command or script. For example, to append the current date and time to **myfile.txt** every day at **12:00 PM** (noon) we add the following line
+```bash
+    0 12 * * * echo "$(date)" >> /path/to/myfile.txt
+```
+Remove all cron job.
+```bash
+    crontab -r
+```
 ### Command Line Browser
 Most of the time you need to browse URLs and fetch that content over the command line. Some times we need some partial information of that URL else we need complete information of that URL.
 
