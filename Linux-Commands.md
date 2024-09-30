@@ -701,8 +701,50 @@ To add a user to multiple groups.
 ```bash
     usermod –a –G bin pritam
 ```
-
-
+Provide full access to user.
+```bash
+     chmod u+rwx test-file
+```
+Provide read access to user, groups and others, Remove execute access
+```bash
+    chmod ugo+r-x test-file
+```
+Remove all access for others
+```bash
+    chmod o-rwx test-file
+```
+Fullaccess for user, add read, remove execute for group & no access for others
+```bash
+    chmod u+rwx,g+r-x,o-rwx test-file
+```
+Provide full access to users, group & others
+```bash
+    chmod 777 test-file
+```
+Provide read and execute access to users, groups & others
+```bash
+    chmod 555 test-file
+```
+Read and Write access for user & Group no access for others.
+```bash
+    chmod 660 test-file
+```
+Fullaccess for user,read and execute for group no access for others.
+```bash
+    chmod 750 test-file
+```
+Changes owner to user and group to developer
+```bash
+    chown user_name:developer test-file
+```
+Changes just the owner of the file to user_name.Group
+```bash
+    chown user_name andoid.apk
+```
+Change the group for the test-file to the group called android.
+```bash
+    chgrp android test-file
+```
 ### Command Line Browser
 Most of the time you need to browse URLs and fetch that content over the command line. Some times we need some partial information of that URL else we need complete information of that URL.
 
