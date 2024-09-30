@@ -765,7 +765,7 @@ SSH (Secure Shell) is a network protocol used to securely access and manage remo
 #### 1. Password Based SSH
 
 **Password based SSH** refers to the method of authenticating a user in an SSH session by using a password. When we use SSH to connect to a remote server the server can ask for a password as a way to verify our identity before granting access. This is one of the simplest & most common forms of **SSH authentication** but it's less secure compared to other methods like **key-based authentication**. 
-##### How Password SSH Works?
+#### How Password SSH Works?
 **First Step ~ Initiating Connection** : We open an SSH connection to a remote server using a command like :
  - **`ssh <hostname OR IP Address>`** :This command initiates an SSH connection to a server using the hostname or IP address of the remote machine.
  - **`ssh <user>@<hostname OR IP Address>`** :This allows us to specify a different user to log into the remote server. We must provide the username along with the hostname or IP address.
@@ -782,7 +782,7 @@ When using password-based SSH we need to enter the password every time we log in
 #### 2. Password Less SSH
 **Password-less SSH** allows us to connect to a remote server without entering a password each time. It uses SSH key-based authentication instead of password authentication. This method is not only more convenient but also more secure as it eliminates the risk of brute-force attacks on passwords.
 
-##### How Password-less SSH Works?
+#### How Password-less SSH Works?
 1. **SSH Key Pair:** A pair of cryptographic keys (public and private) is generated on our local machine.
  - The **private key** stays on the **local machine** and is never shared.
  - The **public key** is placed on the **remote server**.
@@ -791,7 +791,7 @@ When using password-based SSH we need to enter the password every time we log in
 
 <img src="Images/SSH-password-less.png" alt="Project Logo" width=80% height=50%>
 
-##### Steps to Set Up Password-less SSH (Linux to Linux)
+#### Steps to Set Up Password-less SSH (Linux to Linux)
 1. **Generate SSH Key Pair**
 - On our local machine we generate a public-private key pair using the **`ssh-keygen -t rsa`** command.
     This will create two files:
