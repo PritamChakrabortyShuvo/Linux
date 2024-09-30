@@ -854,22 +854,6 @@ Disable a service.
 ```bash
     systemctl disable <service>
 ```
-Check the status of a service.
-```bash
-    systemctl status <service>
-```
-List all services.
-```bash
-    systemctl list-units --type=service
-```
-List Running Services.
-```bash
-    systemctl --type=service --state=running
-```
-Check Logs for a Specific Service.
-```bash
-    journalctl -u <service_name>
-```
 Reboot the System.
 ```bash
     systemctl reboot
@@ -878,8 +862,38 @@ Shut Down the System.
 ```bash
     systemctl poweroff
 ```
-
-
+Check the status of a service.
+```bash
+    systemctl status <service>
+```
+List all services.
+```bash
+    systemctl list-units --type=service
+```
+Lists all active units currently running on the system.
+```bash
+    systemctl list-units
+```
+List Running Services.
+```bash
+    systemctl --type=service --state=running
+```
+Displays the default target (runlevel) that the system boots into.
+```bash
+    systemctl get-default
+```
+Sets the system's default target to multi-user mode (similar to non-GUI runlevel 3).
+```bash
+    systemctl set-default multi-user.target
+```
+Shows logs from the current boot.
+```bash
+    journalctl -b
+```
+Check Logs for a Specific Service.
+```bash
+    journalctl -u <service_name>
+```
 ### Command Line Browser
 Most of the time you need to browse URLs and fetch that content over the command line. Some times we need some partial information of that URL else we need complete information of that URL.
 
