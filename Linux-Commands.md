@@ -833,6 +833,53 @@ Remove all cron job.
 ```bash
     crontab -r
 ```
+### Systemd
+Start a service.
+```bash
+    systemctl start <service>
+```
+Stop a service.
+```bash
+    systemctl stop <service>
+```
+Restart a service.
+```bash
+    systemctl restart <service_name>
+```
+Enable a service (start on boot)
+```bash
+    systemctl enable <service>
+```
+Disable a service.
+```bash
+    systemctl disable <service>
+```
+Check the status of a service.
+```bash
+    systemctl status <service>
+```
+List all services.
+```bash
+    systemctl list-units --type=service
+```
+List Running Services.
+```bash
+    systemctl --type=service --state=running
+```
+Check Logs for a Specific Service.
+```bash
+    journalctl -u <service_name>
+```
+Reboot the System.
+```bash
+    systemctl reboot
+```
+Shut Down the System.
+```bash
+    systemctl poweroff
+```
+
+
 ### Command Line Browser
 Most of the time you need to browse URLs and fetch that content over the command line. Some times we need some partial information of that URL else we need complete information of that URL.
 
