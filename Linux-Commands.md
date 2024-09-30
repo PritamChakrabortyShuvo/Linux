@@ -787,6 +787,31 @@ Recursively and securely copies the media directory from the local machine to th
 ```bash
     scp -pr /home/user/media/ devapp01:/home/user
 ```
+### IP Tables
+Displays the current firewall rules set by iptables.
+```bash
+    iptables
+```
+Lists all the current rules in all chains (INPUT, OUTPUT, FORWARD) for easy viewing.
+```bash
+    iptables -L
+```
+Allows incoming TCP traffic on port **`22`** (SSH) from the IP address **`172.16.238.188`**
+```bash
+    iptables -A INPUT -p tcp -s 172.16.238.188 --dport 22 -j ACCEPT
+```
+Blocks all outgoing TCP traffic to port **`443`** (HTTPS) for all destinations.
+```bash
+    iptables -A OUTPUT -p tcp --dport 443 -j DROP
+```
+Inserts a rule at the top of the OUTPUT chain to allow outgoing TCP traffic to the IP address **`172.16.238.100`** on port **`443`** (HTTPS).
+```bash
+   iptables -I OUTPUT -p tcp -d 172.16.238.100 --dport 443 -j ACCEPT 
+```
+Allows incoming TCP traffic on port **`80`** (HTTP) from the IP address **`172.16.238.187`**.
+```bash
+    iptables -A INPUT -p tcp -s 172.16.238.187 --dport 80 -j ACCEPT
+```
 ### Command Line Browser
 Most of the time you need to browse URLs and fetch that content over the command line. Some times we need some partial information of that URL else we need complete information of that URL.
 
