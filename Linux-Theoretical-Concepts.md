@@ -1146,3 +1146,68 @@ SAN is a high-speed network that provides access to consolidated block-level sto
     - Usually more expensive due to the hardware and infrastructure required.
 
 <img src="Images/SAN.png" alt="Project Logo" width=80% height=50%>
+
+### LVM (:ogical Volume Manager)
+LVM is a storage management tool in Linux that provides a more flexible way to manage disk storage compared to traditional partitioning. It allows users to create, resize & manage logical volumes (virtual partitions) without worrying about physical disk space boundaries.
+
+#### How LVM Works?
+LVM works by abstracting the physical storage devices such as hard drives or partitions into a pool of storage called a **Volume Group (VG)**. From this volume group Logical Volumes (LV) can be created, resized or removed dynamically. This offers great flexibility in managing storage.
+#### Key Concepts in LVM
+- **Physical Volume (PV):** This is a raw storage device like a hard disk or partition.
+- **Volume Group (VG):** A collection of physical volumes grouped together to form a storage pool.
+- **Logical Volume (LV):** Virtual partitions that are created from the volume group where the actual data is stored. These can be resized or moved as needed.
+- **Physical Extents (PE):** The smallest unit of storage in a volume group used to allocate space for logical volumes.
+#### Usage of LVM
+- **Flexible Storage:** You can grow or shrink file systems and partitions without downtime.
+- **Efficient Storage Utilization:** Space is dynamically allocated across logical volumes.
+- **Snapshot Capability:** LVM allows you to create snapshots of volumes which are useful for backups.
+#### Benefits of LVM
+- **Dynamic Resizing:** Logical volumes can be resized easily without downtime.
+- **Storage Flexibility:** It allows for the efficient use of multiple disks.
+- **Snapshots:** You can take snapshots of logical volumes for backups or testing purposes.
+
+LVM is particularly useful in environments where storage needs fluctuate as it provides administrators with powerful tools to manage space efficiently and dynamically.
+
+#### Example 
+Suppose we have a server with two physical disks: **`/dev/sda`** **(500GB)** & **`/dev/sdb`** **(500GB)**. We want to combine them into one large storage pool and create a **600GB** logical volume for storing user data. Later, we decide to add another **400GB** to the logical volume as our data grows.
+
+1. **Create Physical Volumes (PV) :** We first prepare the two disks for use with LVM by creating physical volumes.
+
+   ```bash
+     sudo pvcreate /dev/sda /dev/sdb
+   ``` 
+   This initializes both disks **`/dev/sda`** & **`/dev/sdb`** as physical volumes for LVM to manage.
+
+2. **Create a Volume Group (VG) :** Next, we create a volume group called **vg_data** that combines the space from both physical volumes.
+
+   ```bash
+     sudo vgcreate vg_data /dev/sda /dev/sdb
+   ```
+   Now, we have a volume group named **vg_data** with **1TB** of space **(500GB + 500GB)**.
+
+3. **Create a Logical Volume (LV) :** We create a logical volume called **`lv_users`** that is **600GB** in size from the volume group.
+
+   ```bash
+     sudo lvcreate -L 600G -n lv_users vg_data
+   ```
+   This creates a logical volume named lv_users with 600GB of storage from the volume group.
+
+4. **Format and Mount the Logical Volume :** To use the logical volume, we format it with a file system and mount it.
+
+   ```bash
+     sudo mkfs.ext4 /dev/vg_data/lv_users
+     sudo mount /dev/vg_data/lv_users /mnt/users
+   ```
+5. **Expand the Logical Volume Later :** Suppose we run out of space and we need to add another **400GB** to **`lv_users`**. First, **we expand the logical volume**, then **resize the file system**.
+
+   ```bash
+     sudo lvextend -L +400G /dev/vg_data/lv_users
+     sudo resize2fs /dev/vg_data/lv_users
+   ```
+   We just expanded **`lv_users`** by **400GB** making it **1TB** in total. The file system is also resized to use the new space.
+
+- **Summary :**
+  - **Physical Volumes (PV):** We combined two disks.
+  - **Volume Group (VG):** We created a pool of storage.
+  - **Logical Volume (LV):** We allocated space dynamically for user data.
+  - **Expansion:** Later, we expanded the storage as our data needs grew, without losing any data or needing to unmount the volume.
