@@ -979,14 +979,14 @@ Partitioning a **30 GB disk (/dev/sda)** involves several steps from checking th
 
  <img src="Images/example of partition.png" alt="Project Logo" width=40% height=50%>
  
-- **Step 1.** **Check Existing Partitions ~** 
+- **Step 1.** **Check Existing Partitions :** 
 This command shows the partition table of **`/dev/sda`**.
 ```bash
     sudo fdisk -l /dev/sda
 ```
 Review the current partition scheme to ensure there is enough free space or to decide if any partitions need resizing or deletion.
 
-- **Step 2.** **Start Partitioning Using `fdisk` ~** 
+- **Step 2.** **Start Partitioning Using `fdisk` :** 
 We will use fdisk to partition the disk. This tool is interactive and works well for both MBR and GPT.
   - **Start `fdisk` :** This opens the partition table for **`/dev/sda`**.
 
@@ -1011,7 +1011,7 @@ We will use fdisk to partition the disk. This tool is interactive and works well
     4. Then, specify the size of the partition. We can do this in megabytes (e.g., **`+10G`** for a **10GB partition**) or let the partition use the remaining space.
   - **Repeat the Process for More Partitions (Optional) :**
     1. If we want to create more partitions, repeat the process by typing **`n`** and specifying the size for each partition.
-- **Step 3. Set Partition Type ~**
+- **Step 3. Set Partition Type :**
   - For most Linux partitions, the default partition type (83 for Linux) is fine.
   - If we are setting up a swap partition we need to change its type to 82.
 
@@ -1020,14 +1020,14 @@ We will use fdisk to partition the disk. This tool is interactive and works well
     ```
     After selecting **`t`** choose the appropriate partition number and specify 82 for swap or keep the default 83 for Linux.
 
-- **Step 4. Write Changes and Exit `fdisk` ~**
+- **Step 4. Write Changes and Exit `fdisk` :**
 After creating all partitions, we need to save the changes.
 
  ```bash
         Command (m for help): w
  ```
  **`w`** writes the new partition table to the disk and exits **`fdisk`**. After this step, the kernel may need to re-read the partition table. If there are any issues, reboot the system to ensure the new partition table is loaded.
- - **Step 5. Format the Partitions ~**
+ - **Step 5. Format the Partitions :**
  Once the partitions are created, they need to be formatted with a file system so they can store data.
    - Format as **`ext4`** (common Linux file system):
 
@@ -1041,7 +1041,7 @@ After creating all partitions, we need to save the changes.
      ```bash
         sudo mkswap /dev/sda2
      ```
-- **Step 6. Mount the Partitions ~**
+- **Step 6. Mount the Partitions :**
 Once the partitions are formatted, we can mount them to make them accessible.
   - Create Mount Points.
 
@@ -1059,7 +1059,7 @@ Once the partitions are formatted, we can mount them to make them accessible.
     ```bash
         sudo swapon /dev/sda2
     ```
-- **Step 7. Make Mount Permanent (Optional) ~**
+- **Step 7. Make Mount Permanent (Optional) :**
 To ensure that the partition mounts automatically on reboot we need to add it to **`/etc/fstab`**.
   - Get the UUID of the Partition.
 
@@ -1079,7 +1079,7 @@ To ensure that the partition mounts automatically on reboot we need to add it to
     ```
 Save the file and exit. This ensures that the partition will be mounted at **`/mnt/mydata`** every time the system boots.
 
-- **Step 8.  Verify the Partition and Mount ~**
+- **Step 8.  Verify the Partition and Mount :**
 To confirm that the partition was successfully created, formatted, and mounted, we can use the following commands:
 
 ```bash
