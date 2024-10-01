@@ -641,9 +641,8 @@ Shows a history of all users who have logged in and out.
 ```bash
     last
 ```
-Switches to another user (including root) with their environment settings.
-```bash
-    su -
+Switches to root user.
+    su -i
 ```
 You can switch user from one user to another user using.
 ```bash
