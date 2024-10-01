@@ -880,4 +880,5 @@ To schedule a cron job to run at 12:01 AM on 16th September and only if it is a 
 
 #### Real-Life Example of systemd in Action
 Let's assume we are managing an **Apache web server** on a Linux machine. We need to start Apache enable it to start on boot and verify that it is running properly. Here’s how we can do this using **`systemd`**.
-<img src="Images/exmaple of systemd.png" alt="Project Logo" width=80% height=50%>
+
+<img src="Images/exmaple of systemd.png" alt="Project Logo" width=50% height=50%>
