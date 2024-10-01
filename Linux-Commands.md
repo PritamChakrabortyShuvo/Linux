@@ -957,6 +957,25 @@ To mount an NFS directory on the client.
 ```bash
     sudo mount server_IP:/shared_directory /local_mount_point
 ```
+### Logical Volume Manager
+Create a physical volume (PV).
+```bash
+    sudo pvcreate /dev/sda1 /dev/sdb1
+```
+Create a volume group (VG).
+```bash
+    sudo vgcreate my_volume_group /dev/sda1 /dev/sdb1
+```
+Create a logical volume (LV). This creates a 50GB logical volume from the volume group.
+```bash
+    sudo lvcreate -L 50G -n my_logical_volume my_volume_group
+```
+Format and mount the logical volume.
+```bash
+    sudo mkfs.ext4 /dev/my_volume_group/my_logical_volume
+    sudo mount /dev/my_volume_group/my_logical_volume /mnt
+```
+
 ### Command Line Browser
 Most of the time you need to browse URLs and fetch that content over the command line. Some times we need some partial information of that URL else we need complete information of that URL.
 
