@@ -1090,6 +1090,20 @@ To confirm that the partition was successfully created, formatted, and mounted, 
 ```bash
         df -h
 ```
+### NFS (Network File System)
+NFS is a distributed file system protocol that allows users to access files over a network as if they were located on their local machine. It enables file sharing between multiple computers on the same network.
+
+#### How NFS Works:
+- NFS allows a client machine to access files on a remote server through a network making the remote files appear as if they are on the client’s local filesystem.
+- A server exports a directory & clients can mount this directory over the network accessing it just like any other local storage.
+- The protocol uses TCP or UDP for communication & it is widely used in Unix/Linux environments.
+#### Usage Context:
+- **File Sharing:** Commonly used in enterprise environments where multiple users or systems need access to shared data.
+- **Centralized Storage:** A great solution for centralizing file storage across a network enabling data access and collaboration.
+#### Key Features
+- **Centralized Management:** Files are stored in one location but accessible across the network.
+- **Access Control:** NFS supports permission settings and access controls for users.
+- **Transparent Access:** Users access files remotely but it feels as if they are on their local machine.
 ### Storage Devices 
 
 When DAS (Direct Attached Storage), NAS (Network Attached Storage) and SAN (Storage Area Network) are considered together they are often referred to as **"Storage Solutions"** or **"Storage Architectures"**. This term encompasses the various methods and technologies for storing and managing data in different environments, whether it be for individual users, small businesses or large enterprises. These storage solutions can be chosen based on specific needs related to performance, accessibility, capacity, and scalability.
