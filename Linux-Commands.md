@@ -893,6 +893,59 @@ Check Logs for a Specific Service.
 ```bash
     journalctl -u <service_name>
 ```
+### Storage in Linux 
+Check Disk Partitions. It will lists all partitions on **`/dev/sda`** with details like size and type.
+```bash
+    sudo fdisk -l /dev/sda
+```
+Opens **`fdisk`** to modify the partition table of **`/dev/sda`**.
+```bash
+    sudo fdisk /dev/sda
+```
+Create New Partition inside **`fdisk`**. Adds a new partition (primary or extended).
+```bash
+    n
+```
+Changes the type of the partition (e.g., 82 for swap, 83 for Linux).
+```bash
+    t
+```
+Saves changes and exits **`fdisk`**
+```bash
+    w
+```
+Formats *`/dev/sda1`** with the ext4 file system.
+```bash
+    sudo mkfs.ext4 /dev/sda1
+```
+Formats /dev/sda2 as swap space
+```bash
+    sudo mkswap /dev/sda2
+```
+Activates the swap partition.
+```bash
+    sudo swapon /dev/sda2
+```
+Create Mount Directory
+```bash
+    sudo mkdir /mnt/mydata
+```
+Mounts **`/dev/sda1`** at **`/mnt/mydata`**
+```bash
+    sudo mount /dev/sda1 /mnt/mydata
+```
+Get UUID of Partition
+```bash
+    sudo blkid /dev/sda1
+```
+Edit **`/etc/fstab`**
+```bash
+    sudo nano /etc/fstab
+```
+Check Mounted Partitions
+```bash
+    df -h
+```
 ### Command Line Browser
 Most of the time you need to browse URLs and fetch that content over the command line. Some times we need some partial information of that URL else we need complete information of that URL.
 
