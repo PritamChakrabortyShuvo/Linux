@@ -974,6 +974,11 @@ Partition tables define how partitions are organized on a storage device. There 
 
 **When to use GPT:** If we have a modern system with **UEFI** and **larger disks more than 2TB** or want better partition management and error recovery.
 
+#### fstab
+**`fstab`** **(File System Table)** is a configuration file in Linux located at **`/etc/fstab`**. It defines how disk partitions, file systems & other storage devices should be mounted and used automatically when the system boots.
+
+ <img src="Images/fstab.png" alt="Project Logo" width=40% height=50%>
+
 #### Example of Partitioning from Scratch
 Partitioning a **30 GB disk (/dev/sda)** involves several steps from checking the current partition layout to creating and formatting new partitions. We'll walk through the entire process from scratch including installing necessary tools if needed using common Linux utilities like **`fdisk`** and **`mkfs`**. Here's how we can do it:
 
@@ -1085,6 +1090,45 @@ To confirm that the partition was successfully created, formatted, and mounted, 
 ```bash
         df -h
 ```
+### Storage Devices 
 
+When DAS (Direct Attached Storage), NAS (Network Attached Storage) and SAN (Storage Area Network) are considered together they are often referred to as **"Storage Solutions"** or **"Storage Architectures"**. This term encompasses the various methods and technologies for storing and managing data in different environments, whether it be for individual users, small businesses or large enterprises. These storage solutions can be chosen based on specific needs related to performance, accessibility, capacity, and scalability.
 
+#### DAS (Direct Attached Storage)
+DAS refers to storage devices that are directly connected to a computer or server without a network.
+- **Examples:** Internal hard drives, external hard drives, USB flash drives.
+- **Use Case:** Ideal for individual users or small setups where data access needs are limited to a single machine.
+- **Pros:**
+    - Simple setup.
+    - Usually cheaper than NAS and SAN.
+- **Cons:**
+    - Limited sharing capabilities; typically accessible only by the directly connected device.
 
+ <img src="Images/DAS.png" alt="Project Logo" width=80% height=50%>
+
+#### NAS (Network Attached Storage)
+NAS is a dedicated file storage device that connects to a network, allowing multiple users and devices to access files over the network.
+- **Examples:** Devices like Synology or QNAP that provide shared storage over a network.
+- **Use Case:** Great for home or office environments where multiple users need access to shared files and data.
+- **Pros:**
+    - Centralized storage accessible from any device on the network.
+    - Often includes features like user management, data redundancy and remote access.
+- **Cons:**
+    - Typically more expensive than DAS.
+    - Requires a network setup for access.
+
+<img src="Images/NAS.png" alt="Project Logo" width=80% height=50%>
+
+ #### SAN (Storage Area Network)
+SAN is a high-speed network that provides access to consolidated block-level storage, allowing multiple servers to connect to shared storage devices.
+- **Examples:** Fibre Channel networks and iSCSI networks that connect servers to storage devices..
+- **Use Case:** : Suitable for enterprise environments where high availability, performance, and scalability are critical, like databases or virtualization.
+- **Pros:**
+    - High speed and low latency.
+    - Scalable; can add more storage without disrupting existing systems.
+    - Better performance for applications requiring rapid access to storage.
+- **Cons:**
+    - More complex to set up and manage.
+    - Usually more expensive due to the hardware and infrastructure required.
+
+<img src="Images/SAN.png" alt="Project Logo" width=80% height=50%>
