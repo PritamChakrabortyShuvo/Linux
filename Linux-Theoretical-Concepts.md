@@ -461,6 +461,7 @@ Let’s say we want to visit **`www.example.com`**. Here’s what happens step-b
     - With the IP address our computer can now connect to **`www.example.com`** & the website appears in our browser.
 
  Here is the workflow diagram of this complete process :
+
 <img src="Images/DNS Workflow.png" alt="Project Logo" width=100% height=75%>
 
 Simple Workflow diagram :
@@ -526,6 +527,7 @@ Switching is how we connect devices like computers and printers in a local netwo
 1. **Faster Communication:** Switches help devices talk to each other quickly by sending data only to the intended device.
 2. **Less Confusion:** Data goes to the right device not to everyone on the network.
 3. **Easy to Expand:** We can easily add more devices by connecting them to the switch.
+
 <img src="Images/Switching.png" alt="Project Logo" width=100% height=50%>
 
 ### Routing 
@@ -535,6 +537,7 @@ Routing is the process of selecting paths in a network along which to send data 
 2. **Routers:** Routers are devices that connect different networks. They read the destination IP address of each packet and determine the best path for it to take.
 3. **Routing Tables:** Each router has a routing table, which is like a map that lists the best paths to different network destinations. Routers update these tables to adapt to changes in the network.
 4. **Forwarding:** Based on the routing table, the router forwards the packet to the next hop (another router or the final destination) until it reaches the target device.
+
 <img src="Images/Routing.png" alt="Project Logo" width=100% height=50%>
 
 ### Gateway
@@ -617,6 +620,7 @@ Access Control Files in Linux are essential system files that manage user authen
 1. **`/etc/passwd`** :
     - **Purpose:** Stores basic information about user accounts.
     - **Content:** Contains username, user ID (UID), group ID (GID), home directory & default shell. It allows the system to identify and authenticate users when they log in.
+
 <img src="Images/passwd.png" alt="Project Logo" width=80% height=50%>
 
 **Fields Explained:**
@@ -630,6 +634,7 @@ Access Control Files in Linux are essential system files that manage user authen
 2. **`/etc/shadow`** :
     - **Purpose:** Contains secure hashed passwords and account expiration information.
     - **Content:** Includes the username and hashed password, as well as details about password expiration, minimum and maximum password age & account expiration. This file is usually **accessible only to the root user** for security reasons.
+
  <img src="Images/shadow.png" alt="Project Logo" width=80% height=50%>
 
 **Fields Explained:**
@@ -645,6 +650,7 @@ Access Control Files in Linux are essential system files that manage user authen
 2. **`/etc/group`** :
     - **Purpose:** Defines groups of users and their membership.
     - **Content:** Contains group names, group IDs (GIDs) & a list of users that belong to each group. This helps manage permissions collectively for users in a group.
+
  <img src="Images/groups.png" alt="Project Logo" width=80% height=50%>
 
 **Fields Explained:**
@@ -654,6 +660,7 @@ Access Control Files in Linux are essential system files that manage user authen
 - **`MEMBERS`**: **`user01`**,**`user02`** - A comma-separated list of users who are members of the "**developer**" group.
 
 #### Manging Users
+
 <img src="Images/Managing Users.png" alt="Project Logo" width=80% height=50%>
 
 **Description:** Creates a new user account named "user01" with the specified settings:
@@ -806,10 +813,12 @@ When using password-based SSH we need to enter the password every time we log in
    - Now that the public key is on the remote server, we can log in without a password using **`ssh user@remote_host`** command.
 
 Here is the workflow of **Linux** to **Linux** **Password-Less SSH**
+
 <img src="Images/SSH-passwordless01.png" alt="Project Logo" width=80% height=50%>
 
 ### SCP (Secure Copy Protocol)
 **SCP** stands for **Secure Copy Protocol**. It is a command used to securely **transfer files** between a local and a remote system or between two remote systems over an SSH connection. SCP ensures that the data is encrypted during the transfer making it secure.
+
 <img src="Images/SCP.png" alt="Project Logo" width=80% height=50%>
 
 ### IP Tables
@@ -825,10 +834,12 @@ In iptables chains are a fundamental concept used to manage the flow of network 
  3. **FORWARD Chain :** Rules for packets being routed through the local system to another destination.
 #### Chain
  In the context of iptables a chain is a set of rules that determine how packets are handled based on specified criteria. Each chain consists of a sequence of rules that are evaluated in order, and each rule specifies actions (like ACCEPT, DROP, or REJECT) for matching packets.
+
 <img src="Images/IP Tables.png" alt="Project Logo" width=80% height=50%>
 
 #### IP Tables Examples
 Suppose we have a client with 172.46.238.188 IP & a Server with 172.46.238.10 IP address.
+
 <img src="Images/IP Tables01.png" alt="Project Logo" width=80% height=50%>
 
 To adds a rule to the INPUT chain to allow incoming TCP traffic on port 22 (commonly used for SSH) from the IP address 172.46.238.188. We need to use this command 
@@ -859,10 +870,12 @@ use **`iptables -A OUTPUT -p tcp --dport 443 -j DROP`**
      - Day of the Month (1-31)
      - Month (1-12)
      - Day of the Week (0-7, where 0 or 7 is Sunday)
+
 <img src="Images/Cron01.png" alt="Project Logo" width=80% height=50%>
 
 #### Example of a Cron Job
 To schedule a cron job to run at 12:01 AM on 16th September and only if it is a Thursday the cron expression would be
+
 <img src="Images/Cron.png" alt="Project Logo" width=80% height=50%>
 
  - In cron, the **`*`** (asterisk) is a wildcard that means "every" or "any." It is used to tell cron that it should not restrict the job to a specific value for that field.
@@ -882,3 +895,80 @@ To schedule a cron job to run at 12:01 AM on 16th September and only if it is a 
 Let's assume we are managing an **Apache web server** on a Linux machine. We need to start Apache enable it to start on boot and verify that it is running properly. Here’s how we can do this using **`systemd`**.
 
 <img src="Images/exmaple of systemd.png" alt="Project Logo" width=50% height=50%>
+
+## Storage in Linux
+Storage in Linux involves managing how data is stored and accessed on a system including hard drives, SSDs, partitions, file systems & various tools to manage and manipulate storage.
+### File System in Linux
+A file system is the method & data structure used by an operating system to manage and store files on a storage device like a hard drive or SSD. In Linux, the file system organizes files & directories into a structured hierarchy allowing the system to read, write & manipulate data efficiently.
+#### Key Components of a File System
+ - **Files:** Data stored in the form of documents, images, scripts etc.
+ - **Directories:** Folders that organize files into a structured hierarchy.
+ - **Inodes:** Data structures that store metadata about files like permissions, ownership, and location on the disk.
+ - **Superblock:** A structure that holds information about the entire file system including size, available space & metadata information.
+ - **Blocks:** The basic units of storage where file **data is written**. Files can span across multiple blocks.
+ #### Common Linux File Systems
+  1. **ext4 (Fourth Extended File System)**
+   - Most widely used file system in Linux.
+   - Supports large file sizes (up to 16TB) and volumes (up to 1EB).
+   - Features journaling which helps recover data after system crashes.
+  2. **XFS**
+   - High-performance file system, suitable for large files and parallel I/O.
+   - Used in enterprise environments where high throughput is required.
+   - Supports online resizing and defragmentation.
+  3. **Btrfs (B-tree File System)**
+   - Advanced, modern file system with built-in support for snapshots, subvolumes, and RAID.
+   - Focuses on fault tolerance and self-healing, making it ideal for modern large-scale systems.
+  4. **FAT32 and exFAT**
+   - Often used in removable devices like USB drives and SD cards due to their cross-platform support.
+   - Limited in file size and features compared to ext4 or XFS.  
+### Disk Partition
+A disk partition is a logically divided section of a storage device like a hard drive or SSD that acts as a separate unit. Partitions allow us to organize and manage data more efficiently especially when we want to use different file systems or separate system and user data.
+#### Disk Partitions Type
+1. **Primary Partition**
+ - A type of partition that directly stores data or an operating system.
+ - A hard disk can have up to **four primary partitions**.
+ - If we need more than four partitions, we must create an extended partition.
+
+<img src="Images/Primary Partition.png" alt="Project Logo" width=50% height=50%>
+
+2. **Extended Partition**
+ - A special partition that acts as a container for **logical partitions**.
+ - Only one extended partition can exist per disk but it can contain multiple logical partitions.
+ - Allows bypassing the four-partition limit of primary partitions.
+
+3. **Logical Partition**
+ - Resides within an extended partition.
+ - Functions like primary partitions and can host files or operating systems, except it's created inside an extended partition.
+
+<img src="Images/Extended and Logical Partition.png" alt="Project Logo" width=70% height=50%>
+
+#### Partition Table Types
+Partition tables define how partitions are organized on a storage device. There are two primary types of partition tables: **MBR (Master Boot Record)** and **GPT (GUID Partition Table)**. Here's a breakdown of both:
+
+1. **MBR (Master Boot Record)**
+ - **Partition Limit :** Supports up to 4 primary partitions. Alternatively, we can create **3 primary partitions** and **1 extended partition** which can contain **multiple logical partitions**.
+ - **Disk Size Limit :** Works with disks up to 2TB in size.
+ - **Boot Sector :** Stores the bootloader and partition information in the first 512 bytes of the disk called the boot sector.
+ - **Compatibility :** MBR is widely supported on older systems, making it useful for older hardware.
+
+ <img src="Images/MBR.png" alt="Project Logo" width=70% height=50%>
+
+ - **Limitations :** Cannot handle disks larger than 2TB & limited to 4 primary partitions.
+
+ - **Example :** If we have a **1TB hard drive** **MBR** can divide it into up to **4 partitions**. For disks **larger than 2TB** **MBR** won't fully utilize the storage space.
+
+ 1. **GPT (GUID Partition Table)**
+ - **Partition Limit :** Supports up to 128 partitions
+ - **Disk Size Limit :**  Can handle disks larger than 2TB, supporting sizes up to 9.4 ZB (zettabytes).
+ - **Boot Sector :** GPT stores multiple copies of the partition table across the disk, which provides redundancy in case of corruption.
+ - **Compatibility :** Requires a UEFI-compatible system, though some systems offer backward compatibility with legacy BIOS.
+
+ <img src="Images/GPT.png" alt="Project Logo" width=40% height=50%>
+
+ - **Advantages :** Supports very large disk sizes, more partitions (up to 128) & redundant partition table for recovery in case of corruption.
+
+ - **Example :** If we have a **4TB hard drive** **GPT** can partition the entire disk and allow us to create more than four partitions overcoming the limits of MBR.
+
+#### Choosing MBR or GPT
+- **When to use MBR:** If we're working with **older hardware** or need to install an OS on a disk smaller than **2TB** that requires BIOS (legacy) booting.
+**When to use GPT:** If we have a modern system with **UEFI** and **larger disks more than 2TB** or want better partition management and error recovery.
