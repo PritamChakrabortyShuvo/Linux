@@ -971,4 +971,120 @@ Partition tables define how partitions are organized on a storage device. There 
 
 #### Choosing MBR or GPT
 - **When to use MBR:** If we're working with **older hardware** or need to install an OS on a disk smaller than **2TB** that requires BIOS (legacy) booting.
+
 **When to use GPT:** If we have a modern system with **UEFI** and **larger disks more than 2TB** or want better partition management and error recovery.
+
+#### Example of Partitioning from Scratch
+Partitioning a **30 GB disk (/dev/sda)** involves several steps from checking the current partition layout to creating and formatting new partitions. We'll walk through the entire process from scratch including installing necessary tools if needed using common Linux utilities like **`fdisk`** and **`mkfs`**. Here's how we can do it:
+
+ <img src="Images/example of partition.png" alt="Project Logo" width=40% height=50%>
+ 
+- **Step 1.** **Check Existing Partitions ~** 
+This command shows the partition table of **`/dev/sda`**.
+```bash
+    sudo fdisk -l /dev/sda
+```
+Review the current partition scheme to ensure there is enough free space or to decide if any partitions need resizing or deletion.
+
+- **Step 2.** **Start Partitioning Using `fdisk` ~** 
+We will use fdisk to partition the disk. This tool is interactive and works well for both MBR and GPT.
+  - **Start `fdisk` :** This opens the partition table for **`/dev/sda`**.
+
+    ```bash
+     sudo fdisk /dev/sda
+    ```
+  - **View Current Partitions (Optional) :** After opening fdisk, type **`p`** to print the current partitions on **`/dev/sda`**. This will show existing partition numbers, sizes & types.
+
+    ```bash
+        Command (m for help): p
+    ```
+  - **Create a New Partition :**  Type **`n`** to create a new partition.
+
+    ```bash
+        Command (m for help): n
+    ```
+    1. **`fdisk`** will ask whether to create a primary or extended partition.
+       - If fewer than 4 primary partitions exist choose p for primary.
+       - If you need more partitions, consider creating an extended partition first then logical partitions within it.
+    2. Choose a partition number (e.g., **`1`** for the first partition, **`2`** for the second, etc.).
+    3. **`fdisk`** will ask for the **start sector** & **end sector** of the partition. We can press **Enter** to accept the default start sector.
+    4. Then, specify the size of the partition. We can do this in megabytes (e.g., **`+10G`** for a **10GB partition**) or let the partition use the remaining space.
+  - **Repeat the Process for More Partitions (Optional) :**
+    1. If we want to create more partitions, repeat the process by typing **`n`** and specifying the size for each partition.
+- **Step 3. Set Partition Type ~**
+  - For most Linux partitions, the default partition type (83 for Linux) is fine.
+  - If we are setting up a swap partition we need to change its type to 82.
+
+    ```bash
+        Command (m for help): t
+    ```
+    After selecting **`t`** choose the appropriate partition number and specify 82 for swap or keep the default 83 for Linux.
+
+- **Step 4. Write Changes and Exit `fdisk` ~**
+After creating all partitions, we need to save the changes.
+
+ ```bash
+        Command (m for help): w
+ ```
+ **`w`** writes the new partition table to the disk and exits **`fdisk`**. After this step, the kernel may need to re-read the partition table. If there are any issues, reboot the system to ensure the new partition table is loaded.
+ - **Step 5. Format the Partitions ~**
+ Once the partitions are created, they need to be formatted with a file system so they can store data.
+   - Format as **`ext4`** (common Linux file system):
+
+     ```bash
+        sudo mkfs.ext4 /dev/sda1
+     ```
+    Repeat for other partitions, e.g., **`/dev/sda2`**, **`/dev/sda3`** depending on how many partitions we created.
+
+   - Format Swap Partition (if created):
+   
+     ```bash
+        sudo mkswap /dev/sda2
+     ```
+- **Step 6. Mount the Partitions ~**
+Once the partitions are formatted, we can mount them to make them accessible.
+  - Create Mount Points.
+
+    ```bash
+        sudo mkdir /mnt/mydata
+    ```
+    We create a directory where the partition will be mounted. Replace **`/mnt/mydata`** with a directory name that makes sense for our use.
+  - Mount the Partition.
+
+    ```bash
+        sudo mount /dev/sda1 /mnt/mydata
+    ```
+  - Activate Swap(if swap partition was created)
+
+    ```bash
+        sudo swapon /dev/sda2
+    ```
+- **Step 7. Make Mount Permanent (Optional) ~**
+To ensure that the partition mounts automatically on reboot we need to add it to **`/etc/fstab`**.
+  - Get the UUID of the Partition.
+
+    ```bash
+        sudo blkid /dev/sda1
+    ```
+    This will return the UUID, something like **`UUID="d3f5c2b9-384e-4eb8-bac4-4e5556b695e9"`**.
+  - Edit **`/etc/fstab`**
+
+    ```bash
+        sudo nano /etc/fstab
+    ```
+    Add the following line to the file.
+
+    ```bash
+        UUID=d3f5c2b9-384e-4eb8-bac4-4e5556b695e9 /mnt/mydata ext4 defaults 0 0
+    ```
+Save the file and exit. This ensures that the partition will be mounted at **`/mnt/mydata`** every time the system boots.
+
+- **Step 8.  Verify the Partition and Mount ~**
+To confirm that the partition was successfully created, formatted, and mounted, we can use the following commands:
+
+```bash
+        df -h
+```
+
+
+
