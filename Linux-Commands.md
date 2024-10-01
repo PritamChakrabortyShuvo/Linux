@@ -946,6 +946,17 @@ Check Mounted Partitions
 ```bash
     df -h
 ```
+### NFS
+To export a directory on the server.
+```bash
+    sudo nano /etc/exports
+    /shared_directory client_IP(rw,sync,no_subtree_check)
+    sudo exportfs -a
+```
+To mount an NFS directory on the client.
+```bash
+    sudo mount server_IP:/shared_directory /local_mount_point
+```
 ### Command Line Browser
 Most of the time you need to browse URLs and fetch that content over the command line. Some times we need some partial information of that URL else we need complete information of that URL.
 
