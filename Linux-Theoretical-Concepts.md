@@ -1147,7 +1147,7 @@ SAN is a high-speed network that provides access to consolidated block-level sto
 
 <img src="Images/SAN.png" alt="Project Logo" width=80% height=50%>
 
-### LVM (:ogical Volume Manager)
+### LVM (Logical Volume Manager)
 LVM is a storage management tool in Linux that provides a more flexible way to manage disk storage compared to traditional partitioning. It allows users to create, resize & manage logical volumes (virtual partitions) without worrying about physical disk space boundaries.
 
 #### How LVM Works?
