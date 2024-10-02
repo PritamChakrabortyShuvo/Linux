@@ -112,9 +112,9 @@ In Linux, **`commands`** are instructions given to the shell to perform specific
     - **Command :** The main instruction (e.g., **`ls, cp, mkdir`**).
     - **Argumants :** Options or parameters that provide context or modify the command's behavior (e.g., **`-l`*for long format).
 - **Example :**
-
+<div align="center">
     <img src="Images/Command & Argument.png" alt="Project Logo" width=50% height=25%>
-   
+</div>
    Here **`/home/user`** an argument that specifying the directory to list.
 - **Options :** Usually start with **`-`** or **`--`**(e.g., **`-a`**, **`--all`**).
 
@@ -135,7 +135,9 @@ A **path** is the location of a file or directory in the filesystem which can be
 
 - **Relative Path :** A relative path is the path to a file or directory from our current working directory, without starting from the root. For example, if we are in **`/home/user`** the relative path to **`file.txt`** inside directory would be **`directory/file.txt`**.
 
-<img src="Images/Path.png" alt="Project Logo" width=50% height=25%>
+<div align="center">
+    <img src="Images/Path.png" alt="Project Logo" width=50% height=25%>
+</div>
 
 ## Pushd and Popd
 **`pushd`** & **`popd`** are commands in Bash used for managing the directory stack allowing us to easily switch between directories.
@@ -161,13 +163,17 @@ There are various shell types in linux. They are
 ## Bash Environment Variables
 Bash environment variables are like placeholders that store important information such as **user settings** or **system paths**. They help the shell and programs run smoothly and can be used to control how commands work. For example :
 
-<img src="Images/Logname.png" alt="Project Logo" width=50% height=25%>
+<div align="center">
+    <img src="Images/Logname.png" alt="Project Logo" width=50% height=25%>
+</div>
 
 Logname show the name which stored in the logname.
 
 We can also set an environment variable. For example :
 
-<img src="Images/env.png" alt="Project Logo" width=50% height=25%>
+<div align="center">
+    <img src="Images/env.png" alt="Project Logo" width=50% height=25%>
+</div>
 
 ## PATH Variables
 The **PATH** variable in Bash is a list of directories where the shell searches for executable programs when we enter a command. If a command is in one of these directories we can run it without needing to type the full path.
@@ -175,13 +181,15 @@ The **PATH** variable in Bash is a list of directories where the shell searches 
 ## Bash Prompt
 The **bash prompt** is the text displayed in the terminal where we type commands. It typically shows our username, hostname, and current director & can be customized using environment variables like **`$PS1`**.
 
-<img src="Images/ps1.png" alt="Project Logo" width=50% height=25%>
+<div align="center">
+    <img src="Images/ps1.png" alt="Project Logo" width=50% height=25%>
+</div>
 
 ## Linux Prompt
 
 **The Linux prompt**, also known as the **command prompt**, is the interface in a terminal where users type commands. It typically looks like this :
 
-<div style="text-align: center;">
+<div align="center">
     <img src="Images/Linux-Prompt.png" alt="Project Logo">
 </div>
 
@@ -205,8 +213,9 @@ Linux core concepts include the system's main parts, like the kernel, file syste
 The **kernel** is the core part of the Linux operating system that manages hardware resources, facilitates communication between software and hardware & handles system processes, memory, and file management. 
 It acts as a bridge between applications and the underlying hardware.
 
-<img src="Images/Kernel.png" alt="Project Logo" width=50% height=25%>
-
+<div align="center">
+    <img src="Images/Kernel.png" alt="Project Logo" width=50% height=25%>
+</div>
 
 **Kernel functions** are the core tasks performed by the Linux kernel to manage system resources and ensure smooth operation. Here’s a brief overview of the main kernel functions
 
@@ -230,7 +239,9 @@ Linux includes a **monolithic kernel** which makes this OS the most stable and f
 
 **Kernel Space** and **User Space** are two distinct areas of memory in a Linux operating system that separate kernel-level operations from user-level processes.
 
-<img src="Images/Kenel and User space.png" alt="Project Logo" width=90% height=75%>
+<div align="center">
+    <img src="Images/Kenel and User space.png" alt="Project Logo" width=90% height=75%>
+</div>
 
 **Key Differences :**
 
@@ -263,8 +274,9 @@ The **Linux boot sequence** is the series of steps that the system goes through 
     - **Explanation :** After the kernel has initialized the system, it starts the **INIT** process, which is often managed by **Systemd** in modern Linux distributions. This process is the first user-space application that runs.
     - **Purpose :** The **INIT** process is the first program that runs after the kernel is ready; it starts other programs and services that the system needs to work, like logging in and connecting to the internet. **Example :** When our system boots up, INIT starts the login screen so we can enter our username and password.
 
-
-<img src="Images/Boot Sequence.png" alt="Project Logo" width=90% height=75%>
+<div align="center">
+    <img src="Images/Boot Sequence.png" alt="Project Logo" width=90% height=75%>
+</div>
 
 ## Systemd Targets
 **Systemd** is a system and service manager for Linux that starts up the system, manages services, and improves boot speed by running processes in parallel.
@@ -282,7 +294,9 @@ The file system hierarchy in Linux organizes the structure of directories and fi
 - Every directory has a parent except for the root **`("/")`** directory.
 - Many directories have subdirectories.
 
-![Project Logo](Images/File%20system%20hierarchy.png)
+<div align="center">
+    <img src="Images/File system hierarchy.png" alt="Project Logo" width=90% height=75%>
+</div>
 
 This hierarchical structure ensures consistency and provides a standardized way to organize and access files and directories in Linux systems.
 
@@ -345,14 +359,18 @@ Each distribution caters to different user needs, from general desktop use to sp
 ## Software Package 
 **A software package** is a bundled collection of files including executables, libraries and metadata that are grouped together for easy installation and management on an operating system.
 
-<img src="Images/Packages.png" alt="Project Logo" width=90% height=75%>
+<div align="center">
+    <img src="Images/Packages.png alt="Project Logo" width=90% height=75%>
+</div>
 
 The image illustrates the components involved in installing GIMP on an Ubuntu 24.04 system. A .deb package containing the GIMP software binaries, metadata and configuration files is downloaded and installed on the system making GIMP accessible for use.
 
 ## Package Manager 
 **A package manager** is a tool that automates the installation, updating and removal of software packages on an operating system such as **`DPKG`**, **`APT`**, **`APT-GET`**, **`RPM`**, **`YUM`** & **`DNF`**. 
 
-<img src="Images/Packages01.png" alt="Project Logo" width=90% height=75%>
+<div align="center">
+    <img src="Images/Packages01.png" alt="Project Logo" width=90% height=75%>
+</div>
 
 Here’s a simple explanation of each package managers 
 1. **`DPKG`**
@@ -374,7 +392,9 @@ Here’s a simple explanation of each package managers
     - **Type:** Package Manager
     - **Description:** The next-generation package manager that replaces YUM in Red Hat-based systems. It offers better performance and improved dependency resolution while maintaining similar functionality.
 
-    <img src="Images/Package Managers.png" alt="Project Logo" width=70% height=75%>
+<div align="center">
+    <img src="Images/Package Managers.png" alt="Project Logo" width=90% height=75%>
+</div>
 
 All of these are package managers or tools used to manage software packages but **`DPKG`**, **`APT`** and **`APT-GET`** are primarily for **Debian-based systems** while **`RPM`**, **`YUM`** and **`DNF`** are for **Red Hat-based systems**.
 
@@ -421,7 +441,9 @@ These editors help users edit configuration files, write scripts, and manage doc
 ```bash
     vim file_name
 ```
-<img src="Images/VIM Editor.png" alt="Project Logo" width=90% height=75%>
+<div align="center">
+    <img src="Images/VIM Editor.png" alt="Project Logo" width=90% height=75%>
+</div>
 
 ### ESC Mode
 In vim (Vi IMproved) editor, the **`ESC`** (Escape) key is pivotal for navigating and executing commands in Normal mode. Here are key functionalities in ESC mode:
@@ -507,11 +529,14 @@ Let’s say we want to visit **`www.example.com`**. Here’s what happens step-b
 
  Here is the workflow diagram of this complete process :
 
-<img src="Images/DNS Workflow.png" alt="Project Logo" width=100% height=75%>
+ <div align="center">
+    <img src="Images/DNS Workflow.png" alt="Project Logo" width=90% height=75%>
+</div>
 
 Simple Workflow diagram :
-
-<img src="Images/Domain Names02.png" alt="Project Logo" width=70% height=75%>
+<div align="center">
+    <img src="Images/Domain Names02.png" alt="Project Logo" width=90% height=75%>
+</div>
 
 ## Domain Name
 A domain name is the human-readable address we use to access websites on the internet. Instead of remembering IP addresses we use easy to remember names like **`www.google.com`**.
@@ -533,7 +558,9 @@ Putting it together **`www.google.com`** consists of:
 - **`google`:** The second-level domain.
 - **`.com`:** The top-level domain.
 
-<img src="Images/Domain Names.png" alt="Project Logo" width=70% height=50%>
+<div align="center">
+    <img src="Images/Domain Names.png" alt="Project Logo" width=90% height=75%>
+</div>
 
 ### How Domain Names Work?
 1. **Registration:** To get a domain name, we need to register it through a domain registrar like **GoDaddy**, **Namecheap**, etc. This usually involves paying a yearly fee.
@@ -573,7 +600,9 @@ Switching is how we connect devices like computers and printers in a local netwo
 2. **Less Confusion:** Data goes to the right device not to everyone on the network.
 3. **Easy to Expand:** We can easily add more devices by connecting them to the switch.
 
-<img src="Images/Switching.png" alt="Project Logo" width=100% height=50%>
+<div align="center">
+    <img src="Images/Switching.png" alt="Project Logo" width=90% height=75%>
+</div>
 
 ## Routing 
 Routing is the process of selecting paths in a network along which to send data packets from one device to another. Routers are the devices that perform this function.
@@ -583,7 +612,9 @@ Routing is the process of selecting paths in a network along which to send data 
 3. **Routing Tables:** Each router has a routing table, which is like a map that lists the best paths to different network destinations. Routers update these tables to adapt to changes in the network.
 4. **Forwarding:** Based on the routing table, the router forwards the packet to the next hop (another router or the final destination) until it reaches the target device.
 
-<img src="Images/Routing.png" alt="Project Logo" width=100% height=50%>
+<div align="center">
+    <img src="Images/Routing.png" alt="Project Logo" width=90% height=75%>
+</div>
 
 ## Gateway
 A gateway is a device that acts as a "gate" between two networks, allowing them to communicate with each other. It serves as a translator or bridge between different protocols or architectures.
@@ -666,7 +697,9 @@ Access Control Files in Linux are essential system files that manage user authen
     - **Purpose:** Stores basic information about user accounts.
     - **Content:** Contains username, user ID (UID), group ID (GID), home directory & default shell. It allows the system to identify and authenticate users when they log in.
 
-<img src="Images/passwd.png" alt="Project Logo" width=80% height=50%>
+<div align="center">
+    <img src="Images/passwd.png" alt="Project Logo" width=90% height=75%>
+</div>
 
 **Fields Explained:**
 - **`USERNAME`**: **`user01`** - The name of the user.
@@ -680,7 +713,9 @@ Access Control Files in Linux are essential system files that manage user authen
     - **Purpose:** Contains secure hashed passwords and account expiration information.
     - **Content:** Includes the username and hashed password, as well as details about password expiration, minimum and maximum password age & account expiration. This file is usually **accessible only to the root user** for security reasons.
 
- <img src="Images/shadow.png" alt="Project Logo" width=80% height=50%>
+<div align="center">
+    <img src="Images/shadow.png" alt="Project Logo" width=90% height=75%>
+</div>
 
 **Fields Explained:**
 - **`USERNAME`**: **`user01`** - The name of the user.
@@ -696,7 +731,9 @@ Access Control Files in Linux are essential system files that manage user authen
     - **Purpose:** Defines groups of users and their membership.
     - **Content:** Contains group names, group IDs (GIDs) & a list of users that belong to each group. This helps manage permissions collectively for users in a group.
 
- <img src="Images/groups.png" alt="Project Logo" width=80% height=50%>
+<div align="center">
+    <img src="Images/groups.png" alt="Project Logo" width=90% height=75%>
+</div>
 
 **Fields Explained:**
 - **`NAME`**: developer - The name of the group.
@@ -706,7 +743,9 @@ Access Control Files in Linux are essential system files that manage user authen
 
 ### Manging Users
 
-<img src="Images/Managing Users.png" alt="Project Logo" width=80% height=50%>
+<div align="center">
+    <img src="Images/Managing Users.png" alt="Project Logo" width=90% height=75%>
+</div>
 
 **Description:** Creates a new user account named "user01" with the specified settings:
 **`
@@ -748,7 +787,9 @@ Three Types of File Permissions:
 4. **No Permission (`-`):**
 If a user is denied permission for a specific action, a **`-`** will appear in place of r, w or x. This means no permission for that particular action.
 
-<img src="Images/file-permission01.png" alt="Project Logo" width=80% height=50%>
+<div align="center">
+    <img src="Images/file-permission01.png" alt="Project Logo" width=90% height=75%>
+</div>
 
 ### How Permissions Are Assigned?
 Permissions are assigned to three different categories of users:
@@ -756,9 +797,13 @@ Permissions are assigned to three different categories of users:
 - **Group:** A group of users who share access to the file.
 - **Others:** Everyone else on the system who is not the owner or part of the group.
 
-<img src="Images/file-permission.png" alt="Project Logo" width=80% height=50%>
+<div align="center">
+    <img src="Images/file-permission.png" alt="Project Logo" width=90% height=75%>
+</div>
 
-<img src="Images/file-permission03.png" alt="Project Logo" width=80% height=50%>
+<div align="center">
+    <img src="Images/file-permission03.png" alt="Project Logo" width=90% height=75%>
+</div>
 
 ### Modifying File Permissions
 In Linux, we modify file permissions using the **`chmod`** command. This command lets us set or change the permissions for owner, group & others.
@@ -829,7 +874,9 @@ SSH (Secure Shell) is a network protocol used to securely access and manage remo
 
 When using password-based SSH we need to enter the password every time we log in to the remote server. This can be less convenient especially if we frequently connect to the server as the system will always prompt us for the password at each login attempt.
 
-<img src="Images//SSH-password.png" alt="Project Logo" width=80% height=50%>
+<div align="center">
+    <img src="Images/SSH-password.png" alt="Project Logo" width=90% height=75%>
+</div>
 
 ### 2. Password Less SSH
 **Password-less SSH** allows us to connect to a remote server without entering a password each time. It uses SSH key-based authentication instead of password authentication. This method is not only more convenient but also more secure as it eliminates the risk of brute-force attacks on passwords.
@@ -841,7 +888,9 @@ When using password-based SSH we need to enter the password every time we log in
 
 2. **Authentication:** When we connect to the server, the server checks if the local machine has the correct private key to match the public key. If it does, access is granted without needing a password.
 
-<img src="Images/SSH-password-less.png" alt="Project Logo" width=80% height=50%>
+<div align="center">
+    <img src="Images/SSH-password-less.png" alt="Project Logo" width=90% height=75%>
+</div>
 
 #### Steps to Set Up Password-less SSH (Linux to Linux)
 1. **Generate SSH Key Pair**
@@ -859,12 +908,16 @@ When using password-based SSH we need to enter the password every time we log in
 
 Here is the workflow of **Linux** to **Linux** **Password-Less SSH**
 
-<img src="Images/SSH-passwordless01.png" alt="Project Logo" width=80% height=50%>
+<div align="center">
+    <img src="Images/SSH-passwordless01.png" alt="Project Logo" width=90% height=75%>
+</div>
 
 ## SCP (Secure Copy Protocol)
 **SCP** stands for **Secure Copy Protocol**. It is a command used to securely **transfer files** between a local and a remote system or between two remote systems over an SSH connection. SCP ensures that the data is encrypted during the transfer making it secure.
 
-<img src="Images/SCP.png" alt="Project Logo" width=80% height=50%>
+<div align="center">
+    <img src="Images/SCP.png" alt="Project Logo" width=90% height=75%>
+</div>
 
 ## IP Tables
 **iptables** is a command-line utility in Linux that manages network traffic by setting up rules for how incoming and outgoing data packets are handled. It functions as a firewall, controlling the flow of data based on specified criteria such as **IP addresses**, **ports** & protocols. With iptables, we can allow, block or redirect traffic to protect the system and manage network connections securely.
@@ -880,19 +933,25 @@ In iptables chains are a fundamental concept used to manage the flow of network 
 ### Chain
  In the context of iptables a chain is a set of rules that determine how packets are handled based on specified criteria. Each chain consists of a sequence of rules that are evaluated in order, and each rule specifies actions (like ACCEPT, DROP, or REJECT) for matching packets.
 
-<img src="Images/IP Tables.png" alt="Project Logo" width=80% height=50%>
+<div align="center">
+    <img src="Images/IP Tables.png" alt="Project Logo" width=90% height=75%>
+</div>
 
 ### IP Tables Examples
 Suppose we have a client with 172.46.238.188 IP & a Server with 172.46.238.10 IP address.
 
-<img src="Images/IP Tables01.png" alt="Project Logo" width=80% height=50%>
+<div align="center">
+    <img src="Images/IP Tables01.png" alt="Project Logo" width=90% height=75%>
+</div>
 
 To adds a rule to the INPUT chain to allow incoming TCP traffic on port 22 (commonly used for SSH) from the IP address 172.46.238.188. We need to use this command 
 **`iptables -A INPUT -p tcp -s 172.16.238.188  --dport 22 -j ACCEPT`**
 
 Here is the breakdown :
 
-<img src="Images/IP Tables02.png" alt="Project Logo" width=80% height=50%>
+<div align="center">
+    <img src="Images/IP Tables02.png" alt="Project Logo" width=90% height=75%>
+</div>
 
 More examples are given below :
 
@@ -916,12 +975,16 @@ use **`iptables -A OUTPUT -p tcp --dport 443 -j DROP`**
      - Month (1-12)
      - Day of the Week (0-7, where 0 or 7 is Sunday)
 
-<img src="Images/Cron01.png" alt="Project Logo" width=80% height=50%>
+<div align="center">
+    <img src="Images/Cron01.png" alt="Project Logo" width=90% height=75%>
+</div>
 
 ### Example of a Cron Job
 To schedule a cron job to run at 12:01 AM on 16th September and only if it is a Thursday the cron expression would be
 
-<img src="Images/Cron.png" alt="Project Logo" width=80% height=50%>
+<div align="center">
+    <img src="Images/Cron.png" alt="Project Logo" width=90% height=75%>
+</div>
 
  - In cron, the **`*`** (asterisk) is a wildcard that means "every" or "any." It is used to tell cron that it should not restrict the job to a specific value for that field.
  - In a cron expression, **`/2`** means "every 2 units" for the respective field (minute, hour, etc.). It’s a step value which indicates the job should run at regular intervals.
@@ -939,7 +1002,9 @@ To schedule a cron job to run at 12:01 AM on 16th September and only if it is a 
 ## Real-Life Example of systemd in Action
 Let's assume we are managing an **Apache web server** on a Linux machine. We need to start Apache enable it to start on boot and verify that it is running properly. Here’s how we can do this using **`systemd`**.
 
-<img src="Images/exmaple of systemd.png" alt="Project Logo" width=50% height=50%>
+<div align="center">
+    <img src="Images/exmaple of systemd.png" alt="Project Logo" width=90% height=75%>
+</div>
 
 # Storage in Linux
 Storage in Linux involves managing how data is stored and accessed on a system including hard drives, SSDs, partitions, file systems & various tools to manage and manipulate storage.
@@ -974,7 +1039,9 @@ A disk partition is a logically divided section of a storage device like a hard 
  - A hard disk can have up to **four primary partitions**.
  - If we need more than four partitions, we must create an extended partition.
 
-<img src="Images/Primary Partition.png" alt="Project Logo" width=50% height=50%>
+<div align="center">
+    <img src="Images/Primary Partition.png" alt="Project Logo" width=90% height=75%>
+</div>
 
 2. **Extended Partition**
  - A special partition that acts as a container for **logical partitions**.
@@ -985,7 +1052,9 @@ A disk partition is a logically divided section of a storage device like a hard 
  - Resides within an extended partition.
  - Functions like primary partitions and can host files or operating systems, except it's created inside an extended partition.
 
-<img src="Images/Extended and Logical Partition.png" alt="Project Logo" width=70% height=50%>
+ <div align="center">
+    <img src="Images/Extended and Logical Partition.png" alt="Project Logo" width=90% height=75%>
+</div>
 
 ### Partition Table Types
 Partition tables define how partitions are organized on a storage device. There are two primary types of partition tables: **MBR (Master Boot Record)** and **GPT (GUID Partition Table)**. Here's a breakdown of both:
@@ -996,7 +1065,9 @@ Partition tables define how partitions are organized on a storage device. There 
  - **Boot Sector :** Stores the bootloader and partition information in the first 512 bytes of the disk called the boot sector.
  - **Compatibility :** MBR is widely supported on older systems, making it useful for older hardware.
 
- <img src="Images/MBR.png" alt="Project Logo" width=70% height=50%>
+<div align="center">
+    <img src="Images/MBR.png" alt="Project Logo" width=90% height=75%>
+</div>
 
  - **Limitations :** Cannot handle disks larger than 2TB & limited to 4 primary partitions.
 
@@ -1008,7 +1079,9 @@ Partition tables define how partitions are organized on a storage device. There 
  - **Boot Sector :** GPT stores multiple copies of the partition table across the disk, which provides redundancy in case of corruption.
  - **Compatibility :** Requires a UEFI-compatible system, though some systems offer backward compatibility with legacy BIOS.
 
- <img src="Images/GPT.png" alt="Project Logo" width=40% height=50%>
+<div align="center">
+    <img src="Images/GPT.png" alt="Project Logo" width=90% height=75%>
+</div>
 
  - **Advantages :** Supports very large disk sizes, more partitions (up to 128) & redundant partition table for recovery in case of corruption.
 
@@ -1022,12 +1095,16 @@ Partition tables define how partitions are organized on a storage device. There 
 ### fstab
 **`fstab`** **(File System Table)** is a configuration file in Linux located at **`/etc/fstab`**. It defines how disk partitions, file systems & other storage devices should be mounted and used automatically when the system boots.
 
- <img src="Images/fstab.png" alt="Project Logo" width=40% height=50%>
+<div align="center">
+    <img src="Images/fstab.png" alt="Project Logo" width=90% height=75%>
+</div>
 
 ### Example of Partitioning from Scratch
 Partitioning a **30 GB disk (/dev/sda)** involves several steps from checking the current partition layout to creating and formatting new partitions. We'll walk through the entire process from scratch including installing necessary tools if needed using common Linux utilities like **`fdisk`** and **`mkfs`**. Here's how we can do it:
 
- <img src="Images/example of partition.png" alt="Project Logo" width=40% height=50%>
+<div align="center">
+    <img src="Images/example of partition.png" alt="Project Logo" width=90% height=75%>
+</div>
  
 - **Step 1.** **Check Existing Partitions :** 
 This command shows the partition table of **`/dev/sda`**.
@@ -1163,7 +1240,9 @@ DAS refers to storage devices that are directly connected to a computer or serve
 - **Cons:**
     - Limited sharing capabilities; typically accessible only by the directly connected device.
 
- <img src="Images/DAS.png" alt="Project Logo" width=80% height=50%>
+<div align="center">
+    <img src="Images/DAS.png" alt="Project Logo" width=90% height=75%>
+</div>
 
 ### NAS (Network Attached Storage)
 NAS is a dedicated file storage device that connects to a network, allowing multiple users and devices to access files over the network.
@@ -1176,7 +1255,9 @@ NAS is a dedicated file storage device that connects to a network, allowing mult
     - Typically more expensive than DAS.
     - Requires a network setup for access.
 
-<img src="Images/NAS.png" alt="Project Logo" width=80% height=50%>
+<div align="center">
+    <img src="Images/NAS.png" alt="Project Logo" width=90% height=75%>
+</div>
 
 ### SAN (Storage Area Network)
 SAN is a high-speed network that provides access to consolidated block-level storage, allowing multiple servers to connect to shared storage devices.
@@ -1190,7 +1271,9 @@ SAN is a high-speed network that provides access to consolidated block-level sto
     - More complex to set up and manage.
     - Usually more expensive due to the hardware and infrastructure required.
 
-<img src="Images/SAN.png" alt="Project Logo" width=80% height=50%>
+<div align="center">
+    <img src="Images/SAN.png" alt="Project Logo" width=90% height=75%>
+</div>
 
 ## LVM (Logical Volume Manager)
 LVM is a storage management tool in Linux that provides a more flexible way to manage disk storage compared to traditional partitioning. It allows users to create, resize & manage logical volumes (virtual partitions) without worrying about physical disk space boundaries.
