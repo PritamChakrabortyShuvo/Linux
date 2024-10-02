@@ -2,11 +2,9 @@
 
 ![Project Logo](Images/Linux%20Image.png)
 
-
 Welcome! to **Linux Theoretical Concepts** guide. This is your go-to guide for mastering Linux concepts and theory. Whether you're a beginner or need a quick reference, it offers essential insights to enhance your Linux understanding and usage.
 
 # Table of Contents
-<a href="#what-is-linux" style="text-decoration:none;">What is Linux?</a>
 
 1. [What is Linux?](#what-is-linux)
 2. [Who is Linux?](#who-is-linux)
@@ -26,8 +24,43 @@ Welcome! to **Linux Theoretical Concepts** guide. This is your go-to guide for m
     - [Bash Prompt](#bash-prompt)
     - [Linux Prompt](#linux-prompt)
 7. [Core Concepts](#core-concepts)
-    - 
-
+    - [Linux Kernel](#linux-kernel)
+    - [Linux Boot Sequence](#linux-boot-sequence)
+    - [Systemd Targets](#systemd-targets)
+    - [File System Hierarchy in Linux](#file-system-hierarchy-in-linux)
+    - [Linux Distributions](#linux-distributions)
+8. [Package Management](#package-management)
+    - [Software Package](#software-package)
+    - [Package Manager](#package-manager)
+    - [Upgrade vs Update](#upgrade-vs-update)
+    - [APT vs APT-GET](#apt-vs-apt-get)
+9. [Working with Shell - II](#working-with-shell---ii)
+    - [Vim Editor](#vim-editor)
+10. [Linux Networking Basics](#linux-networking-basics)
+    - [Name Resolution](#name-resolution)
+    - [DNS (Domain Name System)](#dns-domain-name-system)
+    - [Domain Name](#domain-name)
+    - [Hub](#hub)
+    - [Switching](#switching)
+    - [Routing](#routing)
+    - [Gateway](#gateway)
+11. [Linux Security & File Permissions](#linux-security--file-permissions)
+    - [Linux Security](#linux-security)
+    - [Access Controls Files](#access-controls-files)
+    - [File Permissions](#file-permissions)
+    - [SSH (Secure Shell)](#ssh-secure-shell)
+    - [SCP (Secure Copy Protocol)](#scp-secure-copy-protocol)
+    - [IP Tables](#ip-tables)
+    - [CRON](#cron)
+12. [SystemD]
+    - [Key Features of systemd](#key-features-of-systemd)
+    - [Real-Life Example of systemd in Action](#real-life-example-of-systemd-in-action)
+13. [Storage in Linux](#storage-in-linux)
+    - [File System in Linux](#file-system-in-linux)
+    - [Disk Partition](#disk-partition)
+    - [NFS (Network File System)](#nfs-network-file-system)
+    - [Storage Devices](#storage-devices)
+    - [LVM (Logical Volume Manager)](#lvm-logical-volume-manager)
 # What is Linux?
 Linux is an **open-source operating system** based on **Unix**, widely used for *servers*, *desktops*, and *embedded systems*. 
 It provides a stable, secure, and flexible environment for managing hardware resources and running applications.
@@ -419,7 +452,7 @@ In vim (Vi IMproved) editor, the **`ESC`** (Escape) key is pivotal for navigatin
     - **`:q!`**: Quit without saving changes (force quit)
     - **`:wq`** or **`:x`**: Save changes and quit
 
-- Modes:
+- **Modes:**
 
     - Normal Mode: Press **`Esc`** to enter Normal mode, where you can navigate and execute commands.
     - Insert Mode: Press **`i`** to enter Insert mode, where you can insert and edit text.
