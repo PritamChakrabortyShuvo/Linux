@@ -923,7 +923,7 @@ Saves changes and exits **`fdisk`**
 ```bash
     w
 ```
-Formats *`/dev/sda1`** with the ext4 file system.
+Formats **`/dev/sda1`** with the ext4 file system.
 ```bash
     sudo mkfs.ext4 /dev/sda1
 ```
