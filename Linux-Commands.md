@@ -28,26 +28,34 @@ This guide provides an extensive overview of the most commonly used Linux comman
 - [Kernel Versoins](#kernel-versions)
 - [Working with Hardware](#working-with-hardware)
 - [Package Management](#package-management)
+- [Vieweing File Sizes](#vieweing-file-sizes)
+- [Archiving Files](#archiving-files)
+- [Compressing](#compressing)
+- [Uncompressing](#uncompressing)
+- [Compressing Files](#compressing-files)
+- [Searching for Files and Directories](#searching-for-files-and-directories)
 - [Grep Command Filter](#grep-command-filter)
 - [Awk Command Filter](#awk-command-filter)
-- [File Editors](#file-editors)
-- [Vim Editor](#vim-editor)
+- [Linux Networking](#linux-networking)
+- [Security and File Permissions](#security-and-file-permissions)
+- [SSH](#ssh)
+- [SCP](#scp)
+- [IP Tables](#ip-tables)
+- [Crontab](#crontab)
+- [Systemd](#systemd)
+- [Storage in Linux](#storage-in-linux)
+- [NFS](#nfs)
+- [Logical Volume Manager](#logical-volume-manager)
 - [Command Line Browser](#command-line-browser)
 - [Downloading Files](#downloading-files)
 - [Extract tar archives](#extract-tar-archives)
-- [User Specific Commands](#user-specific-commands)
 - [Update and Install](#update-and-install)
-- [Linux Networking](#linux-networking)
 - [Process Management](#process-management)
 - [Administration](#administration)
 - [Administration - User Management](#administration---user-management)
-- [Administration – Package Management](#administration--package-management)
-- [Administration – Service Management](#administration--service-management)
 - [Administration – Commands Reboot](#administration--commands-reboot)
-- [Administration – File Ownerships](#administration--file-ownerships)
-- [Administration – File Permissions](#administration--file-permissions)
 
-### Listing Files & Directories
+## Listing Files & Directories
 This command lists files and directories. Essential for file navigation in Linux.
 
 Get list of files and directories, but it may not show hidden files.
@@ -72,12 +80,12 @@ Get list of files and directories sorted by modification time, with the most rec
 ```bash
     ls -t
 ```
-### Command Types
+## Command Types
 It shows how a command is recognized by the shell, indicating if it's built-in, an alias, or an external program.
 ```bash
     type <command>
 ```
-### Creating Files
+## Creating Files
 We can create files in Linux in multiple ways/commands. As a basic  we always use **`touch`** command to create a file.
 Creates an empty text file.
 ```bash
@@ -89,7 +97,7 @@ Creates an empty text file.
 ```
 **Note :** In Linux we don’t have any file extensions. Extensions we may use it for our understanding.
 
-### Remove Files
+## Remove Files
 To remove files we have **`rm`** command, Also we can use **`unlink`** command which performs the same action, yet we prefer mostly to use **`rm`** command.
 
 ```bash
@@ -99,7 +107,7 @@ This command forcefully deletes file without confirmation, bypassing write prote
 ```bash
     rm -f file_name
 ```
-### Copy Files
+## Copy Files
 To copy a file we have **`cp`** command. Alternatively we have **`rsync`** command as well but mostly we prefer to use cp command in general.
 
 ```bash
@@ -107,7 +115,7 @@ To copy a file we have **`cp`** command. Alternatively we have **`rsync`** comma
 ```
 If the destination file already exists then it will overwrite the file and in few cases it may warn you to overwrite the file or not.
 
-### Renaming Files
+## Rename Files
 To rename or move a file we use **`mv`** command.
 
 For rename the file.
@@ -118,14 +126,14 @@ For moving the file.
 ```bash
     mv file_name /path/to/directory/
 ```
-### Present Working Directory
+## Present Working Directory
 The **`pwd`** command prints the current working directory's absolute path. It's useful for determining your current location.
 ```bash
     pwd
 ```
 **Note :** It is always important to observe the directory you are in before executing the command, because in some cases if you try to execute some command and which you lead to loss of data if you executecommands in wrong location.
 
-### Create Directory
+## Create Directory
 To make a single directory
 ```bash
     mkdir directory_name
@@ -144,7 +152,7 @@ This command creates both **`directory1`** and **`directory2`** if they don't al
 ```
 **Note :** The **`-p`** option ensures that all necessary parent directories are created without errors.
 
-### Change Directory
+## Change Directory
 ```bash
     cd <directory>
 ```
@@ -166,7 +174,7 @@ Double dot denotes parent directory and it can take you to parent directory of e
 ```bash
     cd .. 
 ```
-### Single Dot & Double Dot
+## Single Dot & Double Dot
 Single dot **`(.)`** in Linux denote the present working directory.
 
 Double dot **`(..)`** denotes the parent directory.
@@ -175,7 +183,7 @@ Double dot **`(..)`** denotes the parent directory.
 ```
 Here dot denotes to copy the file in this location without specifying any filename or path
 
-### Remove Directory
+## Remove Directory
 Removing directory commands needed to be picked based on requirement.
 
 To remove empty directories we use **`rmdir`** command.
@@ -190,7 +198,7 @@ This command recursively and forcefully removes multiple directories and all its
 
 **Note :** This action cannot be undone and deletes files permanently.
 
-### Copy Directory
+## Copy Directory
 Copying directories can be done with cp command.
 
 It copies dir1 to dir2 and all the contents of dir1 will be copied to dir2 as well.
@@ -199,7 +207,7 @@ It copies dir1 to dir2 and all the contents of dir1 will be copied to dir2 as we
 ```
 **Note :** While copying the directories we need to mention **`–r`** option to enable that we are copying directories.
 
-### Moving Directory
+## Moving Directory
 Moving directories or renaming directories can be done with **`mv`** command.
 ```bash
     mv file /path/to/directory
@@ -211,7 +219,7 @@ Depends on the situation it will rename or move.
 - If destination exists:
     - Destination is a file - Then that is a invalid operation.
     - Destination is a directory – Then the source will be moved into destination directory.
-### Concatenate a File
+## Concatenate a File
 In view the complete content of a file then we will concatenate (cat) the file.
 
 Shows complete content of a file.
@@ -232,7 +240,7 @@ It will print the lines in reverse order mean last line in first and first line 
 ```bash
     tac file_name
 ```
-### Using Command Line to Get Help
+## Using Command Line to Get Help
 
 This command provides a one-line description of a specified command or program, summarizing its function.
 ```bash
@@ -242,7 +250,7 @@ This command displays the manual page for a specified command or program, provid
 ```bash
     man <command>
 ```
-### Head Command Filter 
+## Head Command Filter 
 **`head`** command can give the **top 10 lines** by default.
 ```bash
     head file_name
@@ -251,7 +259,7 @@ Print top 5 lines.
 ```bash
     head -n 5 file_name
 ```
-### Tail Command Filter
+## Tail Command Filter
 **`tail`** command can give the **last 10 lines** by default.
 ```bash
     tail file_name
@@ -267,13 +275,13 @@ Print last 5 lines.
 
 **Note :** To come out of **`tail –f`** you can press **`CTRL + C`** on terminal.
 
-### Alias Command
+## Alias Command
 This command creates a shortcut or nickname for a longer command in the shell allowing users to execute complex or frequently used commands more easily.
 ```bash
     alias ll='ls -l'
 ```
 This creates a shortcut **`ll`** that lists files in long format.
-### Environment Variables 
+## Environment Variables 
 This command shows the current environment variables or lets a command run with specific variable settings.
 ```bash
     env
@@ -290,7 +298,7 @@ This sets the **`LOGNAME`** variable to **`user2`** in the current shell session
 ```bash
     LOGNAME=user2
 ```
-### Path Variables
+## Path Variables
 Displays the current list of directories where the shell looks for executable programs.
 ```bash
     echo $PATH
@@ -303,7 +311,7 @@ Shows the full path of the specified executable program, if it exists in the dir
 ```bash
     export PATH=$PATH:/opt/apps/bin
 ```
-### Bash Prompt
+## Bash Prompt
 The command changes the terminal prompt to simply show **Server01 :**.
 ```bash
     PS1="Server01 :"
@@ -329,7 +337,7 @@ Here’s a simplified explanation of each of the prompt escape sequences :
 - **`\W`**: Displays the basename of the current working directory, with $HOME abbreviated as a tilde (~).
 - **`\$`**: Displays a # if the user is root (UID 0) and a $ otherwise.
 
-### Kernel Versions
+## Kernel Versions
 Displays the kernel version of the operating system currently running on the system.
 ```bash
     uname -r
@@ -341,7 +349,7 @@ Suppose the Kerner Version is **`4.15.0-72-generic`**. Here
 - **`72`** : Patch Release
 - **`Generic`** : Distro Specific Information
 
-### Working with Hardware
+## Working with Hardware
 Shows system messages related to the kernel and hardware events, useful for troubleshooting.
 ```bash
     dmesg
@@ -382,7 +390,7 @@ Lists detailed information about all hardware in the system requiring admin acce
 ```bash
    sudo lshw 
 ```
-### Package Management 
+## Package Management 
 1. **Working with **`RPM`** :** Suppose we have a package called **`telnet.rpm`** in rpm format. 
 
     Installs the telnet package with a progress bar and detailed output.
@@ -462,7 +470,7 @@ Lists detailed information about all hardware in the system requiring admin acce
     ```bash
        apt list | grep telnet 
     ```
-### Vieweing File Sizes
+## Vieweing File Sizes
 
 Shows the size of test.img in kilobytes (KB), in a simple total format.
 ```bash
@@ -476,7 +484,7 @@ Lists test.img file details, including size, in a human-readable format with fil
 ```bash
     ls -lh test.img 
 ```
-### Archiving Files
+## Archiving Files
 Creates an archive named **`test.tar`** that includes file1 & file2
 ```bash
     tar -cf test.tar file1 file2 
@@ -497,7 +505,7 @@ Creates a compressed archive (using gzip) named **`test.tar.gz`** containing fil
 ```bash
     tar -zcf test.tar file1 file2 
 ```
-### Compressing 
+## Compressing 
 Compresses **`test.img`** using **`bzip2`** creating a **`test.img.bz2`** file.
 ```bash
     bzip2 test.img 
@@ -510,7 +518,7 @@ Compresses **`test.img`** using **`xz`** creating a **`test.img.xz`** file.
 ```bash
     xz test2.img 
 ```
-### Uncompressing
+## Uncompressing
 Decompresses **`test.img.bz2`** restoring it to the original **`test.img`** file.
 ```bash
     bunzip2 test.img.bz2 
@@ -523,12 +531,12 @@ Decompresses **`test.img.xz`** restoring it to the original **`test.img`** file.
 ```bash
     unxz test1.img.xz 
 ```
-### Compressing Files
+## Compressing Files
 Displays the contents of hostfile.txt.bz2 without extracting it.
 ```bash
     bzcat hostfile.txt.bz2 
 ```
-### Searching for Files and Directories
+## Searching for Files and Directories
 Quickly searches and displays the paths of files named **`Test.txt`** using a prebuilt file index.
 ```bash
     locate Test.txt 
@@ -538,7 +546,7 @@ Searches for a file named Test.txt starting from the /home/user01 directory and 
     find /home/user01 -name Test.txt 
 ```
 **Note :** If the database is not up-to-date, running **`sudo updatedb`** can refresh it.
-### Grep Command Filter
+## Grep Command Filter
 The **`grep`** command searches for a specific word or string in files and prints only the lines containing that word or string.
 ```bash
     grep word file_name
@@ -556,14 +564,14 @@ It fethes all the lines having a word Hello in **`Test.txt`** file.
 ```
 It fethes all the lines having a word Hello in **`Test.txt`** file.
 
-### Awk Command Filter
+## Awk Command Filter
 The **`awk`** command scans and processes text files. It can extract and print specific columns of data. 
 
 Prints the first column from each line.
 ```bash
     awk '{print $1}' file_name
 ```
-### Linux Networking
+## Linux Networking
 Queries the DNS to find the IP address associated with the domain name **`www.google.com`**.
 Add your line here
 ```bash
@@ -617,7 +625,7 @@ Shows all active network connections on port 80 that are currently listening for
 ```bash
     netstat -an | grep 80 | grep -i LISTEN
 ```
-### Security and File Permissions
+## Security and File Permissions
 
 In Linux family, User cannot be added with out a group. So we need a group in order to add a user. User can be part of one more group but primarily should be associated with one group.
 
@@ -642,6 +650,7 @@ Shows a history of all users who have logged in and out.
     last
 ```
 Switches to root user.
+```bash
     su -i
 ```
 You can switch user from one user to another user using.
@@ -744,7 +753,7 @@ Change the group for the test-file to the group called android.
 ```bash
     chgrp android test-file
 ```
-### SSH
+## SSH
 Connects to a remote server using its hostname or IP address.
 ```bash
     ssh <hostname OR IP Address>
@@ -773,7 +782,7 @@ Displays the contents of the authorized_keys file, showing the public keys autho
 ```bash
     cat /home/user/.ssh/authorized_keys
 ```
-### SCP
+## SCP
 Securely copies a file (**`caleston-code.tar.gz`**) from the local machine to the remote server (**`devapp01`**) in the **`/home/user`** directory.
 ```bash
     scp /home/user/caleston-code.tar.gz devapp01:/home/user
@@ -786,7 +795,7 @@ Recursively and securely copies the media directory from the local machine to th
 ```bash
     scp -pr /home/user/media/ devapp01:/home/user
 ```
-### IP Tables
+## IP Tables
 Displays the current firewall rules set by iptables.
 ```bash
     iptables
@@ -815,7 +824,7 @@ It is used to delete a 5 no rule from the OUTPUT chain in the iptables firewall.
 ```bash
     iptables -D OUTPUT 5
 ```
-### Crontab
+## Crontab
 To view crontab.
 ```bash
     crontab -l
@@ -832,7 +841,7 @@ Remove all cron job.
 ```bash
     crontab -r
 ```
-### Systemd
+## Systemd
 Start a service.
 ```bash
     systemctl start <service>
@@ -893,7 +902,7 @@ Check Logs for a Specific Service.
 ```bash
     journalctl -u <service_name>
 ```
-### Storage in Linux 
+## Storage in Linux 
 Check Disk Partitions. It will lists all partitions on **`/dev/sda`** with details like size and type.
 ```bash
     sudo fdisk -l /dev/sda
@@ -946,7 +955,7 @@ Check Mounted Partitions
 ```bash
     df -h
 ```
-### NFS
+## NFS
 To export a directory on the server.
 ```bash
     sudo nano /etc/exports
@@ -957,7 +966,7 @@ To mount an NFS directory on the client.
 ```bash
     sudo mount server_IP:/shared_directory /local_mount_point
 ```
-### Logical Volume Manager
+## Logical Volume Manager
 Create a physical volume (PV).
 ```bash
     sudo pvcreate /dev/sda1 /dev/sdb1
@@ -976,7 +985,7 @@ Format and mount the logical volume.
     sudo mount /dev/my_volume_group/my_logical_volume /mnt
 ```
 
-### Command Line Browser
+## Command Line Browser
 Most of the time you need to browse URLs and fetch that content over the command line. Some times we need some partial information of that URL else we need complete information of that URL.
 
 Command **`curl`** is available to browse the content over the command line.
@@ -987,7 +996,7 @@ This command is useful for downloading files from the internet directly to your 
 ```bash
     curl URL -o file_name_to_save_download
 ```
-### Downloading Files
+## Downloading Files
 Most of the times we just need to download the software of different tools which we work on. To just download the software we can use **`wget`** command.
 
 Command **`wget`** just downloads the file in the location which you are in, Else you can provide a custom location as well.
@@ -998,38 +1007,7 @@ Downloads the file in given path and name.
 ```bash
     wget -o /opt/file_name URL
 ```
-
-### User Specific Commands
-All accesses into a Linux System are through a User.
-
-Create a User.
-```bash
-    useradd user_name
-```
-Delete a User.
-```bash
-    userdel user_name
-```
-Start new shell as different user.
-```bash
-    su -[username]
-```
-User information lookup.
-```bash
-    finger
-```
-Change or Create user password.
-```bash
-    passwd
-```
-Prints the current username of the logged-in user. 
-```bash
-    whoami
-```
-```bash
-    who
-```
-### Update and Install
+## Update and Install
 Displays information about users who are currently logged into the system. 
 ```bash
    sudo apt update 
@@ -1046,9 +1024,7 @@ For install package.
     sudo apt install <package_name>
 ```
 
-
-
-### Process Management
+## Process Management
 
 Every command we execute in Linux will create a process and every process will get an associated ID which we generally call it as PID and it is unique in the OS which is taken care by Kernel.
 
@@ -1088,7 +1064,7 @@ Kill the process of given PID with 9 signal.
 ```
 **Note :** 15 signal is graceful kill and where as 9 is forceful kill of a process.
 
-### Administration 
+## Administration 
 
 - In Linux, All admin activities cannot be performed by normal user. We need to be a root user to perform any activities.
 
@@ -1100,31 +1076,7 @@ Kill the process of given PID with 9 signal.
 
 - In companies we usually will have individual accounts and we can perform the admin activities which are allowed using **`sudo`** access.
 
-
-### Administration – Package Management
-
-In Linux uses rpm for packaging. Such packages can be downloaded and installed using **`yum`** command which uses **`rpm`** command in backend.
-
-**`YUM`** has capability to download and install the packages from different sources which are defined under **`/etc/yum.repos.d/*.repo`**
-```bash
-    sudo yum list / sudo yum list all 
-```
-```bash
-    sudo yum list installed 
-```
-```bash
-    sudo yum list available
-```
-```bash
-    sudo yum install httpd –y
-```
-```bash
-    sudo yum remove httpd –y
-```
-```bash
-     sudo yum update httpd –y
-```
-### Administration – Service Management
+## Administration – Service Management
 
 RedHat Linux 7 uses **`systemctl`** command to manage the services, Earlier till 6 version we use to use **`service`** command.
 
@@ -1168,22 +1120,5 @@ We can validate system restarted by referring the startup time.
 ```bash
     uptime
 ```
-### Administration – File Ownerships
-To change the owner / group of a file 
-```bash
-    chown <owner-name> file/directory
-```
-```bash
-    chgrp <group-name> file/directory
-```
-```bash
-    chown <owner-name>:<group-name> file/directory
-```
-**Note :** **-R** option need to be used for a directory.
 
-###  Administration – File Permissions 
-To change the permission of a file
-```bash
-    chmod <notation> file/directory
-```
 This markdown file serves as a comprehensive guide to essential Linux commands, crucial for any Linux user, system administrator, or DevOps professional. By mastering these commands, you'll be able to navigate and manage your Linux environment efficiently, automate repetitive tasks, and troubleshoot issues effectively.
