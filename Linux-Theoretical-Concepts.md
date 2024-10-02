@@ -614,9 +614,9 @@ There are 3 types of Linux Accounts.
 **Shell:**
 - **Definition:** The program that interprets and executes commands.
 - **Purpose:** Each account is assigned a shell (like Bash), which allows the user to interact with the system through the terminal.
-### Access Controls Files 
+## Access Controls Files 
 Access Control Files in Linux are essential system files that manage user authentication, permissions & access to system resources. These files define how users can log in to the system, what resources they can access & their respective permissions.
-#### Key Access Control Files
+### Key Access Control Files
 1. **`/etc/passwd`** :
     - **Purpose:** Stores basic information about user accounts.
     - **Content:** Contains username, user ID (UID), group ID (GID), home directory & default shell. It allows the system to identify and authenticate users when they log in.
@@ -659,7 +659,7 @@ Access Control Files in Linux are essential system files that manage user authen
 - **`GID`**: **`1001`** - The unique Group ID associated with the "**developer**" group.
 - **`MEMBERS`**: **`user01`**,**`user02`** - A comma-separated list of users who are members of the "**developer**" group.
 
-#### Manging Users
+### Manging Users
 
 <img src="Images/Managing Users.png" alt="Project Logo" width=80% height=50%>
 
@@ -671,10 +671,10 @@ Access Control Files in Linux are essential system files that manage user authen
 - **`-s`** **`/bin/bash`**: Sets the default shell for the user to /bin/bash.
 - **`-c`** **`"Mercury Project member"`**: Adds a comment describing the user as a "Mercury Project member".
 
-### File Permissions 
+## File Permissions 
 File permissions in Linux control who can read, write or execute files & directories. These permissions ensure that only authorized users can access or modify files providing a fundamental layer of security and access control.
 
-#### File types Identifiers
+### File types Identifiers
 File type identifiers in Linux indicate the type of file or object in the file system. These identifiers are the first character shown when we use the **`ls -l`** command to list files. They help us quickly identify what kind of object we’re dealing with—whether it’s a regular file, directory or a special device file.
 
 Here’s a simple list of file type identifiers in Linux:
@@ -686,7 +686,7 @@ Here’s a simple list of file type identifiers in Linux:
 - **Pipe (Named Pipe)**: **`p`**
 - **Block Device**: **`b`**
 
-#### File Permission Types
+### File Permission Types
 
 In Linux, file permission types determine who can read, write or execute a file or directory. These permissions are essential for maintaining security and controlling access to files.
 
@@ -705,7 +705,7 @@ If a user is denied permission for a specific action, a **`-`** will appear in p
 
 <img src="Images/file-permission01.png" alt="Project Logo" width=80% height=50%>
 
-#### How Permissions Are Assigned?
+### How Permissions Are Assigned?
 Permissions are assigned to three different categories of users:
 - **Owner:** The user who owns the file.
 - **Group:** A group of users who share access to the file.
@@ -715,7 +715,7 @@ Permissions are assigned to three different categories of users:
 
 <img src="Images/file-permission03.png" alt="Project Logo" width=80% height=50%>
 
-#### Modifying File Permissions
+### Modifying File Permissions
 In Linux, we modify file permissions using the **`chmod`** command. This command lets us set or change the permissions for owner, group & others.
 **Ways to Modify Permissions**
 1. **Symbolic Notation:** Use letters to represent permissions (**`r`**, **`w`**, **`x`**) and operators (**`+`**, **`-`**, **`=`**).
@@ -767,9 +767,9 @@ For Example :
  **`chown user_name andoid.apk`** : Changes just the owner of the file to user_name.Group unchanged.
 
  **`chgrp android test-file`** : Change the group for the test-file to the group called android.
-### SSH (Secure Shell)
+## SSH (Secure Shell)
 SSH (Secure Shell) is a network protocol used to securely access and manage remote systems over an unsecured network. It provides a secure way to log into another computer, execute commands & transfer files all while encrypting the communication to prevent eavesdropping, data tampering or identity theft.There are 2 types of **SSH**
-#### 1. Password Based SSH
+### 1. Password Based SSH
 
 **Password based SSH** refers to the method of authenticating a user in an SSH session by using a password. When we use SSH to connect to a remote server the server can ask for a password as a way to verify our identity before granting access. This is one of the simplest & most common forms of **SSH authentication** but it's less secure compared to other methods like **key-based authentication**. 
 #### How Password SSH Works?
@@ -786,7 +786,7 @@ When using password-based SSH we need to enter the password every time we log in
 
 <img src="Images//SSH-password.png" alt="Project Logo" width=80% height=50%>
 
-#### 2. Password Less SSH
+### 2. Password Less SSH
 **Password-less SSH** allows us to connect to a remote server without entering a password each time. It uses SSH key-based authentication instead of password authentication. This method is not only more convenient but also more secure as it eliminates the risk of brute-force attacks on passwords.
 
 #### How Password-less SSH Works?
@@ -816,14 +816,14 @@ Here is the workflow of **Linux** to **Linux** **Password-Less SSH**
 
 <img src="Images/SSH-passwordless01.png" alt="Project Logo" width=80% height=50%>
 
-### SCP (Secure Copy Protocol)
+## SCP (Secure Copy Protocol)
 **SCP** stands for **Secure Copy Protocol**. It is a command used to securely **transfer files** between a local and a remote system or between two remote systems over an SSH connection. SCP ensures that the data is encrypted during the transfer making it secure.
 
 <img src="Images/SCP.png" alt="Project Logo" width=80% height=50%>
 
-### IP Tables
+## IP Tables
 **iptables** is a command-line utility in Linux that manages network traffic by setting up rules for how incoming and outgoing data packets are handled. It functions as a firewall, controlling the flow of data based on specified criteria such as **IP addresses**, **ports** & protocols. With iptables, we can allow, block or redirect traffic to protect the system and manage network connections securely.
-#### Key uses of iptables:
+### Key uses of iptables:
 - **Packet filtering:** Decide which packets to allow or deny based on their source/destination IP, protocol, or port.
 - **Network Address Translation (NAT):** Change the source or destination addresses of packets to route them correctly.
 - **Traffic forwarding:** Control how data packets are forwarded between different network interfaces.
@@ -832,12 +832,12 @@ In iptables chains are a fundamental concept used to manage the flow of network 
  1. **INPUT Chain :** Handles packets destined for the local system controlling **incoming traffic**.
  2. **OUTPUT Chain :** Manages packets generated by the local system controlling **outgoing traffic**.
  3. **FORWARD Chain :** Rules for packets being routed through the local system to another destination.
-#### Chain
+### Chain
  In the context of iptables a chain is a set of rules that determine how packets are handled based on specified criteria. Each chain consists of a sequence of rules that are evaluated in order, and each rule specifies actions (like ACCEPT, DROP, or REJECT) for matching packets.
 
 <img src="Images/IP Tables.png" alt="Project Logo" width=80% height=50%>
 
-#### IP Tables Examples
+### IP Tables Examples
 Suppose we have a client with 172.46.238.188 IP & a Server with 172.46.238.10 IP address.
 
 <img src="Images/IP Tables01.png" alt="Project Logo" width=80% height=50%>
@@ -859,9 +859,9 @@ use **`iptables -A OUTPUT -p tcp --dport 443 -j DROP`**
 **`iptables -I OUTPUT -p tcp -d 172.16.238.100 --dport 443 -j ACCEPT`** this command inserts a rule at the top of the OUTPUT chain to allow outgoing TCP traffic to the destination IP address 172.16.238.100 on port 443.
 4. Allow incoming on pirt 80 use **`iptables -A INPUT -p tcp -s 172.16.238.187 --dport 80 -j ACCEPT`**
 
-### CRON 
+## CRON 
 **Cron** is a Linux utility used for scheduling tasks to run automatically at specified intervals or times. It allows us to automate tasks like running scripts, performing backups or updating the system. These tasks called **cron jobs** are defined in a special file called the **crontab(cron table)**.
-#### Key Points about Cron:
+### Key Points about Cron
  - **Crontab:** A file where we can list tasks (cron jobs) to run at specific times.
  - **Syntax of a Cron Job:** Each line in the crontab file defines a job and includes the time schedule followed by the command to execute.
  - **Time Format:** A cron job uses a five-field time format:
@@ -873,7 +873,7 @@ use **`iptables -A OUTPUT -p tcp --dport 443 -j DROP`**
 
 <img src="Images/Cron01.png" alt="Project Logo" width=80% height=50%>
 
-#### Example of a Cron Job
+### Example of a Cron Job
 To schedule a cron job to run at 12:01 AM on 16th September and only if it is a Thursday the cron expression would be
 
 <img src="Images/Cron.png" alt="Project Logo" width=80% height=50%>
@@ -881,7 +881,7 @@ To schedule a cron job to run at 12:01 AM on 16th September and only if it is a 
  - In cron, the **`*`** (asterisk) is a wildcard that means "every" or "any." It is used to tell cron that it should not restrict the job to a specific value for that field.
  - In a cron expression, **`/2`** means "every 2 units" for the respective field (minute, hour, etc.). It’s a step value which indicates the job should run at regular intervals.
 
-### Systemd
+# Systemd
 **systemd** is a system and service manager for Linux operating systems. It is responsible for initializing the system **during boot**, **managing services** (like **starting, stopping, enabling, or disabling them**) & ensuring the system is running smoothly. It replaces the older **SysVinit** system and provides better performance by allowing services to run in parallel and handling dependencies more effectively.
 #### Key Features of systemd
 1. **Service Management:** Manages system services (start, stop, enable, disable).
@@ -891,16 +891,16 @@ To schedule a cron job to run at 12:01 AM on 16th September and only if it is a 
 5. **Target Units:** Groups of services or units that are started together like multi-user.target (for multi-user mode without GUI) or graphical.target (for GUI mode).
 6. **Timers:** Instead of cron jobs **`systemd`** can use timers to run tasks periodically.
 
-#### Real-Life Example of systemd in Action
+## Real-Life Example of systemd in Action
 Let's assume we are managing an **Apache web server** on a Linux machine. We need to start Apache enable it to start on boot and verify that it is running properly. Here’s how we can do this using **`systemd`**.
 
 <img src="Images/exmaple of systemd.png" alt="Project Logo" width=50% height=50%>
 
-## Storage in Linux
+# Storage in Linux
 Storage in Linux involves managing how data is stored and accessed on a system including hard drives, SSDs, partitions, file systems & various tools to manage and manipulate storage.
-### File System in Linux
+## File System in Linux
 A file system is the method & data structure used by an operating system to manage and store files on a storage device like a hard drive or SSD. In Linux, the file system organizes files & directories into a structured hierarchy allowing the system to read, write & manipulate data efficiently.
-#### Key Components of a File System
+### Key Components of a File System
  - **Files:** Data stored in the form of documents, images, scripts etc.
  - **Directories:** Folders that organize files into a structured hierarchy.
  - **Inodes:** Data structures that store metadata about files like permissions, ownership, and location on the disk.
@@ -921,9 +921,9 @@ A file system is the method & data structure used by an operating system to mana
   4. **FAT32 and exFAT**
    - Often used in removable devices like USB drives and SD cards due to their cross-platform support.
    - Limited in file size and features compared to ext4 or XFS.  
-### Disk Partition
+## Disk Partition
 A disk partition is a logically divided section of a storage device like a hard drive or SSD that acts as a separate unit. Partitions allow us to organize and manage data more efficiently especially when we want to use different file systems or separate system and user data.
-#### Disk Partitions Type
+### Disk Partitions Type
 1. **Primary Partition**
  - A type of partition that directly stores data or an operating system.
  - A hard disk can have up to **four primary partitions**.
@@ -942,7 +942,7 @@ A disk partition is a logically divided section of a storage device like a hard 
 
 <img src="Images/Extended and Logical Partition.png" alt="Project Logo" width=70% height=50%>
 
-#### Partition Table Types
+### Partition Table Types
 Partition tables define how partitions are organized on a storage device. There are two primary types of partition tables: **MBR (Master Boot Record)** and **GPT (GUID Partition Table)**. Here's a breakdown of both:
 
 1. **MBR (Master Boot Record)**
@@ -969,17 +969,17 @@ Partition tables define how partitions are organized on a storage device. There 
 
  - **Example :** If we have a **4TB hard drive** **GPT** can partition the entire disk and allow us to create more than four partitions overcoming the limits of MBR.
 
-#### Choosing MBR or GPT
+### Choosing MBR or GPT
 - **When to use MBR:** If we're working with **older hardware** or need to install an OS on a disk smaller than **2TB** that requires BIOS (legacy) booting.
 
 **When to use GPT:** If we have a modern system with **UEFI** and **larger disks more than 2TB** or want better partition management and error recovery.
 
-#### fstab
+### fstab
 **`fstab`** **(File System Table)** is a configuration file in Linux located at **`/etc/fstab`**. It defines how disk partitions, file systems & other storage devices should be mounted and used automatically when the system boots.
 
  <img src="Images/fstab.png" alt="Project Logo" width=40% height=50%>
 
-#### Example of Partitioning from Scratch
+### Example of Partitioning from Scratch
 Partitioning a **30 GB disk (/dev/sda)** involves several steps from checking the current partition layout to creating and formatting new partitions. We'll walk through the entire process from scratch including installing necessary tools if needed using common Linux utilities like **`fdisk`** and **`mkfs`**. Here's how we can do it:
 
  <img src="Images/example of partition.png" alt="Project Logo" width=40% height=50%>
@@ -1090,25 +1090,25 @@ To confirm that the partition was successfully created, formatted, and mounted, 
 ```bash
         df -h
 ```
-### NFS (Network File System)
+## NFS (Network File System)
 NFS is a distributed file system protocol that allows users to access files over a network as if they were located on their local machine. It enables file sharing between multiple computers on the same network.
 
-#### How NFS Works:
+### How NFS Works
 - NFS allows a client machine to access files on a remote server through a network making the remote files appear as if they are on the client’s local filesystem.
 - A server exports a directory & clients can mount this directory over the network accessing it just like any other local storage.
 - The protocol uses TCP or UDP for communication & it is widely used in Unix/Linux environments.
-#### Usage Context:
+### Usage Context
 - **File Sharing:** Commonly used in enterprise environments where multiple users or systems need access to shared data.
 - **Centralized Storage:** A great solution for centralizing file storage across a network enabling data access and collaboration.
-#### Key Features
+### Key Features
 - **Centralized Management:** Files are stored in one location but accessible across the network.
 - **Access Control:** NFS supports permission settings and access controls for users.
 - **Transparent Access:** Users access files remotely but it feels as if they are on their local machine.
-### Storage Devices 
+## Storage Devices 
 
 When DAS (Direct Attached Storage), NAS (Network Attached Storage) and SAN (Storage Area Network) are considered together they are often referred to as **"Storage Solutions"** or **"Storage Architectures"**. This term encompasses the various methods and technologies for storing and managing data in different environments, whether it be for individual users, small businesses or large enterprises. These storage solutions can be chosen based on specific needs related to performance, accessibility, capacity, and scalability.
 
-#### DAS (Direct Attached Storage)
+### DAS (Direct Attached Storage)
 DAS refers to storage devices that are directly connected to a computer or server without a network.
 - **Examples:** Internal hard drives, external hard drives, USB flash drives.
 - **Use Case:** Ideal for individual users or small setups where data access needs are limited to a single machine.
@@ -1120,7 +1120,7 @@ DAS refers to storage devices that are directly connected to a computer or serve
 
  <img src="Images/DAS.png" alt="Project Logo" width=80% height=50%>
 
-#### NAS (Network Attached Storage)
+### NAS (Network Attached Storage)
 NAS is a dedicated file storage device that connects to a network, allowing multiple users and devices to access files over the network.
 - **Examples:** Devices like Synology or QNAP that provide shared storage over a network.
 - **Use Case:** Great for home or office environments where multiple users need access to shared files and data.
@@ -1133,7 +1133,7 @@ NAS is a dedicated file storage device that connects to a network, allowing mult
 
 <img src="Images/NAS.png" alt="Project Logo" width=80% height=50%>
 
- #### SAN (Storage Area Network)
+### SAN (Storage Area Network)
 SAN is a high-speed network that provides access to consolidated block-level storage, allowing multiple servers to connect to shared storage devices.
 - **Examples:** Fibre Channel networks and iSCSI networks that connect servers to storage devices..
 - **Use Case:** : Suitable for enterprise environments where high availability, performance, and scalability are critical, like databases or virtualization.
@@ -1147,17 +1147,17 @@ SAN is a high-speed network that provides access to consolidated block-level sto
 
 <img src="Images/SAN.png" alt="Project Logo" width=80% height=50%>
 
-### LVM (Logical Volume Manager)
+## LVM (Logical Volume Manager)
 LVM is a storage management tool in Linux that provides a more flexible way to manage disk storage compared to traditional partitioning. It allows users to create, resize & manage logical volumes (virtual partitions) without worrying about physical disk space boundaries.
 
-#### How LVM Works?
+### How LVM Works?
 LVM works by abstracting the physical storage devices such as hard drives or partitions into a pool of storage called a **Volume Group (VG)**. From this volume group Logical Volumes (LV) can be created, resized or removed dynamically. This offers great flexibility in managing storage.
 #### Key Concepts in LVM
 - **Physical Volume (PV):** This is a raw storage device like a hard disk or partition.
 - **Volume Group (VG):** A collection of physical volumes grouped together to form a storage pool.
 - **Logical Volume (LV):** Virtual partitions that are created from the volume group where the actual data is stored. These can be resized or moved as needed.
 - **Physical Extents (PE):** The smallest unit of storage in a volume group used to allocate space for logical volumes.
-#### Usage of LVM
+### Usage of LVM
 - **Flexible Storage:** You can grow or shrink file systems and partitions without downtime.
 - **Efficient Storage Utilization:** Space is dynamically allocated across logical volumes.
 - **Snapshot Capability:** LVM allows you to create snapshots of volumes which are useful for backups.
@@ -1168,7 +1168,7 @@ LVM works by abstracting the physical storage devices such as hard drives or par
 
 LVM is particularly useful in environments where storage needs fluctuate as it provides administrators with powerful tools to manage space efficiently and dynamically.
 
-#### Example 
+### Example 
 Suppose we have a server with two physical disks: **`/dev/sda`** **(500GB)** & **`/dev/sdb`** **(500GB)**. We want to combine them into one large storage pool and create a **600GB** logical volume for storing user data. Later, we decide to add another **400GB** to the logical volume as our data grows.
 
 1. **Create Physical Volumes (PV) :** We first prepare the two disks for use with LVM by creating physical volumes.
