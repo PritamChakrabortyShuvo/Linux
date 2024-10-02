@@ -6,6 +6,7 @@
 Welcome! to **Linux Theoretical Concepts** guide. This is your go-to guide for mastering Linux concepts and theory. Whether you're a beginner or need a quick reference, it offers essential insights to enhance your Linux understanding and usage.
 
 # Table of Contents
+<a href="#what-is-linux" style="text-decoration:none;">What is Linux?</a>
 
 1. [What is Linux?](#what-is-linux)
 2. [Who is Linux?](#who-is-linux)
@@ -17,6 +18,15 @@ Welcome! to **Linux Theoretical Concepts** guide. This is your go-to guide for m
     - [Commands & Arguments](#commands--arguments)
     - [Commands Type](#commands-type)
     - [Linux Basic Command](#linux-basic-commands)
+    - [Absoluiute & Relative Path](#absoluiute--relative-path)
+    - [Pushd and Popd](#pushd-and-popd)
+    - [Shell Types](#shell-types)
+    - [Bash Environment Variables](#bash-environment-variables)
+    - [PATH Variables](#path-variables)
+    - [Bash Prompt](#bash-prompt)
+    - [Linux Prompt](#linux-prompt)
+7. [Core Concepts](#core-concepts)
+    - 
 
 # What is Linux?
 Linux is an **open-source operating system** based on **Unix**, widely used for *servers*, *desktops*, and *embedded systems*. 
