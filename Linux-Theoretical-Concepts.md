@@ -137,7 +137,7 @@ A **path** is the location of a file or directory in the filesystem which can be
 - **Relative Path :** A relative path is the path to a file or directory from our current working directory, without starting from the root. For example, if we are in **`/home/user`** the relative path to **`file.txt`** inside directory would be **`directory/file.txt`**.
 
 <div align="center">
-    <img src="Images/Path.png" alt="Project Logo" width=50% height=15%>
+    <img src="Images/Path.png" alt="Project Logo" width=40% height=15%>
 </div>
 
 ## Pushd and Popd
@@ -191,7 +191,7 @@ The **bash prompt** is the text displayed in the terminal where we type commands
 **The Linux prompt**, also known as the **command prompt**, is the interface in a terminal where users type commands. It typically looks like this :
 
 <div align="center">
-    <img src="Images/Linux-Prompt.png" alt="Project Logo" width=100%>
+    <img src="Images/Linux-Prompt.png" alt="Project Logo" width=70%>
 </div>
 
 **Components of the Linux Prompt**
@@ -215,7 +215,7 @@ The **kernel** is the core part of the Linux operating system that manages hardw
 It acts as a bridge between applications and the underlying hardware.
 
 <div align="center">
-    <img src="Images/Kernel.png" alt="Project Logo" width=45% height=25%>
+    <img src="Images/Kernel.png" alt="Project Logo" width=40% height=25%>
 </div>
 
 **Kernel functions** are the core tasks performed by the Linux kernel to manage system resources and ensure smooth operation. Here’s a brief overview of the main kernel functions
@@ -537,7 +537,7 @@ Let’s say we want to visit **`www.example.com`**. Here’s what happens step-b
 **Simple Workflow diagram :**
 
 <div align="center">
-    <img src="Images/Domain Names02.png" alt="Project Logo" width=50% height=75%>
+    <img src="Images/Domain Names02.png" alt="Project Logo" width=40% height=75%>
 </div>
 
 ## Domain Name
@@ -790,7 +790,7 @@ Three Types of File Permissions:
 If a user is denied permission for a specific action, a **`-`** will appear in place of r, w or x. This means no permission for that particular action.
 
 <div align="center">
-    <img src="Images/file-permission01.png" alt="Project Logo" width=50% height=75%>
+    <img src="Images/file-permission01.png" alt="Project Logo" width=40% height=75%>
 </div>
 
 ### How Permissions Are Assigned?
@@ -800,11 +800,11 @@ Permissions are assigned to three different categories of users:
 - **Others:** Everyone else on the system who is not the owner or part of the group.
 
 <div align="center">
-    <img src="Images/file-permission.png" alt="Project Logo" width=60% height=75%>
+    <img src="Images/file-permission.png" alt="Project Logo" width=50% height=75%>
 </div>
 
 <div align="center">
-    <img src="Images/file-permission03.png" alt="Project Logo" width=70% height=75%>
+    <img src="Images/file-permission03.png" alt="Project Logo" width=50% height=75%>
 </div>
 
 ### Modifying File Permissions
@@ -911,7 +911,7 @@ When using password-based SSH we need to enter the password every time we log in
 Here is the workflow of **Linux** to **Linux** **Password-Less SSH**
 
 <div align="center">
-    <img src="Images/SSH-passwordless01.png" alt="Project Logo" width=50% height=75%>
+    <img src="Images/SSH-passwordless01.png" alt="Project Logo" width=45% height=75%>
 </div>
 
 ## SCP (Secure Copy Protocol)
@@ -1005,7 +1005,7 @@ To schedule a cron job to run at 12:01 AM on 16th September and only if it is a 
 Let's assume we are managing an **Apache web server** on a Linux machine. We need to start Apache enable it to start on boot and verify that it is running properly. Here’s how we can do this using **`systemd`**.
 
 <div align="center">
-    <img src="Images/exmaple of systemd.png" alt="Project Logo" width=40% height=75%>
+    <img src="Images/exmaple of systemd.png" alt="Project Logo" width=35% height=75%>
 </div>
 
 # Storage in Linux
