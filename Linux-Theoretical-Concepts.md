@@ -883,7 +883,7 @@ To schedule a cron job to run at 12:01 AM on 16th September and only if it is a 
 
 # Systemd
 **systemd** is a system and service manager for Linux operating systems. It is responsible for initializing the system **during boot**, **managing services** (like **starting, stopping, enabling, or disabling them**) & ensuring the system is running smoothly. It replaces the older **SysVinit** system and provides better performance by allowing services to run in parallel and handling dependencies more effectively.
-#### Key Features of systemd
+## Key Features of systemd
 1. **Service Management:** Manages system services (start, stop, enable, disable).
 2. **Parallel Service Startup:** Reduces boot time by starting services simultaneously where possible.
 3. **Unified Logging:** Centralized system logs using **`journald`**.
@@ -906,7 +906,7 @@ A file system is the method & data structure used by an operating system to mana
  - **Inodes:** Data structures that store metadata about files like permissions, ownership, and location on the disk.
  - **Superblock:** A structure that holds information about the entire file system including size, available space & metadata information.
  - **Blocks:** The basic units of storage where file **data is written**. Files can span across multiple blocks.
- #### Common Linux File Systems
+ ### Common Linux File Systems
   1. **ext4 (Fourth Extended File System)**
    - Most widely used file system in Linux.
    - Supports large file sizes (up to 16TB) and volumes (up to 1EB).
@@ -1152,7 +1152,7 @@ LVM is a storage management tool in Linux that provides a more flexible way to m
 
 ### How LVM Works?
 LVM works by abstracting the physical storage devices such as hard drives or partitions into a pool of storage called a **Volume Group (VG)**. From this volume group Logical Volumes (LV) can be created, resized or removed dynamically. This offers great flexibility in managing storage.
-#### Key Concepts in LVM
+### Key Concepts in LVM
 - **Physical Volume (PV):** This is a raw storage device like a hard disk or partition.
 - **Volume Group (VG):** A collection of physical volumes grouped together to form a storage pool.
 - **Logical Volume (LV):** Virtual partitions that are created from the volume group where the actual data is stored. These can be resized or moved as needed.
@@ -1161,7 +1161,7 @@ LVM works by abstracting the physical storage devices such as hard drives or par
 - **Flexible Storage:** You can grow or shrink file systems and partitions without downtime.
 - **Efficient Storage Utilization:** Space is dynamically allocated across logical volumes.
 - **Snapshot Capability:** LVM allows you to create snapshots of volumes which are useful for backups.
-#### Benefits of LVM
+### Benefits of LVM
 - **Dynamic Resizing:** Logical volumes can be resized easily without downtime.
 - **Storage Flexibility:** It allows for the efficient use of multiple disks.
 - **Snapshots:** You can take snapshots of logical volumes for backups or testing purposes.
