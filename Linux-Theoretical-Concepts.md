@@ -5,27 +5,27 @@
 
 Welcome! to **Linux Theoretical Concepts** guide. This is your go-to guide for mastering Linux concepts and theory. Whether you're a beginner or need a quick reference, it offers essential insights to enhance your Linux understanding and usage.
 
-## Table of Contents
+# Table of Contents
 
 1. [What is Linux?](#what-is-linux)
 2. [Who is Linux?](#who-is-linux)
 3. [Where is Linux?](#where-is-linux)
 4. [Why is Linux?](#why-is-linux)
 5. [Common Challenges](#common-challenges)
-5. [Linux Architecture](#linux-architecture)
-6. [File System Hierarchy in Linux](#file-system-hierarchy-in-linux)
-7. [Linux Distributions](#linux-distributions)
-8. [Linux VS Unix](#linux-vs-unix)
-9. [Linux Interaction](#Linux-interaction)
+6. [Working with Shell - I](#working-with-shell---i)
+    - [Home Directory](#home-directory)
+    - [Commands & Arguments](#commands--arguments)
+    - [Commands Type](#commands-type)
+    - [Linux Basic Command](#linux-basic-commands)
 
-## What is Linux?
+# What is Linux?
 Linux is an **open-source operating system** based on **Unix**, widely used for *servers*, *desktops*, and *embedded systems*. 
 It provides a stable, secure, and flexible environment for managing hardware resources and running applications.
 
-## Who is Linux?
+# Who is Linux?
 Linux was created by **Linus Torvalds** in **1991**. It started as a personal project and has grown into a major force in computing, supported by a global community of developers.
 
-## Where is Linux?
+# Where is Linux?
 **World Wide Web :**
 - 96
 3% of the top 1 milions world’s web-servers running on Linux.
@@ -36,14 +36,14 @@ Linux was created by **Linus Torvalds** in **1991**. It started as a personal pr
 - Amazon Kindle
 - Smart TVs/Devices
 
-## Why is Linux?
+# Why is Linux?
 - Free and open-source.
 - Powerful for research datacenters
 - Personal for desktops and phones
 - Universal
 - Community (and business) driven.
 
-## Common Challenges
+# Common Challenges
 - **Directory Navigation :** Difficulty navigating directory structures and files.
 - **Text Editors :** Lack of experience with text editors, especially Vi or Vim.
 - **Linux Variants :** Confusion over different flavors of Linux.
@@ -53,15 +53,15 @@ Linux was created by **Linus Torvalds** in **1991**. It started as a personal pr
 - **Permissions :** Challenges with permissions and security settings.
 - **Hands-On Practice :** Insufficient practical experience.
 
-## Working with Shell - I
+# Working with Shell - I
 A shell is a **command-line interface** that allows users to interact with the operating system by typing commands to perform tasks.
 Using a **shell** instead of a **Graphical User Interface** (GUI) allows for greater efficiency, automation through scripting, and more precise control over system tasks especially for advanced users and server management.
-### Home Directory
+## Home Directory
 The home directory is a unique, user-specific folder (e.g., `/home/username`) where personal files, settings, and configurations are stored in a Linux system.
 
 <img src="Images/Home Directory.png" alt="Project Logo" width=75% height=30%>
 
-### Commands & Arguments 
+## Commands & Arguments 
 In Linux, **`commands`** are instructions given to the shell to perform specific tasks and **`arguments`** are additional pieces of information passed to those commands to modify their behavior or specify what they operate on.
 - **Structure :**
     - **Command :** The main instruction (e.g., **`ls, cp, mkdir`**).
@@ -73,17 +73,17 @@ In Linux, **`commands`** are instructions given to the shell to perform specific
    Here **`/home/user`** an argument that specifying the directory to list.
 - **Options :** Usually start with **`-`** or **`--`**(e.g., **`-a`**, **`--all`**).
 
-### Commands Type 
+## Commands Type 
 In Linux, commands can be categorized into 2 types based on their location on the system.
 - **External Commands :** In Linux, **external commands** refer to commands that are not built into the shell itself but are separate executable programs stored in the file system. These commands are usually located in directories such as **`/bin`**, **`/usr/bin`**, **`/sbin`**, and **`/usr/sbin`**, and they are run by the shell when called from the terminal. **Example :** **`ls`**, **`cp`**, **`grep`**
 
 - **Internal Commands :** These are built into the shell itself and do not require external programs to run.  **Example :** **`cd`**, **`echo`**, **`pwd`**
 
-### Linux Basic Commands
+## Linux Basic Commands
 
 For more details on commands see the [Linux Commands](https://github.com/PritamChakrabortyShuvo/Linux/blob/main/Linux-Commands.md) file.
 
-### Absoluiute & Relative Path
+## Absoluiute & Relative Path
 
 A **path** is the location of a file or directory in the filesystem which can be either **absolute** (full path) or **relative** (relative to the current directory).
 - **Absolute Path :** An absolute path is the full path to a file or directory from the root directory **`/`**.Starting from the top of the filesystem. For example: **`/home/user/directory/file.txt`**.
@@ -92,7 +92,7 @@ A **path** is the location of a file or directory in the filesystem which can be
 
 <img src="Images/Path.png" alt="Project Logo" width=50% height=25%>
 
-### Pushd and Popd
+## Pushd and Popd
 **`pushd`** & **`popd`** are commands in Bash used for managing the directory stack allowing us to easily switch between directories.
 
 - **`pushd` :** This command saves the current directory on a stack and then changes to the specified directory. For example, running **`pushd`** **`/path/to/directory`** will add the current directory to the stack and navigate to **`/path/to/directory`**.
@@ -100,7 +100,7 @@ A **path** is the location of a file or directory in the filesystem which can be
 - **`popd` :** This command removes the top directory from the stack and changes to that directory. For instance, running **`popd`** after a **`pushd`** will take you back to the directory that was saved on the stack.
 
 These commands are useful for quickly navigating between multiple directories without needing to remember or retype paths.
-### Shell Types
+## Shell Types
 There are various shell types in linux. They are 
 - **Bourne Shell (`sh`) :** The original Unix shell, known for its simplicity and scripting capabilities, widely used for system scripts.
 - **C Shell (`csh/tcsh`) :** A shell with C-like syntax, offering features like aliases and job control, with **`tcsh`** as an enhanced version.
@@ -113,7 +113,7 @@ There are various shell types in linux. They are
 - Alias
 - Command History
 
-### Bash Environment Variables
+## Bash Environment Variables
 Bash environment variables are like placeholders that store important information such as **user settings** or **system paths**. They help the shell and programs run smoothly and can be used to control how commands work. For example :
 
 <img src="Images/Logname.png" alt="Project Logo" width=50% height=25%>
@@ -124,15 +124,15 @@ We can also set an environment variable. For example :
 
 <img src="Images/env.png" alt="Project Logo" width=50% height=25%>
 
-### PATH Variables
+## PATH Variables
 The **PATH** variable in Bash is a list of directories where the shell searches for executable programs when we enter a command. If a command is in one of these directories we can run it without needing to type the full path.
 
-### Bash Prompt
+## Bash Prompt
 The **bash prompt** is the text displayed in the terminal where we type commands. It typically shows our username, hostname, and current director & can be customized using environment variables like **`$PS1`**.
 
 <img src="Images/ps1.png" alt="Project Logo" width=50% height=25%>
 
-### Linux Prompt
+## Linux Prompt
 
 **The Linux prompt**, also known as the **command prompt**, is the interface in a terminal where users type commands. It typically looks like this :
 
@@ -153,10 +153,10 @@ The **bash prompt** is the text displayed in the terminal where we type commands
 The prompt waits for the user to enter commands, which are then executed by the shell.
 
 
-## Core Concepts
+# Core Concepts
 Linux core concepts include the system's main parts, like the kernel, file system, processes, and user management, which work together to run applications smoothly and securely.
 
-### Linux Kernel
+## Linux Kernel
 The **kernel** is the core part of the Linux operating system that manages hardware resources, facilitates communication between software and hardware & handles system processes, memory, and file management. 
 It acts as a bridge between applications and the underlying hardware.
 
@@ -195,7 +195,7 @@ Linux includes a **monolithic kernel** which makes this OS the most stable and f
 This separation is crucial for system security, stability, and efficiency, preventing user applications from directly interfering with critical system operations.
 
 
-### Linux Boot Sequence
+## Linux Boot Sequence
 The **Linux boot sequence** is the series of steps that the system goes through to start up and load the operating system. Here’s a simple explanation of each point in the sequence:
 
 1. **BIOS POST**
@@ -221,14 +221,14 @@ The **Linux boot sequence** is the series of steps that the system goes through 
 
 <img src="Images/Boot Sequence.png" alt="Project Logo" width=90% height=75%>
 
-### Systemd Targets
+## Systemd Targets
 **Systemd** is a system and service manager for Linux that starts up the system, manages services, and improves boot speed by running processes in parallel.
 
 **Runlevels :** Runlevels are different modes that tell a Linux system what services to start or stop, helping to control how the system operates at startup or during use
 - **`3` :** Boots into a **`Command Line Interface`**
 - **`5` :** Boots into a **`Graphical Interface`**
 
-### File System Hierarchy in Linux
+## File System Hierarchy in Linux
 
 The file system hierarchy in Linux organizes the structure of directories and files, ensuring efficient management and accessibility.
 
@@ -275,7 +275,7 @@ This hierarchical structure ensures consistency and provides a standardized way 
 
 **`/var:`** Variable data files, including logs, spool files, and temporary files that may change during system operation.
 
-### Linux Distributions
+## Linux Distributions
 
 A Linux distribution (distro) is a packaged version of Linux that includes the kernel, system utilities, applications, and a package manager.
 
@@ -293,18 +293,18 @@ A Linux distribution (distro) is a packaged version of Linux that includes the k
 
 Each distribution caters to different user needs, from general desktop use to specialized server environments.
 
-## Package Management 
+# Package Management 
 
 **Package management** refers to the process of installing, upgrading, configuring and removing software packages in an operating system. It involves using package managers which are tools that automate these tasks by managing dependencies, ensuring that the correct versions of software are installed and handling software repositories.
 
-### Software Package 
+## Software Package 
 **A software package** is a bundled collection of files including executables, libraries and metadata that are grouped together for easy installation and management on an operating system.
 
 <img src="Images/Packages.png" alt="Project Logo" width=90% height=75%>
 
 The image illustrates the components involved in installing GIMP on an Ubuntu 24.04 system. A .deb package containing the GIMP software binaries, metadata and configuration files is downloaded and installed on the system making GIMP accessible for use.
 
-### Package Manager 
+## Package Manager 
 **A package manager** is a tool that automates the installation, updating and removal of software packages on an operating system such as **`DPKG`**, **`APT`**, **`APT-GET`**, **`RPM`**, **`YUM`** & **`DNF`**. 
 
 <img src="Images/Packages01.png" alt="Project Logo" width=90% height=75%>
@@ -344,14 +344,14 @@ Package managers perform several key functions to simplify software management o
 
 These functions make managing software on Linux systems efficient and straightforward.
 
-### Upgrade vs Update 
+## Upgrade vs Update 
 In the context of package management, update and upgrade have different meanings:
 
 - **Update:** This refreshes the package list on the system by retrieving the latest information about available software versions from the repositories. It doesn't install or modify any packages, just ensures the system is aware of the newest versions. **Example:** **`sudo apt update`**
 
 - **Upgrade:** This installs the latest available versions of the installed software packages based on the updated package list. It updates the actual software on the system. **Example:** **`sudo apt upgrade`**
 
-### APT vs APT-GET
+## APT vs APT-GET
 **`APT`** and **`APT-GET`** are both command-line tools used for managing packages on Debian-based systems like Ubuntu but they have some differences:
 - **`APT`:** A more user-friendly command introduced in newer versions of Ubuntu, combining features of various older **`APT`** tools (like **`apt-get`**, **`apt-cache`**). It provides a simpler syntax and improved output for most common package management tasks. **Example:** **`sudo apt update`**; **`sudo apt install package_name`**
 
@@ -359,7 +359,7 @@ In the context of package management, update and upgrade have different meanings
 
 In summary, **`APT`** is a modern,more convenient version for most users while **`APT-GET`** is still used for more advanced or specific tasks.
 
-## Working with Shell - II
+# Working with Shell - II
 
 File editors are tools used to create, modify, and manage text files in Linux. Common file editors include:
 
@@ -371,14 +371,14 @@ File editors are tools used to create, modify, and manage text files in Linux. C
 
 These editors help users edit configuration files, write scripts, and manage documents directly from the command line or a graphical interface.
 
-### Vim Editor 
+## Vim Editor 
 **`vim`** (Vi IMproved) is a highly configurable and powerful text editor used in Linux. It extends the capabilities of the older **`vi`** editor and is suitable for both beginners and advanced users.
 ```bash
     vim file_name
 ```
 <img src="Images/VIM Editor.png" alt="Project Logo" width=90% height=75%>
 
-#### ESC Mode
+### ESC Mode
 In vim (Vi IMproved) editor, the **`ESC`** (Escape) key is pivotal for navigating and executing commands in Normal mode. Here are key functionalities in ESC mode:
 
 - **Navigation:**
@@ -415,13 +415,13 @@ In vim (Vi IMproved) editor, the **`ESC`** (Escape) key is pivotal for navigatin
     - Insert Mode: Press **`i`** to enter Insert mode, where you can insert and edit text.
     - Visual Mode: Press **`v`** to enter Visual mode, where you can select blocks of text for editing or copying.
 
-## Linux Networking Basic
+# Linux Networking Basics
 Linux networking is fundamental for system administration especially in managing servers configuring network interfaces & ensuring smooth communication between devices. Some components are described below.
 
-### Name Resolution
+## Name Resolution
 **Name resolution** is like translating a website name into an address that computers understand called an IP address like **`142.250.182.206`**. Just like a GPS needs an address to take us somewhere our computer needs the IP address of a website to load it.
 
-#### How Does Name Resolution Work?
+### How Does Name Resolution Work?
 When we type a website’s name like **`www.example.com`** in our browser:
 1. **Our Computer Looks for answer locally :**
     - It checks if it already knows the IP address for that website this is called a **"cache"**.
@@ -430,14 +430,14 @@ When we type a website’s name like **`www.example.com`** in our browser:
     - It asks a **`DNS server`** to find the IP address for the website.
 3. DNS server finds the IP address and sends it back to our computer.
 4. Our computer connects to the website using the IP address it got & the page loads.
-#### Why Do We Need Name Resolution?
+### Why Do We Need Name Resolution?
 1. Instead of remembering IP addresses we only need to remember names like **`google.com`**.
 2. Just like we need an address to find a house computers need an IP address to find a website.
 
-### DNS (Domain Name System)
+## DNS (Domain Name System)
 **DNS (Domain Name System)** is like the "phone book" of the internet. It translates human-friendly domain names like **`www.example.com`** into IP addresses like **`192.168.1.1`** that computers use to communicate with each other. Without DNS we'd need to remember the IP addresses of every website we visit which would be very difficult.
 
-#### How DNS Works?
+### How DNS Works?
 Let’s say we want to visit **`www.example.com`**. Here’s what happens step-by-step:
 1. **We Type a Website Name**
     - We open our browser and type **`www.example.com`**.
@@ -468,9 +468,9 @@ Simple Workflow diagram :
 
 <img src="Images/Domain Names02.png" alt="Project Logo" width=70% height=75%>
 
-### Domain Name
+## Domain Name
 A domain name is the human-readable address we use to access websites on the internet. Instead of remembering IP addresses we use easy to remember names like **`www.google.com`**.
-#### Structure of a Domain Name
+### Structure of a Domain Name
 A domain name typically has two main parts:
 
 1. **Second-Level Domain (SLD):** This is the main name that identifies the website. For example, in **`www.google.com`**, **"google"** is the SLD.
@@ -490,7 +490,7 @@ Putting it together **`www.google.com`** consists of:
 
 <img src="Images/Domain Names.png" alt="Project Logo" width=70% height=50%>
 
-#### How Domain Names Work?
+### How Domain Names Work?
 1. **Registration:** To get a domain name, we need to register it through a domain registrar like **GoDaddy**, **Namecheap**, etc. This usually involves paying a yearly fee.
 
 2. **DNS Linking**: Once registered the domain name needs to be linked to an IP address through the **Domain Name System**. This tells the internet where to find the website associated with that name.
@@ -499,23 +499,23 @@ Putting it together **`www.google.com`** consists of:
     - Our computer uses DNS to find the corresponding IP address.
     - It connects to the server at that IP address and loads the website.
 
-### Hub
+## Hub
 A hub is a device that allows multiple devices to connect to a network and communicate with each other but doesn’t manage traffic.
-#### How Does a Hub Work?
+### How Does a Hub Work?
 1. **Data Transmission:** When one device sends data to the hub the hub broadcasts that data to all other connected devices.
 2. **No Intelligence:** A hub does not filter or direct data. It simply sends everything it receives to all ports regardless of the destination.
 3. **Physical Layer:** Hubs operate at the physical layer (Layer 1) of the OSI model, meaning they deal with the physical connection and transmission of data.
-#### Characteristics of Hubs
+### Characteristics of Hubs
 1. **Broadcasting:** Sends data to all devices on the network, leading to potential data collisions if multiple devices send data simultaneously.
 2. **Limited Intelligence:** Hubs don’t learn device addresses; they do not store any information about connected devices.
 3. **Simple Setup:** Hubs are easy to set up, as they typically only require connecting devices via Ethernet cables.
-#### Limitations of Hubs
+### Limitations of Hubs
 1.	If the HUB is failed the entire network is failed
 2.	We can’t send private data through HUB
 3.	HUB doesn’t provide any security
 4.	It doesn’t support full-duplex transmission
 
-### Switching 
+## Switching 
 Switching is how we connect devices like computers and printers in a local network so they can share information.
 ### How Does Switching Work?
 1. **Data Packets:** Information is sent in small pieces called packets.
@@ -523,14 +523,14 @@ Switching is how we connect devices like computers and printers in a local netwo
 3. **Address Book:** Each device has a unique address called a MAC address. The switch keeps a list of these addresses to know where to send data.
 4. **Learning:** When a packet arrives the switch checks who sent it and adds that address to its list.
 5. **Forwarding:** If the switch knows where to send the packet it goes straight to that device. If it doesn't know it sends the packet to everyone to find the right device.
-#### Benefits of Switching
+### Benefits of Switching
 1. **Faster Communication:** Switches help devices talk to each other quickly by sending data only to the intended device.
 2. **Less Confusion:** Data goes to the right device not to everyone on the network.
 3. **Easy to Expand:** We can easily add more devices by connecting them to the switch.
 
 <img src="Images/Switching.png" alt="Project Logo" width=100% height=50%>
 
-### Routing 
+## Routing 
 Routing is the process of selecting paths in a network along which to send data packets from one device to another. Routers are the devices that perform this function.
 ### How Does Routing Work?
 1. **Data Packets:** When data is sent over the internet, it is divided into small packets. Each packet needs to find its way to the destination.
@@ -540,14 +540,14 @@ Routing is the process of selecting paths in a network along which to send data 
 
 <img src="Images/Routing.png" alt="Project Logo" width=100% height=50%>
 
-### Gateway
+## Gateway
 A gateway is a device that acts as a "gate" between two networks, allowing them to communicate with each other. It serves as a translator or bridge between different protocols or architectures.
-#### How Does a Gateway Work?
+### How Does a Gateway Work?
 1. **Connecting Networks:** A gateway connects networks that use different protocols. For example, it can connect a local area network (LAN) to the internet.
 2. **Data Translation:** When data passes through a gateway it can convert the data formats or protocols so that devices on different networks can understand each other.
 3. **Routing:** Gateways often have routing capabilities meaning they can direct data packets to their destination even if the destination is on a different network.
-## Linux Security & File Permissions
-### Linux Security
+# Linux Security & File Permissions
+## Linux Security
 **Linux Security** refers to the various measures, tools & practices used to protect a Linux system from unauthorized access, attacks & threats. It involves controlling who can access the system, securing data, managing user permissions & protecting the system from vulnerabilities. Let’s explore Linux Security in simple terms :
 1. **Access Controls**
     - **Definition:** Control who can access files, directories & resources on the system.
