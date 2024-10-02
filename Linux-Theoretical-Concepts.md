@@ -1,7 +1,7 @@
 # 💻Linux Theoretical Concepts💻
-
-![Project Logo](Images/Linux%20Image.png)
-
+<div align="center">
+  <img src="Images/Linux Image.png" alt="Project Logo" width=100% height=30%>/>
+</div>
 Welcome! to **Linux Theoretical Concepts** guide. This is your go-to guide for mastering Linux concepts and theory. Whether you're a beginner or need a quick reference, it offers essential insights to enhance your Linux understanding and usage.
 
 # Table of Contents
@@ -102,7 +102,9 @@ Using a **shell** instead of a **Graphical User Interface** (GUI) allows for gre
 ## Home Directory
 The home directory is a unique, user-specific folder (e.g., `/home/username`) where personal files, settings, and configurations are stored in a Linux system.
 
-<img src="Images/Home Directory.png" alt="Project Logo" width=75% height=30%>
+<div align="center">
+  <img src="Images/Home Directory.png" alt="Project Logo" width=75% height=30%/>
+</div>
 
 ## Commands & Arguments 
 In Linux, **`commands`** are instructions given to the shell to perform specific tasks and **`arguments`** are additional pieces of information passed to those commands to modify their behavior or specify what they operate on.
