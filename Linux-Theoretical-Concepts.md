@@ -137,7 +137,7 @@ A **path** is the location of a file or directory in the filesystem which can be
 - **Relative Path :** A relative path is the path to a file or directory from our current working directory, without starting from the root. For example, if we are in **`/home/user`** the relative path to **`file.txt`** inside directory would be **`directory/file.txt`**.
 
 <div align="center">
-    <img src="Images/Path.png" alt="Project Logo" width=40% height=15%>
+    <img src="Images/Path.png" alt="Project Logo" width=50% height=15%>
 </div>
 
 ## Pushd and Popd
@@ -165,7 +165,7 @@ There are various shell types in linux. They are
 Bash environment variables are like placeholders that store important information such as **user settings** or **system paths**. They help the shell and programs run smoothly and can be used to control how commands work. For example :
 
 <div align="center">
-    <img src="Images/Logname.png" alt="Project Logo" width=40% height=25%>
+    <img src="Images/Logname.png" alt="Project Logo" width=30% height=25%>
 </div>
 
 Logname show the name which stored in the logname.
@@ -173,7 +173,7 @@ Logname show the name which stored in the logname.
 We can also set an environment variable. For example :
 
 <div align="center">
-    <img src="Images/env.png" alt="Project Logo" width=40% height=25%>
+    <img src="Images/env.png" alt="Project Logo" width=30% height=25%>
 </div>
 
 ## PATH Variables
@@ -183,7 +183,7 @@ The **PATH** variable in Bash is a list of directories where the shell searches 
 The **bash prompt** is the text displayed in the terminal where we type commands. It typically shows our username, hostname, and current director & can be customized using environment variables like **`$PS1`**.
 
 <div align="center">
-    <img src="Images/ps1.png" alt="Project Logo" width=40% height=25%>
+    <img src="Images/ps1.png" alt="Project Logo" width=30% height=25%>
 </div>
 
 ## Linux Prompt
@@ -215,7 +215,7 @@ The **kernel** is the core part of the Linux operating system that manages hardw
 It acts as a bridge between applications and the underlying hardware.
 
 <div align="center">
-    <img src="Images/Kernel.png" alt="Project Logo" width=50% height=25%>
+    <img src="Images/Kernel.png" alt="Project Logo" width=45% height=25%>
 </div>
 
 **Kernel functions** are the core tasks performed by the Linux kernel to manage system resources and ensure smooth operation. Here’s a brief overview of the main kernel functions
@@ -394,7 +394,7 @@ Here’s a simple explanation of each package managers
     - **Description:** The next-generation package manager that replaces YUM in Red Hat-based systems. It offers better performance and improved dependency resolution while maintaining similar functionality.
 
 <div align="center">
-    <img src="Images/Package Managers.png" alt="Project Logo" width=70% height=75%>
+    <img src="Images/Package Managers.png" alt="Project Logo" width=60% height=75%>
 </div>
 
 All of these are package managers or tools used to manage software packages but **`DPKG`**, **`APT`** and **`APT-GET`** are primarily for **Debian-based systems** while **`RPM`**, **`YUM`** and **`DNF`** are for **Red Hat-based systems**.
@@ -528,15 +528,16 @@ Let’s say we want to visit **`www.example.com`**. Here’s what happens step-b
 8. **Our Computer Connects to the Website**
     - With the IP address our computer can now connect to **`www.example.com`** & the website appears in our browser.
 
- Here is the workflow diagram of this complete process :
+ **Here is the workflow diagram of this complete process :**
 
  <div align="center">
     <img src="Images/DNS Workflow.png" alt="Project Logo" width=100% height=75%>
 </div>
 
-Simple Workflow diagram :
+**Simple Workflow diagram :**
+
 <div align="center">
-    <img src="Images/Domain Names02.png" alt="Project Logo" width=70% height=75%>
+    <img src="Images/Domain Names02.png" alt="Project Logo" width=50% height=75%>
 </div>
 
 ## Domain Name
@@ -560,7 +561,7 @@ Putting it together **`www.google.com`** consists of:
 - **`.com`:** The top-level domain.
 
 <div align="center">
-    <img src="Images/Domain Names.png" alt="Project Logo" width=50% height=75%>
+    <img src="Images/Domain Names.png" alt="Project Logo" width=40% height=75%>
 </div>
 
 ### How Domain Names Work?
@@ -699,7 +700,7 @@ Access Control Files in Linux are essential system files that manage user authen
     - **Content:** Contains username, user ID (UID), group ID (GID), home directory & default shell. It allows the system to identify and authenticate users when they log in.
 
 <div align="center">
-    <img src="Images/passwd.png" alt="Project Logo" width=70% height=75%>
+    <img src="Images/passwd.png" alt="Project Logo" width=50% height=75%>
 </div>
 
 **Fields Explained:**
@@ -745,7 +746,7 @@ Access Control Files in Linux are essential system files that manage user authen
 ### Manging Users
 
 <div align="center">
-    <img src="Images/Managing Users.png" alt="Project Logo" width=100% height=75%>
+    <img src="Images/Managing Users.png" alt="Project Logo" width=70% height=75%>
 </div>
 
 **Description:** Creates a new user account named "user01" with the specified settings:
@@ -789,7 +790,7 @@ Three Types of File Permissions:
 If a user is denied permission for a specific action, a **`-`** will appear in place of r, w or x. This means no permission for that particular action.
 
 <div align="center">
-    <img src="Images/file-permission01.png" alt="Project Logo" width=70% height=75%>
+    <img src="Images/file-permission01.png" alt="Project Logo" width=50% height=75%>
 </div>
 
 ### How Permissions Are Assigned?
@@ -799,11 +800,11 @@ Permissions are assigned to three different categories of users:
 - **Others:** Everyone else on the system who is not the owner or part of the group.
 
 <div align="center">
-    <img src="Images/file-permission.png" alt="Project Logo" width=70% height=75%>
+    <img src="Images/file-permission.png" alt="Project Logo" width=60% height=75%>
 </div>
 
 <div align="center">
-    <img src="Images/file-permission03.png" alt="Project Logo" width=80% height=75%>
+    <img src="Images/file-permission03.png" alt="Project Logo" width=70% height=75%>
 </div>
 
 ### Modifying File Permissions
@@ -910,14 +911,14 @@ When using password-based SSH we need to enter the password every time we log in
 Here is the workflow of **Linux** to **Linux** **Password-Less SSH**
 
 <div align="center">
-    <img src="Images/SSH-passwordless01.png" alt="Project Logo" width=70% height=75%>
+    <img src="Images/SSH-passwordless01.png" alt="Project Logo" width=50% height=75%>
 </div>
 
 ## SCP (Secure Copy Protocol)
 **SCP** stands for **Secure Copy Protocol**. It is a command used to securely **transfer files** between a local and a remote system or between two remote systems over an SSH connection. SCP ensures that the data is encrypted during the transfer making it secure.
 
 <div align="center">
-    <img src="Images/SCP.png" alt="Project Logo" width=80% height=75%>
+    <img src="Images/SCP.png" alt="Project Logo" width=70% height=75%>
 </div>
 
 ## IP Tables
@@ -942,16 +943,16 @@ In iptables chains are a fundamental concept used to manage the flow of network 
 Suppose we have a client with 172.46.238.188 IP & a Server with 172.46.238.10 IP address.
 
 <div align="center">
-    <img src="Images/IP Tables01.png" alt="Project Logo" width=80% height=75%>
+    <img src="Images/IP Tables01.png" alt="Project Logo" width=70% height=75%>
 </div>
 
 To adds a rule to the INPUT chain to allow incoming TCP traffic on port 22 (commonly used for SSH) from the IP address 172.46.238.188. We need to use this command 
 **`iptables -A INPUT -p tcp -s 172.16.238.188  --dport 22 -j ACCEPT`**
 
-Here is the breakdown :
+**Here is the breakdown :**
 
 <div align="center">
-    <img src="Images/IP Tables02.png" alt="Project Logo" width=80% height=75%>
+    <img src="Images/IP Tables02.png" alt="Project Logo" width=70% height=75%>
 </div>
 
 More examples are given below :
@@ -977,7 +978,7 @@ use **`iptables -A OUTPUT -p tcp --dport 443 -j DROP`**
      - Day of the Week (0-7, where 0 or 7 is Sunday)
 
 <div align="center">
-    <img src="Images/Cron01.png" alt="Project Logo" width=100% height=75%>
+    <img src="Images/Cron01.png" alt="Project Logo" width=70% height=75%>
 </div>
 
 ### Example of a Cron Job
@@ -1004,7 +1005,7 @@ To schedule a cron job to run at 12:01 AM on 16th September and only if it is a 
 Let's assume we are managing an **Apache web server** on a Linux machine. We need to start Apache enable it to start on boot and verify that it is running properly. Here’s how we can do this using **`systemd`**.
 
 <div align="center">
-    <img src="Images/exmaple of systemd.png" alt="Project Logo" width=50% height=75%>
+    <img src="Images/exmaple of systemd.png" alt="Project Logo" width=40% height=75%>
 </div>
 
 # Storage in Linux
@@ -1041,7 +1042,7 @@ A disk partition is a logically divided section of a storage device like a hard 
  - If we need more than four partitions, we must create an extended partition.
 
 <div align="center">
-    <img src="Images/Primary Partition.png" alt="Project Logo" width=50% height=75%>
+    <img src="Images/Primary Partition.png" alt="Project Logo" width=40% height=75%>
 </div>
 
 2. **Extended Partition**
@@ -1054,7 +1055,7 @@ A disk partition is a logically divided section of a storage device like a hard 
  - Functions like primary partitions and can host files or operating systems, except it's created inside an extended partition.
 
  <div align="center">
-    <img src="Images/Extended and Logical Partition.png" alt="Project Logo" width=70% height=75%>
+    <img src="Images/Extended and Logical Partition.png" alt="Project Logo" width=50% height=75%>
 </div>
 
 ### Partition Table Types
@@ -1067,7 +1068,7 @@ Partition tables define how partitions are organized on a storage device. There 
  - **Compatibility :** MBR is widely supported on older systems, making it useful for older hardware.
 
 <div align="center">
-    <img src="Images/MBR.png" alt="Project Logo" width=80% height=75%>
+    <img src="Images/MBR.png" alt="Project Logo" width=60% height=75%>
 </div>
 
  - **Limitations :** Cannot handle disks larger than 2TB & limited to 4 primary partitions.
@@ -1081,7 +1082,7 @@ Partition tables define how partitions are organized on a storage device. There 
  - **Compatibility :** Requires a UEFI-compatible system, though some systems offer backward compatibility with legacy BIOS.
 
 <div align="center">
-    <img src="Images/GPT.png" alt="Project Logo" width=50% height=75%>
+    <img src="Images/GPT.png" alt="Project Logo" width=30% height=75%>
 </div>
 
  - **Advantages :** Supports very large disk sizes, more partitions (up to 128) & redundant partition table for recovery in case of corruption.
@@ -1097,14 +1098,14 @@ Partition tables define how partitions are organized on a storage device. There 
 **`fstab`** **(File System Table)** is a configuration file in Linux located at **`/etc/fstab`**. It defines how disk partitions, file systems & other storage devices should be mounted and used automatically when the system boots.
 
 <div align="center">
-    <img src="Images/fstab.png" alt="Project Logo" width=70% height=75%>
+    <img src="Images/fstab.png" alt="Project Logo" width=80% height=75%>
 </div>
 
 ### Example of Partitioning from Scratch
 Partitioning a **30 GB disk (/dev/sda)** involves several steps from checking the current partition layout to creating and formatting new partitions. We'll walk through the entire process from scratch including installing necessary tools if needed using common Linux utilities like **`fdisk`** and **`mkfs`**. Here's how we can do it:
 
 <div align="center">
-    <img src="Images/example of partition.png" alt="Project Logo" width=60% height=75%>
+    <img src="Images/example of partition.png" alt="Project Logo" width=40% height=75%>
 </div>
  
 - **Step 1.** **Check Existing Partitions :** 
