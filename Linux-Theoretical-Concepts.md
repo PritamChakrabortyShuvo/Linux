@@ -1042,7 +1042,7 @@ A disk partition is a logically divided section of a storage device like a hard 
  - If we need more than four partitions, we must create an extended partition.
 
 <div align="center">
-    <img src="Images/Primary Partition.png" alt="Project Logo" width=40% height=75%>
+    <img src="Images/Primary Partition.png" alt="Project Logo" width=30% height=75%>
 </div>
 
 2. **Extended Partition**
