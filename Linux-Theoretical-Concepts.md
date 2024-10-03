@@ -1,6 +1,6 @@
 # 💻Linux Theoretical Concepts💻
 <div align="center">
-  <img src="Images/Linux Image.png" alt="Project Logo" width=70% height=30%/>
+  <img src="Images/Redme File Cover.png" alt="Project Logo" width=100% height=30%/>
 </div>
 Welcome! to **Linux Theoretical Concepts** guide. This is your go-to guide for mastering Linux concepts and theory. Whether you're a beginner or need a quick reference, it offers essential insights to enhance your Linux understanding and usage.
 
