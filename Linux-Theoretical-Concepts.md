@@ -325,25 +325,25 @@ This hierarchical structure ensures consistency and provides a standardized way 
 
 **`/bin:`** Essential user binaries such as **`cp`**, **`mv`**, **`mkdir`** etc. are located here.
 
-**`/boot:`** Files required for the boot process, including the Linux kernel and bootloader configurations.
+**`/boot:`** Files required for the boot process including the **Linux kernel** and **bootloader** configurations.
 
-**`/dev:`** Device files representing hardware devices such as hdd, mouse, keyboard etc. connected to the system, managed by the kernel.
+**`/dev:`** Device files representing hardware devices such as hdd, mouse, keyboard etc. connected to the system managed by the kernel.
 
 **`/etc:`** Store most of the configuration files used by various applications and services.
 
-**`/home:`** User home directories where personal files and configurations are stored.
+**`/home:`** Non-root users home directories where personal files and configurations are stored.
 
-**`/lib and /lib64:`** Libraries essential for programs and shared libraries (on 64-bit systems).
+**`/lib and /lib64:`** Libraries essential for programs and shared libraries.**`\lib64`** for 64-bit systems.
 
-**`/media:`** Mount points for removable media devices such as USB drives and optical discs.
+**`/media:`** Mount points for removable media devices such as **USB drives** and **optical discs**.
 
 **`/mnt:`** Temporary mount points for filesystems mounted manually by the user.
 
-**`/opt:`** 3rd party software applications installed manually by the system administrator.
+**`/opt:`** **3rd party software** applications installed manually by the system administrator.
 
 **`/proc:`** Virtual file system providing information about processes and system resources.
 
-**`/root:`** Home directory for the root user (superuser) account.
+**`/root:`** Home directory for the **root user** (superuser) account.
 
 **`/sbin:`** System binaries (executable programs) used for system administration tasks.
 
@@ -351,9 +351,9 @@ This hierarchical structure ensures consistency and provides a standardized way 
 
 **`/tmp:`** Stores temporary data.
 
-**`/usr:`** Secondary hierarchy containing read-only user data and programs (user utilities).
+**`/usr:`** Mount point for user programs, documents, video files, audio files, library files etc.
 
-**`/var:`** Variable data files, including logs, spool files, and temporary files that may change during system operation.
+**`/var:`** Variable data files, including logs, spool files & temporary files that may change during system operation.
 
 ## Linux Distributions
 
