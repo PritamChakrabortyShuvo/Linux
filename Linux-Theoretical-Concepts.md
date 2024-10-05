@@ -323,13 +323,17 @@ This hierarchical structure ensures consistency and provides a standardized way 
 
 **`Root Directory (/):`**  The top-level directory containing all other directories and files in the system.
 
-**`/bin:`** Essential user binaries such as **`cp`**, **`mv`**, **`mkdir`** etc. are located here.
+**`/bin:`** Contains essential user commands needed for basic system functionality. These are general-purpose utilities available for all users. These commands are **`ls`**, **`cp`**, **`mv`**, **`cat`**, **`bash`** and **`echo`**. Usable by **all users** both normal and root.
+
+**`/sbin:`** Contains essential system administration commands primarily used for system management tasks. These tools are critical for system booting, maintenance and repair. These commands are **`shutdown`**, **`reboot`**, **`fdisk`**, **`ifconfig`** & **`mkfs`**. Usable by the **root (superuser)**. Normal users can view the binaries but may not have permission to execute them unless they use **`sudo`**.
 
 **`/boot:`** Files required for the boot process including the **Linux kernel** and **bootloader** configurations.
 
-**`/dev:`** Device files representing hardware devices such as hdd, mouse, keyboard etc. connected to the system managed by the kernel.
+**`/dev:`** Device files representing hardware devices such as **hdd**, **mouse**, **keyboard** etc. connected to the system managed by the kernel.
 
-**`/etc:`** Store most of the configuration files used by various applications and services.
+**`/etc:`** Store most of the **configuration files** used by various applications and services.
+
+**`/root:`** Home directory for the **root user (superuser)** account.
 
 **`/home:`** Non-root users home directories where personal files and configurations are stored.
 
@@ -339,17 +343,13 @@ This hierarchical structure ensures consistency and provides a standardized way 
 
 **`/mnt:`** Temporary mount points for filesystems mounted manually by the user.
 
-**`/opt:`** **3rd party software** applications installed manually by the system administrator.
+**`/tmp:`** Stores temporary data.
+
+**`/opt:`** **3rd party software** applications or **unbundeled packages** installed manually by the system administrator.
 
 **`/proc:`** Virtual file system providing information about processes and system resources.
 
-**`/root:`** Home directory for the **root user** (superuser) account.
-
-**`/sbin:`** System binaries (executable programs) used for system administration tasks.
-
 **`/srv:`** Data files for services provided by the system.
-
-**`/tmp:`** Stores temporary data.
 
 **`/usr:`** Mount point for user programs, documents, video files, audio files, library files etc.
 
