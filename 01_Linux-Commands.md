@@ -1,6 +1,6 @@
 # 🗒️Comprehensive Guide to Essential Linux Commands🗒️
 
-This guide provides an extensive overview of the most commonly used Linux commands. It covers various aspects of system management, file operations, network management, and user administration. Whether you're a beginner or an advanced user, this resource aims to enhance your command-line skills and streamline your workflow in a Linux environment.
+This guide provides an extensive overview of the most commonly used **Linux commands**. It covers various aspects of system management, file operations, network management, and user administration. Whether you're a beginner or an advanced user, this resource aims to enhance your command-line skills and streamline your workflow in a Linux environment.
 
 ### Table of Contents
 
