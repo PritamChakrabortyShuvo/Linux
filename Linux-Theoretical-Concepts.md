@@ -12,6 +12,7 @@ Welcome! to **Linux Theoretical Concepts** guide. This is your go-to guide for m
 - [Where is Linux?](#where-is-linux)
 - [Why is Linux?](#why-is-linux)
 - [Common Challenges](#common-challenges)
+- [Linux Desktop vs Linux Server](#linux-desktop-vs-server)
 - [Working with Shell - I](#working-with-shell---i)
   - [Home Directory](#home-directory)
   - [Commands & Arguments](#commands--arguments)
