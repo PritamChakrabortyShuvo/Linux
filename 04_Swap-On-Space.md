@@ -1,4 +1,4 @@
-# Swap On Space 💿
+# Swap On Space📀
 
 ## What is Swap Space?
 Swap space in Ubuntu  is a portion of the **hard drive** used as **virtual memory** when the **RAM** is full. 
