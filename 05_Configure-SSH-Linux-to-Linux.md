@@ -50,7 +50,7 @@ The **`openssh-server`** package is need to be installed to enable **SSH** acces
     sudo apt install openssh-server
 ```
 ### Step 2 : Start and Enable SSH Service
-After installation the SSH service is started &enabled to run at boot.
+After installation the SSH service is started & enabled to run at boot.
 ```bash
     sudo systemctl status ssh
 ```
@@ -117,17 +117,17 @@ After making changes restart the SSH service to apply the changes.
 ```bash
     sudo systemctl restart ssh
 ```
-### Step 6 : Connecting to the Remote System
-Once SSH is configured we can connect to the server using the **`ssh`** command from another Linux machine (Local).
+### Step 6 : Connecting to the Server
+Once SSH is configured we can connect to the server using the **`ssh`** command from another **Linux machine (Local)**.
 #### Check if SSH Client is Installed
 Most Linux systems come with the SSH client pre-installed. However if it is not installed we can do so using the following command.
 ```bash
     sudo apt install openssh-client
 ```
 #### Find the IP Address of the Remote System
-To connect via SSH we need the **IP address** of the **remote machine**. We can find it by running the **`ifconfig`** or **`ip addr`** command on the remote machine.
-#### Connect to the Remote System
-Once we have the IP address use the following command to connect to the remote system. Replace username with the actual username on the remote machine & IPaddress with the remote machine's IP.
+To connect via SSH we need the **IP address** of the **Server**. We can find it by running the **`ifconfig`** or **`ip addr`** command on the **Server**.
+#### Connect to the Server
+Once we have the IP address use the following command to connect to the server. Replace username with the actual username of the server & IPaddress with the server's IP.
 ```bash
     ssh username@IPaddress
 ```
