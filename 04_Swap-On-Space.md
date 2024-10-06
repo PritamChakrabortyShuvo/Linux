@@ -70,6 +70,10 @@ To disable the swap space for the current session (this will be lost after a reb
 ```bash
     sudo swapoff -a
 ```
+Turns off specific swap spaces.
+```bash
+    sudo swapoff /file_name
+```
 ### Step 2 : Make the Change Permanent
 Open the file with a text editor.
 ```bash
