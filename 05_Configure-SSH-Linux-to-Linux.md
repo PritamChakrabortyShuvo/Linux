@@ -32,6 +32,7 @@ Here is the detailed steps :
   
 In short, the client and server exchange keys and secure the connection for safe communication.
 
+[Reference](https://zedas.fr/posts/linux-explained-8-ssh/)
 
 ## Configuration of SSH
 ### Workflow 
