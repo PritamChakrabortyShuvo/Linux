@@ -6,6 +6,8 @@ Swap space in Ubuntu  is a portion of the **hard drive** used as **virtual memor
 - **Performance:** Although using swap can help prevent crashes when RAM is full **accessing data from swap is slower than from RAM**. Therefore, it’s best to have enough RAM for our applications.
 
 ## Adding swap space on Ubuntu 24.04
+
+### Workflow 
 <div align="center">
   <img src="Images/Swapon.png" alt="Project Logo" width=100% height=30%/>
 </div>
