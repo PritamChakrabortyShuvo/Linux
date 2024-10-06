@@ -10,6 +10,7 @@ Static IP addresses are used because they provide a **fixed address** for device
 A **YAML** file is a **human-readable text file** used for **storing data** in a structured format. It stands for **"Yet Another Markup Language"**. It’s designed to be **simple** & **easy** for both **humans** & **machines** to understand.
 
 ## Configure Static IP Address on Ubuntu 24.04 
+### Workflow 
 <div align="center">
   <img src="Images/Static IP Configuration workflow.png" alt="Project Logo" width=100% height=30%/>
 </div>
