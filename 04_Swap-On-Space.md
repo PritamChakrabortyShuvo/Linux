@@ -63,3 +63,24 @@ to the **`/etc/fstab`** file we are telling the system:
 - **`/etc/fstab`**: This is the file we want to modify. It contains information about filesystems and swap space that should be mounted or activated at boot.
 
 Adding the **swap file** to **`/etc/fstab`** ensures that the system knows to **activate** the swap file every time it **boots up**. Without this step the swap space **would be lost after a reboot** potentially causing issues if the system runs low on memory. This configuration helps maintain consistent performance and prevents application crashes due to insufficient memory.
+
+## Removing Swap Space
+### Step 1 : Disable Swap Immediately
+To disable the swap space for the current session (this will be lost after a reboot) use the following command. This command turns off all swap spaces.
+```bash
+    sudo swapoff -a
+```
+### Step 2 : Make the Change Permanent
+Open the file with a text editor.
+```bash
+    sudo vim /etc/fstab
+```
+Find the line that looks something like this
+```bash
+    /swapfile none swap sw 0 0
+```
+We can comment it out by adding a **`#`** at the beginning.
+```bash
+    # /swapfile none swap sw 0 0
+```
+Save and exit the editor.
