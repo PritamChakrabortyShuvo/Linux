@@ -2,11 +2,43 @@
 ## What is SSH?
 **SSH** or **Secure Shell** is a network protocol that allows secure communication between two computers. It is commonly used for accessing and managing servers remotely.
 
+## SSH Architecture
+SSH (Secure Shell) uses **public-key cryptography** to authenticate the remote system and the user trying to connect. It operates on three layers:
+
+  - **Transport Layer:** Handles server authentication, confidentiality & integrity. It also manages port 22 which is the default port for SSH.
+  - **User Authentication Layer:** Confirms if the user is recognized by the server and verifies the credentials using various authentication algorithms.
+  - **Connection Layer:** Creates an encrypted communication tunnel and splits it into multiple logical channels for different interactions.
+
+These layers work together to securely establish an SSH connection.
+
+Here is a first diagram explaining the summarized steps made during the SSH connection initialization.
+<div align="center">
+  <img src="Images/SSH_01.png" alt="Project Logo" width=100% height=30%/>
+</div>
+
+The **client and the server** **validate their mutual keys** and **open a secured tunnel to proceed**.
+
+Here is the detailed steps :
+  - The client initiates a **TCP connection** to the **SSH server** on **port 22** (default reserved port).
+  - The server responds to the client’s connection and they establish a **TCP handshake**.
+  - The server sends its **identification string** to the client with various informations (protocol version, etc).
+  - The client sends its own **identification informations** to the server using the same format.
+  - Once the identification strings have been exchanged, the **server sends its public key to the client**.
+  - If the server is not in the **`“known_hosts”`** file of the client it will **prompt the user if they can trust it or not**. If **yes**, **the server will be added into the list**.
+  - If **not**, **this question will prompted everytime**.
+  - The **client generates a random session key** and **encrypt it with the server’s public key**.
+  - The **server decrypts the session key** using its **private key**.
+  - The connection between the **client and the server** is now secured by encrypting each data using the session key.
+  
+In short, the client and server exchange keys and secure the connection for safe communication.
+
+
 ## Configuration of SSH
 ### Workflow 
 <div align="center">
   <img src="Images/SSH workflow.png" alt="Project Logo" width=100% height=30%/>
 </div>
+
 
 ### Step 1 : Install SSH on Ubuntu
 The **`openssh-server`** package is need to be installed to enable **SSH** access to the server.
