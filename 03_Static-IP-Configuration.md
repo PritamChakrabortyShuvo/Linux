@@ -68,7 +68,7 @@ Or,
 ```bash
     ip addr show
 ```
-## Explanation 
+### Explanation 
  - **`network :`** This is the top-level key that starts the network configuration.
  - **`version: 2`** Specifies the version of the Netplan configuration format. **`Version 2`** is the most commonly used version.
  - **`renderer: NetworkManager`** Indicates that **NetworkManager** is responsible for managing the network settings on this system. If we were using **`systemd-networkd`** we would replace this with **`renderer: networkd`**.
