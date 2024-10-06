@@ -4,6 +4,9 @@
 
 ## Configuration of SSH
 ### Workflow 
+<div align="center">
+  <img src="Images/SSH workflow.png" alt="Project Logo" width=100% height=30%/>
+</div>
 
 ### Step 1 : Install SSH on Ubuntu
 The **`openssh-server`** package is need to be installed to enable **SSH** access to the server.
@@ -21,28 +24,28 @@ After installation the SSH service is started &enabled to run at boot.
 ```bash
     sudo systemctl enable --now ssh
 ```
-Verify that the service is running successfully &enable service.
+Verify that the service is running successfully & enable service.
 
 ### Step 3 : Configure custom SSH
 The default **SSH port 22** is changed for security reasons & other settings are adjusted to improve security such as disabling empty passwords root login & password-based authentication.
 #### Backup SSH Configuration File
-Before modifying the SSH configuration it’s a best practice to back up the original configuration file to avoid accidental misconfiguration:
+Before modifying the SSH configuration it is a best practice to **back up the original configuration file** to **avoid accidental misconfiguration**.
 ```bash
     sudo cp /etc/ssh/sshd_config /etc/ssh/sshd_config_backup
 ```
 #### Open the SSH Configuration File
-Edit the SSH configuration file using a text editor
+Edit the SSH configuration file using a text editor.
 ```bash
     sudo vim /etc/ssh/sshd_config
 ```
 #### Security Settings for SSH Configuration
 1. **Disable Empty Paswword :**
-By setting **`PermitEmptyPasswords no`** we ensure that no user with an empty password can log in via SSH. This prevents unauthorized access from accounts with no password.
+By setting **`PermitEmptyPasswords no`** we ensure that no user with an **empty password** can log in via SSH. This prevents unauthorized access from accounts with no password.
 ```bash
     PermitEmptyPasswords no
 ```
 2. **Change Default SSH Port**
-The default **SSH port is 22**. Changing it to a custom port  can reduce the number of **brute-force attacks** targeting port 22.
+The default **SSH port is 22**. Changing it to a custom port can reduce the number of **brute-force attacks** targeting port 22.
 ```bash
     port 1646
 ```
@@ -57,34 +60,34 @@ The **`ClientAliveInterval`** option defines the idle timeout interval in second
     ClientAliveInterval 300
 ```
 5. **Disable SSH Protocol 1**
-SSH has two versions 1 and 2. **Version 1 is outdated and less secure**. Disabling it by setting Protocol 2 ensures only the **more secure protocol is used.**
+SSH has **two versions 1 and 2**. **Version 1 is outdated and less secure**. Disabling it by **setting Protocol 2** ensures only the **more secure protocol is used.**
 ```bash
     Protocol 2
 ```
 6. **Allow Selected Users**
-We can restrict SSH access to specific users by using the **`AllowUsers directive`**. Replace **User1** and **User2** with the actual usernames you want to allow SSH access.
+We can restrict SSH access to specific users by using the **`AllowUsers directive`**. Replace **User_name01** and **User_name02** with the actual usernames we want to allow SSH access.
 ```bash
-    AllowUsers User1 User2
+    AllowUsers User_name01 User_name02
 ```
 7. **Disable Password-Based Login**
-To enhance security further especially if we are using SSH keys for authentication we can disable password-based logins0
+To enhance security further especially if we are using SSH keys for authentication we can disable password-based logins.
 ```bash
     PasswordAuthentication no
 ```
 ### Step 4 : Allow SSH Through the Firewall
-The UFW (Uncomplicated Firewall) is configured to allow incoming connections on the custom SSH port.
+The **UFW (Uncomplicated Firewall)** is configured to allow **incoming connections** on the **custom SSH port**.
 ```bash
     sudo ufw allow from any to any port 2222 proto tcp
 ```
 ### Step 5 : Restart SSH Service
-After making changes, restart the SSH service to apply the changes.
+After making changes restart the SSH service to apply the changes.
 ```bash
     sudo systemctl restart ssh
 ```
 ### Step 6 : Connecting to the Remote System
-Once SSH is configured we can connect to the server using the **`ssh`** command from another Linux machine.
+Once SSH is configured we can connect to the server using the **`ssh`** command from another Linux machine (Local).
 #### Check if SSH Client is Installed
-Most Linux systems come with the SSH client pre-installed. However if it’s not installed we can do so using the following command.
+Most Linux systems come with the SSH client pre-installed. However if it is not installed we can do so using the following command.
 ```bash
     sudo apt install openssh-client
 ```
@@ -108,7 +111,7 @@ This command will show us whether the SSH service is active (running) or inactiv
     sudo systemctl status ssh
 ```
 #### Start SSH Service
-To start the SSH service (for example, after stopping it), use this command.
+To start the SSH service (for example, after stopping it) use this command.
 ```bash
     sudo systemctl start ssh
 ```
