@@ -23,7 +23,7 @@ After installation the SSH service is started &enabled to run at boot.
 ```
 Verify that the service is running successfully &enable service.
 
-### Step 3 : Configure custom SSH port
+### Step 3 : Configure custom SSH
 The default **SSH port 22** is changed for security reasons & other settings are adjusted to improve security such as disabling empty passwords root login & password-based authentication.
 #### Backup SSH Configuration File
 Before modifying the SSH configuration it’s a best practice to back up the original configuration file to avoid accidental misconfiguration:
