@@ -12,10 +12,14 @@ Swap space in Ubuntu  is a portion of the **hard drive** used as **virtual memor
   <img src="Images/Swapon.png" alt="Project Logo" width=100% height=30%/>
 </div>
 
-### Step 1 : Check Current Swap Space
+### Step 1 : Check Current Swap Space and Disk Space
 To see the current swap usage use
 ```bash
     sudo swapon --show
+```
+To see information about disk space use 
+```bash
+    df -h
 ```
 ### Step 2 : Create a Swap File 
 Create a 4GB swap file. We can adjust the size as needed.
