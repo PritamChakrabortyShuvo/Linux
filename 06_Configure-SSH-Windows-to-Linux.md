@@ -27,7 +27,8 @@ We will see something like "**`active (running)`**." If not **troubleshoot** wit
 ```bash
     sudo vim /etc/ssh/sshd_config
 ```
-#### 5. Change the port number or other security settings. Locate the line that says **`#Port 22`**.Remove the **`#`** & change **22** to the desired custom port, e.g., **222**.
+#### 5. Edit security settings. 
+For example, Locate the line that says **`#Port 22`**. Remove the **`#`** & change **22** to the desired custom port, e.g., **222**.
 #### 6. Save and Exit
 #### 7. Allow the custom port in the firewall (for **`ufw users`**)
 ```bash
