@@ -57,7 +57,7 @@ To avoid entering passwords each time, we can set up key-based authentication.
 ```bash
     ssh-keygen -t rsa -b 4096
 ```
-We use **`4096`** bits to provide stronger encryption, enhancing the security of the SSH key. We can use **`ECDSA`** or **`ED25519`** for shorter key sizes and faster performance but **RSA** with **4096** bits is still very **secure** and compatible across nearly all systems.
+We use **`4096`** bits to provide stronger encryption, enhancing the security of the SSH key. We can use **`ECDSA`** or **`ED25519`** for shorter key sizes and faster performance but **`RSA`** with **`4096`** bits is still very **secure** and compatible across nearly all systems.
 #### 2. Copy the public key to Server if we using custom port
 ```bash
     ssh-copy-id -p 222 username@ip_address
