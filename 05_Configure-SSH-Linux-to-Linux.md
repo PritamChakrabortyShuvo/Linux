@@ -34,7 +34,7 @@ In short, the client and server exchange keys and secure the connection for safe
 
 Here is a second diagram explaining authentication steps.
 <div align="center">
-  <img src="Images/SSH_02.png" alt="Project Logo" width=90% height=30%/>
+  <img src="Images/SSH_02.png" alt="Project Logo" width=100% height=30%/>
 </div>
 
 Here is the detailed steps :
