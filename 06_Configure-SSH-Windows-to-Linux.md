@@ -73,7 +73,7 @@ After entering the password, the key will be copied to the Server.
 - The firewall on Ubuntu allows the custom port.
 - The SSH service is running and configured properly.
 
-### Revoking SSH Access for a Specific Device
+### Step 5 : Revoking SSH Access for a Specific Device
 #### Option 1 : Remove the Authorized SSH Key (Key-Based Authentication)
 If the Windows PC is using key-based authentication to access Ubuntu, we can remove the corresponding SSH key.
 
