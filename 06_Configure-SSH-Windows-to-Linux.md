@@ -72,3 +72,38 @@ After entering the password, the key will be copied to the Server.
 #### 2. If we encounter issues, ensure the following:
 - The firewall on Ubuntu allows the custom port.
 - The SSH service is running and configured properly.
+
+### Revoking SSH Access for a Specific Device
+#### Option 1 : Remove the Authorized SSH Key (Key-Based Authentication)
+If the Windows PC is using key-based authentication to access Ubuntu, we can remove the corresponding SSH key.
+
+1. Open the terminal on your Ubuntu machine.
+2. Edit the **`authorized_keys`** file that stores the **public keys** of all devices allowed to access via **`SSH`**.
+```bash
+    sudo vim ~/.ssh/authorized_keys
+```
+3. Find and remove the key for our Windows PC. Each entry in this file represents an SSH key. Look for the key that matches the one from our Windows PC (it typically starts with **ssh-rsa**, **ecdsa** or **ed25519** followed by the key itself and the comment or email that identifies the machine).
+4. Delete the key entry and save the file.
+
+#### Option 2 : Block the Windows PC by IP Address
+We can configure Ubuntu’s firewall (UFW) to deny SSH access from that specific device.
+1. Find the IP address of Windows PC. On windows command prompt type
+```bash
+    ipconfig
+```
+Look for the IPv4 Address of network adapter.
+2. Block the IP address using UFW on Ubuntu
+```bash
+    sudo ufw deny from <windows_ip> to any port 22
+```
+Replace **`<windows_ip>`*** with the IP address of Windows PC. This will prevent SSH access from that device.
+#### Option 3: Change SSH Port
+We can also change the SSH port on Ubuntu so the Windows PC will not be able to connect on the old port (assuming it’s using the default port 22). This is an indirect way of preventing access without revoking keys or blocking IP addresses.
+1. Edit the SSH config
+```bash
+    sudo vim /etc/ssh/sshd_config
+```
+2. Change the port number from 22 to a new one, e.g., 222.
+3. Restart the SSH service
+
+Now the Windows PC will not be able to access Ubuntu unless it knows the new port.
