@@ -3,6 +3,9 @@ SSH (Secure Shell) from **Windows** to **Linux** enables us to securely **access
 
 ## Configuration of SSH from Windows System
 ### Workflow
+<div align="center">
+  <img src="Images/SSh Win Workflow.png" alt="Project Logo" width=100% height=30%/>
+</div>
 
 ### Step 1 : Install OpenSSH on Server (Linux)
 #### 1. Open the terminal on Server and install the OpenSSH server.
