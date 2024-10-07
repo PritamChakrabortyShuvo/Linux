@@ -32,6 +32,20 @@ Here is the detailed steps :
   
 In short, the client and server exchange keys and secure the connection for safe communication.
 
+Here is a second diagram explaining authentication steps.
+<div align="center">
+  <img src="Images/SSH_02.png" alt="Project Logo" width=90% height=30%/>
+</div>
+
+Here is the detailed steps :
+
+  - The client sends its authentication information to the server. Example here : its public key.
+  - The server verifies is the public key is in the “authorized_keys” according to a deductive pattern.
+  - If the client’s public key is not authorized, the server rejects it and notify the client.
+  - The client tries to authenticate using the username and password.
+  - The server validates the provided credentials.
+  - The client and servers can now exchange data and commands in a secured encrypted way.
+
 [Reference](https://zedas.fr/posts/linux-explained-8-ssh/)
 
 ## Configuration of SSH
