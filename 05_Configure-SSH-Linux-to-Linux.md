@@ -55,7 +55,7 @@ Here is the detailed steps :
 </div>
 
 
-### Step 1 : Install SSH on Ubuntu
+### Step 1 : Install SSH on Server
 The **`openssh-server`** package is need to be installed to enable **SSH** access to the server.
 ```bash
     sudo apt update
@@ -63,7 +63,7 @@ The **`openssh-server`** package is need to be installed to enable **SSH** acces
 ```bash
     sudo apt install openssh-server
 ```
-### Step 2 : Start and Enable SSH Service
+### Step 2 : Start and Enable SSH Service on Server
 After installation the SSH service is started & enabled to run at boot.
 ```bash
     sudo systemctl status ssh
@@ -73,14 +73,14 @@ After installation the SSH service is started & enabled to run at boot.
 ```
 Verify that the service is running successfully & enable service.
 
-### Step 3 : Configure custom SSH
+### Step 3 : Configure custom SSH on Server
 The default **SSH port 22** is changed for security reasons & other settings are adjusted to improve security such as disabling empty passwords root login & password-based authentication.
 #### Backup SSH Configuration File
 Before modifying the SSH configuration it is a best practice to **back up the original configuration file** to **avoid accidental misconfiguration**.
 ```bash
     sudo cp /etc/ssh/sshd_config /etc/ssh/sshd_config_backup
 ```
-#### Open the SSH Configuration File
+#### Open the SSH Configuration File from the Server
 Edit the SSH configuration file using a text editor.
 ```bash
     sudo vim /etc/ssh/sshd_config
@@ -131,9 +131,9 @@ After making changes restart the SSH service to apply the changes.
 ```bash
     sudo systemctl restart ssh
 ```
-### Step 6 : Connecting to the Server
+### Step 6 : Connecting to the Server from Local Machine
 Once SSH is configured we can connect to the server using the **`ssh`** command from another **Linux machine (Local)**.
-#### Check if SSH Client is Installed
+#### Check if SSH Client is Installed on Local Machine
 Most Linux systems come with the SSH client pre-installed. However if it is not installed we can do so using the following command.
 ```bash
     sudo apt install openssh-client
