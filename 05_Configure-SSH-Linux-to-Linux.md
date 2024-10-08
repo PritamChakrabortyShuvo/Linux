@@ -150,7 +150,7 @@ If SSH is configured to use a **custom port** (not the default port 22) specify 
 ```bash
     ssh username@IPaddress -p portnumber
 ```
-### Steps 7 : Enable, Disable or Status check
+### Step 7 : Enable, Disable or Status check
 In Ubuntu 24.04 (and newer) managing services like **SSH** is done using **`systemctl`** which is part of **systemd** the system and service manager. Here's a breakdown of how to **enable**, **disable** or **check the status** of the SSH service using **`systemctl`**
 #### Check SSH Status
 This command will show us whether the SSH service is active (running) or inactive (stopped).
@@ -177,3 +177,53 @@ To prevent SSH from starting automatically at boot use this command. We might us
 ```bash
     sudo systemctl disable ssh
 ```
+### Steps 8 : Set Up SSH Key-Based Authentication (Optional)
+#### 1. Generate SSH Key Pair on the Client Machine
+On the client machine (Linux system from which we want to initiate the SSH connection):
+```bash
+    ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
+```
+- **`-t rsa`**: Specifies the type of key to create (RSA is widely used).
+- **`-b 4096`**: Specifies the key size (4096 bits is a good balance of security).
+
+**Note :** The **`-C`** flag in the **ssh-keygen** command is used to add a comment to our SSH key for **identification purposes**. While many people use their **email address** as a **recognizable identifier** we can put anything we like instead of **your_email@example.com**. It doesn't have to be a Gmail address or even an email address at all.
+- Prompted for a file location. We can press Enter to accept the default (**`~/.ssh/id_rsa`**).
+- Optionally, we can provide a passphrase for an additional layer of security. Otherwise, press Enter for no passphrase.
+#### 2. Copy the Public Key to the Server
+We now copy the generated **public key** (**`id_rsa.pub`**) to the **remote machine**. This can be done using the **`ssh-copy-id`** command:
+```bash
+    ssh-copy-id username@remote_host
+```
+- Replace **`username`** with the server machine's username.
+- Replace **`remote_host`*** with the IP address or domain of the server machine.
+
+The command will copy the public key to the server machine’s **`~/.ssh/authorized_keys`** file setting the proper permissions.
+
+#### 3. SSH Into the Remote Machine Without a Password
+Now that the key is set up, we can **SSH** into the **remote machine** without being prompted for a password
+```bash
+    ssh username@remote_host
+```
+#### 4. Verify Permissions
+Ensure that permissions on the remote machine are set correctly for SSH to accept the key
+```bash
+    chmod 700 ~/.ssh
+```
+```bash
+    chmod 600 ~/.ssh/authorized_keys
+```
+#### 5. Disable Password Authentication (Optional)
+To enhance security, we can disable **password-based authentication** so only **key-based authentication** is allowed. Edit the SSH configuration file on the server machine:
+```bash
+    sudo vim /etc/ssh/sshd_config
+```
+Find and set the following parameters :
+```bash
+    PasswordAuthentication no
+    PubkeyAuthentication yes
+```
+Then restart the SSH service
+```bash
+    sudo systemctl restart ssh
+```
+Now the connection can only be made using **key-based authentication**.
