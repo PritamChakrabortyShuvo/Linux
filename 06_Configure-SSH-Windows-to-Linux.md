@@ -37,9 +37,23 @@ For example, Locate the line that says **`#Port 22`**. Remove the **`#`** & chan
 ```bash
     sudo ufw allow 222/tcp
 ```
+#### 8 Reload the Systemd Daemon
+This ensures that **`systemd`** picks up any changes made to service files (like **SSH configuration** changes).
+```bash
+    sudo systemctl daemon-reload
+```
+We use **`systemctl daemon-reload`** to reload systemd's configuration and recognize any changes made to service unit files or configurations before applying them.
 #### 8. Find the IP address of our Server machine by running
 ```bash
     ip addr
+```
+#### 9. Restart the SSH Service
+```bash
+    sudo systemctl restart ssh
+```
+#### 10. Check the Status of SSH
+```bash
+    sudo systemctl status ssh
 ```
 ### Step 2 : Install an SSH Client on Windows
 PowerShell has a **built-in SSH client** so we don’t need to install any additional software.
