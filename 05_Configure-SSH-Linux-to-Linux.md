@@ -54,7 +54,6 @@ Here is the detailed steps :
   <img src="Images/SSH workflow.png" alt="Project Logo" width=100% height=30%/>
 </div>
 
-
 ### Step 1 : Install SSH on Server
 The **`openssh-server`** package is need to be installed to enable **SSH** access to the server.
 ```bash
@@ -75,6 +74,7 @@ Verify that the service is running successfully & enable service.
 
 ### Step 3 : Configure custom SSH on Server
 The default **SSH port 22** is changed for security reasons & other settings are adjusted to improve security such as disabling empty passwords root login & password-based authentication.
+
 #### Backup SSH Configuration File
 Before modifying the SSH configuration it is a best practice to **back up the original configuration file** to **avoid accidental misconfiguration**.
 ```bash
@@ -125,6 +125,11 @@ To enhance security further especially if we are using SSH keys for authenticati
 The **UFW (Uncomplicated Firewall)** is configured to allow **incoming connections** on the **custom SSH port**.
 ```bash
     sudo ufw allow from any to any port 2222 proto tcp
+```
+### Step 5 : Reload the Systemd Daemon
+This ensures that systemd picks up any changes made to service files (like SSH configuration changes).
+```bash
+    sudo systemctl daemon-reload
 ```
 ### Step 5 : Restart SSH Service
 After making changes restart the SSH service to apply the changes.
