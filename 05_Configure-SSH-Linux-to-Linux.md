@@ -131,12 +131,12 @@ This ensures that systemd picks up any changes made to service files (like SSH c
 ```bash
     sudo systemctl daemon-reload
 ```
-### Step 5 : Restart SSH Service
+### Step 6 : Restart SSH Service
 After making changes restart the SSH service to apply the changes.
 ```bash
     sudo systemctl restart ssh
 ```
-### Step 6 : Connecting to the Server from Local Machine
+### Step 7 : Connecting to the Server from Local Machine
 Once SSH is configured we can connect to the server using the **`ssh`** command from another **Linux machine (Local)**.
 #### Check if SSH Client is Installed on Local Machine
 Most Linux systems come with the SSH client pre-installed. However if it is not installed we can do so using the following command.
@@ -155,7 +155,7 @@ If SSH is configured to use a **custom port** (not the default port 22) specify 
 ```bash
     ssh username@IPaddress -p portnumber
 ```
-### Step 7 : Enable, Disable or Status check
+### Step 8 : Enable, Disable or Status check
 In Ubuntu 24.04 (and newer) managing services like **SSH** is done using **`systemctl`** which is part of **systemd** the system and service manager. Here's a breakdown of how to **enable**, **disable** or **check the status** of the SSH service using **`systemctl`**
 #### Check SSH Status
 This command will show us whether the SSH service is active (running) or inactive (stopped).
@@ -182,7 +182,7 @@ To prevent SSH from starting automatically at boot use this command. We might us
 ```bash
     sudo systemctl disable ssh
 ```
-### Steps 8 : Set Up SSH Key-Based Authentication (Optional)
+### Step 9 : Set Up SSH Key-Based Authentication (Optional)
 #### 1. Generate SSH Key Pair on the Client Machine
 On the client machine (Linux system from which we want to initiate the SSH connection):
 ```bash
