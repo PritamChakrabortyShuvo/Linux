@@ -43,7 +43,7 @@ This ensures that **`systemd`** picks up any changes made to service files (like
     sudo systemctl daemon-reload
 ```
 We use **`systemctl daemon-reload`** to reload systemd's configuration and recognize any changes made to service unit files or configurations before applying them.
-### Step 6 : Restart SSH Service and Check the Status
+### Step 6. Restart SSH Service and Check the Status
 After making changes restart the SSH service to apply the changes.
 ```bash
     sudo systemctl restart ssh
