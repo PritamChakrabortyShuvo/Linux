@@ -35,6 +35,7 @@ This guide provides an extensive overview of the most commonly used **Linux comm
 - [Uncompressing](#uncompressing)
 - [Compressing Files](#compressing-files)
 - [Searching for Files and Directories](#searching-for-files-and-directories)
+- [Sed](#sed-command)
 - [Grep Command Filter](#grep-command-filter)
 - [Awk Command Filter](#awk-command-filter)
 - [Linux Networking](#linux-networking)
