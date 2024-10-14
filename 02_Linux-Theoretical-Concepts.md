@@ -39,6 +39,7 @@ Welcome! to **Linux Theoretical Concepts** guide. This is your go-to guide for m
 - [**Working with Shell - II**](#working-with-shell---ii)
   - [Vim Editor](#vim-editor)
   - [Append Operator](#append-operator)
+  - [Truncate](#truncate)
 - [**Linux Networking Basics**](#linux-networking-basics)
   - [Name Resolution](#name-resolution)
   - [DNS (Domain Name System)](#dns-domain-name-system)
@@ -531,6 +532,9 @@ After these commands, if we check the contents of **`log.txt`**:
     First Entry
     Second Entry
 ```
+## Truncate
+We use the **truncate** in Linux to quickly clear the contents of a file without deleting it. This command also allows us to **resize files** to specific lengths, which is useful for testing purposes. Additionally, it helps manage log files by **resetting their size** while keeping the file intact, preventing data loss and saving disk space. Overall, truncate is a versatile tool for efficient file management in scripting and automation tasks.
+
 # Linux Networking Basics
 Linux networking is fundamental for system administration especially in managing servers configuring network interfaces & ensuring smooth communication between devices. Some components are described below.
 
