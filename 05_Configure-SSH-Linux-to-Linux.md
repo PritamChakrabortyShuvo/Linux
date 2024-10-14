@@ -85,7 +85,7 @@ Edit the SSH configuration file using a text editor.
 ```bash
     sudo vim /etc/ssh/sshd_config
 ```
-#### 4. Security Settings for SSH Configuration
+#### 3. Security Settings for SSH Configuration
 1. **Disable Empty Paswword**
 By setting **`PermitEmptyPasswords no`** we ensure that no user with an **empty password** can log in via SSH. This prevents unauthorized access from accounts with no password.
 ```bash
@@ -223,7 +223,7 @@ Then restart the SSH service
     sudo systemctl restart ssh
 ```
 Now the connection can only be made using **key-based authentication**.
-### Step 11 : Verify and Troubleshoot
+### Step 11 : Verify and Troubleshoot on Server
 #### 1. To test the connection
 ```bash 
     ssh username@ip_address -p 222
