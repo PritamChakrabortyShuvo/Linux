@@ -193,7 +193,7 @@ We now copy the generated **public key** (**`id_rsa.pub`**) to the **remote mach
 - Replace **`username`** with the server machine's username.
 - Replace **`remote_host`*** with the IP address or domain of the server machine.
 
-The command will copy the public key to the server machine’s **`~/.ssh/authorized_keys`** file setting the proper permissions.
+The command will copy the public key to the server machine’s **`/.ssh/authorized_keys`** file setting the proper permissions.
 
 #### 3. SSH Into the Remote Machine Without a Password
 Now that the key is set up, we can **SSH** into the **remote machine** without being prompted for a password
@@ -203,10 +203,10 @@ Now that the key is set up, we can **SSH** into the **remote machine** without b
 #### 4. Verify Permissions
 Ensure that permissions on the remote machine are set correctly for SSH to accept the key
 ```bash
-    chmod 700 ~/.ssh
+    chmod 700 /.ssh
 ```
 ```bash
-    chmod 600 ~/.ssh/authorized_keys
+    chmod 600 /.ssh/authorized_keys
 ```
 #### 5. Disable Password Authentication (Optional)
 To enhance security, we can disable **password-based authentication** so only **key-based authentication** is allowed. Edit the SSH configuration file on the server machine:
@@ -235,9 +235,59 @@ Now the connection can only be made using **key-based authentication**.
 ## Necessary Commands
 Displays the contents of the **`authorized_keys`** file of the **Servers** which contains **public keys authorized** to access the system via **SSH**.
 ```bash
-    cat ~/.ssh/authorized_keys
+    cat /.ssh/authorized_keys
 ```
 Displays the contents of the **public key file** located on the **local machine**, which can be shared with servers to enable SSH key-based authentication.
 ```bash
-    cat ~/.ssh/id_rsa.pub
+    cat /.ssh/id_rsa.pub
 ```
+## Why We Use the SSH Config File?
+The SSH **config file** helps **simplify** & **automate** our **SSH connections** by letting us save settings for multiple servers in one place. Instead of typing the server's **IP**, **port**, **username** & **key file** every time we connect, we can **store these details** in the **config file** & use a simple alias to connect easily.
+
+### Steps to Set Up an SSH Config File in Ubuntu (Local Machine)
+
+#### 1. Navigate to the `.ssh` Directory
+The **`.ssh`** directory is where **SSH keys** & **config files** are stored. If we are not already there, we can move to the **`.ssh`** directory using:
+```bash
+    cd /.ssh
+```
+If the **`.ssh`** directory doesn’t exist we can create it.
+
+#### 2. Edit the `config` File
+We can edit the **`SSH config file`** using a text editor like **vim**
+```bash
+    vim /.ssh/config
+```
+#### 3. Add Host Configuration
+In the config file, we add a block for each server we want to connect to.
+```bash 
+    Host Server_Name
+        HostName IP_Address_of_Server
+        User User_Name
+        Port Port_Number
+        IdentityFile ~/.ssh/key
+```
+  - **`Host`** : This is a label or alias we give to a specific SSH connection. We can use this alias later to connect to the server easily without typing the full details. Replace **`Server_name`** with actual Server Name.
+  - **`HostName`** : The server’s **IP address** or **Domain Name**.
+  - **`User`** :  The username we use for connecting.
+  - **`Port`** : This indicates the port number on which the SSH service is running. 
+  - **`IdentityFile`** : This specifies the **path** to the **private SSH key file** used for **authentication**. The SSH client will use this key when connecting to the server.
+
+Each line in the **SSH config file** defines specific parameters for connecting to a server, simplifying the SSH command by allowing us to use an alias instead of entering the full connection details each time.
+
+#### 4. Save the File
+Press **`Esc`** to exit **Insert Mode** & Type **`:wq`** then press **Enter**.
+#### 5. Set Correct Permissions
+The config file should be readable only by the owner. We can ensure the correct permissions with:
+```bash
+    chmod 600 /.ssh/config
+```
+#### 6. Connect to the Server
+Now, we can connect to the server using the alias we defined in the config file
+```bash
+    ssh Server_Name
+```
+This will automatically use the settings we defined for the alias web-server (IP, port, user, and key file).
+
+#### 7. Repeat for Additional Servers
+We can add more server configurations in the same config file, just like the example above.
