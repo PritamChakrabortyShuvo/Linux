@@ -511,6 +511,26 @@ The **`>>`** operator in a shell command is used for **appending** output to a f
    - This is useful when we want to keep a record of multiple outputs over time.
 2. **Avoid Overwriting :**
     - If we use a single **`>`** (i.e., > filename) it will **overwrite** the entire contents of the file. Using **`>>`** ensures that we don’t lose any existing data in the file.
+### Example 
+Appending Output to a File. Suppose we want to log messages or results to a file
+1. **First Entry :**
+```bash
+    echo "First Entry" >> log.txt
+```
+2. **Second Entry :**
+```bash
+    echo "Second Entry" >> log.txt
+```
+3. **Check Contents :** 
+After these commands, if we check the contents of **`log.txt`**:
+```bash
+    cat log.txt
+```
+**Output**
+```plaintext
+    First Entry
+    Second Entry
+```
 # Linux Networking Basics
 Linux networking is fundamental for system administration especially in managing servers configuring network interfaces & ensuring smooth communication between devices. Some components are described below.
 
