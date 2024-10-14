@@ -54,7 +54,7 @@ Here is the detailed steps :
   <img src="Images/SSH workflow.png" alt="Project Logo" width=100% height=30%/>
 </div>
 
-### Step 1 : Install SSH on Server
+### Step 1. Install SSH on Server
 The **`openssh-server`** package is need to be installed to enable **SSH** access to the server.
 ```bash
     sudo apt update
@@ -62,7 +62,7 @@ The **`openssh-server`** package is need to be installed to enable **SSH** acces
 ```bash
     sudo apt install openssh-server
 ```
-### Step 2 : Start and Enable SSH Service on Server
+### Step 2. Start & Enable SSH Service on Server
 After installation the SSH service is started & enabled to run at boot.
 ```bash
     sudo systemctl status ssh
@@ -72,21 +72,21 @@ After installation the SSH service is started & enabled to run at boot.
 ```
 Verify that the service is running successfully & enable service.
 
-### Step 3 : Configure custom SSH on Server
+### Step 3. Configure custom SSH on Server
 The default **SSH port 22** is changed for security reasons & other settings are adjusted to improve security such as disabling empty passwords root login & password-based authentication.
 
-#### Backup SSH Configuration File
+#### 1. Take backup of SSH Configuration File
 Before modifying the SSH configuration it is a best practice to **back up the original configuration file** to **avoid accidental misconfiguration**.
 ```bash
     sudo cp /etc/ssh/sshd_config /etc/ssh/sshd_config_backup
 ```
-#### Open the SSH Configuration File from the Server
+#### 2. Open the SSH Configuration File from the Server
 Edit the SSH configuration file using a text editor.
 ```bash
     sudo vim /etc/ssh/sshd_config
 ```
-#### Security Settings for SSH Configuration
-1. **Disable Empty Paswword :**
+#### 4. Security Settings for SSH Configuration
+1. **Disable Empty Paswword**
 By setting **`PermitEmptyPasswords no`** we ensure that no user with an **empty password** can log in via SSH. This prevents unauthorized access from accounts with no password.
 ```bash
     PermitEmptyPasswords no
@@ -121,68 +121,59 @@ To enhance security further especially if we are using SSH keys for authenticati
 ```bash
     PasswordAuthentication no
 ```
-### Step 4 : Allow SSH Through the Firewall
+### Step 4. Allow SSH Through the Firewall
 The **UFW (Uncomplicated Firewall)** is configured to allow **incoming connections** on the **custom SSH port**.
 ```bash
     sudo ufw allow from any to any port 2222 proto tcp
 ```
-### Step 5 : Reload the Systemd Daemon
+### Step 5. Reload the Systemd Daemon
 This ensures that systemd picks up any changes made to service files (like SSH configuration changes).
 ```bash
     sudo systemctl daemon-reload
 ```
-### Step 6 : Restart SSH Service
+### Step 6. Restart SSH Service and Check the Status
 After making changes restart the SSH service to apply the changes.
 ```bash
     sudo systemctl restart ssh
 ```
-### Step 7 : Connecting to the Server from Local Machine
+To check the status
+```bash
+    sudo systemctl status ssh
+```
+### Step 7. Find the IP address of Server machine
+```bash
+    ip addr
+```
+### Step 8. Connecting to the Server from Local Machine
 Once SSH is configured we can connect to the server using the **`ssh`** command from another **Linux machine (Local)**.
-#### Check if SSH Client is Installed on Local Machine
+#### 1. Check if SSH Client is Installed on Local Machine
 Most Linux systems come with the SSH client pre-installed. However if it is not installed we can do so using the following command.
 ```bash
     sudo apt install openssh-client
 ```
-#### Find the IP Address of the Remote System
-To connect via SSH we need the **IP address** of the **Server**. We can find it by running the **`ifconfig`** or **`ip addr`** command on the **Server**.
-#### Connect to the Server
+#### 2. Connect to the Server
 Once we have the IP address use the following command to connect to the server. Replace username with the actual username of the server & IPaddress with the server's IP.
 ```bash
     ssh username@IPaddress
 ```
-#### Connect to a Custom SSH Port
+#### 3. Connect to a Custom SSH Port
 If SSH is configured to use a **custom port** (not the default port 22) specify the port using the **`-p`** option.
 ```bash
     ssh username@IPaddress -p portnumber
 ```
-### Step 8 : Enable, Disable or Status check
+### Step 9. Start and Stop at boot
 In Ubuntu 24.04 (and newer) managing services like **SSH** is done using **`systemctl`** which is part of **systemd** the system and service manager. Here's a breakdown of how to **enable**, **disable** or **check the status** of the SSH service using **`systemctl`**
-#### Check SSH Status
-This command will show us whether the SSH service is active (running) or inactive (stopped).
-```bash
-    sudo systemctl status ssh
-```
-#### Start SSH Service
-To start the SSH service (for example, after stopping it) use this command.
-```bash
-    sudo systemctl start ssh
-```
-#### Stop SSH Service
-If we want to stop the SSH service use this command. This will temporarily disable SSH until we start it again.
-```bash
-    sudo systemctl stop ssh
-```
-#### Enable SSH at Boot
+#### 1. Enable SSH at Boot
 To ensure SSH starts automatically every time the system boots, use the following command. This sets SSH to start on boot.
 ```bash
     sudo systemctl enable ssh
 ```
-#### Disable SSH at Boot
+#### 2. Disable SSH at Boot
 To prevent SSH from starting automatically at boot use this command. We might use this if we don’t want the SSH service running after every reboot.
 ```bash
     sudo systemctl disable ssh
 ```
-### Step 9 : Set Up SSH Key-Based Authentication (Optional)
+### Step 10. Set Up SSH Key-Based Authentication (Recommended)
 #### 1. Generate SSH Key Pair on the Client Machine
 On the client machine (Linux system from which we want to initiate the SSH connection):
 ```bash
@@ -232,3 +223,11 @@ Then restart the SSH service
     sudo systemctl restart ssh
 ```
 Now the connection can only be made using **key-based authentication**.
+### Step 11 : Verify and Troubleshoot
+#### 1. To test the connection
+```bash 
+    ssh username@ip_address -p 222
+```
+#### 2. If we encounter issues, ensure the following:
+- The firewall on Ubuntu allows the custom port.
+- The SSH service is running and configured properly.
