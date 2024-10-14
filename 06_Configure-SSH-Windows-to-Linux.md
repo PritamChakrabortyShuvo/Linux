@@ -8,12 +8,12 @@ SSH (Secure Shell) from **Windows** to **Linux** enables us to securely **access
 </div>
 
 ### Step 1 : Install OpenSSH on Server (Linux)
-#### 1. Open the terminal on Server and install the OpenSSH server.
+#### 1. Open the terminal on Server and install the OpenSSH server
 ```bash
     sudo apt update
     sudo apt install openssh-server
 ```
-### Step 2. Start and Enable SSH Service on Server.
+### Step 2. Start and Enable SSH Service on Server
 ```bash
     sudo systemctl enable ssh
     sudo systemctl start ssh
