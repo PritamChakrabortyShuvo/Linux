@@ -231,3 +231,13 @@ Now the connection can only be made using **key-based authentication**.
 #### 2. If we encounter issues, ensure the following:
 - The firewall on Ubuntu allows the custom port.
 - The SSH service is running and configured properly.
+
+## Necessary Commands
+Displays the contents of the **`authorized_keys`** file of the **Servers** which contains **public keys authorized** to access the system via **SSH**.
+```bash
+    cat ~/.ssh/authorized_keys
+```
+Displays the contents of the **public key file** located on the **local machine**, which can be shared with servers to enable SSH key-based authentication.
+```bash
+    cat ~/.ssh/id_rsa.pub
+```
