@@ -20,13 +20,13 @@
 ```
 This command activates the firewall based on the default policies.
 ### 3. Setting Default Policies
-Before adding specific rules, it's a good practice to set the default policies
-  1. To deny all incoming traffic and allow all outgoing traffic
+Before adding specific rules it's a good practice to set the default policies.
+1. To deny all incoming traffic and allow all outgoing traffic
 ```bash
     sudo ufw default deny incoming
     sudo ufw default allow outgoing
 ```
-#### 4. Allowing and Denying Services
+### 4. Allowing and Denying Services
 We can allow or deny access to specific services by their names or ports.
 1. Allow SSH (default port 22)
 ```bash
@@ -61,7 +61,6 @@ To allow an application using its profile
 ```bash
     sudo ufw allow proto tcp from 192.168.144.1 to any port 1646
 ```
-
 ### 7. Checking UFW Status
 ```bash
     sudo ufw status
@@ -75,7 +74,7 @@ Used to remove the UFW (Uncomplicated Firewall) rule that is currently numbered 
 ```bash
     sudo ufw delete 8
 ```
-### 9. Block and deny incoming connections
+### 9. Block and Deny Incoming connections
 ```bash
     sudo ufw deny from 192.168.100.2
 ```
