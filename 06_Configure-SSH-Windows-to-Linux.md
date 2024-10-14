@@ -13,12 +13,12 @@ SSH (Secure Shell) from **Windows** to **Linux** enables us to securely **access
     sudo apt update
     sudo apt install openssh-server
 ```
-#### 2. Enable and start the SSH service.
+### Step 2. Start and Enable SSH Service on Server.
 ```bash
     sudo systemctl enable ssh
     sudo systemctl start ssh
 ```
-#### 3. Verify that SSH is running.
+#### 1. Verify that SSH is running.
 ```bash
     sudo systemctl status ssh
 ```
@@ -26,38 +26,39 @@ We will see something like "**`active (running)`**." If not **troubleshoot** wit
 ```bash
     sudo systemctl restart ssh
 ```
-#### 4. Edit the SSH configuration file.
+### Step 3. Configure custom SSH on Server.
 ```bash
     sudo vim /etc/ssh/sshd_config
 ```
-#### 5. Edit security settings. 
+#### 1. Edit security settings. 
 For example, Locate the line that says **`#Port 22`**. Remove the **`#`** & change **22** to the desired custom port, e.g., **222**.
-#### 6. Save and Exit
-#### 7. Allow the custom port in the firewall (for **`ufw users`**)
+#### 2. Save and Exit
+### Step 4. Allow SSH Through the Firewall
 ```bash
     sudo ufw allow 222/tcp
 ```
-#### 8. Reload the Systemd Daemon
+### Step 5. Reload the Systemd Daemon
 This ensures that **`systemd`** picks up any changes made to service files (like **SSH configuration** changes).
 ```bash
     sudo systemctl daemon-reload
 ```
 We use **`systemctl daemon-reload`** to reload systemd's configuration and recognize any changes made to service unit files or configurations before applying them.
-#### 9. Find the IP address of our Server machine by running
-```bash
-    ip addr
-```
-#### 10. Restart the SSH Service
+### Step 6 : Restart SSH Service
+After making changes restart the SSH service to apply the changes.
 ```bash
     sudo systemctl restart ssh
 ```
-#### 11. Check the Status of SSH
+### Step 7. Find the IP address of our Server machine by running
+```bash
+    ip addr
+```
+### Step 8. Check the Status of SSH
 ```bash
     sudo systemctl status ssh
 ```
-### Step 2 : Install an SSH Client on Windows
+### Step 9 : Install an SSH Client on Windows
 PowerShell has a **built-in SSH client** so we don’t need to install any additional software.
-### Step 3 : Connect from Windows to Ubuntu on the Custom Port
+### Step 10 : Connect from Windows to Ubuntu on the Custom Port
 #### 1. Open PowerShell & use this command to connect via the custom port
 ```bash 
     ssh username@ip_address -p 222
@@ -68,7 +69,7 @@ PowerShell has a **built-in SSH client** so we don’t need to install any addit
 
 #### 2. Accept the fingerprint if prompted and enter the password.
 
-### Step 3 : Set Up SSH Key-Based Authentication (Recommended)
+### Step 11 : Set Up SSH Key-Based Authentication (Recommended)
 To avoid entering passwords each time, we can set up key-based authentication.
 #### 1. Open PowerShell and run
 ```bash
@@ -81,7 +82,7 @@ We use **`4096`** bits to provide stronger encryption, enhancing the security of
 ```
 After entering the password, the key will be copied to the Server.
 #### 3. Next time we connect using SSH, the key will be used instead of a password.
-### Step 4 : Verify and Troubleshoot
+### Step 12 : Verify and Troubleshoot
 #### 1. To test the connection
 ```bash 
     ssh username@ip_address -p 222
@@ -90,7 +91,7 @@ After entering the password, the key will be copied to the Server.
 - The firewall on Ubuntu allows the custom port.
 - The SSH service is running and configured properly.
 
-### Step 5 : Revoking SSH Access for a Specific Device
+### Step 13 : Revoking SSH Access for a Specific Device
 #### Option 1 : Remove the Authorized SSH Key (Key-Based Authentication)
 If the Windows PC is using key-based authentication to access Ubuntu, we can remove the corresponding SSH key.
 
