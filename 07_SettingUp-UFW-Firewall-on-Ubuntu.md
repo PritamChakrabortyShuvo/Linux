@@ -48,3 +48,20 @@ We can allow or deny access to specific services by their names or ports.
 ```bash
     sudo ufw deny 23  # Deny telnet on port 23
 ```
+### 5. Managing Application Profiles
+UFW can recognize application profiles if they are defined. To see available profiles
+```bash
+    sudo ufw app list
+```
+To allow an application using its profile
+```bash
+    sudo ufw allow 'Apache Full'  # Allow HTTP and HTTPS traffic for Apache
+```
+### 6. Checking UFW Status
+```bash
+    sudo ufw status
+```
+### 7. Disabling UFW
+```bash
+    Disabling UFW
+```
