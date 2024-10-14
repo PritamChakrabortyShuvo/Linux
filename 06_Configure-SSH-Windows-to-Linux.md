@@ -43,22 +43,22 @@ This ensures that **`systemd`** picks up any changes made to service files (like
     sudo systemctl daemon-reload
 ```
 We use **`systemctl daemon-reload`** to reload systemd's configuration and recognize any changes made to service unit files or configurations before applying them.
-### Step 6 : Restart SSH Service
+### Step 6 : Restart SSH Service and Check the Status
 After making changes restart the SSH service to apply the changes.
 ```bash
     sudo systemctl restart ssh
+```
+To check the status
+```bash
+    sudo systemctl status ssh
 ```
 ### Step 7. Find the IP address of our Server machine by running
 ```bash
     ip addr
 ```
-### Step 8. Check the Status of SSH
-```bash
-    sudo systemctl status ssh
-```
-### Step 9 : Install an SSH Client on Windows
+### Step 8 : Install an SSH Client on Windows
 PowerShell has a **built-in SSH client** so we don’t need to install any additional software.
-### Step 10 : Connect from Windows to Ubuntu on the Custom Port
+### Step 9 : Connect from Windows to Ubuntu on the Custom Port
 #### 1. Open PowerShell & use this command to connect via the custom port
 ```bash 
     ssh username@ip_address -p 222
@@ -69,7 +69,7 @@ PowerShell has a **built-in SSH client** so we don’t need to install any addit
 
 #### 2. Accept the fingerprint if prompted and enter the password.
 
-### Step 11 : Set Up SSH Key-Based Authentication (Recommended)
+### Step 10 : Set Up SSH Key-Based Authentication (Recommended)
 To avoid entering passwords each time, we can set up key-based authentication.
 #### 1. Open PowerShell and run
 ```bash
@@ -82,7 +82,7 @@ We use **`4096`** bits to provide stronger encryption, enhancing the security of
 ```
 After entering the password, the key will be copied to the Server.
 #### 3. Next time we connect using SSH, the key will be used instead of a password.
-### Step 12 : Verify and Troubleshoot
+### Step 11 : Verify and Troubleshoot
 #### 1. To test the connection
 ```bash 
     ssh username@ip_address -p 222
@@ -91,7 +91,7 @@ After entering the password, the key will be copied to the Server.
 - The firewall on Ubuntu allows the custom port.
 - The SSH service is running and configured properly.
 
-### Step 13 : Revoking SSH Access for a Specific Device
+### Step 12 : Revoking SSH Access for a Specific Device
 #### Option 1 : Remove the Authorized SSH Key (Key-Based Authentication)
 If the Windows PC is using key-based authentication to access Ubuntu, we can remove the corresponding SSH key.
 
