@@ -68,7 +68,7 @@ PowerShell has a **built-in SSH client** so we don’t need to install any addit
 
 #### 2. Accept the fingerprint if prompted and enter the password.
 
-### Step 3 : Set Up SSH Key-Based Authentication (Optional)
+### Step 3 : Set Up SSH Key-Based Authentication (Recommended)
 To avoid entering passwords each time, we can set up key-based authentication.
 #### 1. Open PowerShell and run
 ```bash
