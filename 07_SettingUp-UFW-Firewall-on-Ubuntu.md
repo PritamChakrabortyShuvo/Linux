@@ -1,0 +1,50 @@
+# Implementing UFW(Uncomplicated Firewall) to Configure a Host Firewall on Ubuntu
+
+## What is UFW?
+**UFW** stands for **Uncomplicated Firewall**. It provides a **command-line interface** to manage firewall rules more easily than the traditional **iptables commands**. UFW is especially useful for those who may not be familiar with the complexities of firewall configurations.
+
+## Key Features of UFW
+1. Simplicity
+2. Default Policies
+3. Application Profiles
+4. Logging
+
+## Basic Commands of UFW
+### 1. Installation
+```bash
+    sudo apt install ufw  # For Debian-based systems
+```
+### 2. Enabling UFW
+```bash
+    sudo ufw enable
+```
+This command activates the firewall based on the default policies.
+### 3. Setting Default Policies
+Before adding specific rules, it's a good practice to set the default policies
+  1. To deny all incoming traffic and allow all outgoing traffic
+```bash
+    sudo ufw default deny incoming
+    sudo ufw default allow outgoing
+```
+#### 4. Allowing and Denying Services
+We can allow or deny access to specific services by their names or ports.
+1. Allow SSH (default port 22)
+```bash
+    sudo ufw allow ssh
+```
+2. Allow HTTP (port 80)
+```bash
+    sudo ufw allow http
+```
+3. Allow HTTPS (port 443)
+```bash
+    sudo ufw allow https
+```
+4. Allow a Specific Port (e.g., port 8080)
+```bash
+    sudo ufw allow 8080
+```
+5. Deny a Specific Port
+```bash
+    sudo ufw deny 23  # Deny telnet on port 23
+```
