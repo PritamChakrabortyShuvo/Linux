@@ -1011,7 +1011,7 @@ To schedule a cron job to run at 12:01 AM on 16th September and only if it is a 
  - In cron, the **`*`** (asterisk) is a wildcard that means "every" or "any." It is used to tell cron that it should not restrict the job to a specific value for that field.
  - In a cron expression, **`/2`** means "every 2 units" for the respective field (minute, hour, etc.). It’s a step value which indicates the job should run at regular intervals.
 
-Visit [Crontab Guru](https://crontab.guru/) for scheduling tasks more easily.
+**Note :** Visit [Crontab Guru](https://crontab.guru/) for scheduling tasks more easily.
 # Systemd
 **systemd** is a system and service manager for Linux operating systems. It is responsible for initializing the system **during boot**, **managing services** (like **starting, stopping, enabling, or disabling them**) & ensuring the system is running smoothly. It replaces the older **SysVinit** system and provides better performance by allowing services to run in parallel and handling dependencies more effectively.
 ## Key Features of systemd
