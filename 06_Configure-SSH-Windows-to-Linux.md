@@ -125,3 +125,18 @@ We can also change the SSH port on Ubuntu so the Windows PC will not be able to 
 3. Restart the SSH service
 
 Now the Windows PC will not be able to access Ubuntu unless it knows the new port.
+
+## Necessary Commands
+Displays the contents of the **`authorized_keys`** file of the **Servers** which contains **public keys authorized** to access the system via **SSH**.
+```bash
+    cat ~/.ssh/authorized_keys
+```
+Displays the contents of the **public key file** located on the **local machine (Windows)**, which can be shared with servers to enable SSH key-based authentication. Open **Terminal** and type
+```bash
+    cd %USERPROFILE%\.ssh
+```
+To display the contents of the **`id_rsa.pub` file** run
+```bash
+    type id_rsa.pub
+```
+This will print the contents of the **`id_rsa.pub` file**, which is your public key.
