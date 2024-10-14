@@ -802,6 +802,17 @@ To add a user to multiple groups.
 ```bash
     usermod –a –G bin pritam
 ```
+To add the specified user to the **`sudo`** group, granting them **administrative privileges** on the system.
+```bash
+    sudo usermod -aG sudo username
+```
+- **`sudo`** : Executes the command with superuser (root) privileges.
+- **`usermod`** : Command used to modify user accounts.
+- **`-a`** : Option to append the user to a group without removing them from other groups.
+- **`-G`** : Specifies the group(s) to which the user is being added.
+- **`sudo`** : The group that grants the user permission to run commands as a superuser.
+- **`username`** : The actual username of the user to whom we want to grant sudo privileges.
+
 Provide full access to user.
 ```bash
      chmod u+rwx test-file
