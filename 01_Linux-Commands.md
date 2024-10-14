@@ -171,6 +171,7 @@ For moving the file.
 ```bash
     mv file_name /path/to/directory/
 ```
+--- 
 ## Present Working Directory
 The **`pwd`** command prints the current working directory's absolute path. It's useful for determining your current location.
 ```bash
