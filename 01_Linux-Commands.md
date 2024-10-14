@@ -2,8 +2,7 @@
 
 This guide provides an extensive overview of the most commonly used **Linux commands**. It covers various aspects of system management, file operations, network management, and user administration. Whether you're a beginner or an advanced user, this resource aims to enhance your command-line skills and streamline your workflow in a Linux environment.
 
-### Table of Contents
-
+## Table of Contents
 - [Listing Files & Directories](#listing-files--directories)
 - [Command Types](#command-types)
 - [Creating Files](#creating-files)
@@ -83,11 +82,13 @@ Get list of files and directories sorted by modification time, with the most rec
 ```bash
     ls -t
 ```
+---
 ## Command Types
 It shows how a command is recognized by the shell, indicating if it's built-in, an alias, or an external program.
 ```bash
     type <command>
 ```
+---
 ## Creating Files
 We can create files in Linux in multiple ways/commands. As a basic  we always use **`touch`** command to create a file.
 Creates an empty text file.
@@ -100,6 +101,7 @@ Creates an empty text file.
 ```
 **Note :** In Linux we don’t have any file extensions. Extensions we may use it for our understanding.
 
+---
 ## Remove Files
 To remove files we have **`rm`** command, Also we can use **`unlink`** command which performs the same action, yet we prefer mostly to use **`rm`** command.
 
@@ -110,6 +112,7 @@ This command forcefully deletes file without confirmation, bypassing write prote
 ```bash
     rm -f file_name
 ```
+---
 ## Copy Files
 To copy a file we have **`cp`** command. Alternatively we have **`rsync`** command as well but mostly we prefer to use cp command in general.
 
@@ -133,6 +136,8 @@ Specify a Different SSH Port
     scp -P port_number /path/to/local/file username@remote_host:/path/to/remote/directory/
 ```
 **Note :** **`-P`** port_number: Specify the SSH port (note the uppercase P)
+
+---
 ## Rsync Command
 This command is a powerful and versatile tool for synchronizing files and directories between two locations, whether on the same machine or between a local machine and a remote host.
 
@@ -154,6 +159,7 @@ Synchronize Directories
   - **`-z`**: Compress file data during transfer.
   - **`--delete`**: Deletes files in the destination that are not present in the source.
 
+---
 ## Rename Files
 To rename or move a file we use **`mv`** command.
 
@@ -172,6 +178,7 @@ The **`pwd`** command prints the current working directory's absolute path. It's
 ```
 **Note :** It is always important to observe the directory you are in before executing the command, because in some cases if you try to execute some command and which you lead to loss of data if you executecommands in wrong location.
 
+---
 ## Create Directory
 To make a single directory
 ```bash
@@ -191,6 +198,7 @@ This command creates both **`directory1`** and **`directory2`** if they don't al
 ```
 **Note :** The **`-p`** option ensures that all necessary parent directories are created without errors.
 
+---
 ## Change Directory
 ```bash
     cd <directory>
@@ -213,6 +221,7 @@ Double dot denotes parent directory and it can take you to parent directory of e
 ```bash
     cd .. 
 ```
+---
 ## Single Dot & Double Dot
 Single dot **`(.)`** in Linux denote the present working directory.
 
@@ -222,6 +231,7 @@ Double dot **`(..)`** denotes the parent directory.
 ```
 Here dot denotes to copy the file in this location without specifying any filename or path
 
+---
 ## Remove Directory
 Removing directory commands needed to be picked based on requirement.
 
@@ -237,6 +247,7 @@ This command recursively and forcefully removes multiple directories and all its
 
 **Note :** This action cannot be undone and deletes files permanently.
 
+---
 ## Copy Directory
 Copying directories can be done with cp command.
 
@@ -246,6 +257,7 @@ It copies dir1 to dir2 and all the contents of dir1 will be copied to dir2 as we
 ```
 **Note :** While copying the directories we need to mention **`–r`** option to enable that we are copying directories.
 
+---
 ## Moving Directory
 Moving directories or renaming directories can be done with **`mv`** command.
 ```bash
@@ -258,6 +270,8 @@ Depends on the situation it will rename or move.
 - If destination exists:
     - Destination is a file - Then that is a invalid operation.
     - Destination is a directory – Then the source will be moved into destination directory.
+
+---
 ## Concatenate a File
 In view the complete content of a file then we will concatenate (cat) the file.
 
@@ -279,6 +293,7 @@ It will print the lines in reverse order mean last line in first and first line 
 ```bash
     tac file_name
 ```
+---
 ## Using Command Line to Get Help
 
 This command provides a one-line description of a specified command or program, summarizing its function.
@@ -289,6 +304,7 @@ This command displays the manual page for a specified command or program, provid
 ```bash
     man <command>
 ```
+---
 ## Head Command Filter 
 **`head`** command can give the **top 10 lines** by default.
 ```bash
@@ -298,6 +314,7 @@ Print top 5 lines.
 ```bash
     head -n 5 file_name
 ```
+---
 ## Tail Command Filter
 **`tail`** command can give the **last 10 lines** by default.
 ```bash
@@ -314,12 +331,15 @@ Print last 5 lines.
 
 **Note :** To come out of **`tail –f`** you can press **`CTRL + C`** on terminal.
 
+---
 ## Alias Command
 This command creates a shortcut or nickname for a longer command in the shell allowing users to execute complex or frequently used commands more easily.
 ```bash
     alias ll='ls -l'
 ```
 This creates a shortcut **`ll`** that lists files in long format.
+
+---
 ## Environment Variables 
 This command shows the current environment variables or lets a command run with specific variable settings.
 ```bash
@@ -337,6 +357,7 @@ This sets the **`LOGNAME`** variable to **`user2`** in the current shell session
 ```bash
     LOGNAME=user2
 ```
+---
 ## Path Variables
 Displays the current list of directories where the shell looks for executable programs.
 ```bash
@@ -350,6 +371,7 @@ Shows the full path of the specified executable program, if it exists in the dir
 ```bash
     export PATH=$PATH:/opt/apps/bin
 ```
+---
 ## Bash Prompt
 The command changes the terminal prompt to simply show **Server01 :**.
 ```bash
@@ -376,6 +398,7 @@ Here’s a simplified explanation of each of the prompt escape sequences :
 - **`\W`**: Displays the basename of the current working directory, with $HOME abbreviated as a tilde (~).
 - **`\$`**: Displays a # if the user is root (UID 0) and a $ otherwise.
 
+---
 ## Kernel Versions
 Displays the kernel version of the operating system currently running on the system.
 ```bash
@@ -388,6 +411,7 @@ Suppose the Kerner Version is **`4.15.0-72-generic`**. Here
 - **`72`** : Patch Release
 - **`Generic`** : Distro Specific Information
 
+---
 ## Working with Hardware
 Shows system messages related to the kernel and hardware events, useful for troubleshooting.
 ```bash
@@ -429,6 +453,7 @@ Lists detailed information about all hardware in the system requiring admin acce
 ```bash
    sudo lshw 
 ```
+---
 ## Package Management 
 1. **Working with **`RPM`** :** Suppose we have a package called **`telnet.rpm`** in rpm format. 
 
@@ -509,6 +534,7 @@ Lists detailed information about all hardware in the system requiring admin acce
     ```bash
        apt list | grep telnet 
     ```
+---
 ## Vieweing File Sizes
 
 Shows the size of test.img in kilobytes (KB), in a simple total format.
@@ -523,11 +549,13 @@ Lists test.img file details, including size, in a human-readable format with fil
 ```bash
     ls -lh test.img 
 ```
+---
 ## Truncate
 This command is used to set the size of the file **`out.txt`** to **zero bytes**, effectively clearing its contents.
 ```bash
     truncate -s 0 out.txt
 ```
+---
 ## Archiving Files
 Creates an archive named **`test.tar`** that includes file1 & file2
 ```bash
@@ -549,6 +577,7 @@ Creates a compressed archive (using gzip) named **`test.tar.gz`** containing fil
 ```bash
     tar -zcf test.tar file1 file2 
 ```
+---
 ## Compressing 
 Compresses **`test.img`** using **`bzip2`** creating a **`test.img.bz2`** file.
 ```bash
@@ -562,6 +591,7 @@ Compresses **`test.img`** using **`xz`** creating a **`test.img.xz`** file.
 ```bash
     xz test2.img 
 ```
+---
 ## Uncompressing
 Decompresses **`test.img.bz2`** restoring it to the original **`test.img`** file.
 ```bash
@@ -575,11 +605,13 @@ Decompresses **`test.img.xz`** restoring it to the original **`test.img`** file.
 ```bash
     unxz test1.img.xz 
 ```
+---
 ## Compressing Files
 Displays the contents of hostfile.txt.bz2 without extracting it.
 ```bash
     bzcat hostfile.txt.bz2 
 ```
+---
 ## Searching for Files and Directories
 Quickly searches and displays the paths of files named **`Test.txt`** using a prebuilt file index.
 ```bash
@@ -591,6 +623,7 @@ Searches for a file named Test.txt starting from the /home/user01 directory and 
 ```
 **Note :** If the database is not up-to-date, running **`sudo updatedb`** can refresh it.
 
+---
 ## Sed Command
 The **`sed`** command, short for **stream editor** is a versatile **text manipulation tool** in Linux systems. It allows us to search, replace, and edit text directly in files or streams.
 
@@ -601,6 +634,8 @@ Replace the word "**world**" with "**WORLD!!!**" in **`output.txt`**
   - **`s`** : Stands for substitution.
   - **`-i`** : Modifies the file in place.
   - **`g`**: Ensures all occurrences of the word in each line are replaced (global replacement).
+
+---
 ## Grep Command Filter
 The **`grep`** command searches for a specific word or string in files and prints only the lines containing that word or string.
 ```bash
@@ -619,6 +654,7 @@ It fethes all the lines having a word Hello in **`Test.txt`** file.
 ```
 It fethes all the lines having a word Hello in **`Test.txt`** file.
 
+---
 ## Awk Command Filter
 The **`awk`** command scans and processes text files. It can extract and print specific columns of data. 
 
@@ -626,6 +662,7 @@ Prints the first column from each line.
 ```bash
     awk '{print $1}' file_name
 ```
+---
 ## Linux Networking
 Queries the DNS to find the IP address associated with the domain name **`www.google.com`**.
 Add your line here
@@ -680,8 +717,8 @@ Shows all active network connections on port 80 that are currently listening for
 ```bash
     netstat -an | grep 80 | grep -i LISTEN
 ```
+---
 ## Security and File Permissions
-
 In Linux family, User cannot be added with out a group. So we need a group in order to add a user. User can be part of one more group but primarily should be associated with one group.
 
 This command creates a new user with a home directory and basic configuration.
@@ -808,6 +845,7 @@ Change the group for the test-file to the group called android.
 ```bash
     chgrp android test-file
 ```
+---
 ## SSH
 Connects to a remote server using its hostname or IP address.
 ```bash
@@ -837,6 +875,7 @@ Displays the contents of the authorized_keys file, showing the public keys autho
 ```bash
     cat /home/user/.ssh/authorized_keys
 ```
+---
 ## SCP
 Securely copies a file (**`caleston-code.tar.gz`**) from the local machine to the remote server (**`devapp01`**) in the **`/home/user`** directory.
 ```bash
@@ -850,6 +889,7 @@ Recursively and securely copies the media directory from the local machine to th
 ```bash
     scp -pr /home/user/media/ devapp01:/home/user
 ```
+---
 ## IP Tables
 Displays the current firewall rules set by iptables.
 ```bash
@@ -879,6 +919,7 @@ It is used to delete a 5 no rule from the OUTPUT chain in the iptables firewall.
 ```bash
     iptables -D OUTPUT 5
 ```
+---
 ## Crontab
 To view crontab.
 ```bash
@@ -897,6 +938,8 @@ Remove all cron job.
     crontab -r
 ```
 **Note :** *Visit [Crontab Guru](https://crontab.guru/) for scheduling tasks more easily*.
+
+---
 ## Systemd
 Start a service.
 ```bash
@@ -958,6 +1001,7 @@ Check Logs for a Specific Service.
 ```bash
     journalctl -u <service_name>
 ```
+---
 ## Storage in Linux 
 Check Disk Partitions. It will lists all partitions on **`/dev/sda`** with details like size and type.
 ```bash
@@ -1011,6 +1055,7 @@ Check Mounted Partitions
 ```bash
     df -h
 ```
+---
 ## NFS
 To export a directory on the server.
 ```bash
@@ -1022,6 +1067,7 @@ To mount an NFS directory on the client.
 ```bash
     sudo mount server_IP:/shared_directory /local_mount_point
 ```
+---
 ## Logical Volume Manager
 Create a physical volume (PV).
 ```bash
@@ -1040,7 +1086,7 @@ Format and mount the logical volume.
     sudo mkfs.ext4 /dev/my_volume_group/my_logical_volume
     sudo mount /dev/my_volume_group/my_logical_volume /mnt
 ```
-
+---
 ## Command Line Browser
 Most of the time you need to browse URLs and fetch that content over the command line. Some times we need some partial information of that URL else we need complete information of that URL.
 
@@ -1052,6 +1098,7 @@ This command is useful for downloading files from the internet directly to your 
 ```bash
     curl URL -o file_name_to_save_download
 ```
+---
 ## Downloading Files
 Most of the times we just need to download the software of different tools which we work on. To just download the software we can use **`wget`** command.
 
@@ -1063,6 +1110,7 @@ Downloads the file in given path and name.
 ```bash
     wget -o /opt/file_name URL
 ```
+---
 ## Update and Install
 Displays information about users who are currently logged into the system. 
 ```bash
@@ -1079,9 +1127,8 @@ For install package.
 ```bash
     sudo apt install <package_name>
 ```
-
+---
 ## Process Management
-
 Every command we execute in Linux will create a process and every process will get an associated ID which we generally call it as PID and it is unique in the OS which is taken care by Kernel.
 
 As part of our job we will manage such processes run inside server. In order to manage those process we need the information about the process. Command ps can help us in getting required/all process running inside the OS.
@@ -1120,6 +1167,7 @@ Kill the process of given PID with 9 signal.
 ```
 **Note :** 15 signal is graceful kill and where as 9 is forceful kill of a process.
 
+---
 ## Set Date and Time 
 Display the current date and time.
 ```bash
@@ -1145,7 +1193,7 @@ To set the system's time zone we can use the timedatectl command.
 ```bash
     sudo timedatectl set-timezone Asia/Dhaka
 ```
-
+---
 ## Administration 
 
 - In Linux, All admin activities cannot be performed by normal user. We need to be a root user to perform any activities.
@@ -1158,6 +1206,7 @@ To set the system's time zone we can use the timedatectl command.
 
 - In companies we usually will have individual accounts and we can perform the admin activities which are allowed using **`sudo`** access.
 
+---
 ## Administration – Service Management
 
 RedHat Linux 7 uses **`systemctl`** command to manage the services, Earlier till 6 version we use to use **`service`** command.
@@ -1185,6 +1234,7 @@ To start the service at the time of reboot automatically then
 ```bash
     sudo systemctl disable httpd
 ```
+---
 ### Administration – Commands Reboot
 We can use following commands to reboot a server.
 ```bash
@@ -1204,3 +1254,5 @@ We can validate system restarted by referring the startup time.
 ```
 
 This markdown file serves as a comprehensive guide to essential Linux commands, crucial for any Linux user, system administrator, or DevOps professional. By mastering these commands, you'll be able to navigate and manage your Linux environment efficiently, automate repetitive tasks, and troubleshoot issues effectively.
+
+---
