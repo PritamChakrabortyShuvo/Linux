@@ -114,7 +114,7 @@ Look for the IPv4 Address of network adapter.
 ```bash
     sudo ufw deny from <windows_ip> to any port 22
 ```
-Replace **`<windows_ip>`*** with the IP address of Windows PC. This will prevent SSH access from that device.
+Replace **`<windows_ip>`** with the IP address of Windows PC. This will prevent SSH access from that device.
 #### Option 3: Change SSH Port
 We can also change the SSH port on Ubuntu so the Windows PC will not be able to connect on the old port (assuming it’s using the default port 22). This is an indirect way of preventing access without revoking keys or blocking IP addresses.
 1. Edit the SSH config
