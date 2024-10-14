@@ -589,6 +589,17 @@ Searches for a file named Test.txt starting from the /home/user01 directory and 
     find /home/user01 -name Test.txt 
 ```
 **Note :** If the database is not up-to-date, running **`sudo updatedb`** can refresh it.
+
+## Sed Command
+The **`sed`** command, short for **stream editor** is a versatile **text manipulation tool** in Linux systems. It allows us to search, replace, and edit text directly in files or streams.
+
+Replace the word "**world**" with "**WORLD!!!**" in **`output.txt`**
+```bash
+    sed -i 's/world/WORLD!!!/g' output.txt
+```
+  - **`s`** : Stands for substitution.
+  - **`-i`** : Modifies the file in place.
+  - **`g`**: Ensures all occurrences of the word in each line are replaced (global replacement).
 ## Grep Command Filter
 The **`grep`** command searches for a specific word or string in files and prints only the lines containing that word or string.
 ```bash
