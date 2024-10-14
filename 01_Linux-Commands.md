@@ -770,7 +770,11 @@ Displays the list of users and permissions who can run commands as superuser usi
 ```bash
     cat /etc/sudoers
 ```
-A file that contains basic information about user accounts, including usernames, user IDs (UIDs), group IDs (GIDs), home directories, and default shells.
+Displays information about the users currently logged into the system and their activities.
+```bash
+    w
+```
+A file that contains basic information about user accounts, including usernames, user IDs (UIDs), group IDs (GIDs), home directories and default shells.
 ```bash
      /etc/passwd
 ```
