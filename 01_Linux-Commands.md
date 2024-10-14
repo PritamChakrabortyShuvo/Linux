@@ -117,6 +117,20 @@ To copy a file we have **`cp`** command. Alternatively we have **`rsync`** comma
 ```
 If the destination file already exists then it will overwrite the file and in few cases it may warn you to overwrite the file or not.
 
+The **`scp` (Secure Copy Protocol) command** is used in Linux  operating systems to securely transfer files and directories between hosts over SSH (Secure Shell). 
+
+To Copy a File from Local to Remote
+```bash
+    scp /path/to/local/file username@remote_host:/path/to/remote/directory/
+```
+Copy a File from Remote to Local
+```bash
+    scp username@remote_host:/path/to/remote/file /path/to/local/directory/
+```
+Specify a Different SSH Port
+```bash
+    scp -P port_number /path/to/local/file username@remote_host:/path/to/remote/directory/
+```
 ## Rename Files
 To rename or move a file we use **`mv`** command.
 
