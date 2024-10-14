@@ -18,7 +18,7 @@ SSH (Secure Shell) from **Windows** to **Linux** enables us to securely **access
     sudo systemctl enable ssh
     sudo systemctl start ssh
 ```
-#### 1. Verify that SSH is running.
+#### 1. Verify that SSH is running
 ```bash
     sudo systemctl status ssh
 ```
@@ -26,11 +26,11 @@ We will see something like "**`active (running)`**." If not **troubleshoot** wit
 ```bash
     sudo systemctl restart ssh
 ```
-### Step 3. Configure custom SSH on Server.
+### Step 3. Configure custom SSH on Server
 ```bash
     sudo vim /etc/ssh/sshd_config
 ```
-#### 1. Edit security settings. 
+#### 1. Edit security settings
 For example, Locate the line that says **`#Port 22`**. Remove the **`#`** & change **22** to the desired custom port, e.g., **222**.
 #### 2. Save and Exit
 ### Step 4. Allow SSH Through the Firewall
@@ -52,7 +52,7 @@ To check the status
 ```bash
     sudo systemctl status ssh
 ```
-### Step 7. Find the IP address of our Server machine by running
+### Step 7. Find the IP address of Server machine
 ```bash
     ip addr
 ```
@@ -67,7 +67,7 @@ PowerShell has a **built-in SSH client** so we don’t need to install any addit
   - Replace **ip_address** with the IP of our Server machine IP.
   - Replace 222 with the custom port number we set.
 
-#### 2. Accept the fingerprint if prompted and enter the password.
+#### 2. Accept the fingerprint if prompted and enter the password
 
 ### Step 10 : Set Up SSH Key-Based Authentication (Recommended)
 To avoid entering passwords each time, we can set up key-based authentication.
