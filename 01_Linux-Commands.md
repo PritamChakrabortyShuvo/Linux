@@ -131,6 +131,28 @@ Specify a Different SSH Port
 ```bash
     scp -P port_number /path/to/local/file username@remote_host:/path/to/remote/directory/
 ```
+**Note :** **`-P`** port_number: Specify the SSH port (note the uppercase P)
+## Rsync Command
+This command is a powerful and versatile tool for synchronizing files and directories between two locations, whether on the same machine or between a local machine and a remote host.
+
+Copy a File from Local to Remote
+```bash
+    rsync -avz /path/to/local/file username@remote_host:/path/to/remote/directory/
+```
+Copy from Remote to Local
+```bash
+    rsync -avz username@remote_host:/path/to/remote/file /path/to/local/directory/
+```
+Synchronize Directories
+```bash
+    rsync -avz --delete /path/to/local/directory/ username@remote_host:/path/to/remote/directory/
+```
+**Key Options**
+  - **`-a`**: Archive mode, which preserves permissions, timestamps, symbolic links, etc.
+  - **`-v`**: Verbose output, showing detailed information during the transfer.
+  - **`-z`**: Compress file data during transfer.
+  - **`--delete`**: Deletes files in the destination that are not present in the source.
+
 ## Rename Files
 To rename or move a file we use **`mv`** command.
 
