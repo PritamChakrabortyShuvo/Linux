@@ -841,6 +841,7 @@ Remove all cron job.
 ```bash
     crontab -r
 ```
+**Note :** *Visit [Crontab Guru](https://crontab.guru/) for scheduling tasks more easily*.
 ## Systemd
 Start a service.
 ```bash
