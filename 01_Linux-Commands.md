@@ -29,6 +29,7 @@ This guide provides an extensive overview of the most commonly used **Linux comm
 - [Working with Hardware](#working-with-hardware)
 - [Package Management](#package-management)
 - [Vieweing File Sizes](#vieweing-file-sizes)
+- [Truncate](#truncate)
 - [Archiving Files](#archiving-files)
 - [Compressing](#compressing)
 - [Uncompressing](#uncompressing)
@@ -483,6 +484,11 @@ Displays the size of test.img in a human-readable format (like KB, MB, GB).
 Lists test.img file details, including size, in a human-readable format with file permissions and date modified.
 ```bash
     ls -lh test.img 
+```
+## Truncate
+This command is used to set the size of the file **`out.txt`** to **zero bytes**, effectively clearing its contents.
+```bash
+    truncate -s 0 out.txt
 ```
 ## Archiving Files
 Creates an archive named **`test.tar`** that includes file1 & file2
