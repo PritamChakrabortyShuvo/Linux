@@ -38,6 +38,7 @@ Welcome! to **Linux Theoretical Concepts** guide. This is your go-to guide for m
   - [APT vs APT-GET](#apt-vs-apt-get)
 - [**Working with Shell - II**](#working-with-shell---ii)
   - [Vim Editor](#vim-editor)
+  - [Append Operator](#append-operator)
 - [**Linux Networking Basics**](#linux-networking-basics)
   - [Name Resolution](#name-resolution)
   - [DNS (Domain Name System)](#dns-domain-name-system)
@@ -502,7 +503,14 @@ In vim (Vi IMproved) editor, the **`ESC`** (Escape) key is pivotal for navigatin
     - Normal Mode: Press **`Esc`** to enter Normal mode, where you can navigate and execute commands.
     - Insert Mode: Press **`i`** to enter Insert mode, where you can insert and edit text.
     - Visual Mode: Press **`v`** to enter Visual mode, where you can select blocks of text for editing or copying.
-
+## Append Operator
+The **`>>`** operator in a shell command is used for **appending** output to a file.
+### Purpose of `>>` 
+1. **Append Data :**
+   - When we use **`>>`** it adds the **output** to the end of the **specified file** without overwriting its current contents.
+   - This is useful when we want to keep a record of multiple outputs over time.
+2. **Avoid Overwriting :**
+    - If we use a single **`>`** (i.e., > filename) it will **overwrite** the entire contents of the file. Using **`>>`** ensures that we don’t lose any existing data in the file.
 # Linux Networking Basics
 Linux networking is fundamental for system administration especially in managing servers configuring network interfaces & ensuring smooth communication between devices. Some components are described below.
 
