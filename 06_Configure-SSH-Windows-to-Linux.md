@@ -140,3 +140,51 @@ To display the contents of the **`id_rsa.pub` file** run
     type id_rsa.pub
 ```
 This will print the contents of the **`id_rsa.pub` file**, which is your public key.
+
+## Why We Use the SSH Config File?
+The SSH **config file** helps **simplify** & **automate** our **SSH connections** by letting us save settings for multiple servers in one place. Instead of typing the server's **IP**, **port**, **username** & **key file** every time we connect, we can **store these details** in the **config file** & use a simple alias to connect easily.
+
+### Steps to Set Up an SSH Config File in Windows (Local Machine)
+
+#### 1. Navigate to the `.ssh` Directory
+The **`.ssh`** directory is where **SSH keys** & **config files** are stored. Open **`Terminal`** and type :
+```bash
+    cd $HOME\.ssh
+```
+If the **`.ssh`** directory doesn’t exist we can create it.
+
+#### 2. Edit the `config` File
+We can edit the **`SSH config file`**  We can use **`notepad`**
+```bash
+    notepad config
+```
+#### 3. Add Host Configuration
+In the config file, we add a block for each server we want to connect to.
+```bash 
+    Host Server_Name
+        HostName IP_Address_of_Server
+        User User_Name
+        Port Port_Number
+        IdentityFile ~/.ssh/key
+```
+  - **`Host`** : This is a label or alias we give to a specific SSH connection. We can use this alias later to connect to the server easily without typing the full details. Replace **`Server_name`** with actual Server Name.
+  - **`HostName`** : The server’s **IP address** or **Domain Name**.
+  - **`User`** :  The username we use for connecting.
+  - **`Port`** : This indicates the port number on which the SSH service is running. 
+  - **`IdentityFile`** : This specifies the **path** to the **private SSH key file** used for **authentication**. The SSH client will use this key when connecting to the server.
+
+Each line in the **SSH config file** defines specific parameters for connecting to a server, simplifying the SSH command by allowing us to use an alias instead of entering the full connection details each time.
+
+#### 4. Save the File
+After entering the configuration, save the file and close Notepad..
+#### 5. Set Correct Permissions
+On Windows, SSH permissions are typically handled automatically but ensure that the private key file (like **`id_rsa`**) is not accessible to unauthorized users.
+#### 6. Connect to the Server
+Now, we can connect to the server using the alias we defined in the config file
+```bash
+    ssh Server_Name
+```
+This command will use the settings specified in the config file to establish the SSH connection.
+
+#### 7. Repeat for Additional Servers
+We can add more server configurations in the same config file, just like the example above.
