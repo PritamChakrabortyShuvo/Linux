@@ -52,6 +52,7 @@ This guide provides an extensive overview of the most commonly used **Linux comm
 - [Extract tar archives](#extract-tar-archives)
 - [Update and Install](#update-and-install)
 - [Process Management](#process-management)
+- [Set Date and Time](#set-date-and-time)
 - [Administration](#administration)
 - [Administration - User Management](#administration---user-management)
 - [Administration – Commands Reboot](#administration--commands-reboot)
@@ -1070,6 +1071,32 @@ Kill the process of given PID with 9 signal.
     kill -9 PID
 ```
 **Note :** 15 signal is graceful kill and where as 9 is forceful kill of a process.
+
+## Set Date and Time 
+Display the current date and time.
+```bash
+    date
+```
+Display the date and time in a specific format.
+```bash
+    date +"%d-%m-%y %H:%M:%S"
+```
+To check the current time zone set on our system.
+```bash
+    timedatectl
+```
+To list all available time zones.
+```bash
+    timedatectl list-timezones
+```
+Display the date and time in a different time zone.
+```bash
+    TZ="America/New_York" date
+```
+To set the system's time zone we can use the timedatectl command.
+```bash
+    sudo timedatectl set-timezone Asia/Dhaka
+```
 
 ## Administration 
 
