@@ -15,7 +15,6 @@ In the Windows Features window scroll down and check these options:
    - Windows Subsystem for Linux
 Click **`Okay`**.
 3. **Restart the Computer if prompted**
-
 ### Step 2. Install WSL via PowerShell
 1. **Open PowerShell as Administrator**
 Right-click the **Start** button and select **Windows Terminal (Admin)** or **PowerShell (Admin)**.
@@ -25,8 +24,8 @@ Run the following command to install WSL and set it up
     wsl --install
 ```
 This command will:
- - Install the WSL component.
- - Download and install the latest version of Ubuntu by default.
+ - Install the **WSL component**.
+ - Download and install the **latest version of Ubuntu** by default.
  - Set WSL 2 as the default version.
 
  ### Step 3. Verify WSL Version
@@ -40,14 +39,14 @@ This command will:
 ```
 ### Step 4. Install Ubuntu from Microsoft Store (If Needed)
 If we want a specific version of Ubuntu or if it didn’t install automatically:
- 1. Open the Microsoft Store.
- 2. Search for Ubuntu and choose your preferred version (e.g., Ubuntu 22.04 LTS).
+ 1. Open the **Microsoft Store**.
+ 2. Search for Ubuntu and choose preferred version.
  3. Click Install and wait for it to download.
 
 ### Step 5. Launch and Set Up Ubuntu
- 1. Open Ubuntu from the Start menu.
- 2. The first time Ubuntu runs, it will extract and set up the Linux environment.
- 3. we will be prompted to create a username and password for the Linux system.
+ 1. Open Ubuntu from the **Start menu**.
+ 2. The first time Ubuntu runs it will extract and set up the Linux environment.
+ 3. We will be prompted to create a **username** and **password** for the Linux system.
 
 ### Step 6. Update Ubuntu
 Once inside the Ubuntu terminal, update the system by running
@@ -55,7 +54,7 @@ Once inside the Ubuntu terminal, update the system by running
     sudo apt update && sudo apt upgrade
 ```
 ### Step 7. Switch Between Windows and WSL
-To exit WSL and return to the Windows environment, type
+To **exit WSL** and return to the **Windows environment**, type
 ```bash
     exit
 ```
