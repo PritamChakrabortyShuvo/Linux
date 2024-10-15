@@ -4,6 +4,9 @@
 
 ## Configuration Steps of WSL 
 ### Workflow
+<div align="center">
+    <img src="Images/WSL Workflow.png" alt="Project Logo" width=100% height=75%>
+</div>
 
 ### Step 1. Enable Windows Features for WSL
 1. **Open Windows Features**
