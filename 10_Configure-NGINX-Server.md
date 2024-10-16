@@ -12,6 +12,9 @@ Nginx is a high-performance web server and reverse proxy server. It is also used
 ## Basic Configuration of Nginx on Ubuntu
 
 ### Workflow 
+<div align="center">
+  <img src="Images/Nginx Workflow.png" alt="Project Logo" width=100% height=30%/>
+</div>
 
 ### Step 1. Update the System
 Start by ensuring our package index is up to date. Run
@@ -83,5 +86,5 @@ If there are no errors, restart Nginx to apply the configuration changes
 ```bash
     sudo systemctl restart nginx
 ```
-### Step 10: Access the Site
+### Step 10. Access the Site
 Open a web browser and navigate to http://your_domain.com or http://your_server_ip to see our welcome page.
