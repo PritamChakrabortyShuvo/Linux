@@ -1,0 +1,3 @@
+# Installing and Configuring Nginx on Ubuntu
+## What is Nginx?
+Nginx (pronounced "engine-x") is a high-performance web server and reverse proxy server. It is also used as a load balancer, HTTP cache & an email proxy server. Nginx is known for its ability to handle a large number of concurrent connections efficiently, making it a popular choice for serving static content & as a reverse proxy for dynamic applications.
