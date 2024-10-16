@@ -4,10 +4,12 @@
 The Network File System (NFS) allows us to share directories & files with other Linux clients over a network. It enables users to mount remote directories on their system as if they were local folders making it useful for centralizing file management and sharing resources.
 
 ## Overall Workflow
+<div align="center">
+    <img src="Images/NFS Overall Workflow.png" alt="Project Logo" width=100% height=75%>
+</div>
 
-## Configuration Steps of NFS Server Server Setup (Host/Server Machine)
-
-### Step 1. Install and Configure the NFS Server
+### Step 1. Install and Configure the NFS Server (Server Machine)
+#### Workflow of NFS Server Configuration 
 #### 1. **Install the NFS Server Package**
 We install the NFS server package to enable the system to share directories over the network.
 ```bash
@@ -83,6 +85,8 @@ Ensure the NFS share is being exported correctly.
     sudo exportfs -v
 ```
 ### Step 2. Install NFS Client and Mount the Share (Client Machine)
+#### Workflow of NFS Client Configuration 
+
 #### 1. **Install NFS Client Utilities**
 We need to install the NFS client utilities on the client machine.
 ```bash
