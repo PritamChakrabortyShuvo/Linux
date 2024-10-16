@@ -13,6 +13,7 @@ The Network File System (NFS) allows us to share directories & files with other 
 <div align="center">
     <img src="Images/NFS Server Configuration Workflow.png" alt="Project Logo" width=100% height=75%>
 </div>
+
 #### 1. **Install the NFS Server Package**
 We install the NFS server package to enable the system to share directories over the network.
 ```bash
@@ -89,6 +90,9 @@ Ensure the NFS share is being exported correctly.
 ```
 ### Step 2. Install NFS Client and Mount the Share (Client Machine)
 #### Workflow of NFS Client Configuration 
+<div align="center">
+    <img src="Images/NFS Client Configuration Workflow.png" alt="Project Logo" width=100% height=75%>
+</div>
 
 #### 1. **Install NFS Client Utilities**
 We need to install the NFS client utilities on the client machine.
