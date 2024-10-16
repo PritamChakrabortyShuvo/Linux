@@ -129,3 +129,19 @@ This command applies all the mounts listed in /etc/fstab without rebooting.
 ```bash
     sudo mount -a
 ```
+### Step 4. Unmounting the NFS Share (Client Machine)
+If we no longer need the NFS share, we can unmount it to free up the client system resources.
+```bash
+    sudo umount /mnt/nfs_share
+```
+### Step 5. Uninstall NFS Server and Client
+To clean up the NFS services from both the server and the client, we can uninstall the NFS packages.
+#### On both server and client machines
+This step removes the NFS server and client packages from both systems.
+```bash
+    sudo apt-get purge nfs-kernel-server nfs-common
+```
+And,
+```bash
+    sudo apt-get autoremove
+```
