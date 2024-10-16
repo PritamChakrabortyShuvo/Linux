@@ -1,7 +1,7 @@
 # Setting Up NFS Server and Client on Ubuntu
 
 ## What is Linux NFS (Network File System) Server?
-The Network File System (NFS) allows us to share directories & files with other Linux clients over a network. It enables users to mount remote directories on their system as if they were local folders making it useful for centralizing file management and sharing resources.
+The **Network File System (NFS)** allows us to **share directories** & **files** with other **Linux clients** over a network. It enables **users to mount remote directories** on their system as if they were local folders making it useful for centralizing file management and sharing resources.
 
 ## Overall Workflow
 <div align="center">
@@ -62,7 +62,7 @@ We export the directory to make it available to clients. For NFS Export Changes 
     sudo exportfs -a
 ```
 #### 5. **Adjust Firewall Settings (If Applicable)**
-If a firewall is active, we must allow NFS traffic. To allow NFS Service run :
+If a firewall is active we must allow NFS traffic. To allow NFS Service run :
 ```bash
     sudo ufw allow from client_machine_ip to any port nfs
 ```
@@ -95,7 +95,7 @@ Ensure the NFS share is being exported correctly.
 </div>
 
 #### 1. **Install NFS Client Utilities**
-We need to install the NFS client utilities on the client machine.
+We need to install the **NFS client utilities** on the **client machine**.
 ```bash
     sudo apt install nfs-common
 ```
@@ -119,7 +119,7 @@ This step ensures the shared directory has been successfully mounted and is acce
     df -h
 ```
 ### Step 3. On the Client Machine Make the NFS Mount Persistent
-To ensure the NFS share mounts automatically on reboot, we add it to the /etc/fstab file.
+To ensure the NFS share mounts automatically on reboot, we add it to the **`/etc/fstab`** file.
 #### 1. Edit `/etc/fstab`
 ```bash
     sudo vim /etc/fstab
@@ -136,7 +136,7 @@ Replace **nfs_server_ip** with the actual **IP address** of the **Server**.
 - **`defaults`**: Applies default mount options (read/write, auto-mount, etc.).
 - **`0 0`**: The first `0` disables dumping, and the second `0` disables fsck during boot.
 #### 2. Mount all filesystems in `/etc/fstab`
-This command applies all the mounts listed in /etc/fstab without rebooting.
+This command applies all the mounts listed in **`/etc/fstab`** without rebooting.
 ```bash
     sudo mount -a
 ```
@@ -146,7 +146,7 @@ If we no longer need the NFS share, we can unmount it to free up the client syst
     sudo umount /mnt/nfs_share
 ```
 ### Step 5. Uninstall NFS Server and Client
-To clean up the NFS services from both the server and the client, we can uninstall the NFS packages.
+To clean up the NFS services from both the server and the client we can uninstall the NFS packages.
 #### On both server and client machines
 This step removes the NFS server and client packages from both systems.
 ```bash
