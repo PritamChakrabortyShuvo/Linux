@@ -37,14 +37,14 @@ Verify that Nginx is running.
     sudo systemctl status nginx
 ```
 If everything is working correctly, we should see an "active (running)" status
-### Step 5. Configure Firewall
+### Step 4. Configure Firewall
 If we are using a firewall like UFW, we should allow HTTP and HTTPS traffic.
 ```bash
     sudo ufw allow 'Nginx Full'
 ```
-### Step 6. Verify Nginx Installation
+### Step 5. Verify Nginx Installation
 To check if Nginx is installed correctly, open a web browser and navigate to the server's IP address or http://localhost. We should see the Nginx welcome page.
-### Step 7. Basic Configuration
+### Step 6. Basic Configuration
 #### 1. Navigate to the Configuration Directory
 The main configuration files for Nginx are located in /etc/nginx.
 #### 2. Edit the Default Configuration File
@@ -67,21 +67,21 @@ We can modify the default configuration file located at /etc/nginx/sites-availab
     }
 ```
 Replace your_domain.com with your actual domain name.
-### Step 8. Create Document Root
+### Step 7. Create Document Root
 Create the document root directory and a sample HTML file
 ```bash
     sudo mkdir -p /var/www/html
     echo "<h1>Welcome to Nginx!</h1>" | sudo tee /var/www/html/index.html
 ```
-### Step 9. Test the Configuration
+### Step 8. Test the Configuration
 Test the Nginx configuration for any syntax errors. Run :
 ```bash
     sudo nginx -t
 ```
-### Step 10. Restart Nginx
+### Step 9. Restart Nginx
 If there are no errors, restart Nginx to apply the configuration changes
 ```bash
     sudo systemctl restart nginx
 ```
-### Step 11: Access the Site
+### Step 10: Access the Site
 Open a web browser and navigate to http://your_domain.com or http://your_server_ip to see our welcome page.
