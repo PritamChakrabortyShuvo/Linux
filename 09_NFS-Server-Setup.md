@@ -107,3 +107,25 @@ This step ensures the shared directory has been successfully mounted and is acce
 ```bash
     df -h
 ```
+### Step 3. On the Client Machine Make the NFS Mount Persistent
+To ensure the NFS share mounts automatically on reboot, we add it to the /etc/fstab file.
+#### 1. Edit `/etc/fstab`
+```bash
+    sudo vim /etc/fstab
+```
+Add the following line
+```bash
+    nfs_server_ip:/mnt/nfs_share /mnt/nfs_clientshare nfs defaults 0 0
+```
+Replace **nfs_server_ip** with the actual **IP address** of the **Server**.
+
+- **`nfs_server_ip:/mnt/nfs_share`**: Specifies the NFS server's IP and shared directory path. Replace with actual server IP and shared directory.
+- `**/mnt/nfs_clientshare`**: Local mount point on the client for accessing the NFS share. Replace with the desired client path.
+- **`nfs`**: Indicates the filesystem type is NFS.
+- **`defaults`**: Applies default mount options (read/write, auto-mount, etc.).
+- **`0 0`**: The first `0` disables dumping, and the second `0` disables fsck during boot.
+#### 2. Mount all filesystems in `/etc/fstab`
+This command applies all the mounts listed in /etc/fstab without rebooting.
+```bash
+    sudo mount -a
+```
