@@ -88,3 +88,6 @@ If there are no errors, restart Nginx to apply the configuration changes
 ```
 ### Step 10. Access the Site
 Open a web browser and navigate to http://your_domain.com or http://your_server_ip to see our welcome page.
+
+## Conclusion 
+We’ve covered the basics of Nginx, what it is & how to install and configure it from scratch on an Ubuntu system. Nginx can be further customized for specific needs, including **SSL/TLS configuration** for secure connections, load balancing and serving dynamic content with back-end applications.
