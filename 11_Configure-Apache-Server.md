@@ -110,3 +110,16 @@ To apply the changes, restart Apache
 ```bash
     sudo systemctl restart apache2
 ```
+### Step 8. Access the Site
+Now, open a web browser and navigate to http://mysite.com (or use the server’s IP address) to see the test HTML file.
+### Step 9. Set Permissions for the Document Root
+Ensure the appropriate permissions are set for the document root directory so Apache can read and serve files.
+```bash
+    sudo chown -R www-data:www-data /var/www/mysite
+```
+And,
+```bash
+    sudo chmod -R 755 /var/www/mysite
+```
+## Conclusion 
+We’ve now installed Apache, configured a basic virtual host & served a test HTML file. Apache is a flexible and powerful web server, so we can extend its functionality by configuring **SSL/TLS certificates**, enabling modules & setting up reverse proxies.
