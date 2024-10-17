@@ -1,6 +1,6 @@
 # Installing and Configuring Apache on Ubuntu
 ## What is Apache?
-Apache (also known as the Apache HTTP Server) is one of the most widely used and popular open-source web servers in the world. It was developed by the Apache Software Foundation and has been powering websites for over two decades.
+**Apache (also known as the Apache HTTP Server)** is one of the most widely used and popular open-source web servers in the world. It was developed by the Apache Software Foundation and has been powering websites for over two decades.
 ## Key Features of Apache
 - Web Server
 - Modular Architecture
@@ -10,7 +10,6 @@ Apache (also known as the Apache HTTP Server) is one of the most widely used and
 - Security
 - Rewrite Engine
 ## Basic Configuration of Nginx on Ubuntu
-
 ### Overall Workflow
 <div align="center">
   <img src="Images/Apache Workflow.png" alt="Project Logo" width=100% height=30%/>
@@ -41,9 +40,9 @@ We can verify that Apache is running with the following command
 ```bash
     sudo systemctl status apache2
 ```
-We should see a status message that says "active (running)."
+We should see a status message that says "**`active (running)`**."
 ### Step 5. Configure the Firewall
-If we are using UFW (Uncomplicated Firewall), we need to allow Apache to pass through the firewall.
+If we are using **UFW (Uncomplicated Firewall)**, we need to allow Apache to pass through the firewall.
 ```bash
     sudo ufw allow 'Apache Full'
 ```
@@ -52,9 +51,9 @@ To verify that the firewall rules have been updated run :
     sudo ufw status
 ```
 ### Step 6. Test Apache Installation
-To confirm Apache is working, open a web browser and navigate to the server’s IP address or http://localhost. We should see the default Apache welcome page.
+To confirm Apache is working open a web browser and navigate to the **server’s IP address** or **http://localhost.** We should see the default **Apache welcome page**.
 ### Step 7. Basic Configuration
-Apache’s configuration files are stored in /etc/apache2. The main configuration file is apache2.conf, but for individual sites, we usually modify the configuration under sites-available.
+Apache’s configuration files are stored in **`/etc/apache2`**. The main configuration file is **`apache2.conf`** but for individual sites we usually modify the configuration under sites-available.
 #### Workflow 
 <div align="center">
   <img src="Images/Apache Basic Configuration Workflow.png" alt="Project Logo" width=100% height=30%/>
@@ -99,7 +98,7 @@ Create a simple HTML file in the document root to test the site
     echo "<h1>Welcome to My Site!</h1>" | sudo tee /var/www/mysite/index.html
 ```
 #### 6. Enable the Virtual Host
-To enable our new site, create a symbolic link in the sites-enabled directory
+To enable our new site create a **symbolic link** in the **sites-enabled directory**
 ```bash
     sudo a2ensite mysite.conf
 ```
@@ -109,18 +108,18 @@ If we don’t want to use the default Apache site, we can disable it
     sudo a2dissite 000-default.conf
 ```
 #### 8. Test Apache Configuration
-Before restarting Apache, we should test the configuration for syntax errors
+Before restarting Apache we should test the configuration for syntax errors
 ```bash
     sudo apache2ctl configtest
 ```
 If the syntax is correct, we should see a message saying **`Syntax OK`**.
 #### 9. Restart Apache
-To apply the changes, restart Apache
+To apply the changes restart Apache
 ```bash
     sudo systemctl restart apache2
 ```
 ### Step 8. Access the Site
-Now, open a web browser and navigate to http://mysite.com (or use the server’s IP address) to see the test HTML file.
+Now open a web browser and navigate to **http://mysite.com** (or use the server’s IP address) to see the test HTML file.
 ### Step 9. Set Permissions for the Document Root
 Ensure the appropriate permissions are set for the document root directory so Apache can read and serve files.
 ```bash
