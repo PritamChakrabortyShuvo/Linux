@@ -55,6 +55,11 @@ To verify that the firewall rules have been updated run :
 To confirm Apache is working, open a web browser and navigate to the server’s IP address or http://localhost. We should see the default Apache welcome page.
 ### Step 7. Basic Configuration
 Apache’s configuration files are stored in /etc/apache2. The main configuration file is apache2.conf, but for individual sites, we usually modify the configuration under sites-available.
+#### Workflow 
+<div align="center">
+  <img src="Images/Apache Basic Configuration Workflow.png" alt="Project Logo" width=100% height=30%/>
+</div>
+
 #### 1. Navigate to the Configuration Directory
 ```bash
     cd /etc/apache2/sites-available
