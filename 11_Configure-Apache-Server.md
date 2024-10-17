@@ -72,7 +72,7 @@ We can copy the default configuration to create a new one for our site.
 #### 3. Edit the New Configuration File
 To open the new configuration file run :
 ```bash
-    sudo nano mysite.conf
+    sudo vim mysite.conf
 ```
 Replace the contents with something like the following
 ```bash
@@ -88,6 +88,7 @@ Replace the contents with something like the following
 ```
 - **`ServerName`** : The domain name we want to serve (e.g., mysite.com).
 - **`DocumentRoot`** : The directory where our website’s files will be stored.
+Save and Exit.
 #### 4. Create the Document Root Directory
 ```bash
     sudo mkdir -p /var/www/mysite
