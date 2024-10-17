@@ -48,3 +48,65 @@ To verify that the firewall rules have been updated run :
 ```bash
     sudo ufw status
 ```
+### Step 6. Test Apache Installation
+To confirm Apache is working, open a web browser and navigate to the server’s IP address or http://localhost. We should see the default Apache welcome page.
+### Step 7. Basic Configuration
+Apache’s configuration files are stored in /etc/apache2. The main configuration file is apache2.conf, but for individual sites, we usually modify the configuration under sites-available.
+#### 1. Navigate to the Configuration Directory
+```bash
+    cd /etc/apache2/sites-available
+```
+#### 2. Create a New Virtual Host File
+We can copy the default configuration to create a new one for our site.
+```bash
+    sudo cp 000-default.conf mysite.conf
+```
+#### 3. Edit the New Configuration File
+To open the new configuration file run :
+```bash
+    sudo nano mysite.conf
+```
+Replace the contents with something like the following
+```bash
+    <VirtualHost *:80>
+        ServerAdmin webmaster@mysite.com
+        ServerName mysite.com
+        ServerAlias www.mysite.com
+        DocumentRoot /var/www/mysite
+
+        ErrorLog ${APACHE_LOG_DIR}/error.log
+        CustomLog ${APACHE_LOG_DIR}/access.log combined
+    </VirtualHost>
+```
+- **`ServerName`** : The domain name we want to serve (e.g., mysite.com).
+- **`DocumentRoot`** : The directory where our website’s files will be stored.
+#### 4. Create the Document Root Directory
+```bash
+    sudo mkdir -p /var/www/mysite
+```
+#### 5. Add a Test HTML File
+Create a simple HTML file in the document root to test the site
+```bash
+    echo "<h1>Welcome to My Site!</h1>" | sudo tee /var/www/mysite/index.html
+```
+#### 6. Enable the Virtual Host
+To enable our new site, create a symbolic link in the sites-enabled directory
+```bash
+    sudo a2ensite mysite.conf
+```
+#### 7. Disable the Default Site (Optional)
+If we don’t want to use the default Apache site, we can disable it
+```bash
+    sudo a2dissite 000-default.conf
+```
+#### 8. Test Apache Configuration
+Before restarting Apache, we should test the configuration for syntax errors
+```bash
+    sudo apache2ctl configtest
+```
+If the syntax is correct, we should see a message saying **`Syntax OK`**.
+#### 9. Restart Apache
+To apply the changes, restart Apache
+```bash
+    sudo systemctl restart apache2
+```
