@@ -11,7 +11,10 @@ Apache (also known as the Apache HTTP Server) is one of the most widely used and
 - Rewrite Engine
 ## Basic Configuration of Nginx on Ubuntu
 
-### Workflow
+### Overall Workflow
+<div align="center">
+  <img src="Images/Apache Workflow.png" alt="Project Logo" width=100% height=30%/>
+</div>
 
 ### Step 1. Update the System
 Before we install Apache, let's ensure that our package list is up-to-date
