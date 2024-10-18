@@ -85,3 +85,5 @@ We can comment it out by adding a **`#`** at the beginning.
 ```
 Save and exit the editor.
 
+## Conclusion 
+**Swap space** in **Ubuntu** acts as **virtual memory** helping the system handle more processes when RAM is full. Adding or configuring swap space **improves system performance**, especially during **high memory usage**. It's important to set up swap correctly & ensure it's persistent across reboots for consistent performance benefits.
