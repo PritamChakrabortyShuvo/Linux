@@ -60,3 +60,6 @@ To **exit WSL** and return to the **Windows environment**, type
 ```bash
     exit
 ```
+## Conclusion 
+Installing **Ubuntu** on **Windows 11** using **WSL (Windows Subsystem for Linux)** offers a convenient way to **utilize Linux alongside Windows**. This integration allows users to run Linux applications **natively** & **access powerful command-line tools**, enhancing productivity and development workflows. By following the installation steps, users can easily set up Ubuntu making WSL a valuable asset for both **developers** & **system administrators**.
+
