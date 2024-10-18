@@ -26,16 +26,16 @@ We will see something like "**`active (running)`**." If not **troubleshoot** wit
 ```bash
     sudo systemctl restart ssh
 ```
-### Step 3. Configure custom SSH on Server
+### Step 3. Configure Custom SSH on Server
 ```bash
     sudo vim /etc/ssh/sshd_config
 ```
 #### 1. Edit security settings
-For example, Locate the line that says **`#Port 22`**. Remove the **`#`** & change **22** to the desired custom port, e.g., **222**.
+For example, Locate the line that says **`#Port 22`**. Remove the **`#`** & change **22** to the desired custom port, e.g., **1646**.
 #### 2. Save and Exit
 ### Step 4. Allow SSH Through the Firewall
 ```bash
-    sudo ufw allow 222/tcp
+    sudo ufw allow 1646/tcp
 ```
 ### Step 5. Reload the Systemd Daemon
 This ensures that **`systemd`** picks up any changes made to service files (like **SSH configuration** changes).
@@ -61,16 +61,15 @@ PowerShell has a **built-in SSH client** so we don’t need to install any addit
 ### Step 9 : Connect from Windows to Ubuntu on the Custom Port
 #### 1. Open PowerShell & use this command to connect via the custom port
 ```bash 
-    ssh username@ip_address -p 222
+    ssh username@ip_address -p 1646
 ```
   - Replace **username** with our Server username.
   - Replace **ip_address** with the IP of our Server machine IP.
-  - Replace 222 with the custom port number we set.
+  - Replace **1646** with the custom port number we set.
 
 #### 2. Accept the fingerprint if prompted and enter the password
-
 ### Step 10 : Set Up SSH Key-Based Authentication (Recommended)
-To avoid entering passwords each time, we can set up key-based authentication.
+To avoid entering passwords each time we can set up **key-based authentication**.
 #### 1. Open PowerShell and run
 ```bash
     ssh-keygen -t rsa -b 4096
@@ -78,14 +77,14 @@ To avoid entering passwords each time, we can set up key-based authentication.
 We use **`4096`** bits to provide stronger encryption, enhancing the security of the SSH key. We can use **`ECDSA`** or **`ED25519`** for shorter key sizes and faster performance but **`RSA`** with **`4096`** bits is still very **secure** and compatible across nearly all systems.
 #### 2. Copy the public key to Server if we using custom port
 ```bash
-    ssh-copy-id -p 222 username@ip_address
+    ssh-copy-id -p 1646 username@ip_address
 ```
-After entering the password, the key will be copied to the Server.
+After entering the password the key will be copied to the Server.
 #### 3. Next time we connect using SSH, the key will be used instead of a password.
 ### Step 11 : Verify and Troubleshoot
 #### 1. To test the connection
 ```bash 
-    ssh username@ip_address -p 222
+    ssh username@ip_address -p 1646
 ```
 #### 2. If we encounter issues, ensure the following:
 - The firewall on Ubuntu allows the custom port.
@@ -102,7 +101,6 @@ If the Windows PC is using key-based authentication to access Ubuntu, we can rem
 ```
 3. Find and remove the key for our Windows PC. Each entry in this file represents an SSH key. Look for the key that matches the one from our Windows PC (it typically starts with **ssh-rsa**, **ecdsa** or **ed25519** followed by the key itself and the comment or email that identifies the machine).
 4. Delete the key entry and save the file.
-
 #### Option 2 : Block the Windows PC by IP Address
 We can configure Ubuntu’s firewall (UFW) to deny SSH access from that specific device.
 1. Find the IP address of Windows PC. On windows command prompt type
@@ -176,7 +174,7 @@ In the config file, we add a block for each server we want to connect to.
 Each line in the **SSH config file** defines specific parameters for connecting to a server, simplifying the SSH command by allowing us to use an alias instead of entering the full connection details each time.
 
 #### 4. Save the File
-After entering the configuration, save the file and close Notepad..
+After entering the configuration, save the file and close Notepad.
 #### 5. Set Correct Permissions
 On Windows, SSH permissions are typically handled automatically but ensure that the private key file (like **`id_rsa`**) is not accessible to unauthorized users.
 #### 6. Connect to the Server
