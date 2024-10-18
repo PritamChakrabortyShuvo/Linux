@@ -2,12 +2,11 @@
 
 ## What is UFW?
 **UFW** stands for **Uncomplicated Firewall**. It provides a **command-line interface** to manage firewall rules more easily than the traditional **iptables commands**. UFW is especially useful for those who may not be familiar with the complexities of firewall configurations.
-
 ## Key Features of UFW
-1. Simplicity
-2. Default Policies
-3. Application Profiles
-4. Logging
+- Simplicity
+- Default Policies
+- Application Profiles
+- Logging
 
 ## Basic Commands of UFW
 ### 1. Installation
@@ -18,9 +17,9 @@
 ```bash
     sudo ufw enable
 ```
-This command activates the firewall based on the default policies.
+This command **activates the firewall** based on the default policies.
 ### 3. Setting Default Policies
-Before adding specific rules it's a good practice to set the default policies.
+Before adding specific rules it's a **good practice to set the default policies**.
 #### 1. To deny all incoming traffic and allow all outgoing traffic
 ```bash
     sudo ufw default deny incoming
