@@ -1,12 +1,9 @@
 # Swap On Space📀
-
 ## What is Swap Space?
 Swap space in Ubuntu  is a portion of the **hard drive** used as **virtual memory** when the **RAM** is full. 
-- **Virtual Memory:** Swap acts as an overflow area for RAM. When the system runs out of physical memory (RAM) it moves inactive pages from RAM to the swap space allowing more applications to run.
-- **Performance:** Although using swap can help prevent crashes when RAM is full **accessing data from swap is slower than from RAM**. Therefore, it’s best to have enough RAM for our applications.
-
-## Adding swap space on Ubuntu 24.04
-
+- **Virtual Memory:** Swap acts as an overflow area for RAM. When the system **runs out of physical memory (RAM)** it moves inactive pages from RAM to the swap space allowing more applications to run.
+- **Performance:** Although using swap can help **prevent crashes when RAM** is full **accessing data from swap is slower than from RAM**. Therefore, it’s best to have enough RAM for our applications.
+## Adding Swap Space on Ubuntu 24.04
 ### Workflow 
 <div align="center">
   <img src="Images/Swapon.png" alt="Project Logo" width=100% height=30%/>
@@ -22,7 +19,7 @@ To see information about disk space use
     df -h
 ```
 ### Step 2 : Create a Swap File 
-Create a 4GB swap file. We can adjust the size as needed.
+Create a **4GB** swap file. We can adjust the size as needed.
 ```bash
     sudo fallocate -l 4G /swapfile
 ```
@@ -63,7 +60,6 @@ to the **`/etc/fstab`** file we are telling the system:
 - **`/etc/fstab`**: This is the file we want to modify. It contains information about filesystems and swap space that should be mounted or activated at boot.
 
 Adding the **swap file** to **`/etc/fstab`** ensures that the system knows to **activate** the swap file every time it **boots up**. Without this step the swap space **would be lost after a reboot** potentially causing issues if the system runs low on memory. This configuration helps maintain consistent performance and prevents application crashes due to insufficient memory.
-
 ## Removing Swap Space
 ### Step 1 : Disable Swap Immediately
 To disable the swap space for the current session (this will be lost after a reboot) use the following command. This command turns off all swap spaces.
@@ -88,3 +84,4 @@ We can comment it out by adding a **`#`** at the beginning.
     # /swapfile none swap sw 0 0
 ```
 Save and exit the editor.
+
