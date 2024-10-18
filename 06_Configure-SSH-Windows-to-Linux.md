@@ -186,3 +186,6 @@ This command will use the settings specified in the config file to establish the
 
 #### 7. Repeat for Additional Servers
 We can add more server configurations in the same config file, just like the example above.
+
+## Conclusion
+**SSH (Secure Shell)** is an essential protocol for secure communication between **Linux systems over a network**. It allows encrypted access to a remote machine, providing a secure way to **manage servers**, **transfer files** & **execute commands** from **another system**. With SSH, administrators can securely manage systems and services from virtually anywhere, **reducing the need for physical access while maintaining security**. Configuring SSH with additional measures such as disabling root login, using non-default ports & enabling key-based authentication enhances both usability and security in Linux environments.
