@@ -1,7 +1,6 @@
 # Installing Ubuntu on Windows11 using WSL(Windows Subsystem for Linux)
 
-**WSL (Windows Subsystem for Linux)** is a feature in Windows that allows users to run a **Linux distribution** directly on Windows without the need for a **virtual machine** or **dual booting**. It provides a lightweight environment for developers to use Linux tools, utilities & command-line applications alongside Windows applications. **WSL 2** offers full Linux kernel support and better performance making it ideal for tasks like development, scripting & working with open-source software.
-
+**WSL (Windows Subsystem for Linux)** is a feature in Windows that allows users to run a **Linux distribution** directly on Windows without the need for a **virtual machine** or **dual booting**. It provides a **lightweight environment** for developers to use Linux tools, utilities & **command-line applications** alongside Windows applications. **WSL 2** offers full **Linux kernel support** & better performance making it ideal for tasks like development, scripting & working with open-source software.
 ## Configuration Steps of WSL 
 ### Workflow
 <div align="center">
@@ -9,19 +8,19 @@
 </div>
 
 ### Step 1. Enable Windows Features for WSL
-1. **Open Windows Features**
-    - Press **`Windows`** **+** **`S`** and type Turn Windows features on or off.
-    - Click the option that appears.
-2. **Enable Required Features**
+#### 1. Open Windows Features
+- Press **`Windows`** **+** **`S`** and type Turn Windows features on or off.
+- Click the option that appears.
+#### 2. Enable Required Features
 In the Windows Features window scroll down and check these options:
    - Virtual Machine Platform (required for WSL 2)
    - Windows Subsystem for Linux
 Click **`Okay`**.
-3. **Restart the Computer if prompted**
+#### 3. Restart the Computer if Prompted
 ### Step 2. Install WSL via PowerShell
-1. **Open PowerShell as Administrator**
+#### 1. Open PowerShell as Administrator
 Right-click the **Start** button and select **Windows Terminal (Admin)** or **PowerShell (Admin)**.
-2. **Install WSL**
+#### 2. Install WSL
 Run the following command to install WSL and set it up
 ```bash
     wsl --install
@@ -29,14 +28,14 @@ Run the following command to install WSL and set it up
 This command will:
  - Install the **WSL component**.
  - Download and install the **latest version of Ubuntu** by default.
- - Set WSL 2 as the default version.
+ - Set **WSL 2** as the default version.
 
  ### Step 3. Verify WSL Version
- 1. To check the installed version of WSL & Ubuntu run
+ #### 1. To check the installed version of WSL & Ubuntu run
  ```bash
     wsl -l -v
 ```
-2. If WSL is set to version 1 we can upgrade it to version 2 by running
+#### 2. If WSL is set to version 1 we can upgrade it to version 2 by running
 ```bash
     wsl --set-version Ubuntu 2
 ```
