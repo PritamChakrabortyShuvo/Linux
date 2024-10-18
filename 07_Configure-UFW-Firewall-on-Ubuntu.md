@@ -1,4 +1,4 @@
-# Implementing UFW(Uncomplicated Firewall) to Configure a Host Firewall on Ubuntu
+# Implementing UFW(Uncomplicated Firewall) to Configure a Host Firewall on Ubuntu🧱
 
 ## What is UFW?
 **UFW** stands for **Uncomplicated Firewall**. It provides a **command-line interface** to manage firewall rules more easily than the traditional **iptables commands**. UFW is especially useful for those who may not be familiar with the complexities of firewall configurations.
