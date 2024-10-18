@@ -97,3 +97,6 @@ Or, Open the **`.yaml`** configuration file (the filename may vary) to check the
     cat /etc/netplan/01-netcfg.yaml
 ```
 Look for the line starting with **`renderer:`** in the configuration file. It will tell which renderer is being used (NetworkManager or networkd).
+
+## Conclusion 
+Configuring a **static IP** ensures a device has a **fixed address**, **preventing disruptions** caused by **dynamic IP changes**. This is crucial for devices like servers making them consistently reachable on the network. The process involves identifying the interface, updating Netplan & applying the configuration for reliable network communication.
