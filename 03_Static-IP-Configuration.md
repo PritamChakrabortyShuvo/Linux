@@ -15,7 +15,7 @@ A **YAML** file is a **human-readable text file** used for **storing data** in a
   <img src="Images/Static IP Configuration workflow.png" alt="Project Logo" width=100% height=30%/>
 </div>
 
-### Step 1 : Check Network Interface Name and which Network manager is active
+### Step 1 : Check Network Interface Name and which Network Manager is active
 ```bash
     ip link show # For checking network interface
 ```
@@ -81,9 +81,19 @@ Or,
    - **`- to: default`**: This indicates that the following route applies to all traffic that does not match any other specific route.
    - **`via: 192.168.0.1`**: Specifies the **`gateway IP address`** for outgoing traffic. This is the **router's IP address** through which all non-local traffic will be sent.
    - **Alternative for Default Gateway:** Instead of using the **`routes:`** section we can simply specify the default gateway directly under the interface like this:
-
      ```bash
-      gateway4: 192.168.0.1  # Sets the default gateway directly
+        gateway4: 192.168.0.1  # Sets the default gateway directly
      ```
      We can use **`gateway4`** there is no need for the **`routes:`** key specifying **`to: default`** and **`via:.`**
  - **`nameservers:`** This key specifies the **DNS servers** to be used for resolving **domain names** into **IP addresses**. The example specifies two DNS servers: **`8.8.8.8`** **(Google's DNS)** and **`1.1.1.1`** **(Cloudflare's DNS)**.
+
+ ## Necessary Commands
+ To display detailed information about network interfaces including the renderer in use. Run :
+ ```bash
+    networkctl status
+```
+Or, Open the **`.yaml`** configuration file (the filename may vary) to check the renderer
+```bash
+    cat /etc/netplan/01-netcfg.yaml
+```
+Look for the line starting with **`renderer:`** in the configuration file. It will tell which renderer is being used (NetworkManager or networkd).
