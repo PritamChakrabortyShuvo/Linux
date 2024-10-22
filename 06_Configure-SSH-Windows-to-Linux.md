@@ -75,12 +75,25 @@ To avoid entering passwords each time we can set up **key-based authentication**
     ssh-keygen -t rsa -b 4096
 ```
 We use **`4096`** bits to provide stronger encryption, enhancing the security of the SSH key. We can use **`ECDSA`** or **`ED25519`** for shorter key sizes and faster performance but **`RSA`** with **`4096`** bits is still very **secure** and compatible across nearly all systems.
-#### 2. Copy the public key to Server if we using custom port
+#### 2. Display the Public Key
+Run the following command to display the contents of SSH public key
 ```bash
-    ssh-copy-id -p 1646 username@ip_address
+    type C:\Users\User\.ssh\id_rsa.pub
 ```
 After entering the password the key will be copied to the Server.
-#### 3. Next time we connect using SSH, the key will be used instead of a password.
+#### 3. Copy the Output
+Highlight the entire output (the public key) and copy it to clipboard. It will look something like this
+```bash
+    ssh-rsa AAAAB3... your_username@your_hostname
+```
+#### 4. SSH into the Linux Server
+Use SSH to connect to your Linux server on port 1646.
+#### 5. Append the Public Key to `authorized_keys`
+Once you are logged into the Linux server, run the following command
+```bash
+    echo "paste_copied_key_here" >> ~/.ssh/authorized_keys
+```
+Replace **`paste_copied_key_here`** with the **public key** you copied earlier.
 ### Step 11 : Verify and Troubleshoot
 #### 1. To test the connection
 ```bash 
