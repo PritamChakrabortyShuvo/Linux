@@ -7,3 +7,5 @@ An in-depth exploration of fundamental Linux concepts, explaining how the Linux 
 Detailed instructions on configuring a static IP address on Linux, including the benefits of static IPs for servers and networked devices. This guide covers modifying network configuration files, verifying IP address changes & troubleshooting common network issues.
 ## [Swap on Space]()
 A guide to setting up and managing swap space on Linux to extend virtual memory beyond physical RAM. This document explains the role of swap, how to create a swap file or partition, how to activate and deactivate swap space and the pros and cons of different swap configurations. It also includes tips for monitoring swap usage and tuning swappiness.
+## [Configure SSH: Linux to Linux]()
+Step-by-step instructions for setting up Secure Shell (SSH) connectivity between Linux systems, enabling secure remote management and data transfer. This guide covers SSH installation, configuration, key-based authentication for passwordless login & security best practices such as disabling root login and configuring firewalls.
