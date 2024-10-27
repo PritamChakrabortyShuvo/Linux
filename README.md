@@ -20,3 +20,6 @@ A detailed guide for configuring a Network File System (NFS) server on Linux, en
 
 ## [Configure NGINX Server]()
 Instructions for setting up and configuring the NGINX web server. Topics covered include installing NGINX, configuring server blocks (virtual hosts), setting up basic HTTP and HTTPS services & optimizing performance with caching. This guide also provides security tips, such as limiting access to specific IPs and configuring SSL/TLS certificates for secure connections.
+
+## [Configure Apache Server]()
+A complete guide to installing and configuring the Apache HTTP Server on Linux. This document covers basic server setup, creating and managing virtual hosts, setting up SSL/TLS encryption & configuring modules for added functionality. It includes troubleshooting common issues and security practices to harden the Apache server, such as setting permissions and disabling unnecessary modules.
