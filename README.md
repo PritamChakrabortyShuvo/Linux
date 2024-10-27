@@ -17,3 +17,6 @@ Instructions on using Ubuntu’s Uncomplicated Firewall (UFW) to manage firewall
 Step-by-step guide on setting up Ubuntu on Windows 11 through the Windows Subsystem for Linux (WSL). This document covers the installation process, WSL 2 configuration, installing and running Ubuntu, using Linux commands within the Windows environment & tips for integrating Ubuntu with Windows tools for a seamless development experience.
 ## [Configure NFS Server]()
 A detailed guide for configuring a Network File System (NFS) server on Linux, enabling shared access to files across a network. This document explains setting up NFS server and client, configuring exports, setting permissions & optimizing NFS performance. It also includes troubleshooting tips and security considerations, such as limiting access by IP.
+
+## [Configure NGINX Server]()
+Instructions for setting up and configuring the NGINX web server. Topics covered include installing NGINX, configuring server blocks (virtual hosts), setting up basic HTTP and HTTPS services & optimizing performance with caching. This guide also provides security tips, such as limiting access to specific IPs and configuring SSL/TLS certificates for secure connections.
