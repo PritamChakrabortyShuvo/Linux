@@ -52,9 +52,9 @@ Linux was created by **Linus Torvalds** in **1991**. It started as a personal pr
     - **Server :** Minimized downtime with automated maintenance, focusing on stability & security patches.
 # Working with Shell - I
 A shell is a **command-line interface** that allows users to interact with the operating system by typing commands to perform tasks.
-Using a **shell** instead of a **Graphical User Interface** (GUI) allows for greater efficiency, automation through scripting, and more precise control over system tasks especially for advanced users and server management.
+Using a **shell** instead of a **Graphical User Interface** (GUI) allows for **greater efficiency**, **automation** through **scripting** & **more precise control** over system tasks especially for advanced **users** and **server management**.
 ## Home Directory
-The home directory is a unique, user-specific folder (e.g., `/home/username`) where personal files, settings, and configurations are stored in a Linux system.
+The **home directory** is a **unique**, **user-specific folder** (e.g., `/home/username`) where **personal files**, **settings** & **configurations** are **stored** in a Linux system.
 
 <div align="center">
   <img src="Images/Home Directory.png" alt="Project Logo" width=100% height=30%/>
