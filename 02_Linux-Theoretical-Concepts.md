@@ -27,16 +27,14 @@ Linux was created by **Linus Torvalds** in **1991**. It started as a personal pr
 - Community and business driven.
 # Common Challenges
 - **Directory Navigation :** Difficulty navigating directory structures and files.
-- **Text Editors :** Lack of experience with text editors, especially Vi or Vim.
+- **Text Editors :** Lack of experience with text editors especially **Nano**, **Vi** or **Vim**.
 - **Linux Variants :** Confusion over different flavors of Linux.
-- **Installation Errors :** Issues during application and dependency installation.
-- **Package Managers :** Unfamiliarity with rpm, dpkg, apt, and yum.
+- **Installation Errors :** Issues during **application** & **dependency** installation.
+- **Package Managers :** Unfamiliarity with **rpm**, **dpkg**, **apt** & **yum**.
 - **Networking Issues :** Problems with networking between VMs.
-- **Permissions :** Challenges with permissions and security settings.
+- **Permissions :** Challenges with permissions & security settings.
 - **Hands-On Practice :** Insufficient practical experience.
-
-
-# Linux Desktop vs Server
+# Linux Desktop Vs. Server
 1. **Purpose**
     - **Desktop :** For personal use like web browsing, media & office tasks. It includes a **GUI (Graphical User Interface)**.
     - **Server :** Runs backend tasks like **web hosting**, **databases**, etc. often without a GUI to save resources using a **CLI(Command Line Interface)** for management.
