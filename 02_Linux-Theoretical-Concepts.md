@@ -5,30 +5,26 @@
 
 Welcome! to **Linux Theoretical Concepts** guide. This is your go-to guide for mastering Linux concepts and theory. Whether you're a beginner or need a quick reference it offers essential insights to enhance your Linux understanding and usage.
 # What is Linux?
-Linux is an **open-source operating system** based on **Unix**, widely used for *servers*, *desktops*, and *embedded systems*. 
-It provides a stable, secure, and flexible environment for managing hardware resources and running applications.
+Linux is an **open-source operating system** based on **Unix**, widely used for *servers*, *desktops* & *embedded systems*.
 
+It provides a **stable**, **secure** & **flexible environment** for **managing hardware resources** & **running applications**.
 # Who is Linux?
-Linux was created by **Linus Torvalds** in **1991**. It started as a personal project and has grown into a major force in computing, supported by a global community of developers.
-
+Linux was created by **Linus Torvalds** in **1991**. It started as a personal project and has grown into a major force in computing supported by a global community of developers.
 # Where is Linux?
 **World Wide Web :**
-- 96
-3% of the top 1 milions world’s web-servers running on Linux.
+- **3%** of the top **1 milions world’s web-servers** running on Linux.
 **Research/High-Performance Compute :**
 - Google, Amazon, NSA, 100% of TOP500  Super-computers.
 **Modern Smartphones and devices :**
 - The Android phone (86% of all smartphones are powered by Linux)
 - Amazon Kindle
 - Smart TVs/Devices
-
 # Why is Linux?
-- Free and open-source.
+- Free & open-source.
 - Powerful for research datacenters
 - Personal for desktops and phones
 - Universal
-- Community (and business) driven.
-
+- Community and business driven.
 # Common Challenges
 - **Directory Navigation :** Difficulty navigating directory structures and files.
 - **Text Editors :** Lack of experience with text editors, especially Vi or Vim.
