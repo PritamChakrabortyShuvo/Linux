@@ -61,7 +61,7 @@ The **home directory** is a **unique**, **user-specific folder** (e.g., `/home/u
 </div>
 
 ## Commands & Arguments 
-In Linux, **`commands`** are instructions given to the shell to perform specific tasks and **`arguments`** are additional pieces of information passed to those commands to modify their behavior or specify what they operate on.
+In Linux, **Commands** are **instructions** given to the **shell to perform specific tasks** & **Arguments** are **additional pieces of information** passed to those commands to **modify their behavior** or specify what they operate on.
 - **Structure :**
     - **Command :** The main instruction (e.g., **`ls, cp, mkdir`**).
     - **Argumants :** Options or parameters that provide context or modify the command's behavior (e.g., **`-l`*for long format).
