@@ -36,21 +36,20 @@ Linux was created by **Linus Torvalds** in **1991**. It started as a personal pr
 - **Hands-On Practice :** Insufficient practical experience.
 # Linux Desktop Vs. Server
 1. **Purpose**
-    - **Desktop :** For personal use like web browsing, media & office tasks. It includes a **GUI (Graphical User Interface)**.
+    - **Desktop :** For personal use like **web browsing**, **media** & **office tasks**. It includes a **GUI (Graphical User Interface)**.
     - **Server :** Runs backend tasks like **web hosting**, **databases**, etc. often without a GUI to save resources using a **CLI(Command Line Interface)** for management.
 2. **Resource Usage**
-    - **Desktop :** Uses more **RAM/CPU** for the **GUI** and **applications**.
+    - **Desktop :** Uses more **RAM/CPU** for the **GUI** & **applications**.
     - **Server :** Optimized for performance prioritizes services over graphical environments.
 3. **Security**
-    - **Desktop :** Basic security with a smaller attack surface.
-    - **Server :** Enhanced security for exposed services like **firewalls**, **SSH hardening** etc.
+    - **Desktop :** **Basic security** with a smaller attack surface.
+    - **Server :** **Enhanced security** for exposed services like **firewalls**, **SSH hardening** etc.
 4. **Software** 
     - **Desktop :** Productivity-focused apps like **browsers** or **office suites**.
     - **Server :** Server-focused software like **web servers** or **databases**.
 5. **Updates**
-    - **Desktop :** Regular updates with reboots often required.
+    - **Desktop :** Regular **updates with reboots** often required.
     - **Server :** Minimized downtime with automated maintenance, focusing on stability & security patches.
-
 # Working with Shell - I
 A shell is a **command-line interface** that allows users to interact with the operating system by typing commands to perform tasks.
 Using a **shell** instead of a **Graphical User Interface** (GUI) allows for greater efficiency, automation through scripting, and more precise control over system tasks especially for advanced users and server management.
