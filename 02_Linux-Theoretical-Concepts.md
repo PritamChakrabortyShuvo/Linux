@@ -55,7 +55,6 @@ A shell is a **command-line interface** that allows users to interact with the o
 Using a **shell** instead of a **Graphical User Interface** (GUI) allows for **greater efficiency**, **automation** through **scripting** & **more precise control** over system tasks especially for advanced **users** and **server management**.
 ## Home Directory
 The **home directory** is a **unique**, **user-specific folder** (e.g., `/home/username`) where **personal files**, **settings** & **configurations** are **stored** in a Linux system.
-
 <div align="center">
   <img src="Images/Home Directory.png" alt="Project Logo" width=100% height=30%/>
 </div>
@@ -64,7 +63,7 @@ The **home directory** is a **unique**, **user-specific folder** (e.g., `/home/u
 In Linux, **Commands** are **instructions** given to the **shell to perform specific tasks** & **Arguments** are **additional pieces of information** passed to those commands to **modify their behavior** or specify what they operate on.
 - **Structure :**
     - **Command :** The main instruction (e.g., **`ls, cp, mkdir`**).
-    - **Argumants :** Options or parameters that provide context or modify the command's behavior (e.g., **`-l`*for long format).
+    - **Argumants :** **Options or parameters** **that provide context or modify** the command's behavior (e.g., **`-l`*for long format).
 - **Example :**
 <div align="center">
     <img src="Images/Command & Argument.png" alt="Project Logo" width=40% height=25%>
@@ -72,19 +71,14 @@ In Linux, **Commands** are **instructions** given to the **shell to perform spec
 
    Here **`/home/user`** an argument that specifying the directory to list.
 - **Options :** Usually start with **`-`** or **`--`**(e.g., **`-a`**, **`--all`**).
-
 ## Commands Type 
-In Linux, commands can be categorized into 2 types based on their location on the system.
-- **External Commands :** In Linux, **external commands** refer to commands that are not built into the shell itself but are separate executable programs stored in the file system. These commands are usually located in directories such as **`/bin`**, **`/usr/bin`**, **`/sbin`**, and **`/usr/sbin`**, and they are run by the shell when called from the terminal. **Example :** **`ls`**, **`cp`**, **`grep`**
+In Linux, commands can be categorized into **2 types** based on their **location on the system**.
+- **External Commands :** In Linux, **external commands** refer to **commands that are not built into the shell itself** but are separate executable programs stored in the file system. These commands are usually located in directories such as **`/bin`**, **`/usr/bin`**, **`/sbin`** & **`/usr/sbin`**, and they are **run by the shell** when **called from the terminal**. **Example :** **`ls`**, **`cp`**, **`grep`**
 
-- **Internal Commands :** These are built into the shell itself and do not require external programs to run.  **Example :** **`cd`**, **`echo`**, **`pwd`**
-
+- **Internal Commands :** **These are built into the shell** itself & **do not require external programs to run**.  **Example :** **`cd`**, **`echo`**, **`pwd`**
 ## Linux Basic Commands
-
 For more details on commands see the [Linux Commands](https://github.com/PritamChakrabortyShuvo/Linux/blob/main/Linux-Commands.md) file.
-
 ## Absoluiute & Relative Path
-
 A **path** is the location of a file or directory in the filesystem which can be either **absolute** (full path) or **relative** (relative to the current directory).
 - **Absolute Path :** An absolute path is the full path to a file or directory from the root directory **`/`**.Starting from the top of the filesystem. For example: **`/home/user/directory/file.txt`**.
 
