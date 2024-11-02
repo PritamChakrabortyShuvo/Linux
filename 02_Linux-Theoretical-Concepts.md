@@ -80,10 +80,8 @@ In Linux, commands can be categorized into **2 types** based on their **location
 For more details on commands see the [Linux Commands](https://github.com/PritamChakrabortyShuvo/Linux/blob/main/Linux-Commands.md) file.
 ## Absoluiute & Relative Path
 A **path** is the location of a file or directory in the filesystem which can be either **absolute** (full path) or **relative** (relative to the current directory).
-- **Absolute Path :** An absolute path is the full path to a file or directory from the root directory **`/`**.Starting from the top of the filesystem. For example: **`/home/user/directory/file.txt`**.
-
-- **Relative Path :** A relative path is the path to a file or directory from our current working directory, without starting from the root. For example, if we are in **`/home/user`** the relative path to **`file.txt`** inside directory would be **`directory/file.txt`**.
-
+- **Absolute Path :** An **absolute path is the full path to a file or directory** from the **root directory** **`/`**.Starting from the top of the filesystem. For example: **`/home/user/directory/file.txt`**.
+- **Relative Path :** **A relative path is the path to a file or directory from our current working directory**, without starting from the root. For example, if we are in **`/home/user`** the relative path to **`file.txt`** inside directory would be **`directory/file.txt`**.
 <div align="center">
     <img src="Images/Path.png" alt="Project Logo" width=40% height=15%>
 </div>
