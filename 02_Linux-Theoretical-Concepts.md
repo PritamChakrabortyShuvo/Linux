@@ -96,11 +96,11 @@ A **path** is the location of a file or directory in the filesystem which can be
 These commands are useful for quickly navigating between multiple directories without needing to remember or retype paths.
 ## Shell Types
 There are various shell types in linux. They are 
-- **Bourne Shell (`sh`) :** The original Unix shell, known for its simplicity and scripting capabilities, widely used for system scripts.
-- **C Shell (`csh/tcsh`) :** A shell with C-like syntax, offering features like aliases and job control, with **`tcsh`** as an enhanced version.
-- **Korn Shell (`ksh`) :** A superset of the Bourne shell, adding features like command-line editing and improved scripting.
-- **Z Shell (`zsh`) :** A highly customizable shell with advanced features like auto-completion, globbing, and theming.
-- **Bourne Again Shell (`bash`) :** A popular, feature-rich shell, backward-compatible with **`sh`**, and widely used as the **default shell in Linux systems**.
+- **Bourne Shell (`sh`) :** The **original Unix shell** known for its **simplicity** & **scripting capabilities**. Widely used for system scripts.
+- **C Shell (`csh/tcsh`) :** A shell with **C-like syntax**, offering features like **aliases** and **job control** with **`tcsh`** as an enhanced version.
+- **Korn Shell (`ksh`) :** A **superset of the Bourne shell**, adding features like **command-line editing** and **improved scripting**.
+- **Z Shell (`zsh`) :** A highly customizable shell with advanced features like auto-completion, globbing & theming.
+- **Bourne Again Shell (`bash`) :** A **popular**, **feature-rich shell**, **backward-compatible** with **`sh`** & widely used as the **default shell in Linux systems**.
 
 **`bash`** shell has some features like
 - Bash Auto Completion
