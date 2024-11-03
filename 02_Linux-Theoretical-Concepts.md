@@ -87,11 +87,11 @@ A **path** is the location of a file or directory in the filesystem which can be
 </div>
 
 ## Pushd and Popd
-**`pushd`** & **`popd`** are commands in Bash used for managing the directory stack allowing us to easily switch between directories.
+**`pushd`** & **`popd`** are commands in Bash used for **managing the directory stack** allowing us to **easily switch between directories**.
 
-- **`pushd` :** This command saves the current directory on a stack and then changes to the specified directory. For example, running **`pushd`** **`/path/to/directory`** will add the current directory to the stack and navigate to **`/path/to/directory`**.
+- **`pushd` :** This command **saves the current directory on a stack** & **then changes to the specified directory**. For example, running **`pushd`** **`/path/to/directory`** will add the current directory to the stack and navigate to **`/path/to/directory`**.
 
-- **`popd` :** This command removes the top directory from the stack and changes to that directory. For instance, running **`popd`** after a **`pushd`** will take you back to the directory that was saved on the stack.
+- **`popd` :** This command **removes the top directory from the stack** & **changes to that directory**. For instance, running **`popd`** after a **`pushd`** will take you back to the directory that was saved on the stack.
 
 These commands are useful for quickly navigating between multiple directories without needing to remember or retype paths.
 ## Shell Types
