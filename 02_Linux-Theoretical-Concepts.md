@@ -126,7 +126,7 @@ We can also set an environment variable. For example :
 The **PATH** variable in Bash is a **list of directories** where the **shell searches for executable programs** when **we enter a command**. If a command is in one of these directories we can run it without needing to type the full path.
 
 ## Bash Prompt
-The **bash prompt** is the text displayed in the terminal where we type commands. It typically shows our username, hostname, and current director & can be customized using environment variables like **`$PS1`**.
+The **bash prompt** is the **text displayed in the terminal** where **we type commands**. It **typically shows our username, hostname & current directory** & can be customized using environment variables like **`$PS1`**.
 
 <div align="center">
     <img src="Images/ps1.png" alt="Project Logo" width=30% height=25%>
