@@ -142,12 +142,10 @@ The **bash prompt** is the **text displayed in the terminal** where **we type co
 
 The **prompt waits for the user** to **enter commands** which are then **executed by the shell**.
 # Core Concepts
-Linux core concepts include the system's main parts, like the kernel, file system, processes, and user management, which work together to run applications smoothly and securely.
-
+**Linux core concepts** include the **system's main parts** like the **kernel**, **file system**, **processes** & **user management** which **work together to run applications** **smoothly** and **securely**.
 ## Linux Kernel
-The **kernel** is the core part of the Linux operating system that manages hardware resources, facilitates communication between software and hardware & handles system processes, memory, and file management. 
-It acts as a bridge between applications and the underlying hardware.
-
+The **kernel** is the **core part of the Linux operating system** that manages **hardware resources**, **facilitates communication** between **software** and **hardware** & **handles system processes**, **memory** & **file management**. 
+It **acts as a bridge** between **applications** and **the underlying hardware**.
 <div align="center">
     <img src="Images/Kernel.png" alt="Project Logo" width=40% height=25%>
 </div>
