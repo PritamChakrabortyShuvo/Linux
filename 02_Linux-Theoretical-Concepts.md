@@ -106,10 +106,8 @@ There are various shell types in linux. They are
 - Bash Auto Completion
 - Alias
 - Command History
-
 ## Bash Environment Variables
 **Bash Environment Variables** are like **placeholders** that **store important information** such as **user settings** or **system paths**. They **help the shell & programs run smoothly** and can be used to control how commands work. For example :
-
 <div align="center">
     <img src="Images/Logname.png" alt="Project Logo" width=30% height=25%>
 </div>
@@ -117,25 +115,20 @@ There are various shell types in linux. They are
 **Logname** show the **name** which stored in the **logname**.
 
 We can also set an environment variable. For example :
-
 <div align="center">
     <img src="Images/env.png" alt="Project Logo" width=30% height=25%>
 </div>
 
 ## PATH Variables
 The **PATH** variable in Bash is a **list of directories** where the **shell searches for executable programs** when **we enter a command**. If a command is in one of these directories we can run it without needing to type the full path.
-
 ## Bash Prompt
 The **bash prompt** is the **text displayed in the terminal** where **we type commands**. It **typically shows our username, hostname & current directory** & can be customized using environment variables like **`$PS1`**.
-
 <div align="center">
     <img src="Images/ps1.png" alt="Project Logo" width=30% height=25%>
 </div>
 
 ## Linux Prompt
-
 **The Linux prompt**, also known as the **command prompt**, is the interface in a terminal where users type commands. It typically looks like this :
-
 <div align="center">
     <img src="Images/Linux-Prompt.png" alt="Project Logo" width=70%>
 </div>
