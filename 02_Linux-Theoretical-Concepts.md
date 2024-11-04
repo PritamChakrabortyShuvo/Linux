@@ -108,13 +108,13 @@ There are various shell types in linux. They are
 - Command History
 
 ## Bash Environment Variables
-Bash environment variables are like placeholders that store important information such as **user settings** or **system paths**. They help the shell and programs run smoothly and can be used to control how commands work. For example :
+**Bash Environment Variables** are like **placeholders** that **store important information** such as **user settings** or **system paths**. They **help the shell & programs run smoothly** and can be used to control how commands work. For example :
 
 <div align="center">
     <img src="Images/Logname.png" alt="Project Logo" width=30% height=25%>
 </div>
 
-Logname show the name which stored in the logname.
+**Logname** show the **name** which stored in the **logname**.
 
 We can also set an environment variable. For example :
 
