@@ -150,21 +150,16 @@ It **acts as a bridge** between **applications** and **the underlying hardware**
     <img src="Images/Kernel.png" alt="Project Logo" width=40% height=25%>
 </div>
 
-**Kernel functions** are the core tasks performed by the Linux kernel to manage system resources and ensure smooth operation. Here’s a brief overview of the main kernel functions
-
+**Kernel functions** are the **core tasks performed** by the **Linux Kernel** to **manage system resources** & **ensure smooth operation**. Here’s a brief overview of the main kernel functions :
 - **Device Management :** Handles device drivers, input/output operations, and peripheral devices.
-
 - **Resource Management :** Manages CPU processes and bridges resources with processes.
-
 - **Memory Management :** Allocates and manages system memory efficiently.
-
 - **System Calls :** Handles requests for file operations, memory control, and process management.
-
 - **Performance Optimization :** Balances resources, schedules tasks, and enhances system efficiency.
 
 Linux's compatibility with different hardware configurations ensures versatile usage across a wide range of devices.
 
-- **Types of Kernels in OS Architecture :** Monolithic; Microkernel; Hybrid; Nano kernel & Exo kernel
+**Types of Kernels in OS Architecture :** Monolithic; Microkernel; Hybrid; Nano kernel & Exo kernel
 
 Linux includes a **monolithic kernel** which makes this OS the most stable and fast.
 
