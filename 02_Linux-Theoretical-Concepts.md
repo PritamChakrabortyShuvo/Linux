@@ -128,7 +128,7 @@ The **bash prompt** is the **text displayed in the terminal** where **we type co
 </div>
 
 ## Linux Prompt
-**The Linux prompt**, also known as the **command prompt**, is the interface in a terminal where users type commands. It typically looks like this :
+**The Linux prompt**, also known as the **command prompt**, is the **interface in a terminal** where **users type commands**. It typically looks like this :
 <div align="center">
     <img src="Images/Linux-Prompt.png" alt="Project Logo" width=70%>
 </div>
@@ -136,16 +136,11 @@ The **bash prompt** is the **text displayed in the terminal** where **we type co
 **Components of the Linux Prompt**
 
 - **`username:`** The current user's name.
-
 - **`hostname:`** The name of the computer.
-
 - **`current-directory:`** The directory the user is currently in.
-
 - **`$ or #:`** The symbol at the end of the prompt. **`$`** **indicates a regular user**, while **`#`** **indicates the root (superuser)**.
 
-The prompt waits for the user to enter commands, which are then executed by the shell.
-
-
+The **prompt waits for the user** to **enter commands** which are then **executed by the shell**.
 # Core Concepts
 Linux core concepts include the system's main parts, like the kernel, file system, processes, and user management, which work together to run applications smoothly and securely.
 
