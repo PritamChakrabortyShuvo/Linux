@@ -166,7 +166,6 @@ Linux includes a **monolithic kernel** which makes this OS the most stable and f
 **Kernel Space and User Space :**
 
 **Kernel Space** and **User Space** are two distinct areas of memory in a Linux operating system that separate kernel-level operations from user-level processes.
-
 <div align="center">
     <img src="Images/Kenel and User space.png" alt="Project Logo" width=100% height=75%>
 </div>
