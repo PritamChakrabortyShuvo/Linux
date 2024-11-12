@@ -51,7 +51,7 @@ Linux was created by **Linus Torvalds** in **1991**. It started as a personal pr
     - **Desktop :** Regular **updates with reboots** often required.
     - **Server :** Minimized downtime with automated maintenance, focusing on stability & security patches.
 # Working with Shell - I
-A shell is a **command-line interface** that allows users to interact with the operating system by typing commands to perform tasks.
+A **shell** is a **command-line interface** that allows users to **interact with the operating system by typing commands** to perform tasks.
 Using a **shell** instead of a **Graphical User Interface** (GUI) allows for **greater efficiency**, **automation** through **scripting** & **more precise control** over system tasks especially for advanced **users** and **server management**.
 ## Home Directory
 The **home directory** is a **unique**, **user-specific folder** (e.g., `/home/username`) where **personal files**, **settings** & **configurations** are **stored** in a Linux system.
@@ -74,10 +74,9 @@ In Linux, **Commands** are **instructions** given to the **shell to perform spec
 ## Commands Type 
 In Linux, commands can be categorized into **2 types** based on their **location on the system**.
 - **External Commands :** In Linux, **external commands** refer to **commands that are not built into the shell itself** but are separate executable programs stored in the file system. These commands are usually located in directories such as **`/bin`**, **`/usr/bin`**, **`/sbin`** & **`/usr/sbin`**, and they are **run by the shell** when **called from the terminal**. **Example :** **`ls`**, **`cp`**, **`grep`**
-
 - **Internal Commands :** **These are built into the shell** itself & **do not require external programs to run**.  **Example :** **`cd`**, **`echo`**, **`pwd`**
 ## Linux Basic Commands
-For more details on commands see the [Linux Commands](https://github.com/PritamChakrabortyShuvo/Linux/blob/main/Linux-Commands.md) file.
+For more **details on commands** see the [**Linux Commands**](https://github.com/PritamChakrabortyShuvo/Linux/blob/main/Linux-Commands.md) file.
 ## Absoluiute & Relative Path
 A **path** is the location of a file or directory in the filesystem which can be either **absolute** (full path) or **relative** (relative to the current directory).
 - **Absolute Path :** An **absolute path is the full path to a file or directory** from the **root directory** **`/`**.Starting from the top of the filesystem. For example: **`/home/user/directory/file.txt`**.
