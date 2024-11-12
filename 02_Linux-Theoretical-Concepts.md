@@ -148,11 +148,11 @@ It **acts as a bridge** between **applications** and **the underlying hardware**
 </div>
 
 **Kernel functions** are the **core tasks performed** by the **Linux Kernel** to **manage system resources** & **ensure smooth operation**. Here’s a brief overview of the main kernel functions :
-- **Device Management :** Handles device drivers, input/output operations, and peripheral devices.
-- **Resource Management :** Manages CPU processes and bridges resources with processes.
+- **Device Management :** Handles **device drivers**, **input/output** operations & **peripheral devices**.
+- **Resource Management :** Manages **CPU processes** and **bridges** resources with processes.
 - **Memory Management :** Allocates and manages system memory efficiently.
-- **System Calls :** Handles requests for file operations, memory control, and process management.
-- **Performance Optimization :** Balances resources, schedules tasks, and enhances system efficiency.
+- **System Calls :** Handles **requests for file operations**, **memory control** & **process management**.
+- **Performance Optimization :** **Balances resources**, **schedules tasks** & **enhances system efficiency**.
 
 Linux's compatibility with different hardware configurations ensures versatile usage across a wide range of devices.
 
