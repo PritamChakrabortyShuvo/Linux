@@ -78,7 +78,7 @@ In Linux, commands can be categorized into **2 types** based on their **location
 ## Linux Basic Commands
 For more **details on commands** see the [**Linux Commands**](https://github.com/PritamChakrabortyShuvo/Linux/blob/main/Linux-Commands.md) file.
 ## Absoluiute & Relative Path
-A **path** is the location of a file or directory in the filesystem which can be either **absolute** (full path) or **relative** (relative to the current directory).
+A **path** is the **location of a file or directory** in the filesystem which can be either **absolute** (full path) or **relative** (relative to the current directory).
 - **Absolute Path :** An **absolute path is the full path to a file or directory** from the **root directory** **`/`**.Starting from the top of the filesystem. For example: **`/home/user/directory/file.txt`**.
 - **Relative Path :** **A relative path is the path to a file or directory from our current working directory**, without starting from the root. For example, if we are in **`/home/user`** the relative path to **`file.txt`** inside directory would be **`directory/file.txt`**.
 <div align="center">
@@ -87,14 +87,12 @@ A **path** is the location of a file or directory in the filesystem which can be
 
 ## Pushd and Popd
 **`pushd`** & **`popd`** are commands in Bash used for **managing the directory stack** allowing us to **easily switch between directories**.
-
 - **`pushd` :** This command **saves the current directory on a stack** & **then changes to the specified directory**. For example, running **`pushd`** **`/path/to/directory`** will add the current directory to the stack and navigate to **`/path/to/directory`**.
-
 - **`popd` :** This command **removes the top directory from the stack** & **changes to that directory**. For instance, running **`popd`** after a **`pushd`** will take you back to the directory that was saved on the stack.
 
 These commands are useful for quickly navigating between multiple directories without needing to remember or retype paths.
 ## Shell Types
-There are various shell types in linux. They are 
+There are various **shell types** in linux. They are 
 - **Bourne Shell (`sh`) :** The **original Unix shell** known for its **simplicity** & **scripting capabilities**. Widely used for system scripts.
 - **C Shell (`csh/tcsh`) :** A shell with **C-like syntax**, offering features like **aliases** and **job control** with **`tcsh`** as an enhanced version.
 - **Korn Shell (`ksh`) :** A **superset of the Bourne shell**, adding features like **command-line editing** and **improved scripting**.
@@ -102,7 +100,7 @@ There are various shell types in linux. They are
 - **Bourne Again Shell (`bash`) :** A **popular**, **feature-rich shell**, **backward-compatible** with **`sh`** & widely used as the **default shell in Linux systems**.
 
 **`bash`** shell has some features like
-- Bash Auto Completion
+- **Bash Auto Completion**
 - Alias
 - Command History
 ## Bash Environment Variables
