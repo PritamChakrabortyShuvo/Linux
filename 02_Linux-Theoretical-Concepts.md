@@ -169,17 +169,13 @@ Linux includes a **monolithic kernel** which makes this **OS the most stable and
 
 **Key Differences :**
 
-- **Control :** Kernel space has full control over the system, while user space operates under constraints set by the kernel.
-- **Stability :** Crashes or errors in user space applications do not affect the kernel, enhancing system stability.
+- **Control :** **Kernel space has full control over the system**, while **user space operates under constraints** set by the **kernel**.
+- **Stability :** **Crashes** or **Errors** in **user space applications** **do not affect the kernel**, enhancing system stability.
 
-This separation is crucial for system security, stability, and efficiency, preventing user applications from directly interfering with critical system operations.
-
-
+This **separation** is crucial for **system security**, **stability** & **efficiency**, preventing user applications from directly interfering with critical system operations.
 ## Linux Boot Sequence
 The **Linux boot sequence** is the series of steps that the system goes through to start up and load the operating system. Here’s a simple explanation of each point in the sequence:
-
 1. **BIOS POST**
-
     - **Explanation :** When we power on our computer the **BIOS (Basic Input/Output System)** performs a **POST (Power-On Self-Test)** to check the hardware components like the CPU, RAM, and storage devices.
     - **Purpose :** This step checks that all important hardware like RAM, hard drives, and keyboard is working properly before starting the computer. **Example :** When we turn on the computer, we might see a brief screen with a logo indicating that the system is checking if everything is okay. If any hardware issues are detected an error message may appear, preventing the system from booting.
 
