@@ -156,9 +156,9 @@ It **acts as a bridge** between **applications** and **the underlying hardware**
 
 Linux's compatibility with different hardware configurations ensures versatile usage across a wide range of devices.
 
-**Types of Kernels in OS Architecture :** Monolithic; Microkernel; Hybrid; Nano kernel & Exo kernel
+**Types of Kernels in OS Architecture :** **Monolithic**; **Microkernel**; **Hybrid**; **Nano kernel** & **Exo kernel**.
 
-Linux includes a **monolithic kernel** which makes this OS the most stable and fast.
+Linux includes a **monolithic kernel** which makes this **OS the most stable and fast**.
 
 **Kernel Space and User Space :**
 
