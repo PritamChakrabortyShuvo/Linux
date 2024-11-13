@@ -174,15 +174,13 @@ Linux includes a **monolithic kernel** which makes this **OS the most stable and
 
 This **separation** is crucial for **system security**, **stability** & **efficiency**, preventing user applications from directly interfering with critical system operations.
 ## Linux Boot Sequence
-The **Linux boot sequence** is the series of steps that the system goes through to start up and load the operating system. Here’s a simple explanation of each point in the sequence:
+The **Linux Boot Sequence** is the **series of steps** that the **system goes through to start up and load the operating system**. Here’s a simple explanation of each point in the sequence:
 1. **BIOS POST**
-    - **Explanation :** When we power on our computer the **BIOS (Basic Input/Output System)** performs a **POST (Power-On Self-Test)** to check the hardware components like the CPU, RAM, and storage devices.
-    - **Purpose :** This step checks that all important hardware like RAM, hard drives, and keyboard is working properly before starting the computer. **Example :** When we turn on the computer, we might see a brief screen with a logo indicating that the system is checking if everything is okay. If any hardware issues are detected an error message may appear, preventing the system from booting.
-
+    - **Explanation :** When **we power on our computer** the **BIOS (Basic Input/Output System)** performs a **POST (Power-On Self-Test)** to **check the hardware components** like the **CPU, RAM** & **storage devices**.
+    - **Purpose :** **This step checks that all important hardware like RAM, hard drives, and keyboard is working properly before starting the computer**. **Example :** When we turn on the computer, we might see a brief screen with a logo indicating that the system is checking if everything is okay. If any hardware issues are detected an error message may appear, preventing the system from booting.
 2. **Boot Loader (GRUB2)**
-
     - **Explanation :** After the **POST** is successful, the **BIOS** loads the boot loader, such as **GRUB2 (Grand Unified Bootloader)** from the bootable disk.
-    - **Purpose :** **GRUB2** shows a list of installed operating systems and lets us choose which one to start. After we make a selection, it loads the operating system's kernel into memory to begin booting. **Example :** When the computer starts, GRUB2 might show options like "Ubuntu" and "Windows." We can select "Ubuntu" and it will load the necessary files to start the operating system.
+    - **Purpose :** **GRUB2** **shows a list of installed operating systems** and **lets us choose which one to start**. After we **make a selection**, it **loads** the **operating system's kernel** into **memory to begin booting**. **Example :** When the computer starts, GRUB2 might show options like "Ubuntu" and "Windows." We can select "Ubuntu" and it will load the necessary files to start the operating system.
 
 3. **Kernel Initialization**
 
