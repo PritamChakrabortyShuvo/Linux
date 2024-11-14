@@ -197,16 +197,12 @@ The **Linux Boot Sequence** is the **series of steps** that the **system goes th
 **Runlevels :** Runlevels are different modes that tell a Linux system what services to start or stop, helping to control how the system operates at startup or during use
 - **`3` :** Boots into a **`Command Line Interface`**
 - **`5` :** Boots into a **`Graphical Interface`**
-
 ## File System Hierarchy in Linux
-
 The file system hierarchy in Linux organizes the structure of directories and files, ensuring efficient management and accessibility.
-
 - The structure resembles an upside-down tree
 - Directories (a.k.a. folders) are collections of files and other directories.
 - Every directory has a parent except for the root **`("/")`** directory.
 - Many directories have subdirectories.
-
 <div align="center">
     <img src="Images/File system hierarchy.png" alt="Project Logo" width=100% height=75%>
 </div>
