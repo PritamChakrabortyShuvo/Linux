@@ -185,8 +185,8 @@ The **Linux Boot Sequence** is the **series of steps** that the **system goes th
     - **Explanation :** The **boot loader loads** the **Linux kernel into memory** and **hands over control to it**. The kernel initializes the system hardware, sets up memory management, and starts managing processes.
     - **Purpose :** This step **sets up the operating system by detecting** and **configuring hardware**, like **loading drivers** for **devices** such as **keyboards** and **mouse**.  **Example :** When we turn on the computer and the operating system starts the kernel initializes drivers for our keyboard and mouse so that they can be used within the OS.
 4. **INIT Process (Systemd)**
-    - **Explanation :** After the kernel has initialized the system, it starts the **INIT** process, which is often managed by **Systemd** in modern Linux distributions. This process is the first user-space application that runs.
-    - **Purpose :** The **INIT** process is the first program that runs after the kernel is ready; it starts other programs and services that the system needs to work, like logging in and connecting to the internet. **Example :** When our system boots up, INIT starts the login screen so we can enter our username and password.
+    - **Explanation :** After the **kernel has initialized the system**, it starts the **INIT** process, which is often managed by **Systemd** in modern Linux distributions. This process is the **first user-space application that runs**.
+    - **Purpose :** The **INIT** process is the first program that runs after the kernel is ready; it **starts other programs and services** that the system needs to work, like **logging in** and **connecting to the internet**. **Example :** When our system boots up, INIT starts the login screen so we can enter our username and password.
 <div align="center">
     <img src="Images/Boot Sequence.png" alt="Project Logo" width=100% height=75%>
 </div>
