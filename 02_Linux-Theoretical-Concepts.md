@@ -207,7 +207,7 @@ The file system hierarchy in Linux organizes the structure of directories and fi
     <img src="Images/File system hierarchy.png" alt="Project Logo" width=100% height=75%>
 </div>
 
-This hierarchical structure ensures consistency and provides a standardized way to organize and access files and directories in Linux systems.
+This hierarchical structure **ensures consistency** and **provides a standardized way to organize** and **access files and directories in Linux systems**.
 
 **`Root Directory (/):`**  The top-level directory containing all other directories and files in the system.
 
