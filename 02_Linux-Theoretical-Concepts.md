@@ -209,39 +209,23 @@ The file system hierarchy in Linux organizes the structure of directories and fi
 
 This hierarchical structure **ensures consistency** and **provides a standardized way to organize** and **access files and directories in Linux systems**.
 
-**`Root Directory (/):`**  The top-level directory containing all other directories and files in the system.
-
-**`/bin:`** Contains essential user commands needed for basic system functionality. These are general-purpose utilities available for all users. These commands are **`ls`**, **`cp`**, **`mv`**, **`cat`**, **`bash`** and **`echo`**. Usable by **all users** both normal and root.
-
-**`/sbin:`** Contains essential system administration commands primarily used for system management tasks. These tools are critical for system booting, maintenance and repair. These commands are **`shutdown`**, **`reboot`**, **`fdisk`**, **`ifconfig`** & **`mkfs`**. Usable by the **root (superuser)**. Normal users can view the binaries but may not have permission to execute them unless they use **`sudo`**.
-
-**`/boot:`** Files required for the boot process including the **Linux kernel** and **bootloader** configurations.
-
-**`/dev:`** Device files representing hardware devices such as **hdd**, **mouse**, **keyboard** etc. connected to the system managed by the kernel.
-
-**`/etc:`** Store most of the **configuration files** used by various applications and services.
-
-**`/root:`** Home directory for the **root user (superuser)** account.
-
-**`/home:`** Non-root users home directories where personal files and configurations are stored.
-
-**`/lib and /lib64:`** Libraries essential for programs and shared libraries.**`\lib64`** for 64-bit systems.
-
-**`/media:`** Mount points for removable media devices such as **USB drives** and **optical discs**.
-
-**`/mnt:`** Temporary mount points for filesystems mounted manually by the user.
-
-**`/tmp:`** Stores temporary data.
-
-**`/opt:`** **3rd party software** applications or **unbundeled packages** installed manually by the system administrator.
-
-**`/proc:`** Virtual file system providing information about processes and system resources.
-
-**`/srv:`** Data files for services provided by the system.
-
-**`/usr:`** Mount point for user programs, documents, video files, audio files, library files etc.
-
-**`/var:`** Variable data files, including logs, spool files & temporary files that may change during system operation.
+- **`Root Directory (/):`**  The **top-level directory** containing all other directories and files in the system.
+- **`/bin:`** Contains essential user commands needed for basic system functionality. These are general-purpose utilities available for all users. These commands are **`ls`**, **`cp`**, **`mv`**, **`cat`**, **`bash`** and **`echo`**. Usable by **all users** both normal and root.
+- **`/sbin:`** Contains essential system administration commands primarily used for system management tasks. These tools are critical for system booting, maintenance and repair. These commands are **`shutdown`**, **`reboot`**, **`fdisk`**, **`ifconfig`** & **`mkfs`**. Usable by the **root (superuser)**. Normal users can view the binaries but may not have permission to execute them unless they use **`sudo`**.
+- **`/boot:`** Files required for the boot process including the **Linux kernel** and **bootloader** configurations.
+- **`/dev:`** Device files representing hardware devices such as **hdd**, **mouse**, **keyboard** etc. connected to the system managed by the kernel.
+- **`/etc:`** Store most of the **configuration files** used by various applications and services.
+- **`/root:`** Home directory for the **root user (superuser)** account.
+- **`/home:`** Non-root users home directories where personal files and configurations are stored.
+- **`/lib and /lib64:`** Libraries essential for programs and shared libraries.**`\lib64`** for 64-bit systems.
+- **`/media:`** Mount points for removable media devices such as **USB drives** and **optical discs**.
+- **`/mnt:`** Temporary mount points for filesystems mounted manually by the user.
+- **`/tmp:`** Stores temporary data.
+- **`/opt:`** **3rd party software** applications or **unbundeled packages** installed manually by the system administrator.
+- **`/proc:`** Virtual file system providing information about processes and system resources.
+- **`/srv:`** Data files for services provided by the system.
+- **`/usr:`** Mount point for user programs, documents, video files, audio files, library files etc.
+- **`/var:`** Variable data files, including logs, spool files & temporary files that may change during system operation.
 
 ## Linux Distributions
 
