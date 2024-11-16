@@ -210,8 +210,8 @@ The file system hierarchy in Linux organizes the structure of directories and fi
 This hierarchical structure **ensures consistency** and **provides a standardized way to organize** and **access files and directories in Linux systems**.
 
 - **`Root Directory (/):`**  The **top-level directory** containing all other directories and files in the system.
-- **`/bin:`** Contains essential user commands needed for basic system functionality. These are general-purpose utilities available for all users. These commands are **`ls`**, **`cp`**, **`mv`**, **`cat`**, **`bash`** and **`echo`**. Usable by **all users** both normal and root.
-- **`/sbin:`** Contains essential system administration commands primarily used for system management tasks. These tools are critical for system booting, maintenance and repair. These commands are **`shutdown`**, **`reboot`**, **`fdisk`**, **`ifconfig`** & **`mkfs`**. Usable by the **root (superuser)**. Normal users can view the binaries but may not have permission to execute them unless they use **`sudo`**.
+- **`/bin:`** Contains essential **user commands needed for basic system functionality**. These are general-purpose **utilities available for all users**. These commands are **`ls`**, **`cp`**, **`mv`**, **`cat`**, **`bash`** and **`echo`**. Usable by **all users** both normal and root.
+- **`/sbin:`** Contains essential **system administration commands** primarily used for **system management tasks**. These **tools are critical** for **system booting**, **maintenance** & **repair**. These commands are **`shutdown`**, **`reboot`**, **`fdisk`**, **`ifconfig`** & **`mkfs`**. Usable by the **root (superuser)**. **Normal users can view the binaries** but may not have permission to execute them unless they use **`sudo`**.
 - **`/boot:`** Files required for the boot process including the **Linux kernel** and **bootloader** configurations.
 - **`/dev:`** Device files representing hardware devices such as **hdd**, **mouse**, **keyboard** etc. connected to the system managed by the kernel.
 - **`/etc:`** Store most of the **configuration files** used by various applications and services.
