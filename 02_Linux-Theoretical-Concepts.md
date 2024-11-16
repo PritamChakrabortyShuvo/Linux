@@ -216,9 +216,9 @@ This hierarchical structure **ensures consistency** and **provides a standardize
 - **`/dev:`** **Device files representing hardware devices** such as **hdd**, **mouse**, **keyboard** etc. connected to the system managed by the kernel.
 - **`/etc:`** Store most of the **configuration files** used by various applications and services.
 - **`/root:`** **Home directory** for the **root user (superuser)** account.
-- **`/home:`** Non-root users home directories where personal files and configurations are stored.
-- **`/lib and /lib64:`** Libraries essential for programs and shared libraries.**`\lib64`** for 64-bit systems.
-- **`/media:`** Mount points for removable media devices such as **USB drives** and **optical discs**.
+- **`/home:`** **Non-root users home directories** where **personal files** & **configurations** are stored.
+- **`/lib and /lib64:`** **Libraries essential for programs** & **shared libraries**.**`\lib64`** for **64-bit systems**.
+- **`/media:`** **Mount points for removable media devices** such as **USB drives** & **optical discs**.
 - **`/mnt:`** Temporary mount points for filesystems mounted manually by the user.
 - **`/tmp:`** Stores temporary data.
 - **`/opt:`** **3rd party software** applications or **unbundeled packages** installed manually by the system administrator.
