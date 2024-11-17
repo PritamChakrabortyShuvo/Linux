@@ -238,12 +238,9 @@ A **Linux distribution (distro) is a packaged version** of Linux that includes t
 Each distribution caters to different user needs, from general desktop use to specialized server environments.
 
 # Package Management 
-
-**Package management** refers to the process of installing, upgrading, configuring and removing software packages in an operating system. It involves using package managers which are tools that automate these tasks by managing dependencies, ensuring that the correct versions of software are installed and handling software repositories.
-
+**Package management** refers to the process of **installing**, **upgrading**, **configuring** and **removing software packages** in an **operating system**. It involves using **package managers** which are tools that **automate these tasks** by **managing dependencies**, ensuring that the **correct versions of software are installed** and **handling software repositories**.
 ## Software Package 
 **A software package** is a bundled collection of files including executables, libraries and metadata that are grouped together for easy installation and management on an operating system.
-
 <div align="center">
     <img src="Images/Packages.png" alt="Project Logo" width=100% height=75%>
 </div>
