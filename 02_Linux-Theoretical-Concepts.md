@@ -227,18 +227,12 @@ This hierarchical structure **ensures consistency** and **provides a standardize
 - **`/usr:`** **Mount point** for **User Programs**, **Documents**, **video files**, **audio files**, **library files** etc.
 - **`/var:`** Variable **data files**, including **logs, spool files** & **temporary files** that may change during system operation.
 ## Linux Distributions
-A Linux distribution (distro) is a packaged version of Linux that includes the kernel, system utilities, applications, and a package manager.
-
+A **Linux distribution (distro) is a packaged version** of Linux that includes the **kernel**, **system utilities**, **applications** & a **package manager**.
 - **Ubuntu :** Known for its ease of use and community support, ideal for beginners and desktop users.
-
 - **Fedora :** Focuses on innovation, providing the latest features and technologies.
-
 - **Debian :** Renowned for its stability and vast repository of software packages.
-
 - **CentOS :** A free, community-supported alternative to Red Hat Enterprise Linux, commonly used for servers.
-
 - **Red Hat Enterprise Linux (RHEL):** A commercial distribution designed for enterprise use known for its support, security and stability.
-
 - **Mint :** Based on Ubuntu, designed to be user-friendly with a focus on multimedia support.
 
 Each distribution caters to different user needs, from general desktop use to specialized server environments.
