@@ -219,16 +219,14 @@ This hierarchical structure **ensures consistency** and **provides a standardize
 - **`/home:`** **Non-root users home directories** where **personal files** & **configurations** are stored.
 - **`/lib and /lib64:`** **Libraries essential for programs** & **shared libraries**.**`\lib64`** for **64-bit systems**.
 - **`/media:`** **Mount points for removable media devices** such as **USB drives** & **optical discs**.
-- **`/mnt:`** Temporary mount points for filesystems mounted manually by the user.
-- **`/tmp:`** Stores temporary data.
+- **`/mnt:`** **Temporary mount points** for **filesystems mounted manually** by the user.
+- **`/tmp:`** Stores **temporary data**.
 - **`/opt:`** **3rd party software** applications or **unbundeled packages** installed manually by the system administrator.
-- **`/proc:`** Virtual file system providing information about processes and system resources.
+- **`/proc:`** **Virtual file system providing information** about **processes** and **system resources**.
 - **`/srv:`** Data files for services provided by the system.
-- **`/usr:`** Mount point for user programs, documents, video files, audio files, library files etc.
-- **`/var:`** Variable data files, including logs, spool files & temporary files that may change during system operation.
-
+- **`/usr:`** **Mount point** for **User Programs**, **Documents**, **video files**, **audio files**, **library files** etc.
+- **`/var:`** Variable **data files**, including **logs, spool files** & **temporary files** that may change during system operation.
 ## Linux Distributions
-
 A Linux distribution (distro) is a packaged version of Linux that includes the kernel, system utilities, applications, and a package manager.
 
 - **Ubuntu :** Known for its ease of use and community support, ideal for beginners and desktop users.
